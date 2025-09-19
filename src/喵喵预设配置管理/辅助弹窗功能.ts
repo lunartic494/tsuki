@@ -1,10 +1,10 @@
 import { ConfigData } from './配置存储和读取';
 
 export function showHelpPopup(): void {
-    const popupId = 'preset-manager-help-popup';
-    $(`#${popupId}`).remove();
+  const popupId = 'preset-manager-help-popup';
+  $(`#${popupId}`).remove();
 
-    const helpContent = `
+  const helpContent = `
         <div style="padding: 0 10px; font-size: 14px; line-height: 1.6;">
             <h5>主要功能</h5>
             <ul>
@@ -21,7 +21,7 @@ export function showHelpPopup(): void {
         </div>
     `;
 
-    const usageNotice = `
+  const usageNotice = `
         <div style="padding: 12px; font-size: 14px; line-height: 1.6; background-color: #f9f3ea; border-radius: 8px; margin-top: 15px;">
             <h5 style="color: #c62828; margin-top:0;">使用须知</h5>
             <p style="font-weight: bold; margin-bottom: 0;">
@@ -30,7 +30,7 @@ export function showHelpPopup(): void {
         </div>
     `;
 
-    const popupHtml = `
+  const popupHtml = `
         <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
             <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
                 <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px; flex-shrink: 0;">喵喵预设配置管理 - 使用说明</h4>
@@ -44,63 +44,63 @@ export function showHelpPopup(): void {
             </div>
         </div>
     `;
-    $('body').append(popupHtml);
-    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 10vh; max-height: 75vh !important; } }</style>`;
-    $(`#${popupId}`).append(mobileStyles);
-    $('#help-popup-close').on('click', () => $(`#${popupId}`).remove());
+  $('body').append(popupHtml);
+  const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 10vh; max-height: 75vh !important; } }</style>`;
+  $(`#${popupId}`).append(mobileStyles);
+  $('#help-popup-close').on('click', () => $(`#${popupId}`).remove());
 }
 
 export function showRemarkPopup(remarkText: string): Promise<boolean> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-remark-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-remark-popup';
+    $(`#${popupId}`).remove();
 
-        // Simple Markdown to HTML converter
-        function convertMarkdown(text: string): string {
-            const sanitize = (s: string) => $('<div/>').text(s).html();
-            let lines = text.split('\n');
-            let html = '';
-            let inList = false;
+    // Simple Markdown to HTML converter
+    function convertMarkdown(text: string): string {
+      const sanitize = (s: string) => $('<div/>').text(s).html();
+      let lines = text.split('\n');
+      let html = '';
+      let inList = false;
 
-            const processInline = (line: string) => {
-                return sanitize(line)
-                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                    .replace(/`(.*?)`/g, '<code>$1</code>');
-            };
+      const processInline = (line: string) => {
+        return sanitize(line)
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\*(.*?)\*/g, '<em>$1</em>')
+          .replace(/`(.*?)`/g, '<code>$1</code>');
+      };
 
-            for (const line of lines) {
-                const trimmedLine = line.trim();
-                const isList = trimmedLine.startsWith('* ') || trimmedLine.startsWith('- ');
+      for (const line of lines) {
+        const trimmedLine = line.trim();
+        const isList = trimmedLine.startsWith('* ') || trimmedLine.startsWith('- ');
 
-                if (inList && !isList && trimmedLine) {
-                    html += '</ul>';
-                    inList = false;
-                }
-
-                if (trimmedLine.startsWith('# ')) {
-                    html += `<h1>${processInline(trimmedLine.substring(2))}</h1>`;
-                } else if (trimmedLine.startsWith('## ')) {
-                    html += `<h2>${processInline(trimmedLine.substring(3))}</h2>`;
-                } else if (trimmedLine.startsWith('### ')) {
-                    html += `<h3>${processInline(trimmedLine.substring(4))}</h3>`;
-                } else if (isList) {
-                    if (!inList) {
-                        html += '<ul>';
-                        inList = true;
-                    }
-                    html += `<li>${processInline(trimmedLine.substring(2))}</li>`;
-                } else if (trimmedLine) {
-                    html += `<p>${processInline(line)}</p>`;
-                }
-            }
-            if (inList) html += '</ul>';
-            return html;
+        if (inList && !isList && trimmedLine) {
+          html += '</ul>';
+          inList = false;
         }
 
-        const contentHtml = convertMarkdown(remarkText);
+        if (trimmedLine.startsWith('# ')) {
+          html += `<h1>${processInline(trimmedLine.substring(2))}</h1>`;
+        } else if (trimmedLine.startsWith('## ')) {
+          html += `<h2>${processInline(trimmedLine.substring(3))}</h2>`;
+        } else if (trimmedLine.startsWith('### ')) {
+          html += `<h3>${processInline(trimmedLine.substring(4))}</h3>`;
+        } else if (isList) {
+          if (!inList) {
+            html += '<ul>';
+            inList = true;
+          }
+          html += `<li>${processInline(trimmedLine.substring(2))}</li>`;
+        } else if (trimmedLine) {
+          html += `<p>${processInline(line)}</p>`;
+        }
+      }
+      if (inList) html += '</ul>';
+      return html;
+    }
 
-        const popupHtml = `
+    const contentHtml = convertMarkdown(remarkText);
+
+    const popupHtml = `
             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
                     <style>
@@ -124,27 +124,28 @@ export function showRemarkPopup(remarkText: string): Promise<boolean> {
             </div>
         `;
 
-        $('body').append(popupHtml);
-        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    $('body').append(popupHtml);
+    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
 
-        $('#remark-popup-continue').on('click', () => {
-            $(`#${popupId}`).remove();
-            resolve(true);
-        });
+    $('#remark-popup-continue').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(true);
     });
+  });
 }
 
 export function showNewEntriesPopup(newEntries: any[], promptIdToNameMap: Map<string, string>): Promise<any[] | null> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-new-entries-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-new-entries-popup';
+    $(`#${popupId}`).remove();
 
-        const entriesHtml = newEntries.map((entry, index) => {
-            const entryName = promptIdToNameMap.get(entry.id) || `未知条目 (ID: ${entry.id})`;
-            const isChecked = entry.enabled ? 'checked' : '';
-            const safeEntryName = $('<div/>').text(entryName).html();
-            return `
+    const entriesHtml = newEntries
+      .map((entry, index) => {
+        const entryName = promptIdToNameMap.get(entry.id) || `未知条目 (ID: ${entry.id})`;
+        const isChecked = entry.enabled ? 'checked' : '';
+        const safeEntryName = $('<div/>').text(entryName).html();
+        return `
                 <div class="entry-item" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee;">
                     <label for="new-entry-toggle-${index}" style="cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeEntryName}">${safeEntryName}</label>
                     <label class="pm-switch">
@@ -153,9 +154,10 @@ export function showNewEntriesPopup(newEntries: any[], promptIdToNameMap: Map<st
                     </label>
                 </div>
             `;
-        }).join('');
+      })
+      .join('');
 
-        const popupHtml = `
+    const popupHtml = `
             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh; box-sizing: border-box;">
                     <h4 style="margin-top:0; color:#6a4226; text-align: center;">检测到新条目</h4>
@@ -171,40 +173,45 @@ export function showNewEntriesPopup(newEntries: any[], promptIdToNameMap: Map<st
             </div>
         `;
 
-        $('body').append(popupHtml);
+    $('body').append(popupHtml);
 
-        const mobileStyles = `<style>@media (max-width: 600px) {#${popupId} { align-items: flex-start !important; } #${popupId} > div{ margin-top: 5vh; width: 95% !important;max-width: none !important;height: auto !important;max-height: 85vh !important;border-radius: 12px !important;padding: 15px !important;}#${popupId} h4{font-size: 18px !important;margin-bottom: 10px !important;}#${popupId} p{font-size: 14px !important;margin: 5px 0 15px 0 !important;}#${popupId} .entry-item{padding: 10px 0 !important;}#${popupId} .button-container{flex-direction: row !important;gap: 10px !important;justify-content: flex-end;}#${popupId} .button-container button{width: auto !important;margin: 0 !important;flex-grow: 1;}}</style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    const mobileStyles = `<style>@media (max-width: 600px) {#${popupId} { align-items: flex-start !important; } #${popupId} > div{ margin-top: 5vh; width: 95% !important;max-width: none !important;height: auto !important;max-height: 85vh !important;border-radius: 12px !important;padding: 15px !important;}#${popupId} h4{font-size: 18px !important;margin-bottom: 10px !important;}#${popupId} p{font-size: 14px !important;margin: 5px 0 15px 0 !important;}#${popupId} .entry-item{padding: 10px 0 !important;}#${popupId} .button-container{flex-direction: row !important;gap: 10px !important;justify-content: flex-end;}#${popupId} .button-container button{width: auto !important;margin: 0 !important;flex-grow: 1;}}</style>`;
+    $(`#${popupId}`).append(mobileStyles);
 
-        $('#new-entries-confirm').on('click', () => {
-            const updatedEntries = newEntries.map((entry, index) => ({ ...entry, enabled: $(`#new-entry-toggle-${index}`).is(':checked') }));
-            $(`#${popupId}`).remove();
-            resolve(updatedEntries);
-        });
-
-        $('#new-entries-cancel').on('click', () => {
-            $(`#${popupId}`).remove();
-            resolve(null);
-        });
+    $('#new-entries-confirm').on('click', () => {
+      const updatedEntries = newEntries.map((entry, index) => ({
+        ...entry,
+        enabled: $(`#new-entry-toggle-${index}`).is(':checked'),
+      }));
+      $(`#${popupId}`).remove();
+      resolve(updatedEntries);
     });
+
+    $('#new-entries-cancel').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(null);
+    });
+  });
 }
 
 export function showConfigSelectionPopup(configs: ConfigData[], charName: string): Promise<string | null> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-config-selection-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-config-selection-popup';
+    $(`#${popupId}`).remove();
 
-        const configsHtml = configs.map((config, index) => {
-            const safeName = $('<div/>').text(config.name).html();
-            return `
+    const configsHtml = configs
+      .map((config, index) => {
+        const safeName = $('<div/>').text(config.name).html();
+        return `
                 <div class="config-item" style="padding: 10px 5px; border-bottom: 1px solid #eee; cursor: pointer; border-radius: 4px; display: flex; align-items: center;">
                     <input type="radio" id="config-select-${index}" name="config-selection" value="${config.id}" style="margin-right: 10px; transform: scale(1.2);">
                     <label for="config-select-${index}" style="cursor: pointer; width: 100%;">${safeName}</label>
                 </div>
             `;
-        }).join('');
+      })
+      .join('');
 
-        const popupHtml = `
+    const popupHtml = `
             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 400px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh;">
                     <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择配置</h4>
@@ -220,32 +227,42 @@ export function showConfigSelectionPopup(configs: ConfigData[], charName: string
             </div>
         `;
 
-        $('body').append(popupHtml);
-        const mobileStyles = `<style> @media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    $('body').append(popupHtml);
+    const mobileStyles = `<style> @media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
 
-        if (configs.length > 0) $(`#config-select-0`).prop('checked', true);
-        
-        $(`#${popupId} .config-item`).on('click', function() { $(this).find('input[type="radio"]').prop('checked', true); });
+    if (configs.length > 0) $(`#config-select-0`).prop('checked', true);
 
-        $('#config-select-confirm').on('click', () => {
-            const selectedId = $('input[name="config-selection"]:checked').val() as string;
-            if (selectedId) { $(`#${popupId}`).remove(); resolve(selectedId); } 
-            else { toastr.warning("请选择一个配置。"); }
-        });
-
-        $('#config-select-cancel').on('click', () => { $(`#${popupId}`).remove(); resolve(null); });
+    $(`#${popupId} .config-item`).on('click', function () {
+      $(this).find('input[type="radio"]').prop('checked', true);
     });
+
+    $('#config-select-confirm').on('click', () => {
+      const selectedId = $('input[name="config-selection"]:checked').val() as string;
+      if (selectedId) {
+        $(`#${popupId}`).remove();
+        resolve(selectedId);
+      } else {
+        toastr.warning('请选择一个配置。');
+      }
+    });
+
+    $('#config-select-cancel').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(null);
+    });
+  });
 }
 
 export function showRegexExportSelectionPopup(boundRegexes: any[]): Promise<any[] | null> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-regex-export-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-regex-export-popup';
+    $(`#${popupId}`).remove();
 
-        const regexesHtml = boundRegexes.map(regex => {
-            const safeName = $('<div/>').text(regex.script_name).html();
-            return `
+    const regexesHtml = boundRegexes
+      .map(regex => {
+        const safeName = $('<div/>').text(regex.script_name).html();
+        return `
                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;">
                     <label for="regex-export-toggle-${regex.id}" style="cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeName}">${safeName}</label>
                     <label class="pm-switch">
@@ -254,9 +271,10 @@ export function showRegexExportSelectionPopup(boundRegexes: any[]): Promise<any[
                     </label>
                 </div>
             `;
-        }).join('');
+      })
+      .join('');
 
-        const popupHtml = `
+    const popupHtml = `
             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
                     <h4 style="margin-top:0; color:#6a4226; text-align: center;">选择要导出的正则</h4>
@@ -275,44 +293,46 @@ export function showRegexExportSelectionPopup(boundRegexes: any[]): Promise<any[
             </div>
         `;
 
-        $('body').append(popupHtml);
-        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    $('body').append(popupHtml);
+    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
 
-        $('#regex-export-select-all').on('click', () => $('.regex-export-checkbox').prop('checked', true));
-        $('#regex-export-deselect-all').on('click', () => $('.regex-export-checkbox').prop('checked', false));
-        $('#regex-export-cancel').on('click', () => {
-            $(`#${popupId}`).remove();
-            resolve(null);
-        });
-        $('#regex-export-confirm').on('click', () => {
-            const selectedIds = new Set<string>();
-            $('.regex-export-checkbox:checked').each(function() {
-                selectedIds.add($(this).data('id'));
-            });
-            const selectedRegexes = boundRegexes.filter(r => selectedIds.has(r.id));
-            $(`#${popupId}`).remove();
-            resolve(selectedRegexes);
-        });
+    $('#regex-export-select-all').on('click', () => $('.regex-export-checkbox').prop('checked', true));
+    $('#regex-export-deselect-all').on('click', () => $('.regex-export-checkbox').prop('checked', false));
+    $('#regex-export-cancel').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(null);
     });
+    $('#regex-export-confirm').on('click', () => {
+      const selectedIds = new Set<string>();
+      $('.regex-export-checkbox:checked').each(function () {
+        selectedIds.add($(this).data('id'));
+      });
+      const selectedRegexes = boundRegexes.filter(r => selectedIds.has(r.id));
+      $(`#${popupId}`).remove();
+      resolve(selectedRegexes);
+    });
+  });
 }
 
 export function showRegexDeletionPopup(existingRegexes: any[]): Promise<any[]> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-regex-delete-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-regex-delete-popup';
+    $(`#${popupId}`).remove();
 
-        const regexesHtml = existingRegexes.map(regex => {
-            const safeName = $('<div/>').text(regex.script_name).html();
-            return `
+    const regexesHtml = existingRegexes
+      .map(regex => {
+        const safeName = $('<div/>').text(regex.script_name).html();
+        return `
                 <div style="display: flex; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;">
                     <input type="checkbox" class="regex-delete-checkbox" id="regex-delete-toggle-${regex.id}" data-id="${regex.id}" style="margin-right: 15px; transform: scale(1.3);">
                     <label for="regex-delete-toggle-${regex.id}" style="cursor: pointer; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeName}">${safeName}</label>
                 </div>
             `;
-        }).join('');
+      })
+      .join('');
 
-        const popupHtml = `
+    const popupHtml = `
             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
                     <h4 style="margin-top:0; color:#c62828; text-align: center;">删除已有正则 (可选)</h4>
@@ -327,49 +347,51 @@ export function showRegexDeletionPopup(existingRegexes: any[]): Promise<any[]> {
                 </div>
             </div>
         `;
-        $('body').append(popupHtml);
-        
-        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    $('body').append(popupHtml);
 
-        $('#regex-delete-skip').on('click', () => {
-            $(`#${popupId}`).remove();
-            resolve(existingRegexes);
-        });
+    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
 
-        $('#regex-delete-confirm').on('click', () => {
-            const idsToDelete = new Set<string>();
-            $('.regex-delete-checkbox:checked').each(function() {
-                idsToDelete.add($(this).data('id'));
-            });
-            
-            const remainingRegexes = existingRegexes.filter(r => !idsToDelete.has(r.id));
-            if (idsToDelete.size > 0) {
-                toastr.info(`已删除 ${idsToDelete.size} 条旧正则。`);
-            }
-            $(`#${popupId}`).remove();
-            resolve(remainingRegexes);
-        });
+    $('#regex-delete-skip').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(existingRegexes);
     });
+
+    $('#regex-delete-confirm').on('click', () => {
+      const idsToDelete = new Set<string>();
+      $('.regex-delete-checkbox:checked').each(function () {
+        idsToDelete.add($(this).data('id'));
+      });
+
+      const remainingRegexes = existingRegexes.filter(r => !idsToDelete.has(r.id));
+      if (idsToDelete.size > 0) {
+        toastr.info(`已删除 ${idsToDelete.size} 条旧正则。`);
+      }
+      $(`#${popupId}`).remove();
+      resolve(remainingRegexes);
+    });
+  });
 }
 
 export function showBatchImportConfigSelectionPopup(configsToImport: ConfigData[]): Promise<any[] | null> {
-    return new Promise(resolve => {
-        const popupId = 'preset-manager-batch-import-popup';
-        $(`#${popupId}`).remove();
+  return new Promise(resolve => {
+    const popupId = 'preset-manager-batch-import-popup';
+    $(`#${popupId}`).remove();
 
-        const configsHtml = configsToImport.map(config => {
-            const safeName = $('<div/>').text(config.name).html();
-            return `
+    const configsHtml = configsToImport
+      .map(config => {
+        const safeName = $('<div/>').text(config.name).html();
+        return `
                 <div style="padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
                     <input type="checkbox" class="pm-batch-import-checkbox" data-original-id="${config.id}" checked style="transform: scale(1.2);">
                     <label style="font-weight: bold; flex-shrink: 0;" title="${safeName}">${safeName}</label>
                     <input type="text" class="pm-batch-import-newname" value="${safeName}" style="flex: 1; min-width: 100px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 4px 6px; border-radius: 4px; font-size:13px;">
                 </div>
             `;
-        }).join('');
+      })
+      .join('');
 
-        const popupHtml = `
+    const popupHtml = `
              <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
                 <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
                     <h4 style="margin-top:0; color:#6a4226; text-align: center;">选择要导入的配置</h4>
@@ -384,40 +406,40 @@ export function showBatchImportConfigSelectionPopup(configsToImport: ConfigData[
                 </div>
             </div>
         `;
-        $('body').append(popupHtml);
-        
-        const mobileStyles = `<style>
+    $('body').append(popupHtml);
+
+    const mobileStyles = `<style>
             @media (max-width: 600px) { #${popupId} > div { margin-top: 600px; } }
         </style>`;
-        $(`#${popupId}`).append(mobileStyles);
+    $(`#${popupId}`).append(mobileStyles);
 
-        $('#batch-import-cancel').on('click', () => {
-            $(`#${popupId}`).remove();
-            resolve(null);
-        });
-
-        $('#batch-import-confirm').on('click', () => {
-            const choices: any[] = [];
-            let hasError = false;
-            $('#preset-manager-batch-import-popup .pm-batch-import-checkbox').each(function() {
-                const checkbox = $(this);
-                const newName = checkbox.siblings('.pm-batch-import-newname').val()?.toString().trim();
-                if (!newName && checkbox.is(':checked')) {
-                   toastr.error(`有已勾选的配置新名称为空。`);
-                   hasError = true;
-                   return false;
-                }
-                choices.push({
-                    originalId: checkbox.data('original-id'),
-                    newName: newName,
-                    import: checkbox.is(':checked')
-                });
-            });
-
-            if(!hasError) {
-               $(`#${popupId}`).remove();
-               resolve(choices);
-            }
-        });
+    $('#batch-import-cancel').on('click', () => {
+      $(`#${popupId}`).remove();
+      resolve(null);
     });
+
+    $('#batch-import-confirm').on('click', () => {
+      const choices: any[] = [];
+      let hasError = false;
+      $('#preset-manager-batch-import-popup .pm-batch-import-checkbox').each(function () {
+        const checkbox = $(this);
+        const newName = checkbox.siblings('.pm-batch-import-newname').val()?.toString().trim();
+        if (!newName && checkbox.is(':checked')) {
+          toastr.error(`有已勾选的配置新名称为空。`);
+          hasError = true;
+          return false;
+        }
+        choices.push({
+          originalId: checkbox.data('original-id'),
+          newName: newName,
+          import: checkbox.is(':checked'),
+        });
+      });
+
+      if (!hasError) {
+        $(`#${popupId}`).remove();
+        resolve(choices);
+      }
+    });
+  });
 }

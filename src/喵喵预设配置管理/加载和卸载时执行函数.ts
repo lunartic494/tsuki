@@ -24,19 +24,19 @@ $(() => {
     try {
       // 初始化配置管理器
       await initializePresetManager();
-      
+
       // 创建UI界面
       createUI();
-      
+
       // 注册按钮事件
       eventOn(getButtonEvent(TOGGLE_BUTTON_NAME), toggleUI);
-      
+
       // 注册角色切换事件
       eventOn(tavern_events.CHAT_CHANGED, onChatChanged);
-      
+
       // 恢复分组配置
       eventOn(tavern_events.SETTINGS_LOADED, restoreGroupingFromConfig);
-      
+
       // 监听预设变化，如果存在该事件的话
       if ((tavern_events as any).PRESET_CHANGED) {
         eventOn((tavern_events as any).PRESET_CHANGED, restoreGroupingFromConfig);
@@ -61,6 +61,6 @@ $(window).on('pagehide', () => {
   } catch (error) {
     // 忽略清理错误
   }
-  
+
   toastr.info('喵喵预设配置管理已卸载', '再见!');
 });

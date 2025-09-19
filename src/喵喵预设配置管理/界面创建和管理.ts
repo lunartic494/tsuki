@@ -7,9 +7,9 @@ import { showPromptGroupingUI } from './条目分组功能';
 import { renderConfigsList } from './配置存储和读取';
 
 export function createUI(): void {
-    if ($(`#${UI_ID}`).length > 0) return;
+  if ($(`#${UI_ID}`).length > 0) return;
 
-    const uiContainer = $(`
+  const uiContainer = $(`
         <div id="${UI_ID}">
             <style>
                 #${UI_ID}{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;background-color:#fff8f0;color:#3a2c2c;border:1px solid #e0c9a6;border-radius:16px;padding:20px;box-shadow:0 4px 25px rgba(120,90,60,.25);width:90%;max-width:550px;max-height:80vh;font-family:'Segoe UI',sans-serif;display:flex;flex-direction:column}#${UI_ID} h4{margin-top:0;border-bottom:2px solid #f0d8b6;padding-bottom:10px;color:#6a4226}#${UI_ID} h5{margin:8px 0;color:#7a5235}#${UI_ID} button{transition:all .2s ease}#${UI_ID} button:hover{opacity:.85}#${UI_ID} #preset-manager-list-section{flex:1;overflow-y:auto}@media (max-width:600px){#${UI_ID}{top:0;left:0;transform:none;width:100%;height:100vh;max-width:none;max-height:none;border-radius:0;padding:10px;box-shadow:none;display:flex;flex-direction:column}#${UI_ID} h4{font-size:18px;text-align:center;padding:12px 0;margin:0;border-bottom:2px solid #f0d8b6}#${UI_ID} #preset-manager-close{top:10px;right:10px;font-size:28px}#${UI_ID} #preset-manager-save-section{flex-wrap:wrap}#${UI_ID} #preset-manager-name-input{width:100%;margin-left:0;margin-bottom:10px}}
@@ -57,34 +57,34 @@ export function createUI(): void {
             <div id="preset-manager-tips-section"></div>
         </div>
     `);
-    $('body').append(uiContainer);
-    $('body').append('<input type="file" id="preset-manager-import-file" accept=".json" style="display:none;">');
-    
-    $(`#${UI_ID}`).hide();
+  $('body').append(uiContainer);
+  $('body').append('<input type="file" id="preset-manager-import-file" accept=".json" style="display:none;">');
 
-    // 绑定事件处理器
-    bindUIEvents();
+  $(`#${UI_ID}`).hide();
+
+  // 绑定事件处理器
+  bindUIEvents();
 }
 
 function bindUIEvents(): void {
-    $('#preset-manager-close').on('click', toggleUI);
-    $('#preset-manager-help-btn').on('click', showHelpPopup);
-    $('#preset-manager-save-btn').on('click', saveCurrentConfig);
-    $('#preset-manager-import-btn').on('click', () => $('#preset-manager-import-file').click());
-    $('#preset-manager-batch-export-btn').on('click', showBatchExportPopup);
-    $('#preset-manager-batch-delete-btn').on('click', showBatchDeletePopup);
-    $('#preset-manager-grouping-btn').on('click', showPromptGroupingUI);
-    $('#preset-manager-import-file').on('change', handleFileImport);
+  $('#preset-manager-close').on('click', toggleUI);
+  $('#preset-manager-help-btn').on('click', showHelpPopup);
+  $('#preset-manager-save-btn').on('click', saveCurrentConfig);
+  $('#preset-manager-import-btn').on('click', () => $('#preset-manager-import-file').click());
+  $('#preset-manager-batch-export-btn').on('click', showBatchExportPopup);
+  $('#preset-manager-batch-delete-btn').on('click', showBatchDeletePopup);
+  $('#preset-manager-grouping-btn').on('click', showPromptGroupingUI);
+  $('#preset-manager-import-file').on('change', handleFileImport);
 }
 
 export function toggleUI(): void {
-    const ui = $(`#${UI_ID}`);
-    if (ui.is(':visible')) {
-        ui.fadeOut();
-    } else {
-        renderConfigsList();
-        const randomTip = TIPS[Math.floor(Math.random() * TIPS.length)];
-        $('#preset-manager-tips-section').text('小贴士：' + randomTip);
-        ui.fadeIn();
-    }
+  const ui = $(`#${UI_ID}`);
+  if (ui.is(':visible')) {
+    ui.fadeOut();
+  } else {
+    renderConfigsList();
+    const randomTip = TIPS[Math.floor(Math.random() * TIPS.length)];
+    $('#preset-manager-tips-section').text('小贴士：' + randomTip);
+    ui.fadeIn();
+  }
 }
