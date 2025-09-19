@@ -1,0 +1,226 @@
+<head><script type="module">/******/ var __webpack_modules__ = ({
+
+/***/ 341:
+/***/ ((__unused_webpack_module, exports) => {
+
+var __webpack_unused_export__;
+
+__webpack_unused_export__ = ({ value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.A = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
+
+
+/***/ }),
+
+/***/ 495:
+/***/ (() => {
+
+
+// 在界面加载好后执行某个函数
+// 注意: 必须使用 `$()` 而不是 `document.addEventListener('DOMContentLoaded'`, 后者会让实时修改失效
+$(() => {
+    toastr.success('你已经成功加载界面!', '恭喜你!');
+});
+// 在界面卸载时执行某个函数
+$(window).on('pagehide', () => {
+    toastr.info('你已经卸载界面!', '再见!');
+});
+
+
+/***/ })
+
+/******/ });
+/************************************************************************/
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __webpack_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
+/******/ 	}
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
+/************************************************************************/
+var __webpack_exports__ = {};
+
+// EXTERNAL MODULE: ./src/界面示例/加载和卸载时执行函数.ts
+var _ = __webpack_require__(495);
+;// external "Vue"
+const external_Vue_namespaceObject = Vue;
+;// external "VueRouter"
+const external_VueRouter_namespaceObject = VueRouter;
+;// ./node_modules/.pnpm/vue-loader@17.4.2_vue@3.5.21_typescript@6.0.0-dev.20250807__webpack@5.101.3/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.5.21_typescript@6.0.0-dev.20250807__webpack@5.101.3/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/界面示例/app.vue?vue&type=template&id=5c647b98
+
+
+function render(_ctx, _cache) {
+  const _component_RouterView = (0,external_Vue_namespaceObject.resolveComponent)("RouterView")
+
+  return ((0,external_Vue_namespaceObject.openBlock)(), (0,external_Vue_namespaceObject.createBlock)(_component_RouterView))
+}
+;// ./src/界面示例/app.vue?vue&type=template&id=5c647b98
+
+// EXTERNAL MODULE: ./node_modules/.pnpm/vue-loader@17.4.2_vue@3.5.21_typescript@6.0.0-dev.20250807__webpack@5.101.3/node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __webpack_require__(341);
+;// ./src/界面示例/app.vue
+
+const script = {}
+
+;
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(script, [['render',render]])
+
+/* harmony default export */ const app = (__exports__);
+;// ./node_modules/.pnpm/ts-loader@9.5.4_typescript@6.0.0-dev.20250807_webpack@5.101.3/node_modules/ts-loader/index.js??clonedRuleSet-28!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.5.21_typescript@6.0.0-dev.20250807__webpack@5.101.3/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/界面示例/日记.vue?vue&type=script&setup=true&lang=ts
+
+
+const _hoisted_1 = { class: "message-content font-bold underline" };
+
+/* harmony default export */ const _vue_type_script_setup_true_lang_ts = (/*@__PURE__*/(0,external_Vue_namespaceObject.defineComponent)({
+    __name: '日记',
+    setup(__props) {
+        const display_text = (0,external_Vue_namespaceObject.ref)('');
+        function captureDisplayText() {
+            // 通过 substitudeMacros 我们可以解析酒馆宏
+            const character_name = substitudeMacros('{{char}}');
+            // 通过 getCurrentMessageId 我们可以获取界面所在的楼层号
+            const message_id = getCurrentMessageId();
+            // 通过 getChatMessages 我们可以获取楼层内容
+            const chat_message = getChatMessages(message_id)[0];
+            // 我们可以从楼层的消息中通过正则提取出对话内容, 由于这是在代码中做, 相比起直接用酒馆正则会更加方便: 我们完全可以用其他代码对文本进行更多处理
+            const dialogue = chat_message.message.match(/\[查看日记[:：]\s*(.+)\]/)?.[1] ?? '';
+            const text = `${character_name}: ${dialogue}`;
+            display_text.value = text;
+        }
+        (0,external_Vue_namespaceObject.onMounted)(() => {
+            captureDisplayText();
+        });
+        return (_ctx, _cache) => {
+            return ((0,external_Vue_namespaceObject.openBlock)(), (0,external_Vue_namespaceObject.createElementBlock)("div", {
+                class: "clickdiv",
+                tabindex: "1",
+                onClick: _cache[0] || (_cache[0] = ($event) => (_ctx.$router.push('/选择框')))
+            }, [
+                (0,external_Vue_namespaceObject.createElementVNode)("span", _hoisted_1, (0,external_Vue_namespaceObject.toDisplayString)(display_text.value), 1 /* TEXT */)
+            ]));
+        };
+    }
+}));
+
+;// ./src/界面示例/日记.vue?vue&type=script&setup=true&lang=ts
+ 
+;// ./src/界面示例/日记.vue
+
+
+
+;
+
+
+const _exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(_vue_type_script_setup_true_lang_ts, [['__scopeId',"data-v-f3f8c726"]])
+
+/* harmony default export */ const src_ = (_exports_);
+;// ./node_modules/.pnpm/ts-loader@9.5.4_typescript@6.0.0-dev.20250807_webpack@5.101.3/node_modules/ts-loader/index.js??clonedRuleSet-28!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.5.21_typescript@6.0.0-dev.20250807__webpack@5.101.3/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[4].use[0]!./src/界面示例/选择框.vue?vue&type=script&setup=true&lang=ts
+
+
+const _vue_type_script_setup_true_lang_ts_hoisted_1 = { class: "roleplay_options" };
+const _hoisted_2 = { class: "roleplay_options_back" };
+const _hoisted_3 = ["onClick"];
+const _hoisted_4 = { class: "roleplay_options_title" };
+const _hoisted_5 = { class: "roleplay_options_content" };
+
+/* harmony default export */ const dist_ruleSet_1_rules_4_use_0_src_vue_type_script_setup_true_lang_ts = (/*@__PURE__*/(0,external_Vue_namespaceObject.defineComponent)({
+    __name: '选择框',
+    setup(__props) {
+        const items = (0,external_Vue_namespaceObject.ref)([]);
+        function extract_items() {
+            const chat_message = getChatMessages(getCurrentMessageId())[0];
+            const text = chat_message.message.match(/<roleplay_options>(.*?)<\/roleplay_options>/s)?.[1] ?? '';
+            const item_matches = [...text.matchAll(/(.+?)[:：]\s*(.+)/gm)];
+            return item_matches.map(match => ({
+                title: match[1],
+                content: match[2].replace(/^\$\{(.+)\}$/, '$1').replace(/^「(.+)」$/, '$1'),
+            }));
+        }
+        (0,external_Vue_namespaceObject.onMounted)(() => {
+            items.value = extract_items();
+        });
+        async function handle_item_click(item) {
+            await createChatMessages([{ role: 'user', message: item.content }]);
+            triggerSlash('/trigger');
+        }
+        return (_ctx, _cache) => {
+            return ((0,external_Vue_namespaceObject.openBlock)(), (0,external_Vue_namespaceObject.createElementBlock)("div", _vue_type_script_setup_true_lang_ts_hoisted_1, [
+                (0,external_Vue_namespaceObject.createElementVNode)("div", _hoisted_2, [
+                    ((0,external_Vue_namespaceObject.openBlock)(true), (0,external_Vue_namespaceObject.createElementBlock)(external_Vue_namespaceObject.Fragment, null, (0,external_Vue_namespaceObject.renderList)(items.value, (item) => {
+                        return ((0,external_Vue_namespaceObject.openBlock)(), (0,external_Vue_namespaceObject.createElementBlock)("div", {
+                            key: item.title,
+                            class: "roleplay_options_item",
+                            tabindex: "1",
+                            onClick: ($event) => (handle_item_click(item))
+                        }, [
+                            (0,external_Vue_namespaceObject.createElementVNode)("span", _hoisted_4, [
+                                (0,external_Vue_namespaceObject.createElementVNode)("strong", null, (0,external_Vue_namespaceObject.toDisplayString)(item.title), 1 /* TEXT */)
+                            ]),
+                            _cache[0] || (_cache[0] = (0,external_Vue_namespaceObject.createElementVNode)("hr", { class: "roleplay_options_hr" }, null, -1 /* CACHED */)),
+                            (0,external_Vue_namespaceObject.createElementVNode)("span", _hoisted_5, (0,external_Vue_namespaceObject.toDisplayString)(item.content), 1 /* TEXT */)
+                        ], 8 /* PROPS */, _hoisted_3));
+                    }), 128 /* KEYED_FRAGMENT */))
+                ])
+            ]));
+        };
+    }
+}));
+
+;// ./src/界面示例/选择框.vue?vue&type=script&setup=true&lang=ts
+ 
+;// ./src/界面示例/选择框.vue
+
+
+
+;
+
+
+const src_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(dist_ruleSet_1_rules_4_use_0_src_vue_type_script_setup_true_lang_ts, [['__scopeId',"data-v-78e40d88"]])
+
+/* harmony default export */ const src_0 = (src_exports_);
+;// ./src/界面示例/渲染vue界面.ts
+
+
+
+
+
+const router = (0,external_VueRouter_namespaceObject.createRouter)({
+    history: (0,external_VueRouter_namespaceObject.createMemoryHistory)(),
+    routes: [
+        { path: '/日记', component: src_ },
+        { path: '/选择框', component: src_0 },
+    ],
+});
+router.replace('/日记');
+$(() => {
+    (0,external_Vue_namespaceObject.createApp)(app).use(router).mount('#app');
+});
+
+;// ./src/界面示例/index.ts</script><style>body[data-v-f3f8c726]{display:flex;justify-content:center;align-items:center;min-height:100px;margin:0;padding:0;font-family:"Microsoft YaHei",Arial,sans-serif}.message-content[data-v-f3f8c726]{font-size:14px;line-height:1.4;letter-spacing:.7px;color:#7d6b6e;font-weight:bold;text-shadow:0px 1px 1px hsla(0,0%,100%,.5)}.clickdiv[data-v-f3f8c726]{position:relative;margin:10px;max-width:150px;padding:.8em 1.2em;background:linear-gradient(135deg,rgba(255,235,240,0.62),rgba(255,202,215,0.62));border-radius:16px;cursor:pointer;outline:none;border:1px solid hsla(0,0%,100%,.7);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(145,125,138,.15),0 0 0 1px hsla(0,0%,100%,.4) inset,0 -3px 3px hsla(0,0%,100%,.25) inset;backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);transition:all .3s ease;overflow:hidden}.clickdiv[data-v-f3f8c726]:after{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 65%);opacity:.4;pointer-events:none}.clickdiv[data-v-f3f8c726]:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(145,125,138,.2),0 0 0 1px hsla(0,0%,100%,.5) inset,0 -3px 3px hsla(0,0%,100%,.35) inset;background:linear-gradient(135deg,rgba(255,235,240,0.7),rgba(255,202,215,0.7))}.clickdiv[data-v-f3f8c726]:active{transform:translateY(0);box-shadow:0 2px 8px rgba(145,125,138,.15),0 0 0 1px hsla(0,0%,100%,.4) inset}@media (max-width:999px){.clickdiv[data-v-f3f8c726]{padding:.7em 1em;font-size:13px;max-width:240px}}
+.roleplay_options_back[data-v-78e40d88]{background:linear-gradient(160deg,rgba(45,45,45,0.75),rgba(35,35,35,0.85));border-radius:14px;box-shadow:0 10px 28px rgba(0,0,0,.15),0 3px 10px rgba(0,0,0,.12);padding:16px 18px;display:flex;flex-direction:column;gap:10px;border:1px solid hsla(0,0%,100%,.06);max-width:100%;margin:20px 0}.roleplay_options_title[data-v-78e40d88]{font-size:.94em;font-weight:600;color:#f0f0f0;padding-right:12px;letter-spacing:.02em;text-align:left;margin-bottom:4px}.roleplay_options_content[data-v-78e40d88]{font-size:.94em;line-height:1.55;color:#c6c6c6;font-weight:normal;transition:color .25s ease;text-align:left;flex:1;letter-spacing:.015em;overflow-wrap:anywhere}.roleplay_options_content:not(:empty):not(.short-content)~.roleplay_options_title[data-v-78e40d88]{width:100%;margin-bottom:8px;border-bottom:1px solid hsla(0,0%,100%,.08);padding-bottom:6px}.roleplay_options_content.short-content[data-v-78e40d88]{flex:1}.roleplay_options_hr[data-v-78e40d88]{display:none}.roleplay_options_item[data-v-78e40d88]{position:relative;background:rgba(50,50,50,.65);border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:14px 16px;cursor:pointer;border:1px solid hsla(0,0%,100%,.04);transition:all .25s cubic-bezier(0.25,0.8,0.25,1);overflow:hidden;display:flex;flex-wrap:wrap;align-items:flex-start;z-index:1;margin:2px 0;color:#d8d8d8;font-weight:400;line-height:1.5}.roleplay_options_item[data-v-78e40d88]::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(90,90,90,0.06) 0%,transparent 70%);opacity:0;transition:opacity .3s ease;z-index:-1}.roleplay_options_item[data-v-78e40d88]:before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,rgba(160,160,160,0.6),rgba(180,180,180,0.3));transform:scaleY(0);transform-origin:top;transition:transform .3s cubic-bezier(0.4,0,0.2,1)}.roleplay_options_item[data-v-78e40d88]:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15);background:rgba(58,58,58,.75);border-color:rgba(200,200,200,.12)}.roleplay_options_item[data-v-78e40d88]:hover::after{opacity:1}.roleplay_options_item:hover .roleplay_options_content[data-v-78e40d88]{color:#e2e2e2}.roleplay_options_item[data-v-78e40d88]:active{transform:translateY(-1px);box-shadow:0 3px 8px rgba(0,0,0,.12)}.roleplay_options_item[data-v-78e40d88]:hover:before{transform:scaleY(1)}@media (max-width:768px){.roleplay_options_back[data-v-78e40d88]{padding:14px;gap:8px}.roleplay_options_item[data-v-78e40d88]{padding:12px 14px}.roleplay_options_title[data-v-78e40d88]{font-size:.9em;padding-right:10px}.roleplay_options_content[data-v-78e40d88]{font-size:.9em;line-height:1.5}}@media (prefers-reduced-motion:reduce){.roleplay_options_item[data-v-78e40d88]{transition:none}.roleplay_options_item[data-v-78e40d88]::before,.roleplay_options_item[data-v-78e40d88]::after{transition:none}.roleplay_options_content[data-v-78e40d88],.roleplay_options_title[data-v-78e40d88]{transition:none}}
+</style></head><body><div id="app"></div></body>
