@@ -468,27 +468,37 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
   // 分组显示状态
   const enabledStatesHtml = configData.states
     .filter((state: any) => state.enabled)
-    .map((state: any) => `<div style="padding: 4px 8px; margin: 2px; background-color: #e8f5e8; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+    .map(
+      (state: any) =>
+        `<div style="padding: 4px 8px; margin: 2px; background-color: #e8f5e8; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`,
+    )
     .join('');
 
   const disabledStatesHtml = configData.states
     .filter((state: any) => !state.enabled)
-    .map((state: any) => `<div style="padding: 4px 8px; margin: 2px; background-color: #ffebee; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+    .map(
+      (state: any) =>
+        `<div style="padding: 4px 8px; margin: 2px; background-color: #ffebee; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`,
+    )
     .join('');
 
   // 正则绑定信息
-  const regexInfo = configData.regexStates && configData.regexStates.length > 0 
-    ? `<div style="margin-top: 15px;">
+  const regexInfo =
+    configData.regexStates && configData.regexStates.length > 0
+      ? `<div style="margin-top: 15px;">
          <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
          <div style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
-           ${configData.regexStates.map((regex: any) => 
-             `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+           ${configData.regexStates
+             .map(
+               (regex: any) =>
+                 `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
                 ${$('<div/>').text(regex.scriptName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
-              </div>`
-           ).join('')}
+              </div>`,
+             )
+             .join('')}
          </div>
        </div>`
-    : '';
+      : '';
 
   const popupHtml = `
     <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
@@ -524,23 +534,31 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
             </div>
           </div>
 
-          ${enabledStates > 0 ? `
+          ${
+            enabledStates > 0
+              ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">启用的条目 (${enabledStates}个)</h5>
             <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${enabledStatesHtml}
             </div>
           </div>
-          ` : ''}
+          `
+              : ''
+          }
 
-          ${disabledStates > 0 ? `
+          ${
+            disabledStates > 0
+              ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">禁用的条目 (${disabledStates}个)</h5>
             <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${disabledStatesHtml}
             </div>
           </div>
-          ` : ''}
+          `
+              : ''
+          }
 
           ${regexInfo}
         </div>
