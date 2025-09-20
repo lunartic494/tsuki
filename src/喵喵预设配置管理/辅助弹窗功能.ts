@@ -457,6 +457,14 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
     return;
   }
 
+  // 获取所有正则信息，用于显示名称
+  let allRegexes: any[] = [];
+  try {
+    allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+  } catch (error) {
+    console.warn('获取正则信息失败:', error);
+  }
+
   const popupId = 'preset-manager-view-config-popup';
   $(`#${popupId}`).remove();
 
@@ -487,13 +495,17 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
     configData.regexStates && configData.regexStates.length > 0
       ? `<div style="margin-top: 15px;">
          <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
-         <div style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+         <div class="item-list" style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
            ${configData.regexStates
              .map(
-               (regex: any) =>
-                 `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
-                ${$('<div/>').text(regex.scriptName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
-              </div>`,
+               (regex: any) => {
+                 // 从所有正则中查找对应的正则信息
+                 const fullRegexInfo = allRegexes.find(r => r.id === regex.id);
+                 const regexName = fullRegexInfo?.script_name || fullRegexInfo?.scriptName || regex.scriptName || regex.script_name || regex.name || `正则ID: ${regex.id}`;
+                 return `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+                ${$('<div/>').text(regexName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
+              </div>`;
+               }
              )
              .join('')}
          </div>
@@ -518,16 +530,16 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
 
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">条目状态统计</h5>
-            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-              <div style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+            <div class="stats-container" style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <div class="stats-item" style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #2e7d32;">启用</div>
                 <div style="font-size: 18px; font-weight: bold;">${enabledStates}</div>
               </div>
-              <div style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+              <div class="stats-item" style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #c62828;">禁用</div>
                 <div style="font-size: 18px; font-weight: bold;">${disabledStates}</div>
               </div>
-              <div style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+              <div class="stats-item" style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #546e7a;">总计</div>
                 <div style="font-size: 18px; font-weight: bold;">${totalStates}</div>
               </div>
@@ -539,7 +551,7 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
               ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">启用的条目 (${enabledStates}个)</h5>
-            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${enabledStatesHtml}
             </div>
           </div>
@@ -552,7 +564,7 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
               ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">禁用的条目 (${disabledStates}个)</h5>
-            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${disabledStatesHtml}
             </div>
           </div>
@@ -586,6 +598,69 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
   });
 
   // 移动端样式
-  const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 90vh !important; } }</style>`;
+  const mobileStyles = `<style>
+    @media (max-width: 600px) { 
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 10px;
+      } 
+      #${popupId} > div { 
+        margin-top: 5vh; 
+        max-height: 90vh !important; 
+        width: 95% !important;
+        padding: 15px;
+        border-radius: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+      }
+      #${popupId} h5 {
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+      }
+      #${popupId} button {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+        min-height: 44px;
+      }
+      #${popupId} .stats-container {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+      #${popupId} .stats-item {
+        flex: none !important;
+        padding: 12px !important;
+      }
+      #${popupId} .item-list {
+        max-height: 120px !important;
+        font-size: 13px !important;
+      }
+      #${popupId} .item-list div {
+        padding: 6px 10px !important;
+        margin: 3px !important;
+        font-size: 12px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        margin-top: 2vh !important;
+        max-height: 96vh !important;
+        padding: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+      }
+      #${popupId} .stats-item {
+        padding: 10px !important;
+      }
+      #${popupId} .stats-item div:first-child {
+        font-size: 13px !important;
+      }
+      #${popupId} .stats-item div:last-child {
+        font-size: 16px !important;
+      }
+    }
+  </style>`;
   $(`#${popupId}`).append(mobileStyles);
 }

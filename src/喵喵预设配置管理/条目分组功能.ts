@@ -94,12 +94,12 @@ export async function showPromptGroupingUI(): Promise<void> {
 
       return `
       <div class="prompt-item" data-prompt-id="${prompt.id}" data-index="${index}" 
-           style="display: flex; align-items: center; padding: 8px; border: 1px solid #e0e0e0; margin: 2px 0; border-radius: 4px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'};">
-        <input type="checkbox" class="prompt-checkbox" style="margin-right: 10px; transform: scale(1.2);">
-        <span style="flex: 1; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'};">
+           style="display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 3px 0; border-radius: 6px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'}; min-height: 44px;">
+        <input type="checkbox" class="prompt-checkbox" style="margin-right: 12px; transform: scale(1.3); flex-shrink: 0;">
+        <span style="flex: 1; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 14px; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word;">
           ${$('<div/>').text(prompt.name).html()}
         </span>
-        ${isInGroup ? `<span style="font-size: 12px; color: #4CAF50; background: #e8f5e8; padding: 2px 6px; border-radius: 3px;">${groupName}</span>` : ''}
+        ${isInGroup ? `<span style="font-size: 11px; color: #4CAF50; background: #e8f5e8; padding: 3px 8px; border-radius: 4px; margin-left: 8px; flex-shrink: 0; white-space: nowrap;">${groupName}</span>` : ''}
       </div>
     `;
     })
@@ -110,34 +110,36 @@ export async function showPromptGroupingUI(): Promise<void> {
       <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
         <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">预设条目分组管理</h4>
         
-        <div style="margin: 15px 0; display: flex; gap: 10px; align-items: center;">
-          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="flex: 1; padding: 6px 10px; border: 1px solid #d4b58b; border-radius: 4px; background: #fff; color: #333;">
-          <button id="create-group-btn" style="padding: 6px 12px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">创建分组</button>
-          <button id="remove-group-btn" style="padding: 6px 12px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">移除分组</button>
-          <button id="clear-all-groups-btn" style="padding: 6px 12px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">清除所有</button>
+        <div style="margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <button id="create-group-btn" style="padding: 8px 12px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">创建分组</button>
+            <button id="remove-group-btn" style="padding: 8px 12px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">移除分组</button>
+            <button id="clear-all-groups-btn" style="padding: 8px 12px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">清除所有</button>
+          </div>
         </div>
 
-        <div style="margin-bottom: 15px; display: flex; gap: 10px;">
-          <button id="select-all-btn" style="padding: 4px 8px; background-color:#2196F3; border:none; border-radius:4px; color:#fff; cursor:pointer; font-size:12px;">全选</button>
-          <button id="select-none-btn" style="padding: 4px 8px; background-color:#9E9E9E; border:none; border-radius:4px; color:#fff; cursor:pointer; font-size:12px;">全不选</button>
+        <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button id="select-all-btn" style="padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;">全选</button>
+          <button id="select-none-btn" style="padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;">全不选</button>
         </div>
 
-        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 10px; margin-bottom: 15px;">
-          <div style="font-size: 14px; color: #666; margin-bottom: 10px;">提示：选中条目后可以创建分组，分组后的条目会在预设界面中折叠显示</div>
+        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;">提示：选中条目后可以创建分组，分组后的条目会在预设界面中折叠显示</div>
           <div id="prompts-container">
             ${promptsHtml}
           </div>
         </div>
 
-        <div style="margin-bottom: 15px; padding: 10px; background-color: #f0f8ff; border-radius: 6px; border-left: 4px solid #2196F3;">
-          <div style="font-size: 13px; color: #1976D2; font-weight: bold; margin-bottom: 5px;">💡 分组说明</div>
-          <div style="font-size: 12px; color: #424242;">分组设置直接应用到预设界面，会自动保存到浏览器本地存储中，与预设绑定。</div>
+        <div style="margin-bottom: 15px; padding: 12px; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid #2196F3;">
+          <div style="font-size: 13px; color: #1976D2; font-weight: bold; margin-bottom: 6px;">💡 分组说明</div>
+          <div style="font-size: 12px; color: #424242; line-height: 1.4;">分组设置直接应用到预设界面，会自动保存到浏览器本地存储中，与预设绑定。</div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div id="existing-groups-info" style="font-size: 12px; color: #666;"></div>
-          <div style="display: flex; gap: 10px;">
-            <button id="grouping-close" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">关闭</button>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;">
+          <div id="existing-groups-info" style="font-size: 12px; color: #666; flex: 1; min-width: 200px; word-wrap: break-word;"></div>
+          <div style="display: flex; gap: 8px; flex-shrink: 0;">
+            <button id="grouping-close" style="padding: 10px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c; font-size: 14px;">关闭</button>
           </div>
         </div>
       </div>
@@ -153,7 +155,57 @@ export async function showPromptGroupingUI(): Promise<void> {
   bindGroupingEvents(prompts, existingGroups);
 
   // 移动端样式
-  const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 90vh !important; } }</style>`;
+  const mobileStyles = `<style>
+    @media (max-width: 600px) { 
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 10px;
+      } 
+      #${popupId} > div { 
+        margin-top: 5vh; 
+        max-height: 90vh !important; 
+        width: 95% !important;
+        padding: 15px;
+        border-radius: 12px;
+      }
+      #${popupId} .prompt-item {
+        padding: 12px !important;
+        min-height: 48px !important;
+      }
+      #${popupId} .prompt-checkbox {
+        transform: scale(1.4) !important;
+        margin-right: 15px !important;
+      }
+      #${popupId} input[type="text"] {
+        font-size: 16px !important;
+        padding: 10px 14px !important;
+      }
+      #${popupId} button {
+        font-size: 14px !important;
+        padding: 10px 14px !important;
+        min-height: 44px;
+      }
+      #${popupId} #existing-groups-info {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        margin-top: 2vh !important;
+        max-height: 96vh !important;
+        padding: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+      }
+      #${popupId} .prompt-item {
+        padding: 14px !important;
+        min-height: 52px !important;
+      }
+    }
+  </style>`;
   $(`#${popupId}`).append(mobileStyles);
 }
 

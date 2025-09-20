@@ -1018,6 +1018,14 @@ async function showViewConfigPopup(configId) {
         toastr.error('配置不存在');
         return;
     }
+    // 获取所有正则信息，用于显示名称
+    let allRegexes = [];
+    try {
+        allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+    }
+    catch (error) {
+        console.warn('获取正则信息失败:', error);
+    }
     const popupId = 'preset-manager-view-config-popup';
     $(`#${popupId}`).remove();
     // 统计配置信息
@@ -1037,11 +1045,16 @@ async function showViewConfigPopup(configId) {
     const regexInfo = configData.regexStates && configData.regexStates.length > 0
         ? `<div style="margin-top: 15px;">
          <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
-         <div style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+         <div class="item-list" style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
            ${configData.regexStates
-            .map((regex) => `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
-                ${$('<div/>').text(regex.scriptName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
-              </div>`)
+            .map((regex) => {
+            // 从所有正则中查找对应的正则信息
+            const fullRegexInfo = allRegexes.find(r => r.id === regex.id);
+            const regexName = fullRegexInfo?.script_name || fullRegexInfo?.scriptName || regex.scriptName || regex.script_name || regex.name || `正则ID: ${regex.id}`;
+            return `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+                ${$('<div/>').text(regexName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
+              </div>`;
+        })
             .join('')}
          </div>
        </div>`
@@ -1064,16 +1077,16 @@ async function showViewConfigPopup(configId) {
 
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">条目状态统计</h5>
-            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-              <div style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+            <div class="stats-container" style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <div class="stats-item" style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #2e7d32;">启用</div>
                 <div style="font-size: 18px; font-weight: bold;">${enabledStates}</div>
               </div>
-              <div style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+              <div class="stats-item" style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #c62828;">禁用</div>
                 <div style="font-size: 18px; font-weight: bold;">${disabledStates}</div>
               </div>
-              <div style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+              <div class="stats-item" style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
                 <div style="font-weight: bold; color: #546e7a;">总计</div>
                 <div style="font-size: 18px; font-weight: bold;">${totalStates}</div>
               </div>
@@ -1084,7 +1097,7 @@ async function showViewConfigPopup(configId) {
         ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">启用的条目 (${enabledStates}个)</h5>
-            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${enabledStatesHtml}
             </div>
           </div>
@@ -1095,7 +1108,7 @@ async function showViewConfigPopup(configId) {
         ? `
           <div style="margin-bottom: 15px;">
             <h5 style="color: #6a4226; margin-bottom: 8px;">禁用的条目 (${disabledStates}个)</h5>
-            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
               ${disabledStatesHtml}
             </div>
           </div>
@@ -1124,7 +1137,70 @@ async function showViewConfigPopup(configId) {
         await loadConfig(configId);
     });
     // 移动端样式
-    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 90vh !important; } }</style>`;
+    const mobileStyles = `<style>
+    @media (max-width: 600px) { 
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 10px;
+      } 
+      #${popupId} > div { 
+        margin-top: 5vh; 
+        max-height: 90vh !important; 
+        width: 95% !important;
+        padding: 15px;
+        border-radius: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+      }
+      #${popupId} h5 {
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+      }
+      #${popupId} button {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+        min-height: 44px;
+      }
+      #${popupId} .stats-container {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+      #${popupId} .stats-item {
+        flex: none !important;
+        padding: 12px !important;
+      }
+      #${popupId} .item-list {
+        max-height: 120px !important;
+        font-size: 13px !important;
+      }
+      #${popupId} .item-list div {
+        padding: 6px 10px !important;
+        margin: 3px !important;
+        font-size: 12px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        margin-top: 2vh !important;
+        max-height: 96vh !important;
+        padding: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+      }
+      #${popupId} .stats-item {
+        padding: 10px !important;
+      }
+      #${popupId} .stats-item div:first-child {
+        font-size: 13px !important;
+      }
+      #${popupId} .stats-item div:last-child {
+        font-size: 16px !important;
+      }
+    }
+  </style>`;
     $(`#${popupId}`).append(mobileStyles);
 }
 
@@ -1219,12 +1295,12 @@ async function showPromptGroupingUI() {
         const groupName = existingGroups.find(group => group.promptIds.includes(prompt.id))?.name || '';
         return `
       <div class="prompt-item" data-prompt-id="${prompt.id}" data-index="${index}" 
-           style="display: flex; align-items: center; padding: 8px; border: 1px solid #e0e0e0; margin: 2px 0; border-radius: 4px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'};">
-        <input type="checkbox" class="prompt-checkbox" style="margin-right: 10px; transform: scale(1.2);">
-        <span style="flex: 1; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'};">
+           style="display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 3px 0; border-radius: 6px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'}; min-height: 44px;">
+        <input type="checkbox" class="prompt-checkbox" style="margin-right: 12px; transform: scale(1.3); flex-shrink: 0;">
+        <span style="flex: 1; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 14px; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word;">
           ${$('<div/>').text(prompt.name).html()}
         </span>
-        ${isInGroup ? `<span style="font-size: 12px; color: #4CAF50; background: #e8f5e8; padding: 2px 6px; border-radius: 3px;">${groupName}</span>` : ''}
+        ${isInGroup ? `<span style="font-size: 11px; color: #4CAF50; background: #e8f5e8; padding: 3px 8px; border-radius: 4px; margin-left: 8px; flex-shrink: 0; white-space: nowrap;">${groupName}</span>` : ''}
       </div>
     `;
     })
@@ -1234,34 +1310,36 @@ async function showPromptGroupingUI() {
       <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
         <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">预设条目分组管理</h4>
         
-        <div style="margin: 15px 0; display: flex; gap: 10px; align-items: center;">
-          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="flex: 1; padding: 6px 10px; border: 1px solid #d4b58b; border-radius: 4px; background: #fff; color: #333;">
-          <button id="create-group-btn" style="padding: 6px 12px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">创建分组</button>
-          <button id="remove-group-btn" style="padding: 6px 12px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">移除分组</button>
-          <button id="clear-all-groups-btn" style="padding: 6px 12px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">清除所有</button>
+        <div style="margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <button id="create-group-btn" style="padding: 8px 12px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">创建分组</button>
+            <button id="remove-group-btn" style="padding: 8px 12px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">移除分组</button>
+            <button id="clear-all-groups-btn" style="padding: 8px 12px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">清除所有</button>
+          </div>
         </div>
 
-        <div style="margin-bottom: 15px; display: flex; gap: 10px;">
-          <button id="select-all-btn" style="padding: 4px 8px; background-color:#2196F3; border:none; border-radius:4px; color:#fff; cursor:pointer; font-size:12px;">全选</button>
-          <button id="select-none-btn" style="padding: 4px 8px; background-color:#9E9E9E; border:none; border-radius:4px; color:#fff; cursor:pointer; font-size:12px;">全不选</button>
+        <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button id="select-all-btn" style="padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;">全选</button>
+          <button id="select-none-btn" style="padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;">全不选</button>
         </div>
 
-        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 10px; margin-bottom: 15px;">
-          <div style="font-size: 14px; color: #666; margin-bottom: 10px;">提示：选中条目后可以创建分组，分组后的条目会在预设界面中折叠显示</div>
+        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;">提示：选中条目后可以创建分组，分组后的条目会在预设界面中折叠显示</div>
           <div id="prompts-container">
             ${promptsHtml}
           </div>
         </div>
 
-        <div style="margin-bottom: 15px; padding: 10px; background-color: #f0f8ff; border-radius: 6px; border-left: 4px solid #2196F3;">
-          <div style="font-size: 13px; color: #1976D2; font-weight: bold; margin-bottom: 5px;">💡 分组说明</div>
-          <div style="font-size: 12px; color: #424242;">分组设置直接应用到预设界面，会自动保存到浏览器本地存储中，与预设绑定。</div>
+        <div style="margin-bottom: 15px; padding: 12px; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid #2196F3;">
+          <div style="font-size: 13px; color: #1976D2; font-weight: bold; margin-bottom: 6px;">💡 分组说明</div>
+          <div style="font-size: 12px; color: #424242; line-height: 1.4;">分组设置直接应用到预设界面，会自动保存到浏览器本地存储中，与预设绑定。</div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div id="existing-groups-info" style="font-size: 12px; color: #666;"></div>
-          <div style="display: flex; gap: 10px;">
-            <button id="grouping-close" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">关闭</button>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;">
+          <div id="existing-groups-info" style="font-size: 12px; color: #666; flex: 1; min-width: 200px; word-wrap: break-word;"></div>
+          <div style="display: flex; gap: 8px; flex-shrink: 0;">
+            <button id="grouping-close" style="padding: 10px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c; font-size: 14px;">关闭</button>
           </div>
         </div>
       </div>
@@ -1273,7 +1351,57 @@ async function showPromptGroupingUI() {
     // 绑定事件
     bindGroupingEvents(prompts, existingGroups);
     // 移动端样式
-    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 90vh !important; } }</style>`;
+    const mobileStyles = `<style>
+    @media (max-width: 600px) { 
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 10px;
+      } 
+      #${popupId} > div { 
+        margin-top: 5vh; 
+        max-height: 90vh !important; 
+        width: 95% !important;
+        padding: 15px;
+        border-radius: 12px;
+      }
+      #${popupId} .prompt-item {
+        padding: 12px !important;
+        min-height: 48px !important;
+      }
+      #${popupId} .prompt-checkbox {
+        transform: scale(1.4) !important;
+        margin-right: 15px !important;
+      }
+      #${popupId} input[type="text"] {
+        font-size: 16px !important;
+        padding: 10px 14px !important;
+      }
+      #${popupId} button {
+        font-size: 14px !important;
+        padding: 10px 14px !important;
+        min-height: 44px;
+      }
+      #${popupId} #existing-groups-info {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        margin-top: 2vh !important;
+        max-height: 96vh !important;
+        padding: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+      }
+      #${popupId} .prompt-item {
+        padding: 14px !important;
+        min-height: 52px !important;
+      }
+    }
+  </style>`;
     $(`#${popupId}`).append(mobileStyles);
 }
 function updateExistingGroupsInfo(groups) {
