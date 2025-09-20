@@ -497,20 +497,16 @@ export async function showViewConfigPopup(configId: string): Promise<void> {
          <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
          <div class="item-list" style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
            ${configData.regexStates
-             .map((regex: any) => {
-               // 从所有正则中查找对应的正则信息
-               const fullRegexInfo = allRegexes.find(r => r.id === regex.id);
-               const regexName =
-                 fullRegexInfo?.script_name ||
-                 fullRegexInfo?.scriptName ||
-                 regex.scriptName ||
-                 regex.script_name ||
-                 regex.name ||
-                 `正则ID: ${regex.id}`;
-               return `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+             .map(
+               (regex: any) => {
+                 // 从所有正则中查找对应的正则信息
+                 const fullRegexInfo = allRegexes.find(r => r.id === regex.id);
+                 const regexName = fullRegexInfo?.script_name || fullRegexInfo?.scriptName || regex.scriptName || regex.script_name || regex.name || `正则ID: ${regex.id}`;
+                 return `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
                 ${$('<div/>').text(regexName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
               </div>`;
-             })
+               }
+             )
              .join('')}
          </div>
        </div>`
