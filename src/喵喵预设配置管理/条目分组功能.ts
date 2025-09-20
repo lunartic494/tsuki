@@ -112,10 +112,10 @@ export async function showPromptGroupingUI(): Promise<void> {
         
         <div style="margin: 15px 0;">
           <input type="text" id="group-name-input" placeholder="输入分组名称..." style="width: 100%; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 10px;">
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
-            <button id="create-group-btn" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px;">创建分组</button>
-            <button id="remove-group-btn" style="padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px;">移除分组</button>
-            <button id="clear-all-groups-btn" style="padding: 8px 16px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px;">清除所有</button>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; width: 100%; box-sizing: border-box;">
+            <button id="create-group-btn" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;">创建分组</button>
+            <button id="remove-group-btn" style="padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;">移除分组</button>
+            <button id="clear-all-groups-btn" style="padding: 8px 16px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;">清除所有</button>
           </div>
         </div>
 
@@ -188,8 +188,10 @@ export async function showPromptGroupingUI(): Promise<void> {
       }
       #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {
         flex: 1 !important;
-        min-width: 80px !important;
+        min-width: 60px !important;
         margin: 2px !important;
+        font-size: 12px !important;
+        padding: 8px 6px !important;
       }
       #${popupId} #existing-groups-info {
         font-size: 11px !important;
@@ -209,6 +211,22 @@ export async function showPromptGroupingUI(): Promise<void> {
       #${popupId} .prompt-item {
         padding: 14px !important;
         min-height: 52px !important;
+      }
+      #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {
+        min-width: 50px !important;
+        font-size: 11px !important;
+        padding: 6px 4px !important;
+        margin: 1px !important;
+      }
+    }
+    @media (max-width: 360px) {
+      #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {
+        flex: none !important;
+        width: calc(33.333% - 4px) !important;
+        min-width: 45px !important;
+        font-size: 10px !important;
+        padding: 4px 2px !important;
+        margin: 1px !important;
       }
     }
   </style>`;
