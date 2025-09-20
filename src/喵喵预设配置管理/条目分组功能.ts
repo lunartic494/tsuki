@@ -261,10 +261,12 @@ function bindGroupingEvents(
     $('.prompt-checkbox').prop('checked', false);
     selectedPrompts = [];
 
-    // 直接应用分组到预设界面
-    applyGroupingToPreset(existingGroups);
+    // 只保存分组配置，不立即应用（避免在分组界面打开时应用）
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    const validGroups = existingGroups.filter(g => g.promptIds.length > 0);
+    savePresetGrouping(currentPresetName, validGroups);
 
-    toastr.success(`分组 "${groupName}" 创建成功并已应用`);
+    toastr.success(`分组 "${groupName}" 创建成功，将在关闭分组界面时应用`);
   });
 
   // 移除分组
@@ -297,10 +299,12 @@ function bindGroupingEvents(
     $('.prompt-checkbox').prop('checked', false);
     selectedPrompts = [];
 
-    // 直接应用分组到预设界面
-    applyGroupingToPreset(existingGroups);
+    // 只保存分组配置，不立即应用
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    const validGroups = existingGroups.filter(g => g.promptIds.length > 0);
+    savePresetGrouping(currentPresetName, validGroups);
 
-    toastr.success('已移除选中条目的分组并应用');
+    toastr.success('已移除选中条目的分组，将在关闭分组界面时应用');
   });
 
   // 清除所有分组
@@ -327,10 +331,12 @@ function bindGroupingEvents(
       $('.prompt-checkbox').prop('checked', false);
       selectedPrompts = [];
 
-      // 直接应用清空的分组到预设界面
-      applyGroupingToPreset(existingGroups);
+      // 只保存分组配置，不立即应用
+      const currentPresetName = TavernHelper.getLoadedPresetName();
+      const validGroups = existingGroups.filter(g => g.promptIds.length > 0);
+      savePresetGrouping(currentPresetName, validGroups);
 
-      toastr.success('已清除所有分组并应用');
+      toastr.success('已清除所有分组，将在关闭分组界面时应用');
     }
   });
 
@@ -371,13 +377,25 @@ function applyGroupingToPreset(groups: PromptGroup[]): void {
 function applyGroupingToDOM(groups: PromptGroup[]): void {
   console.log('开始应用分组到DOM，分组数量:', groups.length);
 
+  // 检查是否有预设条目存在
+  const promptElements = $('.completion_prompt_manager_prompt');
+  if (promptElements.length === 0) {
+    console.warn('未找到预设条目，无法应用分组');
+    return;
+  }
+
+  console.log('找到预设条目数量:', promptElements.length);
+
+  // 先确保所有条目都从分组容器中移出，然后再移除分组容器
+  $('.prompt-group-container').each(function () {
+    const container = $(this);
+    const prompts = container.find('.completion_prompt_manager_prompt');
+    // 将条目移动到分组容器之前
+    container.before(prompts);
+  });
+
   // 移除现有的分组容器
   $('.prompt-group-container').remove();
-
-  // 确保所有条目都从分组容器中移出
-  $('.prompt-group-container .completion_prompt_manager_prompt').each(function () {
-    $(this).insertAfter($('.completion_prompt_manager_prompt').last());
-  });
 
   groups.forEach(group => {
     if (group.promptIds.length === 0) return;
@@ -417,12 +435,25 @@ function applyGroupingToDOM(groups: PromptGroup[]): void {
 
     // 将分组中的所有条目移动到分组容器中
     group.promptIds.forEach(promptId => {
-      const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+      // 尝试多种选择器来查找条目
+      let promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+      
+      // 如果没找到，尝试在子元素中查找
+      if (promptElement.length === 0) {
+        promptElement = $(`.completion_prompt_manager_prompt`).filter(function() {
+          return $(this).data('pm-identifier') === promptId || 
+                 $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId;
+        });
+      }
+      
       if (promptElement.length > 0) {
         groupContainer.find('.prompt-group-content').append(promptElement);
         console.log('移动条目到分组容器:', promptId);
       } else {
-        console.log('未找到条目:', promptId);
+        console.warn('未找到条目:', promptId, '当前所有条目ID:', 
+          $('.completion_prompt_manager_prompt').map(function() {
+            return $(this).data('pm-identifier') || $(this).find('[data-pm-identifier]').data('pm-identifier');
+          }).get());
       }
     });
 
