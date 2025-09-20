@@ -1,10 +1,10 @@
-import { UI_ID, TIPS } from './初始化和配置';
-import { showHelpPopup } from './辅助弹窗功能';
-import { saveCurrentConfig } from './配置操作功能';
+import { TIPS, UI_ID } from './初始化和配置';
 import { handleFileImport } from './导入导出功能';
-import { showBatchExportPopup, showBatchDeletePopup } from './批量操作功能';
+import { showBatchDeletePopup, showBatchExportPopup } from './批量操作功能';
 import { showPromptGroupingUI } from './条目分组功能';
+import { showHelpPopup } from './辅助弹窗功能';
 import { renderConfigsList } from './配置存储和读取';
+import { saveCurrentConfig } from './配置操作功能';
 
 export function createUI(): void {
   if ($(`#${UI_ID}`).length > 0) return;
@@ -33,19 +33,21 @@ export function createUI(): void {
                     <input type="text" id="preset-manager-name-input" placeholder="例如：仅破限" style="flex:1; min-width: 100px; margin-left: 10px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 6px 8px; border-radius: 6px; font-size:14px;" />
                     <button id="preset-manager-save-btn" style="margin-left: 10px; padding:6px 12px; background-color:#f4c78e; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">保存</button>
                 </div>
-                <div style="margin-top: 10px; display:flex; flex-wrap: wrap; gap: 10px; align-items:center;">
+                <div style="margin-top: 10px; display:flex; align-items:center; padding-left: 5px;">
+                   <label for="preset-manager-bind-char" style="cursor:pointer;">绑定到当前角色</label>
+                   <label class="pm-switch" style="margin-left: auto;">
+                      <input type="checkbox" id="preset-manager-bind-char"/>
+                      <span class="pm-slider"></span>
+                   </label>
+                </div>
+                <!-- 分割线 -->
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e0c9a6; opacity: 0.6;">
+                <div style="display:flex; flex-wrap: wrap; gap: 10px; align-items:center;">
+                    <button id="preset-manager-help-btn" style="padding:6px 12px; background-color:#bcaaa4; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">使用说明</button>
                     <button id="preset-manager-import-btn" style="padding:6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">导入</button>
                     <button id="preset-manager-batch-export-btn" style="padding:6px 12px; background-color:#81c784; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">批量导出</button>
                     <button id="preset-manager-batch-delete-btn" style="padding:6px 12px; background-color:#ef9a9a; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">批量删除</button>
-                    <button id="preset-manager-help-btn" style="padding:6px 12px; background-color:#bcaaa4; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">使用说明</button>
                     <button id="preset-manager-grouping-btn" style="padding:6px 12px; background-color:#9c27b0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">条目分组</button>
-                    <div style="width:100%; margin-top:10px; display:flex; align-items:center; padding-left: 5px;">
-                       <label for="preset-manager-bind-char" style="cursor:pointer;">绑定到当前角色</label>
-                       <label class="pm-switch" style="margin-left: auto;">
-                          <input type="checkbox" id="preset-manager-bind-char"/>
-                          <span class="pm-slider"></span>
-                       </label>
-                    </div>
                 </div>
             </div>
 
@@ -67,14 +69,49 @@ export function createUI(): void {
 }
 
 function bindUIEvents(): void {
-  $('#preset-manager-close').on('click', toggleUI);
-  $('#preset-manager-help-btn').on('click', showHelpPopup);
-  $('#preset-manager-save-btn').on('click', saveCurrentConfig);
-  $('#preset-manager-import-btn').on('click', () => $('#preset-manager-import-file').click());
-  $('#preset-manager-batch-export-btn').on('click', showBatchExportPopup);
-  $('#preset-manager-batch-delete-btn').on('click', showBatchDeletePopup);
-  $('#preset-manager-grouping-btn').on('click', showPromptGroupingUI);
-  $('#preset-manager-import-file').on('change', handleFileImport);
+  console.log('🔗 开始绑定UI事件...');
+
+  $('#preset-manager-close').on('click', () => {
+    console.log('🖱️ 关闭按钮被点击');
+    toggleUI();
+  });
+
+  $('#preset-manager-help-btn').on('click', () => {
+    console.log('🖱️ 帮助按钮被点击');
+    showHelpPopup();
+  });
+
+  $('#preset-manager-save-btn').on('click', () => {
+    console.log('🖱️ 保存按钮被点击');
+    saveCurrentConfig();
+  });
+
+  $('#preset-manager-import-btn').on('click', () => {
+    console.log('🖱️ 导入按钮被点击');
+    $('#preset-manager-import-file').click();
+  });
+
+  $('#preset-manager-batch-export-btn').on('click', () => {
+    console.log('🖱️ 批量导出按钮被点击');
+    showBatchExportPopup();
+  });
+
+  $('#preset-manager-batch-delete-btn').on('click', () => {
+    console.log('🖱️ 批量删除按钮被点击');
+    showBatchDeletePopup();
+  });
+
+  $('#preset-manager-grouping-btn').on('click', () => {
+    console.log('🖱️ 条目分组按钮被点击');
+    showPromptGroupingUI();
+  });
+
+  $('#preset-manager-import-file').on('change', event => {
+    console.log('🖱️ 文件选择发生变化');
+    handleFileImport(event);
+  });
+
+  console.log('✅ UI事件绑定完成');
 }
 
 export function toggleUI(): void {

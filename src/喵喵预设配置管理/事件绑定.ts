@@ -53,6 +53,11 @@ export function bindConfigListEvents(): void {
         await showRegexBindingPopup(configId);
         break;
       }
+      case 'view-config': {
+        const { showViewConfigPopup } = await import('./辅助弹窗功能');
+        await showViewConfigPopup(configId);
+        break;
+      }
     }
 
     button.closest('.pm-submenu').hide();

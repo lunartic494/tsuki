@@ -166,11 +166,13 @@ export async function handleFileImport(event: any): Promise<void> {
       let configToImport, presetToImport, regexToImport, groupingToImport;
 
       if (parsedContent.type === 'MiaoMiaoPresetBundle') {
+        console.log('检测到整合包文件，版本:', parsedContent.version);
         toastr.info('检测到整合包文件。');
         configToImport = parsedContent.presetConfig;
         presetToImport = parsedContent.presetData;
         regexToImport = parsedContent.regexData;
         groupingToImport = parsedContent.groupingConfig;
+        console.log('分组配置:', groupingToImport);
       } else {
         configToImport = parsedContent;
       }
@@ -195,13 +197,18 @@ export async function handleFileImport(event: any): Promise<void> {
       }
 
       // 处理分组配置导入
-      if (groupingToImport && Array.isArray(groupingToImport)) {
-        const applyGroupingChoice = await triggerSlash(
-          `/popup okButton="是" cancelButton="否" result=true "此文件包含条目分组设置。是否要应用到预设中？"`,
-        );
-        if (applyGroupingChoice === '1' && configToImport.presetName) {
-          importPresetGrouping(configToImport.presetName, groupingToImport as PromptGroup[]);
-          toastr.info('已应用分组设置到预设。');
+      if (groupingToImport && Array.isArray(groupingToImport) && groupingToImport.length > 0) {
+        if (configToImport.presetName) {
+          try {
+            console.log('导入分组配置:', groupingToImport);
+            importPresetGrouping(configToImport.presetName, groupingToImport as PromptGroup[]);
+            toastr.success('已成功导入并应用分组设置到预设。');
+          } catch (error) {
+            console.error('导入分组配置失败:', error);
+            toastr.error('导入分组配置失败：' + (error as Error).message);
+          }
+        } else {
+          console.warn('配置中没有预设名称，无法导入分组配置');
         }
       }
 

@@ -131,6 +131,7 @@ export async function renderConfigsList(): Promise<void> {
                         <div class="pm-more-btn-wrapper">
                             <button name="more-actions" style="background-color:#b0bec5; color:#fff;">更多</button>
                             <div class="pm-submenu">
+                                <button data-id="${configData.id}" name="view-config">查看</button>
                                 <button data-id="${configData.id}" name="update-config">更新</button>
                                 <button data-id="${configData.id}" name="rename-config">重命名</button>
                                 <button data-id="${configData.id}" name="bind-regex">正则</button>

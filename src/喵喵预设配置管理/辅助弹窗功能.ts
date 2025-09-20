@@ -10,7 +10,9 @@ export function showHelpPopup(): void {
             <ul>
                 <li><b>保存/更新配置:</b> 保存或更新当前预设中所有"条目"的启用/禁用状态。更新时可选择是否同步正则状态。</li>
                 <li><b>加载配置:</b> 一键切换到指定的预设并将所有"条目"恢复到已保存的状态。</li>
-                <li><b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身和绑定的正则。</li>
+                <li><b>查看配置:</b> 在"更多"菜单中点击"查看"，可详细查看配置的基本信息、条目状态统计、启用/禁用的具体条目列表和绑定的正则信息。</li>
+                <li><b>条目分组:</b> 可以将预设条目创建分组，分组后的条目会在预设界面中折叠显示，让界面更加整洁。支持创建、移除和清除分组，分组设置会自动保存。</li>
+                <li><b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身、绑定的正则和分组配置。</li>
                 <li><b>兼容世界书导入:</b> 支持直接导入通过酒馆世界书功能导出的、含有本插件数据的备份文件。</li>
                 <li><b>批量导入/导出:</b> 一次性分享多个配置、关联的预设和正则脚本，方便备份和迁移。</li>
                 <li><b>批量删除:</b> 在主界面勾选多个配置进行一次性删除，方便清理。</li>
@@ -442,4 +444,130 @@ export function showBatchImportConfigSelectionPopup(configsToImport: ConfigData[
       }
     });
   });
+}
+
+// 显示查看配置弹窗
+export async function showViewConfigPopup(configId: string): Promise<void> {
+  const { getStoredConfigs } = await import('./配置存储和读取');
+  const configs = await getStoredConfigs();
+  const configData = configs[configId];
+
+  if (!configData) {
+    toastr.error('配置不存在');
+    return;
+  }
+
+  const popupId = 'preset-manager-view-config-popup';
+  $(`#${popupId}`).remove();
+
+  // 统计配置信息
+  const totalStates = configData.states.length;
+  const enabledStates = configData.states.filter((state: any) => state.enabled).length;
+  const disabledStates = totalStates - enabledStates;
+
+  // 分组显示状态
+  const enabledStatesHtml = configData.states
+    .filter((state: any) => state.enabled)
+    .map((state: any) => `<div style="padding: 4px 8px; margin: 2px; background-color: #e8f5e8; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+    .join('');
+
+  const disabledStatesHtml = configData.states
+    .filter((state: any) => !state.enabled)
+    .map((state: any) => `<div style="padding: 4px 8px; margin: 2px; background-color: #ffebee; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+    .join('');
+
+  // 正则绑定信息
+  const regexInfo = configData.regexStates && configData.regexStates.length > 0 
+    ? `<div style="margin-top: 15px;">
+         <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
+         <div style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+           ${configData.regexStates.map((regex: any) => 
+             `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+                ${$('<div/>').text(regex.scriptName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
+              </div>`
+           ).join('')}
+         </div>
+       </div>`
+    : '';
+
+  const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">查看配置详情</h4>
+        
+        <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;">
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">基本信息</h5>
+            <div style="background-color: #f9f3ea; padding: 10px; border-radius: 6px;">
+              <div><strong>配置名称:</strong> ${$('<div/>').text(configData.name).html()}</div>
+              <div><strong>关联预设:</strong> ${$('<div/>').text(configData.presetName).html()}</div>
+              <div><strong>创建时间:</strong> ${new Date(configData.id).toLocaleString()}</div>
+              ${configData.boundCharName ? `<div><strong>绑定角色:</strong> <span style="color: #4CAF50;">${$('<div/>').text(configData.boundCharName).html()}</span></div>` : ''}
+            </div>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">条目状态统计</h5>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <div style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #2e7d32;">启用</div>
+                <div style="font-size: 18px; font-weight: bold;">${enabledStates}</div>
+              </div>
+              <div style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #c62828;">禁用</div>
+                <div style="font-size: 18px; font-weight: bold;">${disabledStates}</div>
+              </div>
+              <div style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #546e7a;">总计</div>
+                <div style="font-size: 18px; font-weight: bold;">${totalStates}</div>
+              </div>
+            </div>
+          </div>
+
+          ${enabledStates > 0 ? `
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">启用的条目 (${enabledStates}个)</h5>
+            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+              ${enabledStatesHtml}
+            </div>
+          </div>
+          ` : ''}
+
+          ${disabledStates > 0 ? `
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">禁用的条目 (${disabledStates}个)</h5>
+            <div style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+              ${disabledStatesHtml}
+            </div>
+          </div>
+          ` : ''}
+
+          ${regexInfo}
+        </div>
+
+        <div style="text-align: right; margin-top: 15px; display: flex; gap: 10px; justify-content: flex-end;">
+          <button id="view-config-load" data-id="${configId}" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;">加载此配置</button>
+          <button id="view-config-close" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">关闭</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  $('body').append(popupHtml);
+
+  // 绑定事件
+  $('#view-config-close').on('click', () => {
+    $(`#${popupId}`).remove();
+  });
+
+  $('#view-config-load').on('click', async () => {
+    const configId = $('#view-config-load').data('id');
+    $(`#${popupId}`).remove();
+    const { loadConfig } = await import('./配置操作功能');
+    await loadConfig(configId);
+  });
+
+  // 移动端样式
+  const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 90vh !important; } }</style>`;
+  $(`#${popupId}`).append(mobileStyles);
 }
