@@ -10,7 +10,18 @@ export interface ConfigData {
   boundCharName?: string;
 }
 
+// 添加配置缓存
+let configCache: Record<string, ConfigData> | null = null;
+let lastCacheTime = 0;
+const CONFIG_CACHE_DURATION = 10000; // 10秒缓存
+
 export async function getStoredConfigs(): Promise<Record<string, ConfigData>> {
+  // 检查缓存是否有效
+  const now = Date.now();
+  if (configCache && now - lastCacheTime < CONFIG_CACHE_DURATION) {
+    return configCache;
+  }
+
   let worldbookEntries;
   try {
     worldbookEntries = await TavernHelper.getWorldbook(CONFIG_LOREBOOK_NAME);
@@ -51,7 +62,18 @@ export async function getStoredConfigs(): Promise<Record<string, ConfigData>> {
       // 忽略解析失败的条目
     }
   }
+
+  // 更新缓存
+  configCache = configs;
+  lastCacheTime = now;
+
   return configs;
+}
+
+// 清除配置缓存
+export function clearConfigCache(): void {
+  configCache = null;
+  lastCacheTime = 0;
 }
 
 export async function setStoredConfigs(configsObject: Record<string, ConfigData>): Promise<void> {

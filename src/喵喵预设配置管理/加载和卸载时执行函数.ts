@@ -58,6 +58,21 @@ async function initScript(): Promise<void> {
     // 注册角色切换事件
     eventOn(tavern_events.CHAT_CHANGED, onChatChanged);
 
+    // 延迟加载非关键功能，避免阻塞UI
+    setTimeout(() => {
+      initNonCriticalFeatures();
+    }, 100);
+
+    console.log('✅ 喵喵预设配置管理已加载成功!');
+  } catch (error) {
+    console.error('初始化喵喵预设配置管理失败:', error);
+    toastr.error('喵喵预设配置管理加载失败，请检查控制台');
+  }
+}
+
+// 初始化非关键功能，避免阻塞主UI
+function initNonCriticalFeatures(): void {
+  try {
     // 恢复分组配置
     eventOn(tavern_events.SETTINGS_LOADED, restoreGroupingFromConfig);
 
@@ -72,7 +87,8 @@ async function initScript(): Promise<void> {
       eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => restoreGroupingDelayed(300));
     }
 
-    // 监听DOM变化，当预设条目发生变化时恢复分组
+    // 优化DOM观察器 - 使用防抖机制
+    let restoreTimeout: number | null = null;
     const observer = new MutationObserver(mutations => {
       let shouldRestore = false;
       mutations.forEach(mutation => {
@@ -89,8 +105,14 @@ async function initScript(): Promise<void> {
       });
 
       if (shouldRestore) {
-        console.log('检测到预设条目变化，准备恢复分组');
-        restoreGroupingDelayed(500);
+        // 防抖处理，避免频繁触发
+        if (restoreTimeout) {
+          clearTimeout(restoreTimeout);
+        }
+        restoreTimeout = window.setTimeout(() => {
+          console.log('检测到预设条目变化，准备恢复分组');
+          restoreGroupingDelayed(500);
+        }, 200);
       }
     });
 
@@ -104,16 +126,15 @@ async function initScript(): Promise<void> {
       console.log('✅ 预设管理器DOM观察器已启动');
     }
 
-    // 初始化完成后立即尝试恢复分组
+    // 延迟恢复分组，避免阻塞UI加载
     setTimeout(() => {
       console.log('🔄 脚本加载完成，开始强制恢复分组配置...');
       forceRestoreGrouping();
-    }, 1500);
+    }, 2000);
 
-    console.log('✅ 喵喵预设配置管理已加载成功!');
+    console.log('✅ 非关键功能初始化完成');
   } catch (error) {
-    console.error('初始化喵喵预设配置管理失败:', error);
-    toastr.error('喵喵预设配置管理加载失败，请检查控制台');
+    console.error('初始化非关键功能失败:', error);
   }
 }
 
@@ -122,23 +143,32 @@ console.log('🔥 喵喵预设配置管理模块开始加载...');
 $(() => init());
 
 // 在卸载脚本时执行清理
-$(window).on('pagehide', async () => {
+$(window).on('pagehide', () => {
   // 清理全局标记
   const win = window as unknown as Record<string, unknown>;
   delete win[SCRIPT_ID];
   delete win.miaoMiaoPresetManager;
 
-  // 清理UI元素
-  $('#preset-manager-ui').remove();
-  $('#preset-manager-import-file').remove();
-
-  // 清理分组效果
-  try {
-    const { clearAllGrouping } = await import('./条目分组功能');
-    clearAllGrouping();
-  } catch (error) {
-    // 忽略清理错误
+  // 快速清理UI元素，避免阻塞
+  const uiElement = document.getElementById('preset-manager-ui');
+  const fileElement = document.getElementById('preset-manager-import-file');
+  
+  if (uiElement) {
+    uiElement.remove();
   }
+  if (fileElement) {
+    fileElement.remove();
+  }
+
+  // 异步清理分组效果，避免阻塞页面卸载
+  setTimeout(async () => {
+    try {
+      const { clearAllGrouping } = await import('./条目分组功能');
+      clearAllGrouping();
+    } catch (error) {
+      // 忽略清理错误
+    }
+  }, 0);
 
   console.log('✅ 喵喵预设配置管理已卸载');
 });

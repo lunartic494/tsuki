@@ -30,10 +30,23 @@ function savePresetGrouping(presetName: string, groups: PromptGroup[]): void {
   }
 }
 
+// 缓存DOM查询结果
+let cachedPromptElements: JQuery | null = null;
+let lastPromptQueryTime = 0;
+const PROMPT_CACHE_DURATION = 3000; // 3秒缓存
+
 // 获取当前预设的所有条目
 export function getCurrentPresetPrompts(): Array<{ id: string; name: string; element: JQuery; enabled: boolean }> {
   const prompts: Array<{ id: string; name: string; element: JQuery; enabled: boolean }> = [];
-  const promptElements = $('.completion_prompt_manager_prompt');
+
+  // 检查缓存是否有效
+  const now = Date.now();
+  if (!cachedPromptElements || now - lastPromptQueryTime > PROMPT_CACHE_DURATION) {
+    cachedPromptElements = $('.completion_prompt_manager_prompt');
+    lastPromptQueryTime = now;
+  }
+
+  const promptElements = cachedPromptElements;
 
   promptElements.each(function () {
     const element = $(this);
@@ -506,9 +519,16 @@ export function restoreGroupingFromConfig(): void {
 }
 
 // 延迟恢复分组（用于DOM变化后）
+// 防抖恢复分组
+let restoreTimeout: number | null = null;
+
 export function restoreGroupingDelayed(delay: number = 500): void {
-  setTimeout(() => {
+  if (restoreTimeout) {
+    clearTimeout(restoreTimeout);
+  }
+  restoreTimeout = window.setTimeout(() => {
     restoreGroupingFromConfig();
+    restoreTimeout = null;
   }, delay);
 }
 

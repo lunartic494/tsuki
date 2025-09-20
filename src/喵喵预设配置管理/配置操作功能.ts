@@ -1,7 +1,7 @@
 import { generateUniqueId } from './初始化和配置';
-import { toggleUI } from './界面创建和管理';
+import { toggleUI, updateConfigListCache } from './界面创建和管理';
 import { showNewEntriesPopup } from './辅助弹窗功能';
-import { ConfigData, getStoredConfigs, renderConfigsList, setStoredConfigs } from './配置存储和读取';
+import { clearConfigCache, ConfigData, getStoredConfigs, renderConfigsList, setStoredConfigs } from './配置存储和读取';
 
 export async function renameConfig(configId: string): Promise<void> {
   const configs = await getStoredConfigs();
@@ -17,8 +17,10 @@ export async function renameConfig(configId: string): Promise<void> {
   if (newName && newName.trim() !== '') {
     configs[configId].name = newName.trim();
     await setStoredConfigs(configs);
+    clearConfigCache(); // 清除配置缓存
     toastr.success(`配置已从 "${oldName}" 重命名为 "${newName.trim()}"。`);
     await renderConfigsList();
+    updateConfigListCache(); // 更新UI缓存
   } else {
     toastr.info('重命名操作已取消。');
   }
@@ -82,9 +84,11 @@ export async function updateConfig(configId: string): Promise<void> {
 
     configs[configId] = configToSave;
     await setStoredConfigs(configs);
+    clearConfigCache(); // 清除配置缓存
 
     toastr.success(`配置 "${configToSave.name}" 已更新。`);
     await renderConfigsList();
+    updateConfigListCache(); // 更新UI缓存
   } catch (error) {
     console.error('更新预设配置失败:', error);
     toastr.error('更新预设配置失败，请检查控制台获取更多信息。');
@@ -134,11 +138,13 @@ export async function saveCurrentConfig(): Promise<void> {
     const configs = await getStoredConfigs();
     configs[configToSave.id] = configToSave;
     await setStoredConfigs(configs);
+    clearConfigCache(); // 清除配置缓存
 
     toastr.success(`配置 "${configName}" 已保存。`);
     nameInput.val('');
     $('#preset-manager-bind-char').prop('checked', false);
     await renderConfigsList();
+    updateConfigListCache(); // 更新UI缓存
   } catch (error) {
     console.error('保存预设配置失败:', error);
     toastr.error('保存预设配置失败，请检查控制台获取更多信息。');
@@ -217,8 +223,10 @@ export async function deleteConfig(configId: string): Promise<void> {
     if (configToDelete) {
       delete configs[configId];
       await setStoredConfigs(configs);
+      clearConfigCache(); // 清除配置缓存
       toastr.success(`已删除配置 "${configToDelete.name}"。`);
       await renderConfigsList();
+      updateConfigListCache(); // 更新UI缓存
     } else {
       toastr.warning(`配置不存在。`);
     }

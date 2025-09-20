@@ -114,14 +114,34 @@ function bindUIEvents(): void {
   console.log('✅ UI事件绑定完成');
 }
 
+// 缓存配置列表，避免重复渲染
+let configListCache: string | null = null;
+let lastConfigUpdateTime = 0;
+const CACHE_DURATION = 5000; // 5秒缓存
+
 export function toggleUI(): void {
   const ui = $(`#${UI_ID}`);
   if (ui.is(':visible')) {
-    ui.fadeOut();
+    ui.fadeOut(200); // 减少动画时间
   } else {
-    renderConfigsList();
+    // 检查缓存是否有效
+    const now = Date.now();
+    if (!configListCache || (now - lastConfigUpdateTime) > CACHE_DURATION) {
+      renderConfigsList();
+      lastConfigUpdateTime = now;
+    } else {
+      // 使用缓存的配置列表
+      $('#preset-manager-list').html(configListCache);
+    }
+    
     const randomTip = TIPS[Math.floor(Math.random() * TIPS.length)];
     $('#preset-manager-tips-section').text('小贴士：' + randomTip);
-    ui.fadeIn();
+    ui.fadeIn(200); // 减少动画时间
   }
+}
+
+// 更新缓存
+export function updateConfigListCache(): void {
+  configListCache = $('#preset-manager-list').html();
+  lastConfigUpdateTime = Date.now();
 }
