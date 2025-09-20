@@ -1,21 +1,7 @@
 import { default as default_0 } from "https://testingcf.jsdelivr.net/npm/dedent/+esm";
 /******/ var __webpack_modules__ = ({
 
-/***/ 4:
-/***/ (() => {
-
-
-$(() => {
-    replaceScriptButtons([{ name: '晚上好', visible: true }]);
-    eventOn(getButtonEvent('晚上好'), () => {
-        toastr.warning('晚安, 络络');
-    });
-});
-
-
-/***/ }),
-
-/***/ 33:
+/***/ 306:
 /***/ (() => {
 
 
@@ -26,7 +12,7 @@ eventOn(tavern_events.MESSAGE_UPDATED, (message_id) => {
 
 /***/ }),
 
-/***/ 478:
+/***/ 357:
 /***/ (() => {
 
 
@@ -37,6 +23,20 @@ $(() => {
 // 在卸载脚本时执行某个函数
 $(window).on('pagehide', () => {
     toastr.info('你已经卸载示例脚本!', '再见!');
+});
+
+
+/***/ }),
+
+/***/ 505:
+/***/ (() => {
+
+
+$(() => {
+    replaceScriptButtons([{ name: '晚上好', visible: true }]);
+    eventOn(getButtonEvent('晚上好'), () => {
+        toastr.warning('晚安, 络络');
+    });
 });
 
 
@@ -71,11 +71,11 @@ $(window).on('pagehide', () => {
 /************************************************************************/
 
 // EXTERNAL MODULE: ./src/脚本示例/加载和卸载时执行函数.ts
-var _ = __webpack_require__(478);
+var _ = __webpack_require__(357);
 // EXTERNAL MODULE: ./src/脚本示例/添加按钮和注册按钮事件.ts
-var src_ = __webpack_require__(4);
+var src_ = __webpack_require__(505);
 // EXTERNAL MODULE: ./src/脚本示例/监听消息修改.ts
-var src_0 = __webpack_require__(33);
+var src_0 = __webpack_require__(306);
 ;// external "https://testingcf.jsdelivr.net/npm/dedent/+esm"
 
 ;// ./src/脚本示例/调整消息楼层.ts
