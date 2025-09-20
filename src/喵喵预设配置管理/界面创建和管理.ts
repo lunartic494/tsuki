@@ -126,14 +126,14 @@ export function toggleUI(): void {
   } else {
     // 检查缓存是否有效
     const now = Date.now();
-    if (!configListCache || (now - lastConfigUpdateTime) > CACHE_DURATION) {
+    if (!configListCache || now - lastConfigUpdateTime > CACHE_DURATION) {
       renderConfigsList();
       lastConfigUpdateTime = now;
     } else {
       // 使用缓存的配置列表
       $('#preset-manager-list').html(configListCache);
     }
-    
+
     const randomTip = TIPS[Math.floor(Math.random() * TIPS.length)];
     $('#preset-manager-tips-section').text('小贴士：' + randomTip);
     ui.fadeIn(200); // 减少动画时间

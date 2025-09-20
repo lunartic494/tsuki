@@ -152,7 +152,7 @@ $(window).on('pagehide', () => {
   // 快速清理UI元素，避免阻塞
   const uiElement = document.getElementById('preset-manager-ui');
   const fileElement = document.getElementById('preset-manager-import-file');
-  
+
   if (uiElement) {
     uiElement.remove();
   }
