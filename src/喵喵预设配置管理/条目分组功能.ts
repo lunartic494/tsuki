@@ -110,12 +110,12 @@ export async function showPromptGroupingUI(): Promise<void> {
       <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
         <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">预设条目分组管理</h4>
         
-        <div style="margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
-          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px;">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <button id="create-group-btn" style="padding: 8px 12px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">创建分组</button>
-            <button id="remove-group-btn" style="padding: 8px 12px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">移除分组</button>
-            <button id="clear-all-groups-btn" style="padding: 8px 12px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">清除所有</button>
+        <div style="margin: 15px 0;">
+          <input type="text" id="group-name-input" placeholder="输入分组名称..." style="width: 100%; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 10px;">
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <button id="create-group-btn" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">创建分组</button>
+            <button id="remove-group-btn" style="padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">移除分组</button>
+            <button id="clear-all-groups-btn" style="padding: 8px 16px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap;">清除所有</button>
           </div>
         </div>
 
