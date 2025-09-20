@@ -437,23 +437,31 @@ function applyGroupingToDOM(groups: PromptGroup[]): void {
     group.promptIds.forEach(promptId => {
       // 尝试多种选择器来查找条目
       let promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
-      
+
       // 如果没找到，尝试在子元素中查找
       if (promptElement.length === 0) {
-        promptElement = $(`.completion_prompt_manager_prompt`).filter(function() {
-          return $(this).data('pm-identifier') === promptId || 
-                 $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId;
+        promptElement = $(`.completion_prompt_manager_prompt`).filter(function () {
+          return (
+            $(this).data('pm-identifier') === promptId ||
+            $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId
+          );
         });
       }
-      
+
       if (promptElement.length > 0) {
         groupContainer.find('.prompt-group-content').append(promptElement);
         console.log('移动条目到分组容器:', promptId);
       } else {
-        console.warn('未找到条目:', promptId, '当前所有条目ID:', 
-          $('.completion_prompt_manager_prompt').map(function() {
-            return $(this).data('pm-identifier') || $(this).find('[data-pm-identifier]').data('pm-identifier');
-          }).get());
+        console.warn(
+          '未找到条目:',
+          promptId,
+          '当前所有条目ID:',
+          $('.completion_prompt_manager_prompt')
+            .map(function () {
+              return $(this).data('pm-identifier') || $(this).find('[data-pm-identifier]').data('pm-identifier');
+            })
+            .get(),
+        );
       }
     });
 
