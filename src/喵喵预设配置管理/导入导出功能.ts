@@ -1,3 +1,4 @@
+import download from 'downloadjs';
 import { generateUniqueId } from './初始化和配置';
 import { exportPresetGrouping, importPresetGrouping, PromptGroup } from './条目分组功能';
 import { importRegexLogic } from './正则绑定功能';
@@ -97,19 +98,7 @@ export async function exportConfig(configId: string): Promise<void> {
     userFileName = userFileName.trim().replace(/\.json$/, '');
 
     const jsonString = JSON.stringify(exportBundle, null, 2);
-    const blob = new Blob([jsonString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download = `${userFileName}.json`;
-
-    document.body.appendChild(a);
-    a.click();
-
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    download(jsonString, `${userFileName}.json`, 'text/plain');
 
     toastr.success(`配置包 "${configName}" 已导出。`);
   } catch (error) {
