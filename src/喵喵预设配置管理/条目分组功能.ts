@@ -444,24 +444,6 @@ function bindGroupingEvents(
   });
 }
 
-// 应用分组到预设界面
-function applyGroupingToPreset(groups: PromptGroup[]): void {
-  try {
-    // 保存分组配置到本地存储
-    const currentPresetName = TavernHelper.getLoadedPresetName();
-    const validGroups = groups.filter(g => g.promptIds.length > 0);
-    savePresetGrouping(currentPresetName, validGroups);
-
-    // 应用DOM分组效果
-    applyGroupingToDOM(validGroups);
-
-    toastr.success('分组设置已应用到预设界面');
-  } catch (error) {
-    console.error('应用分组失败:', error);
-    toastr.error('应用分组失败，请检查控制台');
-  }
-}
-
 // 应用分组到DOM
 function applyGroupingToDOM(groups: PromptGroup[]): void {
   console.log('开始应用分组到DOM，分组数量:', groups.length);
@@ -582,6 +564,15 @@ export function restoreGroupingFromConfig(): void {
 
     if (groups.length > 0) {
       console.log(`恢复预设 "${currentPresetName}" 的分组配置，共 ${groups.length} 个分组`);
+
+      // 检查是否有预设条目存在
+      const promptElements = $('.completion_prompt_manager_prompt');
+      if (promptElements.length === 0) {
+        console.log('⚠️ 未找到预设条目，延迟恢复分组');
+        setTimeout(() => restoreGroupingFromConfig(), 500);
+        return;
+      }
+
       // 延迟一点时间确保DOM已加载
       setTimeout(() => {
         applyGroupingToDOM(groups);
@@ -603,6 +594,7 @@ export function restoreGroupingDelayed(delay: number = 500): void {
     clearTimeout(restoreTimeout);
   }
   restoreTimeout = window.setTimeout(() => {
+    console.log('🔄 延迟恢复分组开始...');
     restoreGroupingFromConfig();
     restoreTimeout = null;
   }, delay);
@@ -631,6 +623,15 @@ export function forceRestoreGrouping(): void {
   };
 
   tryRestore(1);
+}
+
+// 主动触发分组恢复（用于关键操作后）
+export function triggerGroupingRestore(): void {
+  console.log('🔄 主动触发分组恢复...');
+  // 先清除现有的分组效果
+  clearAllGrouping();
+  // 然后延迟恢复
+  restoreGroupingDelayed(300);
 }
 
 // 清除所有分组

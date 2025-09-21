@@ -87,6 +87,12 @@ function initNonCriticalFeatures(): void {
       eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => restoreGroupingDelayed(300));
     }
 
+    // 监听设置更新事件，这通常在条目开关后触发
+    eventOn(tavern_events.SETTINGS_UPDATED, () => {
+      console.log('检测到设置更新，准备恢复分组');
+      restoreGroupingDelayed(800);
+    });
+
     // 优化DOM观察器 - 使用防抖机制
     let restoreTimeout: number | null = null;
     const observer = new MutationObserver(mutations => {
@@ -97,7 +103,22 @@ function initNonCriticalFeatures(): void {
           // 检查是否是预设管理器的条目变化
           if (
             target.classList?.contains('completion_prompt_manager') ||
-            target.querySelector?.('.completion_prompt_manager_prompt')
+            target.querySelector?.('.completion_prompt_manager_prompt') ||
+            // 检查是否是预设条目本身的变化
+            target.classList?.contains('completion_prompt_manager_prompt') ||
+            // 检查是否是分组容器的变化
+            target.classList?.contains('prompt-group-container')
+          ) {
+            shouldRestore = true;
+          }
+        }
+
+        // 检查属性变化（如开关状态变化）
+        if (mutation.type === 'attributes') {
+          const target = mutation.target as Element;
+          if (
+            target.classList?.contains('completion_prompt_manager_prompt') ||
+            target.closest?.('.completion_prompt_manager_prompt')
           ) {
             shouldRestore = true;
           }
@@ -122,6 +143,8 @@ function initNonCriticalFeatures(): void {
       observer.observe(presetManagerContainer, {
         childList: true,
         subtree: true,
+        attributes: true,
+        attributeFilter: ['class', 'data-pm-identifier'],
       });
       console.log('✅ 预设管理器DOM观察器已启动');
     }

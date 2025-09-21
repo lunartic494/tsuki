@@ -1,6 +1,7 @@
 import { lastProcessedCharAvatar, setLastProcessedCharAvatar } from './初始化和配置';
 import { getStoredConfigs } from './配置存储和读取';
 import { loadConfig } from './配置操作功能';
+import { triggerGroupingRestore } from './条目分组功能';
 
 export async function onChatChanged(): Promise<void> {
   try {
@@ -31,7 +32,13 @@ export async function onChatChanged(): Promise<void> {
       configIdToLoad = await showConfigSelectionPopup(boundConfigs, charData.name);
     }
 
-    if (configIdToLoad) await loadConfig(configIdToLoad, false);
+    if (configIdToLoad) {
+      await loadConfig(configIdToLoad, false);
+      // 角色切换后触发分组恢复
+      setTimeout(() => {
+        triggerGroupingRestore();
+      }, 800);
+    }
   } catch (error) {
     console.error('检查绑定配置时出错:', error);
     toastr.error('检查角色绑定配置时出错。');

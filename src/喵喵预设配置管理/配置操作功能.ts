@@ -2,6 +2,7 @@ import { generateUniqueId } from './初始化和配置';
 import { toggleUI, updateConfigListCache } from './界面创建和管理';
 import { showNewEntriesPopup } from './辅助弹窗功能';
 import { clearConfigCache, ConfigData, getStoredConfigs, renderConfigsList, setStoredConfigs } from './配置存储和读取';
+import { triggerGroupingRestore } from './条目分组功能';
 
 export async function renameConfig(configId: string): Promise<void> {
   const configs = await getStoredConfigs();
@@ -207,6 +208,12 @@ export async function loadConfig(configId: string, shouldToggleUI = true): Promi
     }
 
     toastr.success(`已加载配置 "${configToLoad.name}"。`);
+    
+    // 加载配置后触发分组恢复
+    setTimeout(() => {
+      triggerGroupingRestore();
+    }, 500);
+    
     if (shouldToggleUI) {
       toggleUI();
     }

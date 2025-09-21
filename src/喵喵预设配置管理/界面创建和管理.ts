@@ -7,7 +7,11 @@ import { renderConfigsList } from './配置存储和读取';
 import { saveCurrentConfig } from './配置操作功能';
 
 export function createUI(): void {
-  if ($(`#${UI_ID}`).length > 0) return;
+  if ($(`#${UI_ID}`).length > 0) {
+    // UI已存在，只需重新绑定事件
+    bindUIEvents();
+    return;
+  }
 
   const uiContainer = $(`
         <div id="${UI_ID}">
@@ -70,6 +74,16 @@ export function createUI(): void {
 
 function bindUIEvents(): void {
   console.log('🔗 开始绑定UI事件...');
+
+  // 先解绑所有事件，避免重复绑定
+  $('#preset-manager-close').off('click');
+  $('#preset-manager-help-btn').off('click');
+  $('#preset-manager-save-btn').off('click');
+  $('#preset-manager-import-btn').off('click');
+  $('#preset-manager-batch-export-btn').off('click');
+  $('#preset-manager-batch-delete-btn').off('click');
+  $('#preset-manager-grouping-btn').off('click');
+  $('#preset-manager-import-file').off('change');
 
   $('#preset-manager-close').on('click', () => {
     console.log('🖱️ 关闭按钮被点击');

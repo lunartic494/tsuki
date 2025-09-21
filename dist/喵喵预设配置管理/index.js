@@ -1,4 +1,3 @@
-import { default as default_0 } from "https://testingcf.jsdelivr.net/npm/downloadjs/+esm";
 /******/ var __webpack_modules__ = ({
 
 /***/ 42:
@@ -309,7 +308,7 @@ async function batchDeleteConfigs(configIds) {
 /* harmony export */   oz: () => (/* binding */ updateConfigListCache)
 /* harmony export */ });
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(482);
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(544);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(842);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(42);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(406);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(337);
@@ -323,8 +322,11 @@ async function batchDeleteConfigs(configIds) {
 
 
 function createUI() {
-    if ($(`#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}`).length > 0)
+    if ($(`#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}`).length > 0) {
+        // UI已存在，只需重新绑定事件
+        bindUIEvents();
         return;
+    }
     const uiContainer = $(`
         <div id="${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}">
             <style>
@@ -383,6 +385,15 @@ function createUI() {
 }
 function bindUIEvents() {
     console.log('🔗 开始绑定UI事件...');
+    // 先解绑所有事件，避免重复绑定
+    $('#preset-manager-close').off('click');
+    $('#preset-manager-help-btn').off('click');
+    $('#preset-manager-save-btn').off('click');
+    $('#preset-manager-import-btn').off('click');
+    $('#preset-manager-batch-export-btn').off('click');
+    $('#preset-manager-batch-delete-btn').off('click');
+    $('#preset-manager-grouping-btn').off('click');
+    $('#preset-manager-import-file').off('change');
     $('#preset-manager-close').on('click', () => {
         console.log('🖱️ 关闭按钮被点击');
         toggleUI();
@@ -1218,6 +1229,7 @@ async function showViewConfigPopup(configId) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Ec: () => (/* binding */ restoreGroupingFromConfig),
 /* harmony export */   XZ: () => (/* binding */ showPromptGroupingUI),
+/* harmony export */   aY: () => (/* binding */ triggerGroupingRestore),
 /* harmony export */   clearAllGrouping: () => (/* binding */ clearAllGrouping),
 /* harmony export */   nO: () => (/* binding */ forceRestoreGrouping),
 /* harmony export */   pM: () => (/* binding */ exportPresetGrouping),
@@ -1603,22 +1615,6 @@ function bindGroupingEvents(_prompts, existingGroups) {
         console.log('分组界面关闭，已保存并应用分组配置');
     });
 }
-// 应用分组到预设界面
-function applyGroupingToPreset(groups) {
-    try {
-        // 保存分组配置到本地存储
-        const currentPresetName = TavernHelper.getLoadedPresetName();
-        const validGroups = groups.filter(g => g.promptIds.length > 0);
-        savePresetGrouping(currentPresetName, validGroups);
-        // 应用DOM分组效果
-        applyGroupingToDOM(validGroups);
-        toastr.success('分组设置已应用到预设界面');
-    }
-    catch (error) {
-        console.error('应用分组失败:', error);
-        toastr.error('应用分组失败，请检查控制台');
-    }
-}
 // 应用分组到DOM
 function applyGroupingToDOM(groups) {
     console.log('开始应用分组到DOM，分组数量:', groups.length);
@@ -1716,6 +1712,13 @@ function restoreGroupingFromConfig() {
         const groups = getPresetGrouping(currentPresetName);
         if (groups.length > 0) {
             console.log(`恢复预设 "${currentPresetName}" 的分组配置，共 ${groups.length} 个分组`);
+            // 检查是否有预设条目存在
+            const promptElements = $('.completion_prompt_manager_prompt');
+            if (promptElements.length === 0) {
+                console.log('⚠️ 未找到预设条目，延迟恢复分组');
+                setTimeout(() => restoreGroupingFromConfig(), 500);
+                return;
+            }
             // 延迟一点时间确保DOM已加载
             setTimeout(() => {
                 applyGroupingToDOM(groups);
@@ -1737,6 +1740,7 @@ function restoreGroupingDelayed(delay = 500) {
         clearTimeout(restoreTimeout);
     }
     restoreTimeout = window.setTimeout(() => {
+        console.log('🔄 延迟恢复分组开始...');
         restoreGroupingFromConfig();
         restoreTimeout = null;
     }, delay);
@@ -1761,6 +1765,14 @@ function forceRestoreGrouping() {
         }
     };
     tryRestore(1);
+}
+// 主动触发分组恢复（用于关键操作后）
+function triggerGroupingRestore() {
+    console.log('🔄 主动触发分组恢复...');
+    // 先清除现有的分组效果
+    clearAllGrouping();
+    // 然后延迟恢复
+    restoreGroupingDelayed(300);
 }
 // 清除所有分组
 function clearAllGrouping() {
@@ -1899,231 +1911,6 @@ async function initializePresetManager() {
 
 /***/ }),
 
-/***/ 544:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  exportConfig: () => (/* binding */ exportConfig),
-  k: () => (/* binding */ handleFileImport)
-});
-
-;// external "https://testingcf.jsdelivr.net/npm/downloadjs/+esm"
-
-// EXTERNAL MODULE: ./src/喵喵预设配置管理/初始化和配置.ts
-var _ = __webpack_require__(482);
-// EXTERNAL MODULE: ./src/喵喵预设配置管理/条目分组功能.ts
-var src_ = __webpack_require__(406);
-// EXTERNAL MODULE: ./src/喵喵预设配置管理/正则绑定功能.ts
-var src_0 = __webpack_require__(304);
-// EXTERNAL MODULE: ./src/喵喵预设配置管理/配置存储和读取.ts
-var src_1 = __webpack_require__(903);
-;// ./src/喵喵预设配置管理/导入导出功能.ts
-
-
-
-
-
-async function exportConfig(configId) {
-    try {
-        const configs = await (0,src_1.getStoredConfigs)();
-        const configData = configs[configId];
-        if (!configData) {
-            toastr.error(`配置不存在，无法导出。`);
-            return;
-        }
-        const configName = configData.name;
-        let userRemark = '';
-        const addRemarkChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否要为此导出添加备注信息？"`);
-        if (addRemarkChoice === '1') {
-            userRemark = await triggerSlash(`/input multiline=true placeholder="请输入备注，例如预设用途、来源等..." "添加备注"`);
-        }
-        const exportBundle = {
-            type: 'MiaoMiaoPresetBundle',
-            version: 1,
-            remark: userRemark || '',
-            presetConfig: configData,
-            presetData: null,
-            regexData: null,
-            groupingConfig: null,
-        };
-        const configPresetName = configData.presetName;
-        if (configPresetName && TavernHelper.getPresetNames().includes(configPresetName)) {
-            const includePresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置关联了预设 \\"${configPresetName}\\"。是否要将预设文件本身一起打包导出？"`);
-            if (includePresetChoice === '1') {
-                const presetData = TavernHelper.getPreset(configPresetName);
-                if (presetData) {
-                    presetData.name = configPresetName;
-                    exportBundle.presetData = presetData;
-                    toastr.info(`已将预设 "${configPresetName}" 打包。`);
-                }
-                else {
-                    toastr.warning(`无法获取预设 "${configPresetName}" 的数据。`);
-                }
-            }
-        }
-        if (configData.regexStates && configData.regexStates.length > 0) {
-            const userChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置绑定了正则。是否选择要一起导出的正则？"`);
-            if (userChoice === '1') {
-                const boundRegexIds = new Set(configData.regexStates.map(r => r.id));
-                const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
-                const boundRegexes = allGlobalRegexes.filter((r) => boundRegexIds.has(r.id));
-                const { showRegexExportSelectionPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 337));
-                const selectedRegexes = await showRegexExportSelectionPopup(boundRegexes);
-                if (selectedRegexes) {
-                    exportBundle.regexData = selectedRegexes;
-                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包导出。`);
-                }
-                else {
-                    toastr.info('已取消导出正则。');
-                }
-            }
-        }
-        // 检查是否包含分组配置
-        const groupingPresetName = configData.presetName;
-        if (groupingPresetName) {
-            const groupingConfig = (0,src_/* exportPresetGrouping */.pM)(groupingPresetName);
-            if (groupingConfig) {
-                const includeGroupingChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "预设 \\"${groupingPresetName}\\" 包含条目分组设置。是否要一起导出？"`);
-                if (includeGroupingChoice === '1') {
-                    exportBundle.groupingConfig = groupingConfig;
-                    toastr.info('已将分组设置打包导出。');
-                }
-            }
-        }
-        const defaultFileName = `${configName}_bundle`;
-        let userFileName = await triggerSlash(`/input default="${defaultFileName}" "请输入导出的文件名（无需后缀）"`);
-        if (!userFileName || userFileName.trim() === '') {
-            userFileName = defaultFileName;
-            toastr.info('文件名为空，已使用默认名称。');
-        }
-        userFileName = userFileName.trim().replace(/\.json$/, '');
-        const jsonString = JSON.stringify(exportBundle, null, 2);
-        default_0(jsonString, `${userFileName}.json`, 'text/plain');
-        toastr.success(`配置包 "${configName}" 已导出。`);
-    }
-    catch (error) {
-        console.error('导出配置失败:', error);
-        toastr.error('导出配置失败，请检查控制台获取更多信息。');
-    }
-}
-async function handleFileImport(event) {
-    const file = event.target.files[0];
-    if (!file)
-        return;
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-        try {
-            const content = e.target?.result;
-            const parsedContent = JSON.parse(content);
-            if (parsedContent.entries && typeof parsedContent.entries === 'object') {
-                toastr.info('检测到世界书备份文件。');
-                const configsToImport = [];
-                for (const entry of Object.values(parsedContent.entries)) {
-                    if (entry.content) {
-                        try {
-                            const config = JSON.parse(entry.content);
-                            if (config.id && config.name && Array.isArray(config.states)) {
-                                configsToImport.push(config);
-                            }
-                        }
-                        catch (err) {
-                            // 忽略解析失败的条目
-                        }
-                    }
-                }
-                if (configsToImport.length > 0) {
-                    const { startBatchImportFlow } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 42));
-                    await startBatchImportFlow(configsToImport);
-                }
-                else {
-                    toastr.warning('世界书文件中未找到有效的喵喵配置数据。');
-                }
-                return;
-            }
-            if (parsedContent.remark) {
-                const { showRemarkPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 337));
-                await showRemarkPopup(parsedContent.remark);
-            }
-            if (parsedContent.type === 'MiaoMiaoPresetMegaBundle') {
-                const { handleMegaBundleImport } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 42));
-                await handleMegaBundleImport(parsedContent);
-                return;
-            }
-            let configToImport, presetToImport, regexToImport, groupingToImport;
-            if (parsedContent.type === 'MiaoMiaoPresetBundle') {
-                console.log('检测到整合包文件，版本:', parsedContent.version);
-                toastr.info('检测到整合包文件。');
-                configToImport = parsedContent.presetConfig;
-                presetToImport = parsedContent.presetData;
-                regexToImport = parsedContent.regexData;
-                groupingToImport = parsedContent.groupingConfig;
-                console.log('分组配置:', groupingToImport);
-            }
-            else {
-                configToImport = parsedContent;
-            }
-            if (!configToImport || typeof configToImport.presetName !== 'string' || !Array.isArray(configToImport.states)) {
-                toastr.error('导入失败：配置数据格式不正确。');
-                return;
-            }
-            if (presetToImport) {
-                const importPresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此文件包含预设文件 \\"${presetToImport.name}\\"。是否导入/覆盖？"`);
-                if (importPresetChoice === '1') {
-                    await TavernHelper.createOrReplacePreset(presetToImport.name, presetToImport);
-                    toastr.success(`预设文件 "${presetToImport.name}" 已导入。`);
-                }
-            }
-            if (regexToImport && regexToImport.length > 0) {
-                await (0,src_0/* importRegexLogic */.P)(regexToImport);
-            }
-            // 处理分组配置导入
-            if (groupingToImport && Array.isArray(groupingToImport) && groupingToImport.length > 0) {
-                if (configToImport.presetName) {
-                    try {
-                        console.log('导入分组配置:', groupingToImport);
-                        (0,src_/* importPresetGrouping */.q$)(configToImport.presetName, groupingToImport);
-                        toastr.success('已成功导入并应用分组设置到预设。');
-                    }
-                    catch (error) {
-                        console.error('导入分组配置失败:', error);
-                        toastr.error('导入分组配置失败：' + error.message);
-                    }
-                }
-                else {
-                    console.warn('配置中没有预设名称，无法导入分组配置');
-                }
-            }
-            const initialName = configToImport.name || file.name.replace(/_bundle\.json$/i, '').replace(/\.json$/i, '');
-            let configName = await triggerSlash(`/input default="${initialName}" "请输入导入配置的名称"`);
-            configName = configName.trim();
-            if (!configName) {
-                toastr.info('导入已取消。');
-                return;
-            }
-            const configs = await (0,src_1.getStoredConfigs)();
-            configToImport.name = configName;
-            configToImport.id = (0,_/* generateUniqueId */.Ij)(); // Always generate new ID for single import
-            configs[configToImport.id] = configToImport;
-            await (0,src_1/* setStoredConfigs */.BR)(configs);
-            toastr.success(`配置 "${configName}" 已成功导入。`);
-            await (0,src_1/* renderConfigsList */.sd)();
-        }
-        catch (error) {
-            console.error('导入文件失败:', error);
-            toastr.error('导入文件失败，请检查控制台获取更多信息。');
-        }
-        finally {
-            $(event.target).val('');
-        }
-    };
-    reader.readAsText(file);
-}
-
-
-/***/ }),
-
 /***/ 718:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2167,7 +1954,7 @@ function bindConfigListEvents() {
                 break;
             }
             case 'export-config': {
-                const { exportConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 544));
+                const { exportConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 842));
                 await exportConfig(configId);
                 break;
             }
@@ -2208,6 +1995,8 @@ function bindConfigListEvents() {
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(165);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(337);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(903);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(406);
+
 
 
 
@@ -2395,6 +2184,10 @@ async function loadConfig(configId, shouldToggleUI = true) {
             }
         }
         toastr.success(`已加载配置 "${configToLoad.name}"。`);
+        // 加载配置后触发分组恢复
+        setTimeout(() => {
+            (0,___WEBPACK_IMPORTED_MODULE_4__/* .triggerGroupingRestore */ .aY)();
+        }, 500);
         if (shouldToggleUI) {
             (0,___WEBPACK_IMPORTED_MODULE_1__/* .toggleUI */ .jS)();
         }
@@ -2424,6 +2217,228 @@ async function deleteConfig(configId) {
         console.error('删除配置失败:', error);
         toastr.error('删除配置失败，请检查控制台获取更多信息。');
     }
+}
+
+
+/***/ }),
+
+/***/ 842:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   exportConfig: () => (/* binding */ exportConfig),
+/* harmony export */   k: () => (/* binding */ handleFileImport)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(482);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(406);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(304);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(903);
+
+
+
+
+async function exportConfig(configId) {
+    try {
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+        const configData = configs[configId];
+        if (!configData) {
+            toastr.error(`配置不存在，无法导出。`);
+            return;
+        }
+        const configName = configData.name;
+        let userRemark = '';
+        const addRemarkChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否要为此导出添加备注信息？"`);
+        if (addRemarkChoice === '1') {
+            userRemark = await triggerSlash(`/input multiline=true placeholder="请输入备注，例如预设用途、来源等..." "添加备注"`);
+        }
+        const exportBundle = {
+            type: 'MiaoMiaoPresetBundle',
+            version: 1,
+            remark: userRemark || '',
+            presetConfig: configData,
+            presetData: null,
+            regexData: null,
+            groupingConfig: null,
+        };
+        const configPresetName = configData.presetName;
+        if (configPresetName && TavernHelper.getPresetNames().includes(configPresetName)) {
+            const includePresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置关联了预设 \\"${configPresetName}\\"。是否要将预设文件本身一起打包导出？"`);
+            if (includePresetChoice === '1') {
+                const presetData = TavernHelper.getPreset(configPresetName);
+                if (presetData) {
+                    presetData.name = configPresetName;
+                    exportBundle.presetData = presetData;
+                    toastr.info(`已将预设 "${configPresetName}" 打包。`);
+                }
+                else {
+                    toastr.warning(`无法获取预设 "${configPresetName}" 的数据。`);
+                }
+            }
+        }
+        if (configData.regexStates && configData.regexStates.length > 0) {
+            const userChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置绑定了正则。是否选择要一起导出的正则？"`);
+            if (userChoice === '1') {
+                const boundRegexIds = new Set(configData.regexStates.map(r => r.id));
+                const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+                const boundRegexes = allGlobalRegexes.filter((r) => boundRegexIds.has(r.id));
+                const { showRegexExportSelectionPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 337));
+                const selectedRegexes = await showRegexExportSelectionPopup(boundRegexes);
+                if (selectedRegexes) {
+                    exportBundle.regexData = selectedRegexes;
+                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包导出。`);
+                }
+                else {
+                    toastr.info('已取消导出正则。');
+                }
+            }
+        }
+        // 检查是否包含分组配置
+        const groupingPresetName = configData.presetName;
+        if (groupingPresetName) {
+            const groupingConfig = (0,___WEBPACK_IMPORTED_MODULE_1__/* .exportPresetGrouping */ .pM)(groupingPresetName);
+            if (groupingConfig) {
+                const includeGroupingChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "预设 \\"${groupingPresetName}\\" 包含条目分组设置。是否要一起导出？"`);
+                if (includeGroupingChoice === '1') {
+                    exportBundle.groupingConfig = groupingConfig;
+                    toastr.info('已将分组设置打包导出。');
+                }
+            }
+        }
+        const defaultFileName = `${configName}_bundle`;
+        let userFileName = await triggerSlash(`/input default="${defaultFileName}" "请输入导出的文件名（无需后缀）"`);
+        if (!userFileName || userFileName.trim() === '') {
+            userFileName = defaultFileName;
+            toastr.info('文件名为空，已使用默认名称。');
+        }
+        userFileName = userFileName.trim().replace(/\.json$/, '');
+        const jsonString = JSON.stringify(exportBundle, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${userFileName}.json`;
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+        a.remove();
+        toastr.success(`配置包 "${configName}" 已导出。`);
+    }
+    catch (error) {
+        console.error('导出配置失败:', error);
+        toastr.error('导出配置失败，请检查控制台获取更多信息。');
+    }
+}
+async function handleFileImport(event) {
+    const file = event.target.files[0];
+    if (!file)
+        return;
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+        try {
+            const content = e.target?.result;
+            const parsedContent = JSON.parse(content);
+            if (parsedContent.entries && typeof parsedContent.entries === 'object') {
+                toastr.info('检测到世界书备份文件。');
+                const configsToImport = [];
+                for (const entry of Object.values(parsedContent.entries)) {
+                    if (entry.content) {
+                        try {
+                            const config = JSON.parse(entry.content);
+                            if (config.id && config.name && Array.isArray(config.states)) {
+                                configsToImport.push(config);
+                            }
+                        }
+                        catch (err) {
+                            // 忽略解析失败的条目
+                        }
+                    }
+                }
+                if (configsToImport.length > 0) {
+                    const { startBatchImportFlow } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 42));
+                    await startBatchImportFlow(configsToImport);
+                }
+                else {
+                    toastr.warning('世界书文件中未找到有效的喵喵配置数据。');
+                }
+                return;
+            }
+            if (parsedContent.remark) {
+                const { showRemarkPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 337));
+                await showRemarkPopup(parsedContent.remark);
+            }
+            if (parsedContent.type === 'MiaoMiaoPresetMegaBundle') {
+                const { handleMegaBundleImport } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 42));
+                await handleMegaBundleImport(parsedContent);
+                return;
+            }
+            let configToImport, presetToImport, regexToImport, groupingToImport;
+            if (parsedContent.type === 'MiaoMiaoPresetBundle') {
+                console.log('检测到整合包文件，版本:', parsedContent.version);
+                toastr.info('检测到整合包文件。');
+                configToImport = parsedContent.presetConfig;
+                presetToImport = parsedContent.presetData;
+                regexToImport = parsedContent.regexData;
+                groupingToImport = parsedContent.groupingConfig;
+                console.log('分组配置:', groupingToImport);
+            }
+            else {
+                configToImport = parsedContent;
+            }
+            if (!configToImport || typeof configToImport.presetName !== 'string' || !Array.isArray(configToImport.states)) {
+                toastr.error('导入失败：配置数据格式不正确。');
+                return;
+            }
+            if (presetToImport) {
+                const importPresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此文件包含预设文件 \\"${presetToImport.name}\\"。是否导入/覆盖？"`);
+                if (importPresetChoice === '1') {
+                    await TavernHelper.createOrReplacePreset(presetToImport.name, presetToImport);
+                    toastr.success(`预设文件 "${presetToImport.name}" 已导入。`);
+                }
+            }
+            if (regexToImport && regexToImport.length > 0) {
+                await (0,___WEBPACK_IMPORTED_MODULE_2__/* .importRegexLogic */ .P)(regexToImport);
+            }
+            // 处理分组配置导入
+            if (groupingToImport && Array.isArray(groupingToImport) && groupingToImport.length > 0) {
+                if (configToImport.presetName) {
+                    try {
+                        console.log('导入分组配置:', groupingToImport);
+                        (0,___WEBPACK_IMPORTED_MODULE_1__/* .importPresetGrouping */ .q$)(configToImport.presetName, groupingToImport);
+                        toastr.success('已成功导入并应用分组设置到预设。');
+                    }
+                    catch (error) {
+                        console.error('导入分组配置失败:', error);
+                        toastr.error('导入分组配置失败：' + error.message);
+                    }
+                }
+                else {
+                    console.warn('配置中没有预设名称，无法导入分组配置');
+                }
+            }
+            const initialName = configToImport.name || file.name.replace(/_bundle\.json$/i, '').replace(/\.json$/i, '');
+            let configName = await triggerSlash(`/input default="${initialName}" "请输入导入配置的名称"`);
+            configName = configName.trim();
+            if (!configName) {
+                toastr.info('导入已取消。');
+                return;
+            }
+            const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+            configToImport.name = configName;
+            configToImport.id = (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)(); // Always generate new ID for single import
+            configs[configToImport.id] = configToImport;
+            await (0,___WEBPACK_IMPORTED_MODULE_3__/* .setStoredConfigs */ .BR)(configs);
+            toastr.success(`配置 "${configName}" 已成功导入。`);
+            await (0,___WEBPACK_IMPORTED_MODULE_3__/* .renderConfigsList */ .sd)();
+        }
+        catch (error) {
+            console.error('导入文件失败:', error);
+            toastr.error('导入文件失败，请检查控制台获取更多信息。');
+        }
+        finally {
+            $(event.target).val('');
+        }
+    };
+    reader.readAsText(file);
 }
 
 
@@ -2671,6 +2686,7 @@ var src_2 = __webpack_require__(825);
 
 
 
+
 async function onChatChanged() {
     try {
         await new Promise(resolve => setTimeout(resolve, 250));
@@ -2697,8 +2713,13 @@ async function onChatChanged() {
             const { showConfigSelectionPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 337));
             configIdToLoad = await showConfigSelectionPopup(boundConfigs, charData.name);
         }
-        if (configIdToLoad)
+        if (configIdToLoad) {
             await (0,src_2.loadConfig)(configIdToLoad, false);
+            // 角色切换后触发分组恢复
+            setTimeout(() => {
+                (0,src_/* triggerGroupingRestore */.aY)();
+            }, 800);
+        }
     }
     catch (error) {
         console.error('检查绑定配置时出错:', error);
@@ -2780,6 +2801,11 @@ function initNonCriticalFeatures() {
         if (tavernEventsExt.PROMPT_MANAGER_UPDATED) {
             eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => (0,src_/* restoreGroupingDelayed */.s8)(300));
         }
+        // 监听设置更新事件，这通常在条目开关后触发
+        eventOn(tavern_events.SETTINGS_UPDATED, () => {
+            console.log('检测到设置更新，准备恢复分组');
+            (0,src_/* restoreGroupingDelayed */.s8)(800);
+        });
         // 优化DOM观察器 - 使用防抖机制
         let restoreTimeout = null;
         const observer = new MutationObserver(mutations => {
@@ -2789,7 +2815,19 @@ function initNonCriticalFeatures() {
                     const target = mutation.target;
                     // 检查是否是预设管理器的条目变化
                     if (target.classList?.contains('completion_prompt_manager') ||
-                        target.querySelector?.('.completion_prompt_manager_prompt')) {
+                        target.querySelector?.('.completion_prompt_manager_prompt') ||
+                        // 检查是否是预设条目本身的变化
+                        target.classList?.contains('completion_prompt_manager_prompt') ||
+                        // 检查是否是分组容器的变化
+                        target.classList?.contains('prompt-group-container')) {
+                        shouldRestore = true;
+                    }
+                }
+                // 检查属性变化（如开关状态变化）
+                if (mutation.type === 'attributes') {
+                    const target = mutation.target;
+                    if (target.classList?.contains('completion_prompt_manager_prompt') ||
+                        target.closest?.('.completion_prompt_manager_prompt')) {
                         shouldRestore = true;
                     }
                 }
@@ -2811,6 +2849,8 @@ function initNonCriticalFeatures() {
             observer.observe(presetManagerContainer, {
                 childList: true,
                 subtree: true,
+                attributes: true,
+                attributeFilter: ['class', 'data-pm-identifier'],
             });
             console.log('✅ 预设管理器DOM观察器已启动');
         }
@@ -2856,8 +2896,6 @@ $(window).on('pagehide', () => {
     console.log('✅ 喵喵预设配置管理已卸载');
 });
 
-// EXTERNAL MODULE: ./src/喵喵预设配置管理/导入导出功能.ts + 1 modules
-var src_3 = __webpack_require__(544);
 ;// ./src/喵喵预设配置管理/index.ts
 
 
