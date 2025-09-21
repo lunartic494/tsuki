@@ -208,12 +208,12 @@ export async function loadConfig(configId: string, shouldToggleUI = true): Promi
     }
 
     toastr.success(`已加载配置 "${configToLoad.name}"。`);
-    
+
     // 加载配置后触发分组恢复
     setTimeout(() => {
       triggerGroupingRestore();
     }, 500);
-    
+
     if (shouldToggleUI) {
       toggleUI();
     }
