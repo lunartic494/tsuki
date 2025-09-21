@@ -66,7 +66,10 @@
   "dependencies": {
     "@vueuse/core": "^13.9.0",
     "dedent": "^1.7.0",
+<<<<<<< HEAD
     "downloadjs": "^1.4.7",
+=======
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
     "gsap": "^3.13.0",
     "jquery": "^3.7.1",
     "jqueryui": "^1.11.1",

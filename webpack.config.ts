@@ -113,7 +113,21 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     entry: path.join(__dirname, entry.script),
     target: 'browserslist',
     output: {
+<<<<<<< HEAD
       devtoolModuleFilenameTemplate: 'webpack://tavern_helper_template/[resource-path]?[loaders]',
+=======
+      devtoolNamespace: 'tavern_helper_template',
+      devtoolModuleFilenameTemplate: info => {
+        const resource_path = decodeURIComponent(info.resourcePath.replace(/^\.\//, ''));
+        const is_direct = info.allLoaders === '';
+        const is_vue_script =
+          resource_path.match(/\.vue$/) &&
+          info.query.match(/\btype=script\b/) &&
+          !info.allLoaders.match(/\bts-loader\b/);
+
+        return `${is_direct === true ? 'src' : 'webpack'}://${info.namespace}/${resource_path}${is_direct || is_vue_script ? '' : '?' + info.hash}`;
+      },
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
       filename: `${script_filepath.name}.js`,
       path: path.join(__dirname, 'dist', path.relative(path.join(__dirname, 'src'), script_filepath.dir)),
       chunkFilename: `${script_filepath.name}.[contenthash].chunk.js`,
@@ -291,7 +305,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           : [],
       ),
     optimization: {
+<<<<<<< HEAD
       minimize: false,
+=======
+      minimize: true,
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
       minimizer: [
         argv.mode === 'production'
           ? new TerserPlugin({

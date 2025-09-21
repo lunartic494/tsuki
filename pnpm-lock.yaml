@@ -14,9 +14,12 @@ importers:
       dedent:
         specifier: ^1.7.0
         version: 1.7.0
+<<<<<<< HEAD
       downloadjs:
         specifier: ^1.4.7
         version: 1.4.7
+=======
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
       gsap:
         specifier: ^3.13.0
         version: 3.13.0
@@ -1492,9 +1495,12 @@ packages:
   dot-case@3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
 
+<<<<<<< HEAD
   downloadjs@1.4.7:
     resolution: {integrity: sha512-LN1gO7+u9xjU5oEScGFKvXhYf7Y/empUIIEAGBs1LzUq/rg5duiDrkuH5A2lQGd5jfMOb9X9usDa2oVXwJ0U/Q==}
 
+=======
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -4932,8 +4938,11 @@ snapshots:
       no-case: 3.0.4
       tslib: 2.8.1
 
+<<<<<<< HEAD
   downloadjs@1.4.7: {}
 
+=======
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
   dunder-proto@1.0.1:
     dependencies:
       call-bind-apply-helpers: 1.0.2

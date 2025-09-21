@@ -66,10 +66,18 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
       'no-var': 'error',
+<<<<<<< HEAD
       'prefer-const': 'warn',
       'vue/multi-word-component-names': 'off',
       yoda: 'error',
       '@typescript-eslint/no-explicit-any': 'error',
+=======
+      'pinia/require-setup-store-properties-export': 'off',
+      'prefer-const': 'warn',
+      'vue/multi-word-component-names': 'off',
+      yoda: 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+>>>>>>> 962a746de903f20844c9390aa30e420b93282d07
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
