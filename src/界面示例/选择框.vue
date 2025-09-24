@@ -19,8 +19,11 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { onMounted, ref } from 'vue';
 
+=======
+>>>>>>> 98c991a3b8798675e36f26ef16b63d68c15f3b14
 interface RoleplayOption {
   title: string;
   content: string;
