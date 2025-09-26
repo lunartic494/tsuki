@@ -1,140 +1,4964 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/喵喵预设配置管理/index.ts":
-/*!*******************************!*\
-  !*** ./src/喵喵预设配置管理/index.ts ***!
-  \*******************************/
+/***/ 11:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./事件绑定 */ \"./src/喵喵预设配置管理/事件绑定.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./加载和卸载时执行函数 */ \"./src/喵喵预设配置管理/加载和卸载时执行函数.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./导入导出功能 */ \"./src/喵喵预设配置管理/导入导出功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./批量操作功能 */ \"./src/喵喵预设配置管理/批量操作功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./正则绑定功能 */ \"./src/喵喵预设配置管理/正则绑定功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./界面创建和管理 */ \"./src/喵喵预设配置管理/界面创建和管理.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./角色绑定功能 */ \"./src/喵喵预设配置管理/角色绑定功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\");\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL2luZGV4LnRzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7QUFBZ0I7QUFDRTtBQUNJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQztBQUNEO0FBQ0E7QUFDQztBQUNEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGF2ZXJuX2hlbHBlcl90ZW1wbGF0ZS8uL3NyYy/llrXllrXpooTorr7phY3nva7nrqHnkIYvaW5kZXgudHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnLi/kuovku7bnu5HlrponO1xuaW1wb3J0ICcuL+WIneWni+WMluWSjOmFjee9ric7XG5pbXBvcnQgJy4v5Yqg6L295ZKM5Y246L295pe25omn6KGM5Ye95pWwJztcbmltcG9ydCAnLi/lr7zlhaXlr7zlh7rlip/og70nO1xuaW1wb3J0ICcuL+aJuemHj+aTjeS9nOWKn+iDvSc7XG5pbXBvcnQgJy4v5p2h55uu5YiG57uE5Yqf6IO9JztcbmltcG9ydCAnLi/mraPliJnnu5Hlrprlip/og70nO1xuaW1wb3J0ICcuL+eVjOmdouWIm+W7uuWSjOeuoeeQhic7XG5pbXBvcnQgJy4v6KeS6Imy57uR5a6a5Yqf6IO9JztcbmltcG9ydCAnLi/ovoXliqnlvLnnqpflip/og70nO1xuaW1wb3J0ICcuL+mFjee9ruWtmOWCqOWSjOivu+WPlic7XG5pbXBvcnQgJy4v6YWN572u5pON5L2c5Yqf6IO9JztcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/index.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Ec: () => (/* binding */ restoreGroupingFromConfig),
+/* harmony export */   XZ: () => (/* binding */ showPromptGroupingUI),
+/* harmony export */   aY: () => (/* binding */ triggerGroupingRestore),
+/* harmony export */   clearAllGrouping: () => (/* binding */ clearAllGrouping),
+/* harmony export */   nO: () => (/* binding */ forceRestoreGrouping),
+/* harmony export */   pM: () => (/* binding */ exportPresetGrouping),
+/* harmony export */   q$: () => (/* binding */ importPresetGrouping),
+/* harmony export */   s8: () => (/* binding */ restoreGroupingDelayed)
+/* harmony export */ });
+/* unused harmony exports getCurrentPresetPrompts, restoreGroupingImmediate, getAllPresetGroupings, clearPresetGrouping */
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+// 防重复加载检查
+if (window.miaomiaoPromptGroupingLoaded) {
+    console.log('喵喵预设配置管理 - 条目分组功能已加载，跳过重复加载');
+    // 直接返回，不执行后续代码
+    throw new Error('Script already loaded');
+}
+window.miaomiaoPromptGroupingLoaded = true;
+console.log('喵喵预设配置管理 - 条目分组功能首次加载');
+
+// 分组数据存储键名（基于预设名称）
+function getGroupingStorageKey(presetName) {
+    return `miaomiao_preset_groups_${presetName}`;
+}
+// 获取预设的分组配置
+function getPresetGrouping(presetName) {
+    try {
+        const stored = localStorage.getItem(getGroupingStorageKey(presetName));
+        return stored ? JSON.parse(stored) : [];
+    }
+    catch (error) {
+        console.error('获取分组配置失败:', error);
+        return [];
+    }
+}
+// 保存预设的分组配置
+function savePresetGrouping(presetName, groups) {
+    try {
+        localStorage.setItem(getGroupingStorageKey(presetName), JSON.stringify(groups));
+    }
+    catch (error) {
+        console.error('保存分组配置失败:', error);
+    }
+}
+// 缓存DOM查询结果
+let cachedPromptElements = null;
+let lastPromptQueryTime = 0;
+const PROMPT_CACHE_DURATION = 3000; // 3秒缓存
+// 触发一次预设保存，避免条目更改丢失
+function triggerPresetSave() {
+    try {
+        const $btn = $('#update_oai_preset');
+        if ($btn.length) {
+            $btn.trigger('click');
+            console.log('已触发预设保存');
+        }
+        else {
+            console.warn('未找到预设保存按钮 #update_oai_preset');
+        }
+    }
+    catch (err) {
+        console.error('触发预设保存时出错:', err);
+    }
+}
+// 获取当前预设的所有条目
+function getCurrentPresetPrompts() {
+    const prompts = [];
+    // 检查缓存是否有效
+    const now = Date.now();
+    if (!cachedPromptElements || now - lastPromptQueryTime > PROMPT_CACHE_DURATION) {
+        cachedPromptElements = $('.completion_prompt_manager_prompt');
+        lastPromptQueryTime = now;
+    }
+    const promptElements = cachedPromptElements;
+    promptElements.each(function () {
+        const element = $(this);
+        const id = element.data('pm-identifier') || element.find('[data-pm-identifier]').data('pm-identifier');
+        if (!id)
+            return; // 早期跳出，避免不必要的DOM查询
+        const nameElement = element.find('.completion_prompt_manager_prompt_name');
+        const name = nameElement.find('a').text().trim() || nameElement.text().trim();
+        if (!name)
+            return; // 早期跳出
+        const isEnabled = element.find('.prompt-manager-toggle-action').hasClass('fa-toggle-on');
+        prompts.push({
+            id: id,
+            name: name,
+            element: element,
+            enabled: isEnabled,
+        });
+    });
+    return prompts;
+}
+// 全局标记，防止重复绑定事件
+let groupingEventsBound = false;
+// 显示条目分组界面
+async function showPromptGroupingUI() {
+    const popupId = 'preset-manager-grouping-popup';
+    $(`#${popupId}`).remove();
+    const prompts = getCurrentPresetPrompts();
+    if (prompts.length === 0) {
+        toastr.warning('当前预设没有可分组的条目。');
+        return;
+    }
+    // 获取当前预设的分组信息
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    const existingGroups = getPresetGrouping(currentPresetName);
+    // 递归查找条目所在的分组路径
+    function findPromptGroupPath(promptId, groups, parentPath = '') {
+        for (const group of groups) {
+            // 检查是否在直接条目中
+            if (group.promptIds.includes(promptId)) {
+                return parentPath ? `${parentPath}/${group.name}` : group.name;
+            }
+            // 递归检查子分组
+            if (group.subGroups.length > 0) {
+                const subPath = findPromptGroupPath(promptId, group.subGroups, parentPath ? `${parentPath}/${group.name}` : group.name);
+                if (subPath) {
+                    return subPath;
+                }
+            }
+        }
+        return null;
+    }
+    const promptsHtml = prompts
+        .map((prompt, index) => {
+        const groupPath = findPromptGroupPath(prompt.id, existingGroups);
+        const isInGroup = groupPath !== null;
+        return `
+      <div class="prompt-item" data-prompt-id="${prompt.id}" data-index="${index}" 
+           style="display: flex; align-items: flex-start; padding: 10px; border: 1px solid #e0e0e0; margin: 3px 0; border-radius: 6px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'}; min-height: 44px;">
+        <input type="checkbox" class="prompt-checkbox" style="margin-right: 12px; transform: scale(1.3); flex-shrink: 0; margin-top: 2px;">
+        <div class="prompt-text" style="flex: 1; min-width: 0;">
+          <div style="font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 14px; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word;">
+          ${$('<div/>').text(prompt.name).html()}
+          </div>
+          ${isInGroup ? `<div style="color: #666; font-size: 12px; margin-top: 4px; word-wrap: break-word; overflow-wrap: break-word;">📁 ${groupPath}</div>` : ''}
+        </div>
+        ${isInGroup ? `<span class="group-tag" style="background-color: #4CAF50; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; flex-shrink: 0; align-self: flex-start; margin-top: 2px;">已分组</span>` : ''}
+      </div>
+    `;
+    })
+        .join('');
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 700px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 85vh; position: relative;">
+        <button id="grouping-close" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #9a6b4f; font-size: 24px; cursor: pointer; z-index: 10003; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background-color 0.2s;">&times;</button>
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px; padding-right: 40px;">预设编辑器</h4>
+        
+        <!-- 操作区域 - 并排布局 -->
+        <div class="操作区域" style="margin: 15px 0; display: flex; gap: 12px; flex-wrap: wrap;">
+          <!-- 分组管理区域 -->
+          <div style="flex: 1; min-width: 280px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #4CAF50;">
+            <div style="font-size: 14px; font-weight: bold; color: #2e7d32; margin-bottom: 8px;">📁 分组管理</div>
+            <input type="text" id="group-name-input" placeholder="输入分组名称..." style="width: 100%; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 10px; box-sizing: border-box;">
+            <div style="position: relative; display: inline-block; width: 100%;">
+              <button id="group-management-btn" style="width: 100%; padding: 10px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 14px; display: flex; align-items: center; justify-content: space-between;">
+                <span>分组操作</span>
+                <span style="font-size: 12px;">▼</span>
+              </button>
+              <div id="group-management-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #d4b58b; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10002; margin-top: 2px;">
+                <button id="create-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#333; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">创建分组</button>
+                <button id="add-to-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#9C27B0; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">加入分组</button>
+                <button id="remove-from-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#FF5722; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">移出分组</button>
+                <button id="dissolve-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#ff9800; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">解散分组</button>
+                <button id="clear-all-groups-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#ff5722; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">清除所有</button>
+                <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
+                <button class="dropdown-close-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#888; cursor:pointer; font-size: 13px; text-align: center;">关闭</button>
+              </div>
+          </div>
+        </div>
+
+          <!-- 条目操作区域 -->
+          <div style="flex: 1; min-width: 280px; padding: 12px; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid #2196F3;">
+            <div style="font-size: 14px; font-weight: bold; color: #1976D2; margin-bottom: 8px;">✏️ 条目操作</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <div style="position: relative; display: inline-block; flex: 1; min-width: 120px;">
+                <button id="item-selection-btn" style="width: 100%; padding: 10px 16px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; display: flex; align-items: center; justify-content: space-between;">
+                  <span>选择操作</span>
+                  <span style="font-size: 12px;">▼</span>
+                </button>
+                <div id="item-selection-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #d4b58b; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10002; margin-top: 2px;">
+                  <button id="select-all-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#333; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">全选</button>
+                  <button id="select-none-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#9E9E9E; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">全不选</button>
+                  <button id="move-prompts-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#673AB7; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">移动条目</button>
+                  <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
+                  <button class="dropdown-close-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#888; cursor:pointer; font-size: 13px; text-align: center;">关闭</button>
+                </div>
+              </div>
+              <div style="position: relative; display: inline-block; flex: 1; min-width: 120px;">
+                <button id="item-edit-btn" style="width: 100%; padding: 10px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; display: flex; align-items: center; justify-content: space-between;">
+                  <span>编辑操作</span>
+                  <span style="font-size: 12px;">▼</span>
+                </button>
+                <div id="item-edit-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #d4b58b; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10002; margin-top: 2px;">
+                  <button id="add-prompt-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#4CAF50; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">新增条目</button>
+                  <button id="edit-prompt-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#FF9800; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">编辑条目</button>
+                  <button id="delete-prompts-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#F44336; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">删除条目</button>
+                  <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
+                  <button class="dropdown-close-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#888; cursor:pointer; font-size: 13px; text-align: center;">关闭</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1; min-height: 300px; max-height: 400px; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 16px; margin-bottom: 15px; background-color: #fafafa;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;">💡 提示：选中条目后可以创建分组，支持多级分组。分组后的条目会在预设界面中折叠显示，便于管理</div>
+          <div id="prompts-container">
+            ${promptsHtml}
+          </div>
+        </div>
+
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; gap: 10px; flex-shrink: 0; margin-top: auto; padding: 8px 0; min-height: 30px;">
+          <div id="existing-groups-info" style="font-size: 12px; color: #666; flex: 1; min-width: 200px; word-wrap: break-word; overflow-wrap: break-word; line-height: 1.4; max-width: 100%; min-height: 20px; display: block;"></div>
+        </div>
+      </div>
+    </div>
+  `;
+    $('body').append(popupHtml);
+    // 显示现有分组信息
+    console.log('现有分组:', existingGroups);
+    updateExistingGroupsInfo(existingGroups);
+    // 绑定事件（防止重复绑定）
+    if (!groupingEventsBound) {
+        bindGroupingEvents(prompts, existingGroups);
+        groupingEventsBound = true;
+    }
+    else {
+        console.log('分组事件已绑定，重新绑定以确保事件正确');
+        // 即使已绑定，也要重新绑定以确保事件正确（适配脚本重复加载）
+        bindGroupingEvents(prompts, existingGroups);
+    }
+    // 立即绑定关闭按钮事件，确保能正常工作
+    setTimeout(() => {
+        $('.dropdown-close-btn')
+            .off('click')
+            .on('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            const menu = $(this).closest('[id$="-menu"]');
+            if (menu.length > 0) {
+                menu.hide();
+                console.log('下拉菜单已关闭:', menu.attr('id'));
+            }
+            else {
+                console.warn('未找到对应的菜单元素');
+            }
+        });
+        console.log('关闭按钮事件已重新绑定');
+    }, 100);
+    // 移动端样式
+    const mobileStyles = `<style>
+    #${popupId} #grouping-close:hover {
+      background-color: rgba(154, 107, 79, 0.1) !important;
+    }
+    .dropdown-close-btn:hover {
+      background-color: rgba(153, 153, 153, 0.1) !important;
+    }
+    
+    /* 平板端适配 (768px - 1024px) */
+    @media (max-width: 1024px) {
+      #${popupId} > div {
+        width: 92% !important;
+        max-width: 650px !important;
+        max-height: 88vh !important;
+      }
+      #${popupId} .操作区域 {
+        gap: 10px !important;
+      }
+      #${popupId} .操作区域 > div {
+        min-width: 250px !important;
+      }
+    }
+    
+    /* 小屏幕适配 (600px - 768px) */
+    @media (max-width: 768px) {
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 8px !important;
+      } 
+      #${popupId} > div { 
+        width: 96% !important;
+        max-width: none !important;
+        margin-top: 1vh !important;
+        max-height: 96vh !important;
+        padding: 16px !important;
+      }
+      #${popupId} h4 {
+        font-size: 17px !important;
+        margin-bottom: 12px !important;
+        padding-right: 35px !important;
+      }
+      #${popupId} .操作区域 {
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin: 12px 0 !important;
+      }
+      #${popupId} .操作区域 > div {
+        min-width: 100% !important;
+        flex: none !important;
+        padding: 10px !important;
+      }
+      #${popupId} #grouping-close {
+        top: 12px !important;
+        right: 12px !important;
+        font-size: 26px !important;
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+    
+    /* 手机端适配 (480px - 600px) */
+    @media (max-width: 600px) {
+      #${popupId} {
+        padding: 5px !important;
+      }
+      #${popupId} > div {
+        width: 98% !important;
+        margin-top: 0.5vh !important;
+        max-height: 98vh !important;
+        padding: 14px !important;
+        border-radius: 12px !important;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+        padding-right: 30px !important;
+      }
+      #${popupId} .操作区域 {
+        margin: 10px 0 !important;
+        gap: 6px !important;
+      }
+      #${popupId} .操作区域 > div {
+        padding: 8px !important;
+        border-radius: 6px !important;
+      }
+      #${popupId} .操作区域 h5 {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+      }
+      #${popupId} .操作区域 input {
+        font-size: 14px !important;
+        padding: 8px 10px !important;
+      }
+      #${popupId} .操作区域 button {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+      }
+      #${popupId} #grouping-close {
+        top: 8px !important;
+        right: 8px !important;
+        font-size: 24px !important;
+        width: 30px !important;
+        height: 30px !important;
+      }
+      #${popupId} #prompts-container {
+        min-height: 250px !important;
+        max-height: 350px !important;
+        padding: 12px !important;
+      }
+      #${popupId} .prompt-item {
+        padding: 8px 10px !important;
+        margin-bottom: 6px !important;
+        font-size: 13px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.4 !important;
+      }
+      #${popupId} .prompt-item input[type="checkbox"] {
+        width: 16px !important;
+        height: 16px !important;
+        margin-right: 8px !important;
+        flex-shrink: 0 !important;
+      }
+      #${popupId} .prompt-item .prompt-text {
+        flex: 1 !important;
+        min-width: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      #${popupId} [id$="-menu"] {
+        position: fixed !important;
+        top: 20vh !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 85% !important;
+        max-width: 320px !important;
+        z-index: 10003 !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+        max-height: 60vh !important;
+        overflow-y: auto !important;
+      }
+      #${popupId} [id$="-menu"] button {
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        min-height: 44px !important;
+        margin: 2px 0 !important;
+      }
+    }
+    
+    /* 小屏手机适配 (360px - 480px) */
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        width: 99% !important;
+        margin-top: 0 !important;
+        max-height: 99vh !important;
+        padding: 12px !important;
+        border-radius: 10px !important;
+      }
+      #${popupId} h4 {
+        font-size: 15px !important;
+        padding-right: 28px !important;
+      }
+      #${popupId} .操作区域 {
+        margin: 8px 0 !important;
+        gap: 5px !important;
+      }
+      #${popupId} .操作区域 > div {
+        padding: 6px !important;
+        border-radius: 5px !important;
+      }
+      #${popupId} .操作区域 h5 {
+        font-size: 12px !important;
+        margin-bottom: 6px !important;
+      }
+      #${popupId} .操作区域 input {
+        font-size: 13px !important;
+        padding: 6px 8px !important;
+      }
+      #${popupId} .操作区域 button {
+        font-size: 12px !important;
+        padding: 6px 10px !important;
+      }
+      #${popupId} #grouping-close {
+        top: 6px !important;
+        right: 6px !important;
+        font-size: 22px !important;
+        width: 28px !important;
+        height: 28px !important;
+      }
+      #${popupId} #prompts-container {
+        min-height: 200px !important;
+        max-height: 300px !important;
+        padding: 10px !important;
+      }
+      #${popupId} .prompt-item {
+        padding: 6px 8px !important;
+        margin-bottom: 4px !important;
+        font-size: 12px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+      }
+      #${popupId} .prompt-item input[type="checkbox"] {
+        width: 14px !important;
+        height: 14px !important;
+        margin-right: 6px !important;
+        flex-shrink: 0 !important;
+      }
+      #${popupId} .prompt-item .prompt-text {
+        flex: 1 !important;
+        min-width: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      #${popupId} #existing-groups-info {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+        padding: 4px 0 !important;
+      }
+      #${popupId} [id$="-menu"] {
+        position: fixed !important;
+        top: 15vh !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        max-width: 300px !important;
+        padding: 10px !important;
+        max-height: 70vh !important;
+        overflow-y: auto !important;
+      }
+      #${popupId} [id$="-menu"] button {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        min-height: 40px !important;
+      }
+    }
+    
+    /* 超小屏适配 (320px - 360px) */
+    @media (max-width: 360px) {
+      #${popupId} > div {
+        width: 100% !important;
+        margin: 0 !important;
+        max-height: 100vh !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+      }
+      #${popupId} h4 {
+        font-size: 14px !important;
+        padding-right: 25px !important;
+      }
+      #${popupId} .操作区域 {
+        margin: 6px 0 !important;
+        gap: 4px !important;
+      }
+      #${popupId} .操作区域 > div {
+        padding: 5px !important;
+        border-radius: 4px !important;
+      }
+      #${popupId} .操作区域 h5 {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+      }
+      #${popupId} .操作区域 input {
+        font-size: 12px !important;
+        padding: 5px 6px !important;
+      }
+      #${popupId} .操作区域 button {
+        font-size: 11px !important;
+        padding: 5px 8px !important;
+      }
+      #${popupId} #grouping-close {
+        top: 5px !important;
+        right: 5px !important;
+        font-size: 20px !important;
+        width: 26px !important;
+        height: 26px !important;
+      }
+      #${popupId} #prompts-container {
+        min-height: 180px !important;
+        max-height: 280px !important;
+        padding: 8px !important;
+      }
+      #${popupId} .prompt-item {
+        padding: 5px 6px !important;
+        margin-bottom: 3px !important;
+        font-size: 11px !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+      }
+      #${popupId} .prompt-item input[type="checkbox"] {
+        width: 12px !important;
+        height: 12px !important;
+        margin-right: 5px !important;
+        flex-shrink: 0 !important;
+      }
+      #${popupId} .prompt-item .prompt-text {
+        flex: 1 !important;
+        min-width: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      #${popupId} #existing-groups-info {
+        font-size: 9px !important;
+        line-height: 1.1 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+        padding: 3px 0 !important;
+      }
+      #${popupId} [id$="-menu"] {
+        position: fixed !important;
+        top: 10vh !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 95% !important;
+        max-width: 280px !important;
+        padding: 8px !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+      }
+      #${popupId} [id$="-menu"] button {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+        min-height: 36px !important;
+      }
+    }
+  </style>`;
+    $(`#${popupId}`).append(mobileStyles);
+}
+function updateExistingGroupsInfo(groups) {
+    const infoElement = $('#existing-groups-info');
+    if (!infoElement.length) {
+        console.warn('分组信息元素未找到');
+        return;
+    }
+    if (groups.length === 0) {
+        infoElement.html('当前没有分组');
+    }
+    else {
+        const groupNames = getGroupNamesRecursively(groups);
+        const groupText = groupNames.length > 0 ? groupNames.join(', ') : '无';
+        infoElement.html(`现有分组: ${groupText}`);
+    }
+}
+// 递归获取所有分组名称（包括子分组）
+function getGroupNamesRecursively(groups) {
+    const names = [];
+    groups.forEach(group => {
+        names.push(group.name);
+        if (group.subGroups.length > 0) {
+            const subGroupNames = getGroupNamesRecursively(group.subGroups);
+            subGroupNames.forEach(subName => {
+                names.push(`${group.name}/${subName}`);
+            });
+        }
+    });
+    return names;
+}
+function bindGroupingEvents(_prompts, existingGroups) {
+    let selectedPrompts = [];
+    // 先解绑所有可能重复的事件，防止重复绑定
+    $('.prompt-item').off('click');
+    $('.prompt-checkbox').off('change');
+    $('#select-all-btn').off('click');
+    $('#select-none-btn').off('click');
+    $('#move-prompts-btn').off('click');
+    $('#add-prompt-btn').off('click');
+    $('#edit-prompt-btn').off('click');
+    $('#delete-prompts-btn').off('click');
+    $('#create-group-btn').off('click');
+    $('#remove-group-btn').off('click');
+    $('#dissolve-group-btn').off('click');
+    $('#clear-all-groups-btn').off('click');
+    $('#grouping-close').off('click');
+    // 新增的下拉菜单按钮
+    $('#group-management-btn').off('click');
+    $('#item-selection-btn').off('click');
+    $('#item-edit-btn').off('click');
+    $('#add-to-group-btn').off('click');
+    $('#remove-from-group-btn').off('click');
+    $('.dropdown-close-btn').off('click');
+    // 解绑文档级别的事件，防止重复绑定
+    $(document).off('click', '.dropdown-close-btn');
+    $(document).off('click', '[id$="-btn"], [id$="-menu"]');
+    // 条目选择
+    $('.prompt-item').on('click', function (e) {
+        if (e.target.type === 'checkbox')
+            return;
+        const checkbox = $(this).find('.prompt-checkbox');
+        checkbox.prop('checked', !checkbox.prop('checked'));
+        updateSelectedPrompts();
+    });
+    $('.prompt-checkbox').on('change', updateSelectedPrompts);
+    function updateSelectedPrompts() {
+        selectedPrompts = [];
+        $('.prompt-checkbox:checked').each(function () {
+            const promptId = $(this).closest('.prompt-item').data('prompt-id');
+            selectedPrompts.push(promptId);
+        });
+    }
+    // 全选/全不选
+    $('#select-all-btn').on('click', () => {
+        $('.prompt-checkbox').prop('checked', true);
+        updateSelectedPrompts();
+    });
+    $('#select-none-btn').on('click', () => {
+        $('.prompt-checkbox').prop('checked', false);
+        updateSelectedPrompts();
+    });
+    // 移动条目
+    $('#move-prompts-btn').on('click', async () => {
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要移动的条目');
+            return;
+        }
+        // 显示目标位置选择弹窗
+        await showPositionSelectionPopup(_prompts, selectedPrompts, (targetPromptId, position) => {
+            movePromptsToPosition(selectedPrompts, targetPromptId, position);
+            // 清除选择状态
+            $('.prompt-checkbox').prop('checked', false);
+            selectedPrompts = [];
+            toastr.success('条目移动完成，将在关闭分组界面时应用到预设');
+        });
+    });
+    // 新增条目
+    $('#add-prompt-btn').on('click', async () => {
+        await showAddPromptPopup(() => {
+            // 重新加载分组界面以显示新条目
+            setTimeout(() => {
+                $('#preset-manager-grouping-popup').remove();
+                showPromptGroupingUI();
+            }, 100);
+        });
+    });
+    // 编辑条目
+    $('#edit-prompt-btn').on('click', async () => {
+        if (selectedPrompts.length !== 1) {
+            toastr.error('请选择一个条目进行编辑');
+            return;
+        }
+        const promptId = selectedPrompts[0];
+        const prompt = _prompts.find(p => p.id === promptId);
+        if (!prompt) {
+            toastr.error('未找到要编辑的条目');
+            return;
+        }
+        await showEditPromptPopup(prompt, () => {
+            // 重新加载分组界面以显示更新后的条目
+            setTimeout(() => {
+                $('#preset-manager-grouping-popup').remove();
+                showPromptGroupingUI();
+            }, 100);
+        });
+    });
+    // 删除条目
+    $('#delete-prompts-btn').on('click', async () => {
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要删除的条目');
+            return;
+        }
+        const confirmChoice = await triggerSlash(`/popup okButton="确认删除" cancelButton="取消" result=true "确定要删除选中的 ${selectedPrompts.length} 个条目吗？此操作不可撤销。"`);
+        if (confirmChoice === '1') {
+            await deleteSelectedPrompts(selectedPrompts);
+            // 重新加载分组界面
+            setTimeout(() => {
+                $('#preset-manager-grouping-popup').remove();
+                showPromptGroupingUI();
+            }, 100);
+        }
+    });
+    // 加入分组
+    $('#add-to-group-btn').on('click', async () => {
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要加入分组的条目');
+            return;
+        }
+        // 检查选中的条目是否已经在其他分组中
+        const alreadyGroupedPrompts = [];
+        selectedPrompts.forEach(promptId => {
+            const existingGroup = findPromptInGroups(existingGroups, promptId);
+            if (existingGroup) {
+                alreadyGroupedPrompts.push(promptId);
+            }
+        });
+        if (alreadyGroupedPrompts.length > 0) {
+            // 获取已分组条目的名称
+            const alreadyGroupedNames = alreadyGroupedPrompts.map(promptId => {
+                const promptItem = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+                return promptItem.find('.prompt-text div:first').text().trim();
+            });
+            toastr.error(`以下条目已在其他分组中，无法重复分组：${alreadyGroupedNames.slice(0, 3).join('、')}${alreadyGroupedNames.length > 3 ? '等' : ''}`);
+            return;
+        }
+        // 显示分组选择弹窗
+        await showGroupSelectionPopup(selectedPrompts, existingGroups);
+    });
+    // 移出分组
+    $('#remove-from-group-btn').on('click', async () => {
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要移出分组的条目');
+            return;
+        }
+        // 检查选中的条目是否在分组中
+        const groupedPrompts = [];
+        selectedPrompts.forEach(promptId => {
+            const existingGroup = findPromptInGroups(existingGroups, promptId);
+            if (existingGroup) {
+                groupedPrompts.push(promptId);
+            }
+        });
+        if (groupedPrompts.length === 0) {
+            toastr.error('选中的条目都不在任何分组中');
+            return;
+        }
+        const confirmChoice = await triggerSlash(`/popup okButton="确认移出" cancelButton="取消" result=true "确定要将选中的 ${groupedPrompts.length} 个条目移出分组吗？"`);
+        if (confirmChoice === '1') {
+            await removePromptsFromGroups(groupedPrompts, existingGroups);
+            // 重新加载分组界面
+            setTimeout(() => {
+                $('#preset-manager-grouping-popup').remove();
+                showPromptGroupingUI();
+            }, 100);
+        }
+    });
+    // 创建分组
+    $('#create-group-btn').on('click', async () => {
+        const groupName = $('#group-name-input').val()?.toString().trim();
+        if (!groupName) {
+            toastr.error('请输入分组名称');
+            return;
+        }
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要分组的条目');
+            return;
+        }
+        // 检测选中条目是否都属于同一个分组
+        const parentGroup = detectCommonParentGroup(selectedPrompts, existingGroups);
+        if (parentGroup) {
+            // 选中的条目都属于同一个分组，创建子分组
+            await createSubGroup(parentGroup, groupName, selectedPrompts, existingGroups);
+        }
+        else {
+            // 检查选中的条目是否已经在其他分组中
+            const alreadyGroupedPrompts = [];
+            selectedPrompts.forEach(promptId => {
+                const existingGroup = findPromptInGroups(existingGroups, promptId);
+                if (existingGroup) {
+                    alreadyGroupedPrompts.push(promptId);
+                }
+            });
+            if (alreadyGroupedPrompts.length > 0) {
+                // 获取已分组条目的名称
+                const alreadyGroupedNames = alreadyGroupedPrompts.map(promptId => {
+                    const promptItem = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+                    return promptItem.find('span:first').text().trim();
+                });
+                toastr.error(`以下条目已在其他分组中，无法重复分组：${alreadyGroupedNames.slice(0, 3).join('、')}${alreadyGroupedNames.length > 3 ? '等' : ''}`);
+                return;
+            }
+            // 检查是否有重名的顶级分组
+            if (existingGroups.some(g => g.name === groupName)) {
+                toastr.error('分组名称已存在');
+                return;
+            }
+            // 创建新的顶级分组
+            await createTopLevelGroup(groupName, selectedPrompts, existingGroups);
+        }
+        // 更新界面状态
+        updateExistingGroupsInfo(existingGroups);
+        $('#group-name-input').val('');
+        $('.prompt-checkbox').prop('checked', false);
+        selectedPrompts = [];
+        // 保存分组配置
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const validGroups = existingGroups.filter(g => hasValidContent(g));
+        savePresetGrouping(currentPresetName, validGroups);
+    });
+    // 移除分组
+    $('#remove-group-btn').on('click', () => {
+        if (selectedPrompts.length === 0) {
+            toastr.error('请选择要移除分组的条目');
+            return;
+        }
+        // 递归从所有分组（包括子分组）中移除选中的条目
+        function removePromptsFromGroups(groups, promptIds) {
+            groups.forEach(group => {
+                // 从当前分组的直接条目中移除
+                group.promptIds = group.promptIds.filter(id => !promptIds.includes(id));
+                // 递归处理子分组
+                if (group.subGroups.length > 0) {
+                    removePromptsFromGroups(group.subGroups, promptIds);
+                }
+            });
+        }
+        // 从所有分组中移除选中的条目
+        removePromptsFromGroups(existingGroups, selectedPrompts);
+        // 递归移除空分组（包括子分组）
+        function removeEmptyGroups(groups) {
+            for (let i = groups.length - 1; i >= 0; i--) {
+                const group = groups[i];
+                // 递归处理子分组
+                if (group.subGroups.length > 0) {
+                    removeEmptyGroups(group.subGroups);
+                }
+                // 检查当前分组是否为空（没有直接条目且没有子分组）
+                if (group.promptIds.length === 0 && group.subGroups.length === 0) {
+                    groups.splice(i, 1);
+                }
+            }
+        }
+        removeEmptyGroups(existingGroups);
+        // 更新UI
+        selectedPrompts.forEach(promptId => {
+            const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+            item.css('background-color', '#fff');
+            item.find('.group-tag').remove();
+            // 清除分组路径显示
+            const promptText = item.find('.prompt-text');
+            if (promptText.length > 0) {
+                promptText.find('div:last-child').remove(); // 移除分组路径div
+            }
+        });
+        updateExistingGroupsInfo(existingGroups);
+        $('.prompt-checkbox').prop('checked', false);
+        selectedPrompts = [];
+        // 保存分组配置并立即应用
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const validGroups = existingGroups.filter(g => hasValidContent(g));
+        savePresetGrouping(currentPresetName, validGroups);
+        // 立即应用分组到DOM
+        applyGroupingToDOM(validGroups);
+        // 延迟恢复以确保DOM更新完成
+        setTimeout(() => {
+            restoreGroupingImmediate();
+        }, 100);
+        toastr.success('已移除选中条目的分组');
+    });
+    // 解散分组
+    $('#dissolve-group-btn').on('click', async () => {
+        if (existingGroups.length === 0) {
+            toastr.info('当前没有分组可以解散');
+            return;
+        }
+        // 显示解散分组弹窗
+        await showDissolveGroupPopup(existingGroups);
+    });
+    // 清除所有分组
+    $('#clear-all-groups-btn').on('click', async () => {
+        if (existingGroups.length === 0) {
+            toastr.info('当前没有分组需要清除');
+            return;
+        }
+        const confirmChoice = await triggerSlash(`/popup okButton="确认清除" cancelButton="取消" result=true "确定要清除当前预设的所有分组吗？此操作不可撤销。"`);
+        if (confirmChoice === '1') {
+            // 清空分组数组
+            existingGroups.length = 0;
+            // 更新UI显示
+            $('.prompt-item').each(function () {
+                $(this).css('background-color', '#fff');
+                $(this).find('.group-tag').remove();
+                // 清除分组路径显示
+                const promptText = $(this).find('.prompt-text');
+                if (promptText.length > 0) {
+                    promptText.find('div:last-child').remove(); // 移除分组路径div
+                }
+            });
+            updateExistingGroupsInfo(existingGroups);
+            $('.prompt-checkbox').prop('checked', false);
+            selectedPrompts = [];
+            // 保存分组配置并立即应用
+            const currentPresetName = TavernHelper.getLoadedPresetName();
+            const validGroups = existingGroups.filter(g => g.promptIds.length > 0);
+            savePresetGrouping(currentPresetName, validGroups);
+            // 立即应用分组到DOM
+            applyGroupingToDOM(validGroups);
+            // 延迟恢复以确保DOM更新完成
+            setTimeout(() => {
+                restoreGroupingImmediate();
+            }, 100);
+            toastr.success('已清除所有分组');
+        }
+    });
+    // 关闭
+    $('#grouping-close').on('click', () => {
+        // 关闭前确保保存当前的分组状态
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const validGroups = existingGroups.filter(g => hasValidContent(g));
+        savePresetGrouping(currentPresetName, validGroups);
+        // 确保分组应用到预设界面
+        applyGroupingToDOM(validGroups);
+        // 重置事件绑定标记
+        groupingEventsBound = false;
+        $('#preset-manager-grouping-popup').remove();
+        console.log('分组界面关闭，已保存并应用分组配置');
+    });
+    // 下拉菜单交互逻辑
+    $('#group-management-btn').on('click', function (e) {
+        e.stopPropagation();
+        const menu = $('#group-management-menu');
+        menu.toggle();
+        // 关闭其他菜单
+        $('#item-selection-menu, #item-edit-menu').hide();
+    });
+    $('#item-selection-btn').on('click', function (e) {
+        e.stopPropagation();
+        const menu = $('#item-selection-menu');
+        menu.toggle();
+        // 关闭其他菜单
+        $('#group-management-menu, #item-edit-menu').hide();
+    });
+    $('#item-edit-btn').on('click', function (e) {
+        e.stopPropagation();
+        const menu = $('#item-edit-menu');
+        menu.toggle();
+        // 关闭其他菜单
+        $('#group-management-menu, #item-selection-menu').hide();
+    });
+    // 关闭按钮事件 - 使用更具体的选择器避免重复绑定
+    $(document)
+        .off('click', '.dropdown-close-btn')
+        .on('click', '.dropdown-close-btn', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const menu = $(this).closest('[id$="-menu"]');
+        if (menu.length > 0) {
+            menu.hide();
+            console.log('下拉菜单已关闭:', menu.attr('id'));
+        }
+        else {
+            console.warn('未找到对应的菜单元素');
+        }
+    });
+    // 为每个具体的关闭按钮单独绑定事件，确保能正常工作
+    $('#group-management-menu .dropdown-close-btn')
+        .off('click')
+        .on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('#group-management-menu').hide();
+        console.log('分组管理菜单已关闭');
+    });
+    $('#item-selection-menu .dropdown-close-btn')
+        .off('click')
+        .on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('#item-selection-menu').hide();
+        console.log('条目选择菜单已关闭');
+    });
+    $('#item-edit-menu .dropdown-close-btn')
+        .off('click')
+        .on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('#item-edit-menu').hide();
+        console.log('条目编辑菜单已关闭');
+    });
+    // 点击其他地方关闭所有菜单
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('[id$="-btn"], [id$="-menu"]').length) {
+            $('#group-management-menu, #item-selection-menu, #item-edit-menu').hide();
+        }
+    });
+}
+// 应用分组到DOM
+function applyGroupingToDOM(groups) {
+    console.log('开始应用分组到DOM，分组数量:', groups.length);
+    // 检查是否有预设条目存在
+    const promptElements = $('.completion_prompt_manager_prompt');
+    if (promptElements.length === 0) {
+        console.warn('未找到预设条目，无法应用分组');
+        return;
+    }
+    console.log('找到预设条目数量:', promptElements.length);
+    // 先确保所有条目都从分组容器中移出，然后再移除分组容器
+    $('.prompt-group-container').each(function () {
+        const container = $(this);
+        const prompts = container.find('.completion_prompt_manager_prompt');
+        // 将条目移动到分组容器之前
+        container.before(prompts);
+    });
+    // 移除现有的分组容器
+    $('.prompt-group-container').remove();
+    // 递归应用分组
+    applyGroupsRecursively(groups, 0);
+}
+// 递归应用分组到DOM
+function applyGroupsRecursively(groups, level) {
+    groups.forEach(group => {
+        // 检查分组是否有内容（条目或子分组）
+        if (!hasValidContent(group))
+            return;
+        console.log('处理分组:', group.name, '层级:', level, '条目数量:', group.promptIds.length, '子分组数量:', group.subGroups.length);
+        // 获取分组中所有条目（包括子分组中的条目）
+        const allPromptIds = getAllPromptIdsFromGroup(group);
+        if (allPromptIds.length === 0) {
+            console.log('分组没有条目，跳过:', group.name);
+            return;
+        }
+        // 找到分组中的第一个条目作为插入点
+        let firstPromptElement = null;
+        for (const promptId of allPromptIds) {
+            const element = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+            if (element.length > 0) {
+                firstPromptElement = element;
+                break;
+            }
+        }
+        if (!firstPromptElement || firstPromptElement.length === 0) {
+            console.log('未找到分组的任何条目:', group.name);
+            return;
+        }
+        console.log('找到第一个条目，开始创建分组容器');
+        // 统计分组内启用的条目数量（包括子分组）
+        const enabledCount = allPromptIds.filter(promptId => {
+            const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+            return promptElement.find('.prompt-manager-toggle-action').hasClass('fa-toggle-on');
+        }).length;
+        // 创建分组容器
+        const indentStyle = level > 0 ? `margin-left: ${level * 20}px;` : '';
+        const groupContainer = $(`
+      <div class="prompt-group-container" data-group-id="${group.id}" style="border: 1px solid rgba(128, 128, 128, 0.3); margin: 5px 0; background-color: rgba(0, 0, 0, 0.05); ${indentStyle} overflow: visible;">
+        <div class="prompt-group-header" style="padding: 6px 10px; background-color: rgba(0, 0, 0, 0.08); cursor: pointer; display: flex; align-items: center;">
+          <span class="group-toggle-icon" style="margin-right: 6px; font-size: 12px; color: inherit;">${group.collapsed ? '▶' : '▼'}</span>
+          <span style="font-weight: bold; color: inherit;">${$('<div/>').text(group.name).html()}</span>
+          <span style="margin-left: 8px; font-size: 12px; color: #666;">(${enabledCount}/${allPromptIds.length})</span>
+        </div>
+        <div class="prompt-group-content" style="padding: 3px; min-height: 0; overflow: visible; ${group.collapsed ? 'display: none;' : 'display: block;'}"></div>
+      </div>
+    `);
+        // 将分组插入到第一个条目之前
+        firstPromptElement.before(groupContainer);
+        console.log('分组容器已插入到DOM');
+        // 将分组中的直接条目移动到分组容器中
+        group.promptIds.forEach(promptId => {
+            // 尝试多种选择器来查找条目
+            let promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+            // 如果没找到，尝试在子元素中查找
+            if (promptElement.length === 0) {
+                promptElement = $(`.completion_prompt_manager_prompt`).filter(function () {
+                    return ($(this).data('pm-identifier') === promptId ||
+                        $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId);
+                });
+            }
+            if (promptElement.length > 0) {
+                groupContainer.find('.prompt-group-content').append(promptElement);
+                console.log('移动条目到分组容器:', promptId);
+            }
+            else {
+                console.warn('未找到条目:', promptId);
+            }
+        });
+        // 递归处理子分组
+        if (group.subGroups.length > 0) {
+            // 创建子分组的容器
+            const subGroupsContainer = $('<div class="subgroups-container"></div>');
+            groupContainer.find('.prompt-group-content').append(subGroupsContainer);
+            // 递归应用子分组
+            applySubGroupsToContainer(group.subGroups, subGroupsContainer, level + 1);
+        }
+        console.log('分组容器创建完成，条目数量:', groupContainer.find('.completion_prompt_manager_prompt').length);
+        // 绑定展开/折叠事件（使用立即执行函数避免闭包问题）
+        (function (currentGroup) {
+            const header = groupContainer.find('.prompt-group-header');
+            console.log('为主分组绑定事件:', currentGroup.name, '头部元素数量:', header.length);
+            // 先解绑旧事件，防止重复绑定
+            header.off('click');
+            header.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const content = $(this).siblings('.prompt-group-content');
+                const icon = $(this).find('.group-toggle-icon');
+                console.log('主分组点击事件触发:', currentGroup.name);
+                console.log('内容元素数量:', content.length, '图标元素数量:', icon.length);
+                console.log('当前内容可见状态:', content.is(':visible'));
+                if (content.is(':visible') && content.css('display') !== 'none') {
+                    content.css('display', 'none');
+                    icon.text('▶');
+                    currentGroup.collapsed = true;
+                    console.log('主分组已折叠:', currentGroup.name);
+                }
+                else {
+                    content.css({
+                        display: 'block',
+                        visibility: 'visible',
+                        height: 'auto',
+                        overflow: 'visible',
+                    });
+                    content.show();
+                    icon.text('▼');
+                    currentGroup.collapsed = false;
+                    console.log('主分组已展开:', currentGroup.name);
+                    console.log('主分组展开后内容区域子元素数量:', content.children().length);
+                }
+            });
+        })(group);
+    });
+}
+// 应用子分组到指定容器
+function applySubGroupsToContainer(subGroups, container, level) {
+    subGroups.forEach(subGroup => {
+        if (!hasValidContent(subGroup))
+            return;
+        console.log('处理子分组:', subGroup.name, '层级:', level);
+        // 获取子分组中所有条目
+        const allPromptIds = getAllPromptIdsFromGroup(subGroup);
+        // 统计启用的条目数量
+        const enabledCount = allPromptIds.filter(promptId => {
+            const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+            return promptElement.find('.prompt-manager-toggle-action').hasClass('fa-toggle-on');
+        }).length;
+        // 创建子分组容器
+        const subGroupContainer = $(`
+      <div class="prompt-group-container subgroup" data-group-id="${subGroup.id}" style="border: 1px solid rgba(128, 128, 128, 0.2); margin: 3px 0; background-color: rgba(0, 0, 0, 0.03); margin-left: 15px; overflow: visible;">
+        <div class="prompt-group-header" style="padding: 4px 8px; background-color: rgba(0, 0, 0, 0.05); cursor: pointer; display: flex; align-items: center;">
+          <span class="group-toggle-icon" style="margin-right: 6px; font-size: 11px; color: inherit;">${subGroup.collapsed ? '▶' : '▼'}</span>
+          <span style="font-weight: bold; color: inherit; font-size: 13px;">${$('<div/>').text(subGroup.name).html()}</span>
+          <span style="margin-left: 8px; font-size: 11px; color: #666;">(${enabledCount}/${allPromptIds.length})</span>
+        </div>
+        <div class="prompt-group-content" style="padding: 2px; min-height: 0; overflow: visible; ${subGroup.collapsed ? 'display: none;' : 'display: block;'}"></div>
+      </div>
+    `);
+        container.append(subGroupContainer);
+        // 移动子分组的直接条目
+        console.log('开始移动子分组条目:', subGroup.promptIds);
+        subGroup.promptIds.forEach(promptId => {
+            let promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+            if (promptElement.length === 0) {
+                promptElement = $(`.completion_prompt_manager_prompt`).filter(function () {
+                    return ($(this).data('pm-identifier') === promptId ||
+                        $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId);
+                });
+            }
+            if (promptElement.length > 0) {
+                const contentContainer = subGroupContainer.find('.prompt-group-content');
+                contentContainer.append(promptElement);
+                console.log('移动条目到子分组容器:', promptId, '容器内条目数量:', contentContainer.children().length);
+            }
+            else {
+                console.warn('未找到条目元素:', promptId);
+            }
+        });
+        const finalContentCount = subGroupContainer.find('.prompt-group-content').children().length;
+        console.log('子分组最终包含的元素数量:', finalContentCount);
+        // 递归处理更深层的子分组
+        if (subGroup.subGroups.length > 0) {
+            const deeperSubGroupsContainer = $('<div class="subgroups-container"></div>');
+            subGroupContainer.find('.prompt-group-content').append(deeperSubGroupsContainer);
+            applySubGroupsToContainer(subGroup.subGroups, deeperSubGroupsContainer, level + 1);
+        }
+        // 绑定展开/折叠事件（使用立即执行函数避免闭包问题）
+        (function (currentSubGroup) {
+            const header = subGroupContainer.find('.prompt-group-header');
+            console.log('为子分组绑定事件:', currentSubGroup.name, '头部元素数量:', header.length);
+            // 先解绑旧事件，防止重复绑定
+            header.off('click');
+            header.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const content = $(this).siblings('.prompt-group-content');
+                const icon = $(this).find('.group-toggle-icon');
+                console.log('子分组点击事件触发:', currentSubGroup.name);
+                console.log('内容元素数量:', content.length, '图标元素数量:', icon.length);
+                console.log('当前内容可见状态:', content.is(':visible'));
+                console.log('当前内容display样式:', content.css('display'));
+                if (content.is(':visible') && content.css('display') !== 'none') {
+                    content.css('display', 'none');
+                    icon.text('▶');
+                    currentSubGroup.collapsed = true;
+                    console.log('子分组已折叠:', currentSubGroup.name);
+                }
+                else {
+                    // 强制显示，并检查内容
+                    content.css({
+                        display: 'block',
+                        visibility: 'visible',
+                        height: 'auto',
+                        overflow: 'visible',
+                    });
+                    content.show(); // 双重保险
+                    icon.text('▼');
+                    currentSubGroup.collapsed = false;
+                    console.log('子分组已展开:', currentSubGroup.name);
+                    console.log('展开后内容区域子元素数量:', content.children().length);
+                    console.log('展开后实际高度:', content.height());
+                    // 强制重新渲染
+                    setTimeout(() => {
+                        content.trigger('resize');
+                        console.log('强制重新渲染后高度:', content.height());
+                    }, 10);
+                }
+            });
+        })(subGroup);
+    });
+}
+// 获取分组中的所有条目ID（递归包括子分组）
+function getAllPromptIdsFromGroup(group) {
+    let allIds = [...group.promptIds];
+    group.subGroups.forEach(subGroup => {
+        allIds = allIds.concat(getAllPromptIdsFromGroup(subGroup));
+    });
+    return allIds;
+}
+// 加载时恢复分组
+function restoreGroupingFromConfig() {
+    try {
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const groups = getPresetGrouping(currentPresetName);
+        if (groups.length > 0) {
+            console.log(`恢复预设 "${currentPresetName}" 的分组配置，共 ${groups.length} 个分组`);
+            // 检查是否有预设条目存在
+            const promptElements = $('.completion_prompt_manager_prompt');
+            if (promptElements.length === 0) {
+                console.log('⚠️ 未找到预设条目，延迟恢复分组');
+                setTimeout(() => restoreGroupingFromConfig(), 200);
+                return;
+            }
+            // 延迟一点时间确保DOM已加载
+            setTimeout(() => {
+                applyGroupingToDOM(groups);
+            }, 200);
+        }
+        else {
+            console.log(`预设 "${currentPresetName}" 没有分组配置`);
+        }
+    }
+    catch (error) {
+        console.error('恢复分组配置失败:', error);
+    }
+}
+// 延迟恢复分组（用于DOM变化后）
+// 防抖恢复分组
+let restoreTimeout = null;
+// 智能延迟恢复，根据操作类型调整延迟时间
+function restoreGroupingDelayed(delay = 200, operation = 'unknown') {
+    if (restoreTimeout) {
+        clearTimeout(restoreTimeout);
+    }
+    // 根据操作类型调整延迟时间
+    let actualDelay = delay;
+    switch (operation) {
+        case 'toggle':
+            actualDelay = 100; // 开关操作最快
+            break;
+        case 'settings':
+            actualDelay = 200; // 设置更新中等
+            break;
+        case 'dom_change':
+            actualDelay = 150; // DOM变化较快
+            break;
+        case 'preset_change':
+            actualDelay = 100; // 预设切换最快
+            break;
+        default:
+            actualDelay = delay;
+    }
+    restoreTimeout = window.setTimeout(() => {
+        console.log(`🔄 延迟恢复分组开始... (操作: ${operation}, 延迟: ${actualDelay}ms)`);
+        restoreGroupingFromConfig();
+        restoreTimeout = null;
+    }, actualDelay);
+}
+// 立即恢复分组（用于关键操作）
+function restoreGroupingImmediate() {
+    console.log('⚡ 立即恢复分组...');
+    restoreGroupingFromConfig();
+}
+// 强制恢复分组（多次尝试确保成功）
+function forceRestoreGrouping() {
+    const tryRestore = (attempt) => {
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const groups = getPresetGrouping(currentPresetName);
+        const promptElements = $('.completion_prompt_manager_prompt');
+        console.log(`第${attempt}次尝试恢复分组，预设: ${currentPresetName}, 分组数: ${groups.length}, 条目数: ${promptElements.length}`);
+        if (groups.length > 0 && promptElements.length > 0) {
+            applyGroupingToDOM(groups);
+            console.log('✅ 分组恢复成功');
+        }
+        else if (attempt < 5) {
+            // 如果还没有条目或分组，继续尝试
+            setTimeout(() => tryRestore(attempt + 1), 200);
+        }
+        else {
+            console.log('⚠️ 分组恢复失败，已达到最大尝试次数');
+        }
+    };
+    tryRestore(1);
+}
+// 主动触发分组恢复（用于关键操作后）
+function triggerGroupingRestore() {
+    console.log('🔄 主动触发分组恢复...');
+    // 先清除现有的分组效果
+    clearAllGrouping();
+    // 然后延迟恢复
+    restoreGroupingDelayed(150, 'dom_change');
+}
+// 清除所有分组
+function clearAllGrouping() {
+    $('.prompt-group-container').each(function () {
+        const prompts = $(this).find('.completion_prompt_manager_prompt');
+        $(this).before(prompts);
+        $(this).remove();
+    });
+}
+// 导出当前预设的分组配置
+function exportPresetGrouping(presetName) {
+    const groups = getPresetGrouping(presetName);
+    return groups.length > 0 ? groups : null;
+}
+// 导入分组配置到指定预设
+function importPresetGrouping(presetName, groups) {
+    if (!groups || !Array.isArray(groups) || groups.length === 0) {
+        console.warn('导入的分组配置为空或格式不正确');
+        return;
+    }
+    console.log('开始导入分组配置到预设:', presetName, '分组数量:', groups.length);
+    // 验证并修复分组数据结构
+    const validGroups = groups
+        .map(group => {
+        // 确保分组对象有所有必需的字段
+        const validGroup = {
+            id: group.id || Date.now().toString() + Math.random().toString(36).substr(2, 9),
+            name: group.name || '未命名分组',
+            promptIds: Array.isArray(group.promptIds) ? group.promptIds : [],
+            subGroups: Array.isArray(group.subGroups) ? group.subGroups : [],
+            collapsed: typeof group.collapsed === 'boolean' ? group.collapsed : true,
+            level: typeof group.level === 'number' ? group.level : 0,
+            parentId: group.parentId,
+        };
+        console.log('处理分组:', validGroup.name, '条目数量:', validGroup.promptIds.length);
+        return validGroup;
+    })
+        .filter(group => group.promptIds.length > 0); // 只保留有条目的分组
+    if (validGroups.length === 0) {
+        console.warn('没有有效的分组配置');
+        return;
+    }
+    console.log('有效分组数量:', validGroups.length);
+    savePresetGrouping(presetName, validGroups);
+    // 如果是当前预设，立即应用
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    console.log('当前预设:', currentPresetName, '目标预设:', presetName);
+    if (currentPresetName === presetName) {
+        console.log('立即应用分组到当前预设');
+        setTimeout(() => {
+            applyGroupingToDOM(validGroups);
+        }, 100);
+    }
+}
+// 获取所有预设的分组配置（用于批量导出）
+function getAllPresetGroupings() {
+    const allGroupings = {};
+    // 遍历localStorage中所有的分组配置
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('miaomiao_preset_groups_')) {
+            const presetName = key.replace('miaomiao_preset_groups_', '');
+            const groups = getPresetGrouping(presetName);
+            if (groups.length > 0) {
+                allGroupings[presetName] = groups;
+            }
+        }
+    }
+    return allGroupings;
+}
+// 清除指定预设的分组配置
+function clearPresetGrouping(presetName) {
+    localStorage.removeItem(getGroupingStorageKey(presetName));
+    // 如果是当前预设，清除DOM中的分组
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    if (currentPresetName === presetName) {
+        clearAllGrouping();
+    }
+}
+// 显示位置选择弹窗
+async function showPositionSelectionPopup(allPrompts, selectedPromptIds, onConfirm) {
+    const popupId = 'position-selection-popup';
+    $(`#${popupId}`).remove();
+    // 过滤掉已选中的条目，只显示可以作为目标的条目
+    const availablePrompts = allPrompts.filter(prompt => !selectedPromptIds.includes(prompt.id));
+    if (availablePrompts.length === 0) {
+        toastr.error('没有可用的目标位置');
+        return;
+    }
+    const promptsHtml = availablePrompts
+        .map(prompt => `
+    <div class="position-target-item" data-prompt-id="${prompt.id}" style="border: 1px solid #e0e0e0; margin: 5px 0; border-radius: 6px; background-color: #fff;">
+      <div style="padding: 10px; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 14px;">
+        ${$('<div/>').text(prompt.name).html()}
+      </div>
+      <div style="display: flex; border-top: 1px solid #f0f0f0;">
+        <button class="position-btn" data-prompt-id="${prompt.id}" data-position="above" style="flex: 1; padding: 8px; background-color: #e3f2fd; border: none; border-right: 1px solid #f0f0f0; cursor: pointer; font-size: 13px; color: #1976d2;">移动到上方</button>
+        <button class="position-btn" data-prompt-id="${prompt.id}" data-position="below" style="flex: 1; padding: 8px; background-color: #f3e5f5; border: none; cursor: pointer; font-size: 13px; color: #7b1fa2;">移动到下方</button>
+      </div>
+    </div>
+  `)
+        .join('');
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10003; display: flex; align-items: center; justify-content: center;">
+      <div class="position-selection-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择移动位置</h4>
+        
+        <div style="margin: 15px 0; padding: 12px; background-color: #e8f5e8; border-radius: 8px; border-left: 4px solid #4CAF50;">
+          <div style="font-size: 13px; color: #2e7d32; font-weight: bold; margin-bottom: 6px;">📋 移动说明</div>
+          <div style="font-size: 12px; color: #424242; line-height: 1.4;">
+            已选择 ${selectedPromptIds.length} 个条目进行移动。点击目标条目的"移动到上方"或"移动到下方"按钮来设置新位置。
+          </div>
+        </div>
+
+        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px;">选择要移动到哪个条目的上方或下方：</div>
+          <div id="position-targets-container">
+            ${promptsHtml}
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+          <button id="position-selection-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
+        </div>
+      </div>
+    </div>
+    <style>
+      .position-btn:hover {
+        opacity: 0.8;
+        font-weight: bold;
+      }
+      @media (max-width: 600px) {
+        #${popupId} {
+          align-items: flex-start !important;
+          padding: 10px;
+        }
+        #${popupId} .position-selection-popup-content {
+          margin-top: 5vh !important;
+          max-height: 90vh !important;
+          width: 95% !important;
+          padding: 15px;
+          border-radius: 12px;
+        }
+        #${popupId} .position-btn {
+          font-size: 12px !important;
+          padding: 6px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        #${popupId} .position-selection-popup-content {
+          margin-top: 2vh !important;
+          max-height: 96vh !important;
+          padding: 12px;
+        }
+        #${popupId} h4 {
+          font-size: 16px !important;
+        }
+        #${popupId} .position-btn {
+          font-size: 11px !important;
+          padding: 5px !important;
+        }
+      }
+    </style>
+  `;
+    $('body').append(popupHtml);
+    // 绑定事件
+    $('.position-btn').on('click', function () {
+        const targetPromptId = $(this).data('prompt-id');
+        const position = $(this).data('position');
+        $(`#${popupId}`).remove();
+        onConfirm(targetPromptId, position);
+    });
+    $('#position-selection-cancel').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+}
+// 移动条目到指定位置
+function movePromptsToPosition(selectedPromptIds, targetPromptId, position) {
+    console.log('开始移动条目:', selectedPromptIds, '到', targetPromptId, position);
+    // 通过酒馆助手获取当前预设的条目顺序
+    const currentPrompts = getCurrentPresetPrompts();
+    const promptIds = currentPrompts.map(p => p.id);
+    // 创建新的顺序数组
+    const newOrder = [...promptIds];
+    // 从原位置移除选中的条目
+    selectedPromptIds.forEach(id => {
+        const index = newOrder.indexOf(id);
+        if (index > -1) {
+            newOrder.splice(index, 1);
+        }
+    });
+    // 找到目标位置
+    const targetIndex = newOrder.indexOf(targetPromptId);
+    if (targetIndex === -1) {
+        console.error('未找到目标条目:', targetPromptId);
+        toastr.error('移动失败：未找到目标条目');
+        return;
+    }
+    // 计算插入位置
+    const insertIndex = position === 'above' ? targetIndex : targetIndex + 1;
+    // 在目标位置插入选中的条目
+    newOrder.splice(insertIndex, 0, ...selectedPromptIds);
+    console.log('新的条目顺序:', newOrder);
+    // 应用新顺序到DOM
+    applyNewPromptOrder(newOrder);
+    // 更新分组界面的显示顺序
+    updateGroupingUIOrder(newOrder);
+}
+// 应用新的条目顺序到DOM
+function applyNewPromptOrder(newOrder) {
+    console.log('应用新的条目顺序到DOM');
+    const container = $('.completion_prompt_manager_prompt').first().parent();
+    if (container.length === 0) {
+        console.error('未找到预设条目容器');
+        return;
+    }
+    // 按新顺序重新排列DOM元素
+    newOrder.forEach(promptId => {
+        const element = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+        if (element.length === 0) {
+            // 尝试在子元素中查找
+            const fallbackElement = $(`.completion_prompt_manager_prompt`).filter(function () {
+                return $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId;
+            });
+            if (fallbackElement.length > 0) {
+                container.append(fallbackElement);
+            }
+        }
+        else {
+            container.append(element);
+        }
+    });
+    console.log('DOM顺序更新完成');
+}
+// 更新分组界面的显示顺序
+function updateGroupingUIOrder(newOrder) {
+    console.log('更新分组界面的显示顺序');
+    const promptsContainer = $('#prompts-container');
+    if (promptsContainer.length === 0) {
+        console.log('分组界面未打开，跳过界面更新');
+        return;
+    }
+    // 按新顺序重新排列分组界面中的条目
+    newOrder.forEach(promptId => {
+        const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+        if (item.length > 0) {
+            promptsContainer.append(item);
+        }
+    });
+    console.log('分组界面顺序更新完成');
+}
+// 显示新增条目弹窗
+async function showAddPromptPopup(onSuccess) {
+    const popupId = 'add-prompt-popup';
+    $(`#${popupId}`).remove();
+    // 获取当前所有条目用于位置选择
+    const currentPrompts = getCurrentPresetPrompts();
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10004; display: flex; align-items: center; justify-content: center;">
+      <div class="add-prompt-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 700px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh; overflow: hidden;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px; flex-shrink: 0;">新增条目</h4>
+        
+        <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 15px;">
+          <div style="margin: 15px 0;">
+            <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #6a4226;">条目名称：</label>
+            <input type="text" id="add-prompt-name" placeholder="输入条目名称..." style="width: 100%; padding: 10px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 15px; box-sizing: border-box;">
+            
+            <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #6a4226;">条目内容：</label>
+            <textarea id="add-prompt-content" placeholder="输入条目内容..." style="width: 100%; height: 120px; padding: 10px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; resize: vertical; box-sizing: border-box;"></textarea>
+          </div>
+
+          <div style="margin: 15px 0;">
+            <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #6a4226;">插入位置：</label>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <label style="display: flex; align-items: center; cursor: pointer;">
+                <input type="radio" name="position-type" value="end" checked style="margin-right: 6px;">
+                <span style="font-size: 14px;">添加到末尾</span>
+              </label>
+              <label style="display: flex; align-items: center; cursor: pointer;">
+                <input type="radio" name="position-type" value="custom" style="margin-right: 6px;">
+                <span style="font-size: 14px;">插入到指定位置</span>
+              </label>
+            </div>
+            
+            <div id="position-selection-container" style="display: none; border: 1px solid #e0e0e0; border-radius: 6px; max-height: 250px; overflow-y: auto;">
+              ${currentPrompts
+        .map(prompt => `
+                <div class="position-option" data-prompt-id="${prompt.id}" style="border-bottom: 1px solid #f0f0f0; last-child:border-bottom: none;">
+                  <div style="padding: 8px 12px; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 13px; background-color: #fafafa;">
+                    ${$('<div/>').text(prompt.name).html()}
+                  </div>
+                  <div style="display: flex;">
+                    <button class="position-btn" data-prompt-id="${prompt.id}" data-position="above" style="flex: 1; padding: 6px; background-color: #e3f2fd; border: none; border-right: 1px solid #f0f0f0; cursor: pointer; font-size: 12px; color: #1976d2;">插入到上方</button>
+                    <button class="position-btn" data-prompt-id="${prompt.id}" data-position="below" style="flex: 1; padding: 6px; background-color: #f3e5f5; border: none; cursor: pointer; font-size: 12px; color: #7b1fa2;">插入到下方</button>
+                  </div>
+                </div>
+              `)
+        .join('')}
+            </div>
+            
+            <div id="selected-position-info" style="margin-top: 10px; padding: 8px; background-color: #e8f5e8; border-radius: 4px; font-size: 13px; color: #2e7d32; display: none;">
+              <strong>选择的位置：</strong><span id="position-description"></span>
+            </div>
+          </div>
+
+          <div style="margin: 15px 0; padding: 12px; background-color: #e3f2fd; border-radius: 8px; border-left: 4px solid #2196F3;">
+            <div style="font-size: 13px; color: #1976d2; font-weight: bold; margin-bottom: 6px;">💡 提示</div>
+            <div style="font-size: 12px; color: #424242; line-height: 1.4;">
+              选择"添加到末尾"会将新条目放在预设的最后。选择"插入到指定位置"可以精确控制新条目的位置。
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-shrink: 0; border-top: 1px solid #f0e2d0; padding-top: 15px;">
+          <div style="display: flex; align-items: center;">
+            <input type="checkbox" id="add-prompt-enabled" checked style="margin-right: 8px; transform: scale(1.2);">
+            <label for="add-prompt-enabled" style="font-size: 13px; color: #666;">启用条目</label>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button id="add-prompt-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
+            <button id="add-prompt-confirm" style="padding: 10px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">创建条目</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 600px) {
+        #${popupId} {
+          align-items: flex-start !important;
+          padding: 10px;
+        }
+        #${popupId} .add-prompt-popup-content {
+          margin-top: 5vh !important;
+          max-height: 90vh !important;
+          width: 95% !important;
+          padding: 15px;
+          border-radius: 12px;
+        }
+        #${popupId} textarea {
+          height: 150px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        #${popupId} .add-prompt-popup-content {
+          margin-top: 2vh !important;
+          max-height: 96vh !important;
+          padding: 12px;
+        }
+        #${popupId} h4 {
+          font-size: 16px !important;
+        }
+        #${popupId} textarea {
+          height: 120px !important;
+        }
+      }
+    </style>
+  `;
+    $('body').append(popupHtml);
+    // 存储选择的位置信息
+    let selectedPosition = null;
+    // 绑定事件
+    $('#add-prompt-cancel').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+    // 位置类型切换
+    $('input[name="position-type"]').on('change', function () {
+        const positionType = $(this).val();
+        if (positionType === 'custom') {
+            $('#position-selection-container').show();
+        }
+        else {
+            $('#position-selection-container').hide();
+            $('#selected-position-info').hide();
+            selectedPosition = null;
+        }
+    });
+    // 位置选择按钮点击
+    $('.position-btn').on('click', function () {
+        const targetId = $(this).data('prompt-id');
+        const position = $(this).data('position');
+        // 清除之前的选择状态
+        $('.position-btn').removeClass('selected').css('font-weight', 'normal');
+        // 设置当前选择状态
+        $(this).addClass('selected').css('font-weight', 'bold');
+        selectedPosition = { targetId, position };
+        // 显示选择信息
+        const targetPrompt = currentPrompts.find(p => p.id === targetId);
+        if (targetPrompt) {
+            const positionText = position === 'above' ? '上方' : '下方';
+            $('#position-description').text(`插入到"${targetPrompt.name}"的${positionText}`);
+            $('#selected-position-info').show();
+        }
+    });
+    $('#add-prompt-confirm').on('click', async () => {
+        const name = $('#add-prompt-name').val()?.toString().trim();
+        const content = $('#add-prompt-content').val()?.toString().trim();
+        const enabled = $('#add-prompt-enabled').is(':checked');
+        const positionType = $('input[name="position-type"]:checked').val();
+        if (!name) {
+            toastr.error('请输入条目名称');
+            return;
+        }
+        if (!content) {
+            toastr.error('请输入条目内容');
+            return;
+        }
+        if (positionType === 'custom' && !selectedPosition) {
+            toastr.error('请选择插入位置');
+            return;
+        }
+        try {
+            if (positionType === 'end' || !selectedPosition) {
+                // 添加到末尾
+                await addNewPrompt(name, content, enabled);
+            }
+            else {
+                // 插入到指定位置
+                await addNewPromptAtPosition(name, content, enabled, selectedPosition.targetId, selectedPosition.position);
+            }
+            $(`#${popupId}`).remove();
+            toastr.success(`条目 "${name}" 创建成功`);
+            onSuccess();
+        }
+        catch (error) {
+            console.error('创建条目失败:', error);
+            toastr.error('创建条目失败，请重试');
+        }
+    });
+}
+// 显示编辑条目弹窗
+async function showEditPromptPopup(prompt, onSuccess) {
+    const popupId = 'edit-prompt-popup';
+    $(`#${popupId}`).remove();
+    // 获取条目的当前内容
+    const currentContent = await getPromptContent(prompt.id);
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10004; display: flex; align-items: center; justify-content: center;">
+      <div class="edit-prompt-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">编辑条目</h4>
+        
+        <div style="margin: 15px 0;">
+          <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #6a4226;">条目名称：</label>
+          <input type="text" id="edit-prompt-name" value="${$('<div/>').text(prompt.name).html()}" style="width: 100%; padding: 10px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 15px; box-sizing: border-box;">
+          
+          <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #6a4226;">条目内容：</label>
+          <textarea id="edit-prompt-content" style="width: 100%; height: 200px; padding: 10px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; resize: vertical; box-sizing: border-box;">${$('<div/>').text(currentContent).html()}</textarea>
+        </div>
+
+        <div style="margin: 15px 0; padding: 12px; background-color: #fff3e0; border-radius: 8px; border-left: 4px solid #ff9800;">
+          <div style="font-size: 13px; color: #f57c00; font-weight: bold; margin-bottom: 6px;">✏️ 编辑说明</div>
+          <div style="font-size: 12px; color: #424242; line-height: 1.4;">
+            修改条目名称和内容后，变更将立即应用到预设中。请确保内容格式正确。
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="display: flex; align-items: center;">
+            <input type="checkbox" id="edit-prompt-enabled" ${prompt.enabled ? 'checked' : ''} style="margin-right: 8px; transform: scale(1.2);">
+            <label for="edit-prompt-enabled" style="font-size: 13px; color: #666;">启用条目</label>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button id="edit-prompt-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
+            <button id="edit-prompt-confirm" style="padding: 10px 16px; background-color:#FF9800; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">保存修改</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 600px) {
+        #${popupId} {
+          align-items: flex-start !important;
+          padding: 10px;
+        }
+        #${popupId} .edit-prompt-popup-content {
+          margin-top: 5vh !important;
+          max-height: 90vh !important;
+          width: 95% !important;
+          padding: 15px;
+          border-radius: 12px;
+        }
+        #${popupId} textarea {
+          height: 150px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        #${popupId} .edit-prompt-popup-content {
+          margin-top: 2vh !important;
+          max-height: 96vh !important;
+          padding: 12px;
+        }
+        #${popupId} h4 {
+          font-size: 16px !important;
+        }
+        #${popupId} textarea {
+          height: 120px !important;
+        }
+      }
+    </style>
+  `;
+    $('body').append(popupHtml);
+    // 绑定事件
+    $('#edit-prompt-cancel').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+    $('#edit-prompt-confirm').on('click', async () => {
+        const name = $('#edit-prompt-name').val()?.toString().trim();
+        const content = $('#edit-prompt-content').val()?.toString().trim();
+        const enabled = $('#edit-prompt-enabled').is(':checked');
+        if (!name) {
+            toastr.error('请输入条目名称');
+            return;
+        }
+        if (!content) {
+            toastr.error('请输入条目内容');
+            return;
+        }
+        try {
+            await updatePrompt(prompt.id, name, content, enabled);
+            $(`#${popupId}`).remove();
+            toastr.success(`条目 "${name}" 更新成功`);
+            onSuccess();
+        }
+        catch (error) {
+            console.error('更新条目失败:', error);
+            toastr.error('更新条目失败，请重试');
+        }
+    });
+}
+// 新增条目
+async function addNewPrompt(name, content, enabled) {
+    console.log('新增条目:', name, enabled);
+    try {
+        // 使用UUID生成函数
+        // 使用酒馆助手的预设API直接创建条目
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUUID */ .lk)(),
+                name: name,
+                enabled: enabled,
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: content,
+            };
+            // 添加到预设的prompts数组末尾
+            preset.prompts.push(newPrompt);
+            return preset;
+        }, { render: 'immediate' });
+        console.log('条目创建成功');
+        triggerPresetSave();
+    }
+    catch (error) {
+        console.error('创建条目失败:', error);
+        throw error;
+    }
+}
+// 在指定位置插入新条目
+async function addNewPromptAtPosition(name, content, enabled, targetId, position) {
+    console.log('在指定位置插入新条目:', name, '位置:', targetId, position);
+    try {
+        // 使用UUID生成函数
+        // 直接在指定位置创建条目
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUUID */ .lk)(),
+                name: name,
+                enabled: enabled,
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: content,
+            };
+            // 找到目标条目的索引
+            const targetIndex = preset.prompts.findIndex(p => p.id === targetId);
+            if (targetIndex === -1) {
+                // 如果找不到目标条目，就添加到末尾
+                preset.prompts.push(newPrompt);
+            }
+            else {
+                // 根据位置插入条目
+                const insertIndex = position === 'above' ? targetIndex : targetIndex + 1;
+                preset.prompts.splice(insertIndex, 0, newPrompt);
+            }
+            return preset;
+        }, { render: 'immediate' });
+        console.log('条目创建并插入成功');
+        triggerPresetSave();
+    }
+    catch (error) {
+        console.error('在指定位置插入条目失败:', error);
+        throw error;
+    }
+}
+// 获取条目内容
+async function getPromptContent(promptId) {
+    // 尝试从DOM中获取条目内容
+    const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+    if (promptElement.length === 0) {
+        console.warn('未找到条目元素:', promptId);
+        return '';
+    }
+    // 查找条目内容元素
+    const contentElement = promptElement.find('.completion_prompt_manager_prompt_content, .prompt-content, textarea');
+    if (contentElement.length > 0) {
+        return contentElement.text() || contentElement.val()?.toString() || '';
+    }
+    console.warn('未找到条目内容:', promptId);
+    return '';
+}
+// 更新条目
+async function updatePrompt(promptId, name, content, enabled) {
+    console.log('更新条目:', promptId, name, enabled);
+    try {
+        // 使用酒馆助手的预设API直接更新条目
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            // 查找要更新的条目
+            const promptToUpdate = preset.prompts.find(p => p.id === promptId);
+            if (promptToUpdate) {
+                promptToUpdate.name = name;
+                promptToUpdate.content = content;
+                promptToUpdate.enabled = enabled;
+            }
+            else {
+                // 如果在prompts中没找到，尝试在prompts_unused中查找
+                const unusedPromptToUpdate = preset.prompts_unused.find(p => p.id === promptId);
+                if (unusedPromptToUpdate) {
+                    unusedPromptToUpdate.name = name;
+                    unusedPromptToUpdate.content = content;
+                    unusedPromptToUpdate.enabled = enabled;
+                }
+            }
+            return preset;
+        }, { render: 'immediate' });
+        console.log('条目更新成功');
+        triggerPresetSave();
+    }
+    catch (error) {
+        console.error('更新条目失败:', error);
+        throw error;
+    }
+}
+// 删除选中的条目
+async function deleteSelectedPrompts(promptIds) {
+    console.log('删除条目:', promptIds);
+    try {
+        // 使用酒馆助手的预设API直接删除条目
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            // 从prompts数组中删除条目
+            preset.prompts = preset.prompts.filter(p => !promptIds.includes(p.id));
+            // 从prompts_unused数组中删除条目
+            preset.prompts_unused = preset.prompts_unused.filter(p => !promptIds.includes(p.id));
+            return preset;
+        }, { render: 'immediate' });
+        console.log('删除条目成功:', promptIds);
+        triggerPresetSave();
+        toastr.success(`成功删除 ${promptIds.length} 个条目`);
+    }
+    catch (error) {
+        console.error('删除条目失败:', promptIds, error);
+        toastr.error('删除条目失败，请重试');
+    }
+}
+// 在分组树中查找包含指定条目的分组
+function findPromptInGroups(groups, promptId) {
+    for (const group of groups) {
+        if (group.promptIds.includes(promptId)) {
+            return group;
+        }
+        // 递归查找子分组
+        const foundInSubGroups = findPromptInGroups(group.subGroups, promptId);
+        if (foundInSubGroups) {
+            return foundInSubGroups;
+        }
+    }
+    return null;
+}
+// 检查分组是否有有效内容（条目或子分组）
+function hasValidContent(group) {
+    return group.promptIds.length > 0 || group.subGroups.some(subGroup => hasValidContent(subGroup));
+}
+// 检测选中条目是否都属于同一个分组
+function detectCommonParentGroup(selectedPrompts, groups) {
+    if (selectedPrompts.length === 0)
+        return null;
+    // 找到第一个条目所属的分组
+    const firstPromptGroup = findPromptInGroups(groups, selectedPrompts[0]);
+    if (!firstPromptGroup)
+        return null;
+    // 检查其他条目是否都属于同一个分组
+    for (let i = 1; i < selectedPrompts.length; i++) {
+        const promptGroup = findPromptInGroups(groups, selectedPrompts[i]);
+        if (!promptGroup || promptGroup.id !== firstPromptGroup.id) {
+            return null; // 不是同一个分组
+        }
+    }
+    return firstPromptGroup;
+}
+// 创建子分组
+async function createSubGroup(parentGroup, subGroupName, selectedPrompts, existingGroups) {
+    // 检查子分组名称是否与父分组的其他子分组重名
+    if (parentGroup.subGroups.some(sg => sg.name === subGroupName)) {
+        toastr.error(`子分组名称 "${subGroupName}" 已存在于分组 "${parentGroup.name}" 中`);
+        return;
+    }
+    // 创建新子分组
+    const newSubGroup = {
+        id: Date.now().toString(),
+        name: subGroupName,
+        promptIds: [...selectedPrompts],
+        subGroups: [],
+        collapsed: true,
+        level: parentGroup.level + 1,
+        parentId: parentGroup.id,
+    };
+    // 从父分组中移除这些条目
+    selectedPrompts.forEach(promptId => {
+        const index = parentGroup.promptIds.indexOf(promptId);
+        if (index > -1) {
+            parentGroup.promptIds.splice(index, 1);
+        }
+    });
+    // 添加子分组
+    parentGroup.subGroups.push(newSubGroup);
+    // 更新UI
+    selectedPrompts.forEach(promptId => {
+        const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+        item.css('background-color', '#e8f5e8');
+        const existingTag = item.find('.group-tag');
+        const groupPath = getGroupPath(newSubGroup, existingGroups);
+        if (existingTag.length) {
+            existingTag.text(groupPath);
+        }
+        else {
+            item
+                .find('span:last')
+                .after(`<span class="group-tag" style="font-size: 12px; color: #4CAF50; background: #e8f5e8; padding: 2px 6px; border-radius: 3px; margin-left: 8px;">${groupPath}</span>`);
+        }
+    });
+    toastr.success(`子分组 "${getGroupPath(newSubGroup, existingGroups)}" 创建成功，将在关闭分组界面时应用`);
+}
+// 创建顶级分组
+async function createTopLevelGroup(groupName, selectedPrompts, existingGroups) {
+    // 创建新的顶级分组
+    const newGroup = {
+        id: Date.now().toString(),
+        name: groupName,
+        promptIds: [...selectedPrompts],
+        subGroups: [],
+        collapsed: true,
+        level: 0,
+    };
+    existingGroups.push(newGroup);
+    // 更新UI
+    selectedPrompts.forEach(promptId => {
+        const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+        item.css('background-color', '#e8f5e8');
+        const existingTag = item.find('.group-tag');
+        if (existingTag.length) {
+            existingTag.text(groupName);
+        }
+        else {
+            item
+                .find('span:last')
+                .after(`<span class="group-tag" style="font-size: 12px; color: #4CAF50; background: #e8f5e8; padding: 2px 6px; border-radius: 3px; margin-left: 8px;">${groupName}</span>`);
+        }
+    });
+    toastr.success(`分组 "${groupName}" 创建成功，将在关闭分组界面时应用`);
+}
+// 获取分组的完整路径
+function getGroupPath(group, allGroups) {
+    const path = [];
+    let currentGroup = group;
+    while (currentGroup) {
+        path.unshift(currentGroup.name);
+        if (currentGroup.parentId) {
+            currentGroup = findGroupById(allGroups, currentGroup.parentId);
+        }
+        else {
+            break;
+        }
+    }
+    return path.join('/');
+}
+// 根据ID查找分组（递归查找）
+function findGroupById(groups, groupId) {
+    for (const group of groups) {
+        if (group.id === groupId) {
+            return group;
+        }
+        const foundInSubGroups = findGroupById(group.subGroups, groupId);
+        if (foundInSubGroups) {
+            return foundInSubGroups;
+        }
+    }
+    return null;
+}
+// 显示分组选择弹窗
+async function showGroupSelectionPopup(selectedPrompts, existingGroups) {
+    const popupId = 'group-selection-popup';
+    $(`#${popupId}`).remove();
+    if (existingGroups.length === 0) {
+        toastr.warning('当前没有可用的分组，请先创建分组');
+        return;
+    }
+    // 生成分组列表HTML
+    const groupsHtml = generateGroupsListHtml(existingGroups, 0);
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
+      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 100%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh; position: relative;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择目标分组</h4>
+        <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;">
+            请选择要将 ${selectedPrompts.length} 个条目加入的分组：
+          </div>
+          <div id="groups-list" style="max-height: 300px; overflow-y: auto;">
+            ${groupsHtml}
+          </div>
+        </div>
+        <div style="text-align: right; margin-top: 15px; flex-shrink: 0;">
+          <div id="selected-group-info" style="font-size: 12px; color: #666; margin-bottom: 10px; text-align: left; display: none;">
+            已选择分组: <span id="selected-group-name" style="font-weight: bold; color: #4CAF50;"></span>
+          </div>
+          <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button id="group-selection-cancel" style="padding: 8px 16px; background-color:#bcaaa4; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">取消</button>
+            <button id="group-selection-confirm" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; display: none;">加入此分组</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .group-option.selected-group {
+        background-color: #e8f5e8 !important;
+        border-color: #4CAF50 !important;
+        border-width: 2px !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+      }
+      .group-option.selected-group:hover {
+        background-color: #d4edda !important;
+      }
+      @media (max-width: 768px) {
+        #${popupId} {
+          align-items: flex-start !important;
+          padding: 10px !important;
+        }
+        #${popupId} > div {
+          margin-top: 5vh !important;
+          max-height: 85vh !important;
+          width: 100% !important;
+          padding: 15px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        #${popupId} {
+          padding: 5px !important;
+        }
+        #${popupId} > div {
+          margin-top: 2vh !important;
+          max-height: 90vh !important;
+          padding: 12px !important;
+        }
+      }
+    </style>
+  `;
+    $('body').append(popupHtml);
+    let selectedGroup = null;
+    // 先解绑所有可能重复的事件，防止脚本重复加载导致的问题
+    $('#group-selection-cancel').off('click');
+    $('#group-selection-confirm').off('click');
+    $(document).off('click', '.group-option');
+    // 绑定事件
+    $('#group-selection-cancel').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+    // 确认加入分组
+    $('#group-selection-confirm').on('click', async () => {
+        if (!selectedGroup) {
+            toastr.error('请先选择一个分组');
+            return;
+        }
+        try {
+            await addPromptsToGroup(selectedPrompts, selectedGroup, existingGroups);
+            $(`#${popupId}`).remove();
+            // 重新加载分组界面
+            setTimeout(() => {
+                $('#preset-manager-grouping-popup').remove();
+                showPromptGroupingUI();
+            }, 100);
+        }
+        catch (error) {
+            console.error('加入分组失败:', error);
+            toastr.error('加入分组失败，请重试');
+        }
+    });
+    // 延迟绑定事件，确保DOM完全加载
+    setTimeout(() => {
+        console.log('开始绑定分组选择事件');
+        console.log('现有分组列表:', existingGroups.map(g => ({ id: g.id, name: g.name, type: typeof g.id })));
+        // 直接绑定到弹窗内的元素
+        $(`#${popupId} .group-option`)
+            .off('click')
+            .on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const groupId = $(this).data('group-id');
+            console.log('点击分组选项:', groupId, '类型:', typeof groupId, '元素:', this);
+            // 确保groupId是字符串类型
+            const groupIdStr = String(groupId);
+            console.log('转换后的groupId:', groupIdStr, '类型:', typeof groupIdStr);
+            const group = findGroupById(existingGroups, groupIdStr);
+            console.log('找到分组:', group);
+            if (group) {
+                // 清除之前的选择
+                $(`#${popupId} .group-option`).removeClass('selected-group');
+                // 标记当前选择
+                $(this).addClass('selected-group');
+                selectedGroup = group;
+                // 显示选择信息和确认按钮
+                const nameElement = $(`#${popupId} #selected-group-name`);
+                const infoElement = $(`#${popupId} #selected-group-info`);
+                const confirmButton = $(`#${popupId} #group-selection-confirm`);
+                console.log('更新UI元素:', {
+                    nameElement: nameElement.length,
+                    infoElement: infoElement.length,
+                    confirmButton: confirmButton.length,
+                });
+                nameElement.text(group.name);
+                infoElement.show();
+                confirmButton.show();
+                console.log('已选择分组:', group.name, 'UI已更新');
+            }
+            else {
+                console.error('未找到分组:', groupId);
+                toastr.error('未找到选中的分组');
+            }
+        });
+        console.log('分组选择事件绑定完成，找到元素数量:', $(`#${popupId} .group-option`).length);
+    }, 100);
+    // 添加调试信息
+    console.log('分组选择弹窗已创建，分组数量:', existingGroups.length);
+    console.log('确认按钮元素:', $('#group-selection-confirm').length);
+    console.log('选择信息元素:', $('#selected-group-info').length);
+}
+// 生成分组列表HTML
+function generateGroupsListHtml(groups, level) {
+    let html = '';
+    groups.forEach(group => {
+        const hasContent = group.promptIds.length > 0 || group.subGroups.length > 0;
+        if (hasContent) {
+            html += `
+        <div class="group-option" data-group-id="${group.id}" 
+             style="padding: 12px; margin: 8px 0; border: 1px solid #e0e0e0; border-radius: 8px; cursor: pointer; background-color: #f9f9f9; transition: all 0.2s ease; margin-left: ${level * 20}px; user-select: none;"
+             onmouseover="this.style.backgroundColor='#e8f5e8'; this.style.borderColor='#4CAF50';"
+             onmouseout="this.style.backgroundColor='#f9f9f9'; this.style.borderColor='#e0e0e0';">
+          <div style="font-weight: bold; color: #333; font-size: 14px; margin-bottom: 4px;">
+            ${$('<div/>').text(group.name).html()}
+          </div>
+          <div style="font-size: 12px; color: #666; display: flex; gap: 12px;">
+            <span>📄 条目: ${group.promptIds.length}</span>
+            <span>📁 子分组: ${group.subGroups.length}</span>
+          </div>
+        </div>
+      `;
+        }
+        // 递归处理子分组
+        if (group.subGroups.length > 0) {
+            html += generateGroupsListHtml(group.subGroups, level + 1);
+        }
+    });
+    return html;
+}
+// 将条目加入指定分组
+async function addPromptsToGroup(selectedPrompts, targetGroup, existingGroups) {
+    // 检查条目是否已经在目标分组中
+    const alreadyInGroup = selectedPrompts.filter(promptId => targetGroup.promptIds.includes(promptId));
+    if (alreadyInGroup.length > 0) {
+        toastr.warning(`有 ${alreadyInGroup.length} 个条目已在该分组中，将跳过`);
+    }
+    // 将条目添加到目标分组
+    const newPrompts = selectedPrompts.filter(promptId => !targetGroup.promptIds.includes(promptId));
+    targetGroup.promptIds.push(...newPrompts);
+    // 更新UI
+    newPrompts.forEach(promptId => {
+        const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+        item.css('background-color', '#e8f5e8');
+        // 更新或添加分组标签
+        const existingTag = item.find('.group-tag');
+        const groupPath = getGroupPath(targetGroup, existingGroups);
+        if (existingTag.length) {
+            existingTag.text(groupPath);
+        }
+        else {
+            item
+                .find('.prompt-text')
+                .append(`<div style="color: #666; font-size: 12px; margin-top: 4px; word-wrap: break-word; overflow-wrap: break-word;">📁 ${groupPath}</div>`);
+            item.append(`<span class="group-tag" style="background-color: #4CAF50; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; flex-shrink: 0; align-self: flex-start; margin-top: 2px;">已分组</span>`);
+        }
+    });
+    // 保存分组配置
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    savePresetGrouping(currentPresetName, existingGroups);
+    // 立即应用分组到DOM
+    applyGroupingToDOM(existingGroups);
+    // 延迟恢复以确保DOM更新完成
+    setTimeout(() => {
+        restoreGroupingImmediate();
+    }, 100);
+    toastr.success(`已将 ${newPrompts.length} 个条目加入分组 "${getGroupPath(targetGroup, existingGroups)}"，已立即应用`);
+}
+// 将条目从分组中移除
+async function removePromptsFromGroups(selectedPrompts, existingGroups) {
+    selectedPrompts.forEach(promptId => {
+        const group = findPromptInGroups(existingGroups, promptId);
+        if (group) {
+            // 从分组中移除条目
+            const index = group.promptIds.indexOf(promptId);
+            if (index > -1) {
+                group.promptIds.splice(index, 1);
+            }
+            // 更新UI
+            const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+            item.css('background-color', '#fff');
+            item.find('.group-tag').remove();
+            item.find('.prompt-text div:last-child').remove(); // 移除分组路径显示
+        }
+    });
+    // 保存分组配置
+    const currentPresetName = TavernHelper.getLoadedPresetName();
+    savePresetGrouping(currentPresetName, existingGroups);
+    // 立即应用分组到DOM
+    applyGroupingToDOM(existingGroups);
+    // 延迟恢复以确保DOM更新完成
+    setTimeout(() => {
+        restoreGroupingImmediate();
+    }, 100);
+    toastr.success(`已将 ${selectedPrompts.length} 个条目移出分组，已立即应用`);
+}
+// 显示解散分组弹窗
+async function showDissolveGroupPopup(existingGroups) {
+    const popupId = 'dissolve-group-popup';
+    $(`#${popupId}`).remove();
+    const groupsHtml = existingGroups
+        .map(group => `
+    <div class="group-selection-item" style="display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 5px 0; border-radius: 6px; cursor: pointer; background-color: #fff;">
+      <input type="checkbox" class="group-checkbox" data-group-name="${$('<div/>').text(group.name).html()}" style="margin-right: 12px; transform: scale(1.3);">
+      <div style="flex: 1;">
+        <div style="font-weight: bold; color: #333; font-size: 14px;">${$('<div/>').text(group.name).html()}</div>
+        <div style="font-size: 12px; color: #666; margin-top: 2px;">包含 ${group.promptIds.length} 个条目</div>
+      </div>
+    </div>
+  `)
+        .join('');
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+      <div class="group-selection-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 70vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择要解散的分组</h4>
+        
+        <div style="margin: 15px 0; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button id="select-all-groups-btn" style="padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全选</button>
+          <button id="select-none-groups-btn" style="padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全不选</button>
+        </div>
+
+        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px;">选择要解散的分组，解散后分组内的条目将变为独立条目</div>
+          <div id="groups-container">
+            ${groupsHtml}
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="font-size: 12px; color: #666;">⚠️ 解散操作不可撤销</div>
+          <div style="display: flex; gap: 8px;">
+            <button id="group-selection-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
+            <button id="group-selection-confirm" style="padding: 10px 16px; background-color:#ff9800; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">解散选中</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+    $('body').append(popupHtml);
+    // 绑定事件
+    $('.group-selection-item').on('click', function (e) {
+        if (e.target.type === 'checkbox')
+            return;
+        const checkbox = $(this).find('.group-checkbox');
+        checkbox.prop('checked', !checkbox.prop('checked'));
+    });
+    $('#select-all-groups-btn').on('click', () => {
+        $('.group-checkbox').prop('checked', true);
+    });
+    $('#select-none-groups-btn').on('click', () => {
+        $('.group-checkbox').prop('checked', false);
+    });
+    $('#group-selection-cancel').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+    $('#group-selection-confirm').on('click', () => {
+        const selectedGroupNames = [];
+        $('.group-checkbox:checked').each(function () {
+            selectedGroupNames.push($(this).data('group-name'));
+        });
+        if (selectedGroupNames.length === 0) {
+            toastr.error('请选择要解散的分组');
+            return;
+        }
+        // 解散选中的分组
+        selectedGroupNames.forEach(groupName => {
+            const groupIndex = existingGroups.findIndex(g => g.name === groupName);
+            if (groupIndex > -1) {
+                const group = existingGroups[groupIndex];
+                // 更新UI - 移除分组标签和背景色
+                group.promptIds.forEach(promptId => {
+                    const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+                    item.css('background-color', '#fff');
+                    item.find('.group-tag').remove();
+                    // 清除分组路径显示
+                    const promptText = item.find('.prompt-text');
+                    if (promptText.length > 0) {
+                        const lastDiv = promptText.find('div:last-child');
+                        if (lastDiv.text().includes('📁')) {
+                            lastDiv.remove();
+                        }
+                    }
+                });
+                // 递归处理子分组
+                const processSubGroups = (subGroups) => {
+                    subGroups.forEach(subGroup => {
+                        subGroup.promptIds.forEach(promptId => {
+                            const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+                            item.css('background-color', '#fff');
+                            item.find('.group-tag').remove();
+                            const promptText = item.find('.prompt-text');
+                            if (promptText.length > 0) {
+                                const lastDiv = promptText.find('div:last-child');
+                                if (lastDiv.text().includes('📁')) {
+                                    lastDiv.remove();
+                                }
+                            }
+                        });
+                        if (subGroup.subGroups.length > 0) {
+                            processSubGroups(subGroup.subGroups);
+                        }
+                    });
+                };
+                if (group.subGroups.length > 0) {
+                    processSubGroups(group.subGroups);
+                }
+                existingGroups.splice(groupIndex, 1);
+            }
+        });
+        // 保存更新后的分组配置
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        const validGroups = existingGroups.filter(g => hasValidContent(g));
+        savePresetGrouping(currentPresetName, validGroups);
+        // 立即应用分组到DOM
+        applyGroupingToDOM(validGroups);
+        // 延迟恢复以确保DOM更新完成
+        setTimeout(() => {
+            restoreGroupingImmediate();
+        }, 100);
+        $(`#${popupId}`).remove();
+        toastr.success(`已解散 ${selectedGroupNames.length} 个分组`);
+    });
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/事件绑定.ts":
-/*!******************************!*\
-  !*** ./src/喵喵预设配置管理/事件绑定.ts ***!
-  \******************************/
+/***/ 65:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   bindConfigListEvents: () => (/* binding */ bindConfigListEvents)\n/* harmony export */ });\n// 配置列表的按钮事件绑定\nfunction bindConfigListEvents() {\n    const listElement = $('#preset-manager-list');\n    listElement.off('click', 'button').on('click', 'button', async function (e) {\n        const button = $(this);\n        const action = button.attr('name');\n        if (action === 'more-actions') {\n            e.stopPropagation();\n            const submenu = button.siblings('.pm-submenu');\n            $('.pm-submenu').not(submenu).hide(); // Hide other open menus\n            submenu.toggle();\n            return;\n        }\n        if (action === 'close-submenu') {\n            button.closest('.pm-submenu').hide();\n            return;\n        }\n        const configId = button.data('id');\n        // 动态导入避免循环引用\n        switch (action) {\n            case 'rename-config': {\n                const { renameConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\"));\n                await renameConfig(configId);\n                break;\n            }\n            case 'update-config': {\n                const { updateConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\"));\n                await updateConfig(configId);\n                break;\n            }\n            case 'load-config': {\n                const { loadConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\"));\n                await loadConfig(configId);\n                break;\n            }\n            case 'export-config': {\n                const { exportConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./导入导出功能 */ \"./src/喵喵预设配置管理/导入导出功能.ts\"));\n                await exportConfig(configId);\n                break;\n            }\n            case 'delete-config': {\n                const { deleteConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\"));\n                await deleteConfig(configId);\n                break;\n            }\n            case 'bind-regex': {\n                const { showRegexBindingPopup } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./正则绑定功能 */ \"./src/喵喵预设配置管理/正则绑定功能.ts\"));\n                await showRegexBindingPopup(configId);\n                break;\n            }\n            case 'view-config': {\n                const { showViewConfigPopup } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\"));\n                await showViewConfigPopup(configId);\n                break;\n            }\n        }\n        button.closest('.pm-submenu').hide();\n    });\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+S6i+S7tue7keWumi50cyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsY0FBYztBQUNQLFNBQVMsb0JBQW9CO0lBQ2xDLE1BQU0sV0FBVyxHQUFHLENBQUMsQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDO0lBRTlDLFdBQVcsQ0FBQyxHQUFHLENBQUMsT0FBTyxFQUFFLFFBQVEsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsUUFBUSxFQUFFLEtBQUssV0FBVyxDQUFDO1FBQ3hFLE1BQU0sTUFBTSxHQUFHLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN2QixNQUFNLE1BQU0sR0FBRyxNQUFNLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBRW5DLElBQUksTUFBTSxLQUFLLGNBQWMsRUFBRSxDQUFDO1lBQzlCLENBQUMsQ0FBQyxlQUFlLEVBQUUsQ0FBQztZQUNwQixNQUFNLE9BQU8sR0FBRyxNQUFNLENBQUMsUUFBUSxDQUFDLGFBQWEsQ0FBQyxDQUFDO1lBQy9DLENBQUMsQ0FBQyxhQUFhLENBQUMsQ0FBQyxHQUFHLENBQUMsT0FBTyxDQUFDLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQyx3QkFBd0I7WUFDOUQsT0FBTyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQ2pCLE9BQU87UUFDVCxDQUFDO1FBRUQsSUFBSSxNQUFNLEtBQUssZUFBZSxFQUFFLENBQUM7WUFDL0IsTUFBTSxDQUFDLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUNyQyxPQUFPO1FBQ1QsQ0FBQztRQUVELE1BQU0sUUFBUSxHQUFHLE1BQU0sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7UUFFbkMsYUFBYTtRQUNiLFFBQVEsTUFBTSxFQUFFLENBQUM7WUFDZixLQUFLLGVBQWUsQ0FBQyxDQUFDLENBQUM7Z0JBQ3JCLE1BQU0sRUFBRSxZQUFZLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUNsRCxNQUFNLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDN0IsTUFBTTtZQUNSLENBQUM7WUFDRCxLQUFLLGVBQWUsQ0FBQyxDQUFDLENBQUM7Z0JBQ3JCLE1BQU0sRUFBRSxZQUFZLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUNsRCxNQUFNLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDN0IsTUFBTTtZQUNSLENBQUM7WUFDRCxLQUFLLGFBQWEsQ0FBQyxDQUFDLENBQUM7Z0JBQ25CLE1BQU0sRUFBRSxVQUFVLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUNoRCxNQUFNLFVBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDM0IsTUFBTTtZQUNSLENBQUM7WUFDRCxLQUFLLGVBQWUsQ0FBQyxDQUFDLENBQUM7Z0JBQ3JCLE1BQU0sRUFBRSxZQUFZLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUNsRCxNQUFNLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDN0IsTUFBTTtZQUNSLENBQUM7WUFDRCxLQUFLLGVBQWUsQ0FBQyxDQUFDLENBQUM7Z0JBQ3JCLE1BQU0sRUFBRSxZQUFZLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUNsRCxNQUFNLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQztnQkFDN0IsTUFBTTtZQUNSLENBQUM7WUFDRCxLQUFLLFlBQVksQ0FBQyxDQUFDLENBQUM7Z0JBQ2xCLE1BQU0sRUFBRSxxQkFBcUIsRUFBRSxHQUFHLE1BQU0sZ0lBQWtCLENBQUM7Z0JBQzNELE1BQU0scUJBQXFCLENBQUMsUUFBUSxDQUFDLENBQUM7Z0JBQ3RDLE1BQU07WUFDUixDQUFDO1lBQ0QsS0FBSyxhQUFhLENBQUMsQ0FBQyxDQUFDO2dCQUNuQixNQUFNLEVBQUUsbUJBQW1CLEVBQUUsR0FBRyxNQUFNLGdJQUFrQixDQUFDO2dCQUN6RCxNQUFNLG1CQUFtQixDQUFDLFFBQVEsQ0FBQyxDQUFDO2dCQUNwQyxNQUFNO1lBQ1IsQ0FBQztRQUNILENBQUM7UUFFRCxNQUFNLENBQUMsT0FBTyxDQUFDLGFBQWEsQ0FBQyxDQUFDLElBQUksRUFBRSxDQUFDO0lBQ3ZDLENBQUMsQ0FBQyxDQUFDO0FBQ0wsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3RhdmVybl9oZWxwZXJfdGVtcGxhdGUvLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+S6i+S7tue7keWumi50cz8iXSwic291cmNlc0NvbnRlbnQiOlsiLy8g6YWN572u5YiX6KGo55qE5oyJ6ZKu5LqL5Lu257uR5a6aXG5leHBvcnQgZnVuY3Rpb24gYmluZENvbmZpZ0xpc3RFdmVudHMoKTogdm9pZCB7XG4gIGNvbnN0IGxpc3RFbGVtZW50ID0gJCgnI3ByZXNldC1tYW5hZ2VyLWxpc3QnKTtcblxuICBsaXN0RWxlbWVudC5vZmYoJ2NsaWNrJywgJ2J1dHRvbicpLm9uKCdjbGljaycsICdidXR0b24nLCBhc3luYyBmdW5jdGlvbiAoZSkge1xuICAgIGNvbnN0IGJ1dHRvbiA9ICQodGhpcyk7XG4gICAgY29uc3QgYWN0aW9uID0gYnV0dG9uLmF0dHIoJ25hbWUnKTtcblxuICAgIGlmIChhY3Rpb24gPT09ICdtb3JlLWFjdGlvbnMnKSB7XG4gICAgICBlLnN0b3BQcm9wYWdhdGlvbigpO1xuICAgICAgY29uc3Qgc3VibWVudSA9IGJ1dHRvbi5zaWJsaW5ncygnLnBtLXN1Ym1lbnUnKTtcbiAgICAgICQoJy5wbS1zdWJtZW51Jykubm90KHN1Ym1lbnUpLmhpZGUoKTsgLy8gSGlkZSBvdGhlciBvcGVuIG1lbnVzXG4gICAgICBzdWJtZW51LnRvZ2dsZSgpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIGlmIChhY3Rpb24gPT09ICdjbG9zZS1zdWJtZW51Jykge1xuICAgICAgYnV0dG9uLmNsb3Nlc3QoJy5wbS1zdWJtZW51JykuaGlkZSgpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIGNvbnN0IGNvbmZpZ0lkID0gYnV0dG9uLmRhdGEoJ2lkJyk7XG5cbiAgICAvLyDliqjmgIHlr7zlhaXpgb/lhY3lvqrnjq/lvJXnlKhcbiAgICBzd2l0Y2ggKGFjdGlvbikge1xuICAgICAgY2FzZSAncmVuYW1lLWNvbmZpZyc6IHtcbiAgICAgICAgY29uc3QgeyByZW5hbWVDb25maWcgfSA9IGF3YWl0IGltcG9ydCgnLi/phY3nva7mk43kvZzlip/og70nKTtcbiAgICAgICAgYXdhaXQgcmVuYW1lQ29uZmlnKGNvbmZpZ0lkKTtcbiAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgICBjYXNlICd1cGRhdGUtY29uZmlnJzoge1xuICAgICAgICBjb25zdCB7IHVwZGF0ZUNvbmZpZyB9ID0gYXdhaXQgaW1wb3J0KCcuL+mFjee9ruaTjeS9nOWKn+iDvScpO1xuICAgICAgICBhd2FpdCB1cGRhdGVDb25maWcoY29uZmlnSWQpO1xuICAgICAgICBicmVhaztcbiAgICAgIH1cbiAgICAgIGNhc2UgJ2xvYWQtY29uZmlnJzoge1xuICAgICAgICBjb25zdCB7IGxvYWRDb25maWcgfSA9IGF3YWl0IGltcG9ydCgnLi/phY3nva7mk43kvZzlip/og70nKTtcbiAgICAgICAgYXdhaXQgbG9hZENvbmZpZyhjb25maWdJZCk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgfVxuICAgICAgY2FzZSAnZXhwb3J0LWNvbmZpZyc6IHtcbiAgICAgICAgY29uc3QgeyBleHBvcnRDb25maWcgfSA9IGF3YWl0IGltcG9ydCgnLi/lr7zlhaXlr7zlh7rlip/og70nKTtcbiAgICAgICAgYXdhaXQgZXhwb3J0Q29uZmlnKGNvbmZpZ0lkKTtcbiAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgICBjYXNlICdkZWxldGUtY29uZmlnJzoge1xuICAgICAgICBjb25zdCB7IGRlbGV0ZUNvbmZpZyB9ID0gYXdhaXQgaW1wb3J0KCcuL+mFjee9ruaTjeS9nOWKn+iDvScpO1xuICAgICAgICBhd2FpdCBkZWxldGVDb25maWcoY29uZmlnSWQpO1xuICAgICAgICBicmVhaztcbiAgICAgIH1cbiAgICAgIGNhc2UgJ2JpbmQtcmVnZXgnOiB7XG4gICAgICAgIGNvbnN0IHsgc2hvd1JlZ2V4QmluZGluZ1BvcHVwIH0gPSBhd2FpdCBpbXBvcnQoJy4v5q2j5YiZ57uR5a6a5Yqf6IO9Jyk7XG4gICAgICAgIGF3YWl0IHNob3dSZWdleEJpbmRpbmdQb3B1cChjb25maWdJZCk7XG4gICAgICAgIGJyZWFrO1xuICAgICAgfVxuICAgICAgY2FzZSAndmlldy1jb25maWcnOiB7XG4gICAgICAgIGNvbnN0IHsgc2hvd1ZpZXdDb25maWdQb3B1cCB9ID0gYXdhaXQgaW1wb3J0KCcuL+i+heWKqeW8ueeql+WKn+iDvScpO1xuICAgICAgICBhd2FpdCBzaG93Vmlld0NvbmZpZ1BvcHVwKGNvbmZpZ0lkKTtcbiAgICAgICAgYnJlYWs7XG4gICAgICB9XG4gICAgfVxuXG4gICAgYnV0dG9uLmNsb3Nlc3QoJy5wbS1zdWJtZW51JykuaGlkZSgpO1xuICB9KTtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/事件绑定.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   P: () => (/* binding */ importRegexLogic),
+/* harmony export */   showRegexBindingPopup: () => (/* binding */ showRegexBindingPopup)
+/* harmony export */ });
+/* unused harmony export sortRegexes */
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(780);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(320);
+
+
+async function showRegexBindingPopup(configId) {
+    const popupId = 'preset-manager-regex-popup';
+    $(`#${popupId}`).remove();
+    try {
+        const allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+        if (allRegexes.length === 0) {
+            toastr.info('没有可绑定的全局正则。');
+            return;
+        }
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();
+        const currentConfig = configs[configId];
+        if (!currentConfig)
+            return;
+        const savedStates = new Map(currentConfig.regexStates?.map(r => [r.id, r.enabled]) ?? []);
+        const regexesHtml = allRegexes
+            .map((regex) => {
+            const isChecked = savedStates.has(regex.id) ? savedStates.get(regex.id) : regex.enabled;
+            const safeName = $('<div/>').text(regex.script_name).html();
+            return `
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;">
+                    <label for="regex-toggle-${regex.id}" style="cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeName}">${safeName}</label>
+                    <label class="pm-switch">
+                       <input type="checkbox" id="regex-toggle-${regex.id}" data-id="${regex.id}" ${isChecked ? 'checked' : ''}/>
+                       <span class="pm-slider"></span>
+                    </label>
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                    <h4 style="margin-top:0; color:#c62828; text-align: center;">请选择绑定正则</h4>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                        ${regexesHtml}
+                    </div>
+                    <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                        <button id="regex-bind-clear" style="padding: 8px 16px; background-color:#f5a8a0; border:none; border-radius:6px; cursor:pointer; color:#fff;">清除绑定</button>
+                        <button id="regex-bind-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                        <button id="regex-bind-save" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">保存</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#regex-bind-cancel').on('click', () => $(`#${popupId}`).remove());
+        $('#regex-bind-clear').on('click', async () => {
+            const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();
+            if (configs[configId] && configs[configId].regexStates) {
+                delete configs[configId].regexStates;
+                await (0,___WEBPACK_IMPORTED_MODULE_1__/* .setStoredConfigs */ .BR)(configs);
+                toastr.success(`配置 "${configs[configId].name}" 的正则绑定已清除。`);
+            }
+            else {
+                toastr.info(`配置没有正则绑定。`);
+            }
+            $(`#${popupId}`).remove();
+            (0,___WEBPACK_IMPORTED_MODULE_1__/* .renderConfigsList */ .sd)();
+        });
+        $('#regex-bind-save').on('click', async () => {
+            const newRegexStates = allRegexes.map((regex) => ({
+                id: regex.id,
+                enabled: $(`#regex-toggle-${regex.id}`).is(':checked'),
+            }));
+            const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();
+            if (!configs[configId])
+                return;
+            configs[configId].regexStates = newRegexStates;
+            await (0,___WEBPACK_IMPORTED_MODULE_1__/* .setStoredConfigs */ .BR)(configs);
+            toastr.success(`配置 "${configs[configId].name}" 的正则绑定已保存。`);
+            $(`#${popupId}`).remove();
+            (0,___WEBPACK_IMPORTED_MODULE_1__/* .renderConfigsList */ .sd)();
+            const currentPresetName = configs[configId].presetName;
+            if (!currentPresetName)
+                return;
+            const otherConfigIds = Object.keys(configs).filter(id => id !== configId && configs[id].presetName === currentPresetName);
+            if (otherConfigIds.length > 0) {
+                const confirmMessage = `是否要将此正则绑定应用到其他使用预设 "${currentPresetName}" 的 ${otherConfigIds.length} 个配置上？`;
+                const userChoice = await triggerSlash(`/popup okButton="应用" cancelButton="取消" result=true "${confirmMessage}"`);
+                if (userChoice === '1') {
+                    otherConfigIds.forEach(id => {
+                        configs[id].regexStates = newRegexStates;
+                    });
+                    await (0,___WEBPACK_IMPORTED_MODULE_1__/* .setStoredConfigs */ .BR)(configs);
+                    toastr.success(`已成功将正则绑定应用到 ${otherConfigIds.length} 个同名预设配置上。`);
+                }
+            }
+        });
+    }
+    catch (error) {
+        console.error('打开正则绑定界面失败:', error);
+        toastr.error('无法加载全局正则列表。');
+    }
+}
+function sortRegexes(regexes) {
+    const getSortNumber = (name) => {
+        const match = name.trim().match(/^(?:\[|【|\(|（)?(\d+)(?:\]|】|\)|）|\.|-|_|\s)?/);
+        if (match && match[1]) {
+            return parseInt(match[1], 10);
+        }
+        return Infinity;
+    };
+    return regexes.sort((a, b) => {
+        const numA = getSortNumber(a.script_name);
+        const numB = getSortNumber(b.script_name);
+        if (numA !== numB) {
+            return numA - numB;
+        }
+        return a.script_name.localeCompare(b.script_name);
+    });
+}
+async function importRegexLogic(regexToImport) {
+    const currentRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+    let remainingRegexes = currentRegexes;
+    if (currentRegexes && currentRegexes.length > 0) {
+        remainingRegexes = await (0,___WEBPACK_IMPORTED_MODULE_0__/* .showRegexDeletionPopup */ .rb)(currentRegexes);
+    }
+    const combinedRegexes = [...regexToImport, ...remainingRegexes];
+    const sortedRegexes = sortRegexes(combinedRegexes);
+    await TavernHelper.replaceTavernRegexes(sortedRegexes, { scope: 'global' });
+    toastr.success(`成功导入 ${regexToImport.length} 条正则，并重新排序。`);
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/初始化和配置.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/初始化和配置.ts ***!
-  \********************************/
+/***/ 291:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   CONFIG_LOREBOOK_NAME: () => (/* binding */ CONFIG_LOREBOOK_NAME),\n/* harmony export */   TIPS: () => (/* binding */ TIPS),\n/* harmony export */   TOGGLE_BUTTON_NAME: () => (/* binding */ TOGGLE_BUTTON_NAME),\n/* harmony export */   UI_ID: () => (/* binding */ UI_ID),\n/* harmony export */   V2_MIGRATION_KEY: () => (/* binding */ V2_MIGRATION_KEY),\n/* harmony export */   ensureConfigLorebookExists: () => (/* binding */ ensureConfigLorebookExists),\n/* harmony export */   generateUniqueId: () => (/* binding */ generateUniqueId),\n/* harmony export */   initializePresetManager: () => (/* binding */ initializePresetManager),\n/* harmony export */   lastProcessedCharAvatar: () => (/* binding */ lastProcessedCharAvatar),\n/* harmony export */   setLastProcessedCharAvatar: () => (/* binding */ setLastProcessedCharAvatar)\n/* harmony export */ });\n// 定义用于存储配置的世界书的固定名称\nconst CONFIG_LOREBOOK_NAME = 'PresetConfigManager_Data';\nconst V2_MIGRATION_KEY = 'MiaoMiaoPresetManager_AllConfigs_V2'; // 用于检测旧版合并数据的Key\nconst TOGGLE_BUTTON_NAME = '喵喵预设配置管理';\nconst UI_ID = 'preset-manager-ui';\nlet lastProcessedCharAvatar = null; // 用于跟踪上一个处理过的角色，防止重复触发\n// 小贴士列表\nconst TIPS = [\n    '如果你玩BL的话，来试试小n同人女预设吧！其他MoM系预设也可以试试哦！',\n    '当你的总token达到6w左右时，你就该总结隐藏了哦',\n    '你知道吗，聊天界面开关正则有一定可能丢失你的聊天记录',\n    '不要使用第三方/\"半公益站\"的api或云酒馆！首先你的数据会非常不安全，其次没有后台我们无法解答你的问题，最后贩子不仅收你钱还掺水！',\n];\nfunction generateUniqueId() {\n    return Date.now().toString(36) + Math.random().toString(36).substring(2);\n}\nfunction setLastProcessedCharAvatar(avatar) {\n    lastProcessedCharAvatar = avatar;\n}\n// 确保配置世界书存在\nasync function ensureConfigLorebookExists() {\n    try {\n        await TavernHelper.getWorldbook(CONFIG_LOREBOOK_NAME);\n    }\n    catch (error) {\n        console.log(`'${CONFIG_LOREBOOK_NAME}' not found. Creating it now.`);\n        await TavernHelper.createOrReplaceWorldbook(CONFIG_LOREBOOK_NAME, []);\n    }\n}\n// 初始化函数（将在加载时执行函数中调用）\nasync function initializePresetManager() {\n    await ensureConfigLorebookExists();\n    $(document).on('click', function (e) {\n        if (!$(e.target).is('button[name=\"more-actions\"]') && $(e.target).closest('.pm-submenu').length === 0) {\n            $('.pm-submenu').hide();\n        }\n    });\n}\n// 移除自动初始化，改为在加载时执行函数中调用\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+WIneWni+WMluWSjOmFjee9ri50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQUEsb0JBQW9CO0FBQ2IsTUFBTSxvQkFBb0IsR0FBRywwQkFBMEIsQ0FBQztBQUN4RCxNQUFNLGdCQUFnQixHQUFHLHFDQUFxQyxDQUFDLENBQUMsaUJBQWlCO0FBQ2pGLE1BQU0sa0JBQWtCLEdBQUcsVUFBVSxDQUFDO0FBQ3RDLE1BQU0sS0FBSyxHQUFHLG1CQUFtQixDQUFDO0FBQ2xDLElBQUksdUJBQXVCLEdBQWtCLElBQUksQ0FBQyxDQUFDLHVCQUF1QjtBQUVqRixRQUFRO0FBQ0QsTUFBTSxJQUFJLEdBQUc7SUFDbEIsc0NBQXNDO0lBQ3RDLDRCQUE0QjtJQUM1Qiw0QkFBNEI7SUFDNUIsb0VBQW9FO0NBQ3JFLENBQUM7QUFFSyxTQUFTLGdCQUFnQjtJQUM5QixPQUFPLElBQUksQ0FBQyxHQUFHLEVBQUUsQ0FBQyxRQUFRLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDLFFBQVEsQ0FBQyxFQUFFLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLENBQUM7QUFDM0UsQ0FBQztBQUVNLFNBQVMsMEJBQTBCLENBQUMsTUFBcUI7SUFDOUQsdUJBQXVCLEdBQUcsTUFBTSxDQUFDO0FBQ25DLENBQUM7QUFFRCxZQUFZO0FBQ0wsS0FBSyxVQUFVLDBCQUEwQjtJQUM5QyxJQUFJLENBQUM7UUFDSCxNQUFNLFlBQVksQ0FBQyxZQUFZLENBQUMsb0JBQW9CLENBQUMsQ0FBQztJQUN4RCxDQUFDO0lBQUMsT0FBTyxLQUFLLEVBQUUsQ0FBQztRQUNmLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxvQkFBb0IsK0JBQStCLENBQUMsQ0FBQztRQUNyRSxNQUFNLFlBQVksQ0FBQyx3QkFBd0IsQ0FBQyxvQkFBb0IsRUFBRSxFQUFFLENBQUMsQ0FBQztJQUN4RSxDQUFDO0FBQ0gsQ0FBQztBQUVELHNCQUFzQjtBQUNmLEtBQUssVUFBVSx1QkFBdUI7SUFDM0MsTUFBTSwwQkFBMEIsRUFBRSxDQUFDO0lBRW5DLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLFVBQVUsQ0FBQztRQUNqQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUFFLENBQUMsNkJBQTZCLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQyxNQUFNLEtBQUssQ0FBQyxFQUFFLENBQUM7WUFDdEcsQ0FBQyxDQUFDLGFBQWEsQ0FBQyxDQUFDLElBQUksRUFBRSxDQUFDO1FBQzFCLENBQUM7SUFDSCxDQUFDLENBQUMsQ0FBQztBQUNMLENBQUM7QUFFRCx3QkFBd0IiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/liJ3lp4vljJblkozphY3nva4udHM/Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIOWumuS5ieeUqOS6juWtmOWCqOmFjee9rueahOS4lueVjOS5pueahOWbuuWumuWQjeensFxuZXhwb3J0IGNvbnN0IENPTkZJR19MT1JFQk9PS19OQU1FID0gJ1ByZXNldENvbmZpZ01hbmFnZXJfRGF0YSc7XG5leHBvcnQgY29uc3QgVjJfTUlHUkFUSU9OX0tFWSA9ICdNaWFvTWlhb1ByZXNldE1hbmFnZXJfQWxsQ29uZmlnc19WMic7IC8vIOeUqOS6juajgOa1i+aXp+eJiOWQiOW5tuaVsOaNrueahEtleVxuZXhwb3J0IGNvbnN0IFRPR0dMRV9CVVRUT05fTkFNRSA9ICfllrXllrXpooTorr7phY3nva7nrqHnkIYnO1xuZXhwb3J0IGNvbnN0IFVJX0lEID0gJ3ByZXNldC1tYW5hZ2VyLXVpJztcbmV4cG9ydCBsZXQgbGFzdFByb2Nlc3NlZENoYXJBdmF0YXI6IHN0cmluZyB8IG51bGwgPSBudWxsOyAvLyDnlKjkuo7ot5/ouKrkuIrkuIDkuKrlpITnkIbov4fnmoTop5LoibLvvIzpmLLmraLph43lpI3op6blj5FcblxuLy8g5bCP6LS05aOr5YiX6KGoXG5leHBvcnQgY29uc3QgVElQUyA9IFtcbiAgJ+WmguaenOS9oOeOqUJM55qE6K+d77yM5p2l6K+V6K+V5bCPbuWQjOS6uuWls+mihOiuvuWQp++8geWFtuS7lk1vTeezu+mihOiuvuS5n+WPr+S7peivleivleWTpu+8gScsXG4gICflvZPkvaDnmoTmgLt0b2tlbui+vuWIsDZ35bem5Y+z5pe277yM5L2g5bCx6K+l5oC757uT6ZqQ6JeP5LqG5ZOmJyxcbiAgJ+S9oOefpemBk+WQl++8jOiBiuWkqeeVjOmdouW8gOWFs+ato+WImeacieS4gOWumuWPr+iDveS4ouWkseS9oOeahOiBiuWkqeiusOW9lScsXG4gICfkuI3opoHkvb/nlKjnrKzkuInmlrkvXCLljYrlhaznm4rnq5lcIueahGFwaeaIluS6kemFkummhu+8gemmluWFiOS9oOeahOaVsOaNruS8mumdnuW4uOS4jeWuieWFqO+8jOWFtuasoeayoeacieWQjuWPsOaIkeS7rOaXoOazleino+etlOS9oOeahOmXrumimO+8jOacgOWQjui0qeWtkOS4jeS7heaUtuS9oOmSsei/mOaOuuawtO+8gScsXG5dO1xuXG5leHBvcnQgZnVuY3Rpb24gZ2VuZXJhdGVVbmlxdWVJZCgpOiBzdHJpbmcge1xuICByZXR1cm4gRGF0ZS5ub3coKS50b1N0cmluZygzNikgKyBNYXRoLnJhbmRvbSgpLnRvU3RyaW5nKDM2KS5zdWJzdHJpbmcoMik7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBzZXRMYXN0UHJvY2Vzc2VkQ2hhckF2YXRhcihhdmF0YXI6IHN0cmluZyB8IG51bGwpOiB2b2lkIHtcbiAgbGFzdFByb2Nlc3NlZENoYXJBdmF0YXIgPSBhdmF0YXI7XG59XG5cbi8vIOehruS/nemFjee9ruS4lueVjOS5puWtmOWcqFxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGVuc3VyZUNvbmZpZ0xvcmVib29rRXhpc3RzKCk6IFByb21pc2U8dm9pZD4ge1xuICB0cnkge1xuICAgIGF3YWl0IFRhdmVybkhlbHBlci5nZXRXb3JsZGJvb2soQ09ORklHX0xPUkVCT09LX05BTUUpO1xuICB9IGNhdGNoIChlcnJvcikge1xuICAgIGNvbnNvbGUubG9nKGAnJHtDT05GSUdfTE9SRUJPT0tfTkFNRX0nIG5vdCBmb3VuZC4gQ3JlYXRpbmcgaXQgbm93LmApO1xuICAgIGF3YWl0IFRhdmVybkhlbHBlci5jcmVhdGVPclJlcGxhY2VXb3JsZGJvb2soQ09ORklHX0xPUkVCT09LX05BTUUsIFtdKTtcbiAgfVxufVxuXG4vLyDliJ3lp4vljJblh73mlbDvvIjlsIblnKjliqDovb3ml7bmiafooYzlh73mlbDkuK3osIPnlKjvvIlcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBpbml0aWFsaXplUHJlc2V0TWFuYWdlcigpOiBQcm9taXNlPHZvaWQ+IHtcbiAgYXdhaXQgZW5zdXJlQ29uZmlnTG9yZWJvb2tFeGlzdHMoKTtcblxuICAkKGRvY3VtZW50KS5vbignY2xpY2snLCBmdW5jdGlvbiAoZSkge1xuICAgIGlmICghJChlLnRhcmdldCkuaXMoJ2J1dHRvbltuYW1lPVwibW9yZS1hY3Rpb25zXCJdJykgJiYgJChlLnRhcmdldCkuY2xvc2VzdCgnLnBtLXN1Ym1lbnUnKS5sZW5ndGggPT09IDApIHtcbiAgICAgICQoJy5wbS1zdWJtZW51JykuaGlkZSgpO1xuICAgIH1cbiAgfSk7XG59XG5cbi8vIOenu+mZpOiHquWKqOWIneWni+WMlu+8jOaUueS4uuWcqOWKoOi9veaXtuaJp+ihjOWHveaVsOS4reiwg+eUqFxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/初始化和配置.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Db: () => (/* binding */ CONFIG_LOREBOOK_NAME),
+/* harmony export */   EF: () => (/* binding */ TOGGLE_BUTTON_NAME),
+/* harmony export */   Ij: () => (/* binding */ generateUniqueId),
+/* harmony export */   KL: () => (/* binding */ V2_MIGRATION_KEY),
+/* harmony export */   Mk: () => (/* binding */ lastProcessedCharAvatar),
+/* harmony export */   Xl: () => (/* binding */ UI_ID),
+/* harmony export */   df: () => (/* binding */ TIPS),
+/* harmony export */   iu: () => (/* binding */ setLastProcessedCharAvatar),
+/* harmony export */   lk: () => (/* binding */ generateUUID),
+/* harmony export */   xd: () => (/* binding */ initializePresetManager)
+/* harmony export */ });
+/* unused harmony export ensureConfigLorebookExists */
+// 定义用于存储配置的世界书的固定名称
+const CONFIG_LOREBOOK_NAME = 'PresetConfigManager_Data';
+const V2_MIGRATION_KEY = 'MiaoMiaoPresetManager_AllConfigs_V2'; // 用于检测旧版合并数据的Key
+const TOGGLE_BUTTON_NAME = '喵喵预设配置管理';
+const UI_ID = 'preset-manager-ui';
+let lastProcessedCharAvatar = null; // 用于跟踪上一个处理过的角色，防止重复触发
+// 小贴士列表
+const TIPS = [
+    '如果你玩BL的话，来试试小n同人女预设吧！其他MoM系预设也可以试试哦！',
+    '当你的总token达到6w左右时，你就该总结隐藏了哦',
+    '你知道吗，聊天界面开关正则有一定可能丢失你的聊天记录',
+    '不要使用第三方/"半公益站"的api或云酒馆！首先你的数据会非常不安全，其次没有后台我们无法解答你的问题，最后贩子不仅收你钱还掺水！',
+];
+function generateUniqueId() {
+    return Date.now().toString(36) + Math.random().toString(36).substring(2);
+}
+// 生成标准的UUID v4格式，用作预设条目 identifier
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = (Math.random() * 16) | 0;
+        const v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
+}
+function setLastProcessedCharAvatar(avatar) {
+    lastProcessedCharAvatar = avatar;
+}
+// 确保配置世界书存在
+async function ensureConfigLorebookExists() {
+    try {
+        await TavernHelper.getWorldbook(CONFIG_LOREBOOK_NAME);
+    }
+    catch (error) {
+        console.log(`'${CONFIG_LOREBOOK_NAME}' not found. Creating it now.`);
+        await TavernHelper.createOrReplaceWorldbook(CONFIG_LOREBOOK_NAME, []);
+    }
+}
+// 初始化函数（将在加载时执行函数中调用）
+async function initializePresetManager() {
+    await ensureConfigLorebookExists();
+    $(document).on('click', function (e) {
+        if (!$(e.target).is('button[name="more-actions"]') && $(e.target).closest('.pm-submenu').length === 0) {
+            $('.pm-submenu').hide();
+        }
+    });
+    // 自动为所有预设创建识别条目（仅在新版用户首次使用时执行）
+    try {
+        const configs = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884)).then(m => m.getStoredConfigs());
+        const hasOldConfigs = Object.values(configs).some((config) => !config.identifierId && config.presetName);
+        if (hasOldConfigs) {
+            console.log('检测到旧版配置，开始自动创建识别条目...');
+            const { autoCreateIdentifiersForAllPresets } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+            await autoCreateIdentifiersForAllPresets();
+        }
+    }
+    catch (error) {
+        console.error('自动创建识别条目时出错:', error);
+    }
+}
+// 移除自动初始化，改为在加载时执行函数中调用
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/加载和卸载时执行函数.ts":
-/*!************************************!*\
-  !*** ./src/喵喵预设配置管理/加载和卸载时执行函数.ts ***!
-  \************************************/
+/***/ 320:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./界面创建和管理 */ \"./src/喵喵预设配置管理/界面创建和管理.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./角色绑定功能 */ \"./src/喵喵预设配置管理/角色绑定功能.ts\");\n\n\n\n\n// 防止重复初始化的全局标记\nconst SCRIPT_ID = 'MIAO_MIAO_PRESET_MANAGER';\n// 等待必要的全局变量加载完成\nfunction checkReady() {\n    const win = window;\n    if (win.jQuery &&\n        win.TavernHelper &&\n        typeof TavernHelper.createOrReplaceWorldbook === 'function' &&\n        win.tavern_events &&\n        typeof getButtonEvent === 'function') {\n        initScript();\n    }\n    else {\n        setTimeout(checkReady, 100);\n    }\n}\nfunction init() {\n    // 简化重复检查 - 只检查UI是否已存在，如果存在就跳过初始化\n    const win = window;\n    if (win[SCRIPT_ID]) {\n        console.log('⚠️ 喵喵预设配置管理已存在，跳过重复初始化');\n        return;\n    }\n    // 设置全局标记\n    win[SCRIPT_ID] = true;\n    win.miaoMiaoPresetManager = true;\n    console.log('🔥 jQuery ready 事件触发...');\n    checkReady();\n}\nasync function initScript() {\n    try {\n        console.log('🚀 喵喵预设配置管理开始初始化...');\n        // 初始化配置管理器\n        await (0,___WEBPACK_IMPORTED_MODULE_0__.initializePresetManager)();\n        console.log('✅ 配置管理器初始化完成');\n        // 创建UI界面\n        (0,___WEBPACK_IMPORTED_MODULE_2__.createUI)();\n        console.log('✅ UI界面创建完成');\n        // 注册按钮事件\n        const buttonEventId = getButtonEvent(___WEBPACK_IMPORTED_MODULE_0__.TOGGLE_BUTTON_NAME);\n        eventOn(buttonEventId, ___WEBPACK_IMPORTED_MODULE_2__.toggleUI);\n        console.log('✅ 按钮事件已注册:', buttonEventId);\n        // 注册角色切换事件\n        eventOn(tavern_events.CHAT_CHANGED, ___WEBPACK_IMPORTED_MODULE_3__.onChatChanged);\n        // 延迟加载非关键功能，避免阻塞UI\n        setTimeout(() => {\n            initNonCriticalFeatures();\n        }, 100);\n        console.log('✅ 喵喵预设配置管理已加载成功!');\n    }\n    catch (error) {\n        console.error('初始化喵喵预设配置管理失败:', error);\n        toastr.error('喵喵预设配置管理加载失败，请检查控制台');\n    }\n}\n// 初始化非关键功能，避免阻塞主UI\nfunction initNonCriticalFeatures() {\n    try {\n        // 恢复分组配置\n        eventOn(tavern_events.SETTINGS_LOADED, ___WEBPACK_IMPORTED_MODULE_1__.restoreGroupingFromConfig);\n        // 监听预设变化，如果存在该事件的话\n        const tavernEventsExt = tavern_events;\n        if (tavernEventsExt.PRESET_CHANGED) {\n            eventOn(tavernEventsExt.PRESET_CHANGED, ___WEBPACK_IMPORTED_MODULE_1__.restoreGroupingFromConfig);\n        }\n        // 监听预设界面变化，延迟恢复分组\n        if (tavernEventsExt.PROMPT_MANAGER_UPDATED) {\n            eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => (0,___WEBPACK_IMPORTED_MODULE_1__.restoreGroupingDelayed)(300));\n        }\n        // 监听设置更新事件，这通常在条目开关后触发\n        eventOn(tavern_events.SETTINGS_UPDATED, () => {\n            console.log('检测到设置更新，准备恢复分组');\n            (0,___WEBPACK_IMPORTED_MODULE_1__.restoreGroupingDelayed)(800);\n        });\n        // 优化DOM观察器 - 使用防抖机制\n        let restoreTimeout = null;\n        const observer = new MutationObserver(mutations => {\n            let shouldRestore = false;\n            mutations.forEach(mutation => {\n                if (mutation.type === 'childList') {\n                    const target = mutation.target;\n                    // 检查是否是预设管理器的条目变化\n                    if (target.classList?.contains('completion_prompt_manager') ||\n                        target.querySelector?.('.completion_prompt_manager_prompt') ||\n                        // 检查是否是预设条目本身的变化\n                        target.classList?.contains('completion_prompt_manager_prompt') ||\n                        // 检查是否是分组容器的变化\n                        target.classList?.contains('prompt-group-container')) {\n                        shouldRestore = true;\n                    }\n                }\n                // 检查属性变化（如开关状态变化）\n                if (mutation.type === 'attributes') {\n                    const target = mutation.target;\n                    if (target.classList?.contains('completion_prompt_manager_prompt') ||\n                        target.closest?.('.completion_prompt_manager_prompt')) {\n                        shouldRestore = true;\n                    }\n                }\n            });\n            if (shouldRestore) {\n                // 防抖处理，避免频繁触发\n                if (restoreTimeout) {\n                    clearTimeout(restoreTimeout);\n                }\n                restoreTimeout = window.setTimeout(() => {\n                    console.log('检测到预设条目变化，准备恢复分组');\n                    (0,___WEBPACK_IMPORTED_MODULE_1__.restoreGroupingDelayed)(500);\n                }, 200);\n            }\n        });\n        // 开始观察预设管理器区域的变化\n        const presetManagerContainer = $('.completion_prompt_manager').get(0);\n        if (presetManagerContainer) {\n            observer.observe(presetManagerContainer, {\n                childList: true,\n                subtree: true,\n                attributes: true,\n                attributeFilter: ['class', 'data-pm-identifier'],\n            });\n            console.log('✅ 预设管理器DOM观察器已启动');\n        }\n        // 延迟恢复分组，避免阻塞UI加载\n        setTimeout(() => {\n            console.log('🔄 脚本加载完成，开始强制恢复分组配置...');\n            (0,___WEBPACK_IMPORTED_MODULE_1__.forceRestoreGrouping)();\n        }, 2000);\n        console.log('✅ 非关键功能初始化完成');\n    }\n    catch (error) {\n        console.error('初始化非关键功能失败:', error);\n    }\n}\n// 在加载脚本时执行初始化\nconsole.log('🔥 喵喵预设配置管理模块开始加载...');\n$(() => init());\n// 在卸载脚本时执行清理\n$(window).on('pagehide', () => {\n    // 清理全局标记\n    const win = window;\n    delete win[SCRIPT_ID];\n    delete win.miaoMiaoPresetManager;\n    // 快速清理UI元素，避免阻塞\n    const uiElement = document.getElementById('preset-manager-ui');\n    const fileElement = document.getElementById('preset-manager-import-file');\n    if (uiElement) {\n        uiElement.remove();\n    }\n    if (fileElement) {\n        fileElement.remove();\n    }\n    // 异步清理分组效果，避免阻塞页面卸载\n    setTimeout(async () => {\n        try {\n            const { clearAllGrouping } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\"));\n            clearAllGrouping();\n        }\n        catch (error) {\n            // 忽略清理错误\n        }\n    }, 0);\n    console.log('✅ 喵喵预设配置管理已卸载');\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+WKoOi9veWSjOWNuOi9veaXtuaJp+ihjOWHveaVsC50cyIsIm1hcHBpbmdzIjoiOzs7OztBQUF1RTtBQUM0QjtBQUNwRDtBQUNOO0FBRXpDLGVBQWU7QUFDZixNQUFNLFNBQVMsR0FBRywwQkFBMEIsQ0FBQztBQUU3QyxnQkFBZ0I7QUFDaEIsU0FBUyxVQUFVO0lBQ2pCLE1BQU0sR0FBRyxHQUFHLE1BQTRDLENBQUM7SUFDekQsSUFDRSxHQUFHLENBQUMsTUFBTTtRQUNWLEdBQUcsQ0FBQyxZQUFZO1FBQ2hCLE9BQU8sWUFBWSxDQUFDLHdCQUF3QixLQUFLLFVBQVU7UUFDM0QsR0FBRyxDQUFDLGFBQWE7UUFDakIsT0FBTyxjQUFjLEtBQUssVUFBVSxFQUNwQyxDQUFDO1FBQ0QsVUFBVSxFQUFFLENBQUM7SUFDZixDQUFDO1NBQU0sQ0FBQztRQUNOLFVBQVUsQ0FBQyxVQUFVLEVBQUUsR0FBRyxDQUFDLENBQUM7SUFDOUIsQ0FBQztBQUNILENBQUM7QUFFRCxTQUFTLElBQUk7SUFDWCxpQ0FBaUM7SUFDakMsTUFBTSxHQUFHLEdBQUcsTUFBNEMsQ0FBQztJQUN6RCxJQUFJLEdBQUcsQ0FBQyxTQUFTLENBQUMsRUFBRSxDQUFDO1FBQ25CLE9BQU8sQ0FBQyxHQUFHLENBQUMsd0JBQXdCLENBQUMsQ0FBQztRQUN0QyxPQUFPO0lBQ1QsQ0FBQztJQUVELFNBQVM7SUFDVCxHQUFHLENBQUMsU0FBUyxDQUFDLEdBQUcsSUFBSSxDQUFDO0lBQ3RCLEdBQUcsQ0FBQyxxQkFBcUIsR0FBRyxJQUFJLENBQUM7SUFFakMsT0FBTyxDQUFDLEdBQUcsQ0FBQyx5QkFBeUIsQ0FBQyxDQUFDO0lBQ3ZDLFVBQVUsRUFBRSxDQUFDO0FBQ2YsQ0FBQztBQUVELEtBQUssVUFBVSxVQUFVO0lBQ3ZCLElBQUksQ0FBQztRQUNILE9BQU8sQ0FBQyxHQUFHLENBQUMscUJBQXFCLENBQUMsQ0FBQztRQUVuQyxXQUFXO1FBQ1gsTUFBTSww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QztRQUNyQixDQUFDO1FBQUMsT0FBTyxLQUFLLEVBQUUsQ0FBQztZQUNmLFNBQVM7UUFDWCxDQUFDO0lBQ0gsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDO0lBRU4sT0FBTyxDQUFDLEdBQUcsQ0FBQyxlQUFlLENBQUMsQ0FBQztBQUMvQixDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3RhdmVybl9oZWxwZXJfdGVtcGxhdGUvLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+WKoOi9veWSjOWNuOi9veaXtuaJp+ihjOWHveaVsC50cz8iXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVE9HR0xFX0JVVFRPTl9OQU1FLCBpbml0aWFsaXplUHJlc2V0TWFuYWdlciB9IGZyb20gJy4v5Yid5aeL5YyW5ZKM6YWN572uJztcbmltcG9ydCB7IGZvcmNlUmVzdG9yZUdyb3VwaW5nLCByZXN0b3JlR3JvdXBpbmdEZWxheWVkLCByZXN0b3JlR3JvdXBpbmdGcm9tQ29uZmlnIH0gZnJvbSAnLi/mnaHnm67liIbnu4Tlip/og70nO1xuaW1wb3J0IHsgY3JlYXRlVUksIHRvZ2dsZVVJIH0gZnJvbSAnLi/nlYzpnaLliJvlu7rlkoznrqHnkIYnO1xuaW1wb3J0IHsgb25DaGF0Q2hhbmdlZCB9IGZyb20gJy4v6KeS6Imy57uR5a6a5Yqf6IO9JztcblxuLy8g6Ziy5q2i6YeN5aSN5Yid5aeL5YyW55qE5YWo5bGA5qCH6K6wXG5jb25zdCBTQ1JJUFRfSUQgPSAnTUlBT19NSUFPX1BSRVNFVF9NQU5BR0VSJztcblxuLy8g562J5b6F5b+F6KaB55qE5YWo5bGA5Y+Y6YeP5Yqg6L295a6M5oiQXG5mdW5jdGlvbiBjaGVja1JlYWR5KCk6IHZvaWQge1xuICBjb25zdCB3aW4gPSB3aW5kb3cgYXMgdW5rbm93biBhcyBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPjtcbiAgaWYgKFxuICAgIHdpbi5qUXVlcnkgJiZcbiAgICB3aW4uVGF2ZXJuSGVscGVyICYmXG4gICAgdHlwZW9mIFRhdmVybkhlbHBlci5jcmVhdGVPclJlcGxhY2VXb3JsZGJvb2sgPT09ICdmdW5jdGlvbicgJiZcbiAgICB3aW4udGF2ZXJuX2V2ZW50cyAmJlxuICAgIHR5cGVvZiBnZXRCdXR0b25FdmVudCA9PT0gJ2Z1bmN0aW9uJ1xuICApIHtcbiAgICBpbml0U2NyaXB0KCk7XG4gIH0gZWxzZSB7XG4gICAgc2V0VGltZW91dChjaGVja1JlYWR5LCAxMDApO1xuICB9XG59XG5cbmZ1bmN0aW9uIGluaXQoKTogdm9pZCB7XG4gIC8vIOeugOWMlumHjeWkjeajgOafpSAtIOWPquajgOafpVVJ5piv5ZCm5bey5a2Y5Zyo77yM5aaC5p6c5a2Y5Zyo5bCx6Lez6L+H5Yid5aeL5YyWXG4gIGNvbnN0IHdpbiA9IHdpbmRvdyBhcyB1bmtub3duIGFzIFJlY29yZDxzdHJpbmcsIHVua25vd24+O1xuICBpZiAod2luW1NDUklQVF9JRF0pIHtcbiAgICBjb25zb2xlLmxvZygn4pqg77iPIOWWteWWtemihOiuvumFjee9rueuoeeQhuW3suWtmOWcqO+8jOi3s+i/h+mHjeWkjeWIneWni+WMlicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIC8vIOiuvue9ruWFqOWxgOagh+iusFxuICB3aW5bU0NSSVBUX0lEXSA9IHRydWU7XG4gIHdpbi5taWFvTWlhb1ByZXNldE1hbmFnZXIgPSB0cnVlO1xuXG4gIGNvbnNvbGUubG9nKCfwn5SlIGpRdWVyeSByZWFkeSDkuovku7bop6blj5EuLi4nKTtcbiAgY2hlY2tSZWFkeSgpO1xufVxuXG5hc3luYyBmdW5jdGlvbiBpbml0U2NyaXB0KCk6IFByb21pc2U8dm9pZD4ge1xuICB0cnkge1xuICAgIGNvbnNvbGUubG9nKCfwn5qAIOWWteWWtemihOiuvumFjee9rueuoeeQhuW8gOWni+WIneWni+WMli4uLicpO1xuXG4gICAgLy8g5Yid5aeL5YyW6YWN572u566h55CG5ZmoXG4gICAgYXdhaXQgaW5pdGlhbGl6ZVByZXNldE1hbmFnZXIoKTtcbiAgICBjb25zb2xlLmxvZygn4pyFIOmFjee9rueuoeeQhuWZqOWIneWni+WMluWujOaIkCcpO1xuXG4gICAgLy8g5Yib5bu6VUnnlYzpnaJcbiAgICBjcmVhdGVVSSgpO1xuICAgIGNvbnNvbGUubG9nKCfinIUgVUnnlYzpnaLliJvlu7rlrozmiJAnKTtcblxuICAgIC8vIOazqOWGjOaMiemSruS6i+S7tlxuICAgIGNvbnN0IGJ1dHRvbkV2ZW50SWQgPSBnZXRCdXR0b25FdmVudChUT0dHTEVfQlVUVE9OX05BTUUpO1xuICAgIGV2ZW50T24oYnV0dG9uRXZlbnRJZCwgdG9nZ2xlVUkpO1xuICAgIGNvbnNvbGUubG9nKCfinIUg5oyJ6ZKu5LqL5Lu25bey5rOo5YaMOicsIGJ1dHRvbkV2ZW50SWQpO1xuXG4gICAgLy8g5rOo5YaM6KeS6Imy5YiH5o2i5LqL5Lu2XG4gICAgZXZlbnRPbih0YXZlcm5fZXZlbnRzLkNIQVRfQ0hBTkdFRCwgb25DaGF0Q2hhbmdlZCk7XG5cbiAgICAvLyDlu7bov5/liqDovb3pnZ7lhbPplK7lip/og73vvIzpgb/lhY3pmLvloZ5VSVxuICAgIHNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgaW5pdE5vbkNyaXRpY2FsRmVhdHVyZXMoKTtcbiAgICB9LCAxMDApO1xuXG4gICAgY29uc29sZS5sb2coJ+KchSDllrXllrXpooTorr7phY3nva7nrqHnkIblt7LliqDovb3miJDlip8hJyk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5Yid5aeL5YyW5Za15Za16aKE6K6+6YWN572u566h55CG5aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+WWteWWtemihOiuvumFjee9rueuoeeQhuWKoOi9veWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsCcpO1xuICB9XG59XG5cbi8vIOWIneWni+WMlumdnuWFs+mUruWKn+iDve+8jOmBv+WFjemYu+WhnuS4u1VJXG5mdW5jdGlvbiBpbml0Tm9uQ3JpdGljYWxGZWF0dXJlcygpOiB2b2lkIHtcbiAgdHJ5IHtcbiAgICAvLyDmgaLlpI3liIbnu4TphY3nva5cbiAgICBldmVudE9uKHRhdmVybl9ldmVudHMuU0VUVElOR1NfTE9BREVELCByZXN0b3JlR3JvdXBpbmdGcm9tQ29uZmlnKTtcblxuICAgIC8vIOebkeWQrOmihOiuvuWPmOWMlu+8jOWmguaenOWtmOWcqOivpeS6i+S7tueahOivnVxuICAgIGNvbnN0IHRhdmVybkV2ZW50c0V4dCA9IHRhdmVybl9ldmVudHMgYXMgUmVjb3JkPHN0cmluZywgc3RyaW5nPjtcbiAgICBpZiAodGF2ZXJuRXZlbnRzRXh0LlBSRVNFVF9DSEFOR0VEKSB7XG4gICAgICBldmVudE9uKHRhdmVybkV2ZW50c0V4dC5QUkVTRVRfQ0hBTkdFRCwgcmVzdG9yZUdyb3VwaW5nRnJvbUNvbmZpZyk7XG4gICAgfVxuXG4gICAgLy8g55uR5ZCs6aKE6K6+55WM6Z2i5Y+Y5YyW77yM5bu26L+f5oGi5aSN5YiG57uEXG4gICAgaWYgKHRhdmVybkV2ZW50c0V4dC5QUk9NUFRfTUFOQUdFUl9VUERBVEVEKSB7XG4gICAgICBldmVudE9uKHRhdmVybkV2ZW50c0V4dC5QUk9NUFRfTUFOQUdFUl9VUERBVEVELCAoKSA9PiByZXN0b3JlR3JvdXBpbmdEZWxheWVkKDMwMCkpO1xuICAgIH1cblxuICAgIC8vIOebkeWQrOiuvue9ruabtOaWsOS6i+S7tu+8jOi/memAmuW4uOWcqOadoeebruW8gOWFs+WQjuinpuWPkVxuICAgIGV2ZW50T24odGF2ZXJuX2V2ZW50cy5TRVRUSU5HU19VUERBVEVELCAoKSA9PiB7XG4gICAgICBjb25zb2xlLmxvZygn5qOA5rWL5Yiw6K6+572u5pu05paw77yM5YeG5aSH5oGi5aSN5YiG57uEJyk7XG4gICAgICByZXN0b3JlR3JvdXBpbmdEZWxheWVkKDgwMCk7XG4gICAgfSk7XG5cbiAgICAvLyDkvJjljJZET03op4Llr5/lmaggLSDkvb/nlKjpmLLmipbmnLrliLZcbiAgICBsZXQgcmVzdG9yZVRpbWVvdXQ6IG51bWJlciB8IG51bGwgPSBudWxsO1xuICAgIGNvbnN0IG9ic2VydmVyID0gbmV3IE11dGF0aW9uT2JzZXJ2ZXIobXV0YXRpb25zID0+IHtcbiAgICAgIGxldCBzaG91bGRSZXN0b3JlID0gZmFsc2U7XG4gICAgICBtdXRhdGlvbnMuZm9yRWFjaChtdXRhdGlvbiA9PiB7XG4gICAgICAgIGlmIChtdXRhdGlvbi50eXBlID09PSAnY2hpbGRMaXN0Jykge1xuICAgICAgICAgIGNvbnN0IHRhcmdldCA9IG11dGF0aW9uLnRhcmdldCBhcyBFbGVtZW50O1xuICAgICAgICAgIC8vIOajgOafpeaYr+WQpuaYr+mihOiuvueuoeeQhuWZqOeahOadoeebruWPmOWMllxuICAgICAgICAgIGlmIChcbiAgICAgICAgICAgIHRhcmdldC5jbGFzc0xpc3Q/LmNvbnRhaW5zKCdjb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyJykgfHxcbiAgICAgICAgICAgIHRhcmdldC5xdWVyeVNlbGVjdG9yPy4oJy5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdCcpIHx8XG4gICAgICAgICAgICAvLyDmo4Dmn6XmmK/lkKbmmK/pooTorr7mnaHnm67mnKzouqvnmoTlj5jljJZcbiAgICAgICAgICAgIHRhcmdldC5jbGFzc0xpc3Q/LmNvbnRhaW5zKCdjb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdCcpIHx8XG4gICAgICAgICAgICAvLyDmo4Dmn6XmmK/lkKbmmK/liIbnu4TlrrnlmajnmoTlj5jljJZcbiAgICAgICAgICAgIHRhcmdldC5jbGFzc0xpc3Q/LmNvbnRhaW5zKCdwcm9tcHQtZ3JvdXAtY29udGFpbmVyJylcbiAgICAgICAgICApIHtcbiAgICAgICAgICAgIHNob3VsZFJlc3RvcmUgPSB0cnVlO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgICAgIC8vIOajgOafpeWxnuaAp+WPmOWMlu+8iOWmguW8gOWFs+eKtuaAgeWPmOWMlu+8iVxuICAgICAgICBpZiAobXV0YXRpb24udHlwZSA9PT0gJ2F0dHJpYnV0ZXMnKSB7XG4gICAgICAgICAgY29uc3QgdGFyZ2V0ID0gbXV0YXRpb24udGFyZ2V0IGFzIEVsZW1lbnQ7XG4gICAgICAgICAgaWYgKFxuICAgICAgICAgICAgdGFyZ2V0LmNsYXNzTGlzdD8uY29udGFpbnMoJ2NvbXBsZXRpb25fcHJvbXB0X21hbmFnZXJfcHJvbXB0JykgfHxcbiAgICAgICAgICAgIHRhcmdldC5jbG9zZXN0Py4oJy5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdCcpXG4gICAgICAgICAgKSB7XG4gICAgICAgICAgICBzaG91bGRSZXN0b3JlID0gdHJ1ZTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH0pO1xuXG4gICAgICBpZiAoc2hvdWxkUmVzdG9yZSkge1xuICAgICAgICAvLyDpmLLmipblpITnkIbvvIzpgb/lhY3popHnuYHop6blj5FcbiAgICAgICAgaWYgKHJlc3RvcmVUaW1lb3V0KSB7XG4gICAgICAgICAgY2xlYXJUaW1lb3V0KHJlc3RvcmVUaW1lb3V0KTtcbiAgICAgICAgfVxuICAgICAgICByZXN0b3JlVGltZW91dCA9IHdpbmRvdy5zZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgICBjb25zb2xlLmxvZygn5qOA5rWL5Yiw6aKE6K6+5p2h55uu5Y+Y5YyW77yM5YeG5aSH5oGi5aSN5YiG57uEJyk7XG4gICAgICAgICAgcmVzdG9yZUdyb3VwaW5nRGVsYXllZCg1MDApO1xuICAgICAgICB9LCAyMDApO1xuICAgICAgfVxuICAgIH0pO1xuXG4gICAgLy8g5byA5aeL6KeC5a+f6aKE6K6+566h55CG5Zmo5Yy65Z+f55qE5Y+Y5YyWXG4gICAgY29uc3QgcHJlc2V0TWFuYWdlckNvbnRhaW5lciA9ICQoJy5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyJykuZ2V0KDApO1xuICAgIGlmIChwcmVzZXRNYW5hZ2VyQ29udGFpbmVyKSB7XG4gICAgICBvYnNlcnZlci5vYnNlcnZlKHByZXNldE1hbmFnZXJDb250YWluZXIsIHtcbiAgICAgICAgY2hpbGRMaXN0OiB0cnVlLFxuICAgICAgICBzdWJ0cmVlOiB0cnVlLFxuICAgICAgICBhdHRyaWJ1dGVzOiB0cnVlLFxuICAgICAgICBhdHRyaWJ1dGVGaWx0ZXI6IFsnY2xhc3MnLCAnZGF0YS1wbS1pZGVudGlmaWVyJ10sXG4gICAgICB9KTtcbiAgICAgIGNvbnNvbGUubG9nKCfinIUg6aKE6K6+566h55CG5ZmoRE9N6KeC5a+f5Zmo5bey5ZCv5YqoJyk7XG4gICAgfVxuXG4gICAgLy8g5bu26L+f5oGi5aSN5YiG57uE77yM6YG/5YWN6Zi75aGeVUnliqDovb1cbiAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgIGNvbnNvbGUubG9nKCfwn5SEIOiEmuacrOWKoOi9veWujOaIkO+8jOW8gOWni+W8uuWItuaBouWkjeWIhue7hOmFjee9ri4uLicpO1xuICAgICAgZm9yY2VSZXN0b3JlR3JvdXBpbmcoKTtcbiAgICB9LCAyMDAwKTtcblxuICAgIGNvbnNvbGUubG9nKCfinIUg6Z2e5YWz6ZSu5Yqf6IO95Yid5aeL5YyW5a6M5oiQJyk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5Yid5aeL5YyW6Z2e5YWz6ZSu5Yqf6IO95aSx6LSlOicsIGVycm9yKTtcbiAgfVxufVxuXG4vLyDlnKjliqDovb3ohJrmnKzml7bmiafooYzliJ3lp4vljJZcbmNvbnNvbGUubG9nKCfwn5SlIOWWteWWtemihOiuvumFjee9rueuoeeQhuaooeWdl+W8gOWni+WKoOi9vS4uLicpO1xuJCgoKSA9PiBpbml0KCkpO1xuXG4vLyDlnKjljbjovb3ohJrmnKzml7bmiafooYzmuIXnkIZcbiQod2luZG93KS5vbigncGFnZWhpZGUnLCAoKSA9PiB7XG4gIC8vIOa4heeQhuWFqOWxgOagh+iusFxuICBjb25zdCB3aW4gPSB3aW5kb3cgYXMgdW5rbm93biBhcyBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPjtcbiAgZGVsZXRlIHdpbltTQ1JJUFRfSURdO1xuICBkZWxldGUgd2luLm1pYW9NaWFvUHJlc2V0TWFuYWdlcjtcblxuICAvLyDlv6vpgJ/muIXnkIZVSeWFg+e0oO+8jOmBv+WFjemYu+WhnlxuICBjb25zdCB1aUVsZW1lbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHJlc2V0LW1hbmFnZXItdWknKTtcbiAgY29uc3QgZmlsZUVsZW1lbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHJlc2V0LW1hbmFnZXItaW1wb3J0LWZpbGUnKTtcblxuICBpZiAodWlFbGVtZW50KSB7XG4gICAgdWlFbGVtZW50LnJlbW92ZSgpO1xuICB9XG4gIGlmIChmaWxlRWxlbWVudCkge1xuICAgIGZpbGVFbGVtZW50LnJlbW92ZSgpO1xuICB9XG5cbiAgLy8g5byC5q2l5riF55CG5YiG57uE5pWI5p6c77yM6YG/5YWN6Zi75aGe6aG16Z2i5Y246L29XG4gIHNldFRpbWVvdXQoYXN5bmMgKCkgPT4ge1xuICAgIHRyeSB7XG4gICAgICBjb25zdCB7IGNsZWFyQWxsR3JvdXBpbmcgfSA9IGF3YWl0IGltcG9ydCgnLi/mnaHnm67liIbnu4Tlip/og70nKTtcbiAgICAgIGNsZWFyQWxsR3JvdXBpbmcoKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgLy8g5b+955Wl5riF55CG6ZSZ6K+vXG4gICAgfVxuICB9LCAwKTtcblxuICBjb25zb2xlLmxvZygn4pyFIOWWteWWtemihOiuvumFjee9rueuoeeQhuW3suWNuOi9vScpO1xufSk7XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/加载和卸载时执行函数.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BR: () => (/* binding */ setStoredConfigs),
+/* harmony export */   getStoredConfigs: () => (/* binding */ getStoredConfigs),
+/* harmony export */   ih: () => (/* binding */ clearConfigCache),
+/* harmony export */   nx: () => (/* binding */ getPresetNameByIdentifier),
+/* harmony export */   sd: () => (/* binding */ renderConfigsList)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+
+// 添加配置缓存
+let configCache = null;
+let lastCacheTime = 0;
+const CONFIG_CACHE_DURATION = 10000; // 10秒缓存
+async function getStoredConfigs() {
+    // 检查缓存是否有效
+    const now = Date.now();
+    if (configCache && now - lastCacheTime < CONFIG_CACHE_DURATION) {
+        return configCache;
+    }
+    let worldbookEntries;
+    try {
+        worldbookEntries = await TavernHelper.getWorldbook(___WEBPACK_IMPORTED_MODULE_0__/* .CONFIG_LOREBOOK_NAME */ .Db);
+    }
+    catch (error) {
+        return {};
+    }
+    const v2Entry = worldbookEntries.find((entry) => entry.strategy?.keys?.includes(___WEBPACK_IMPORTED_MODULE_0__/* .V2_MIGRATION_KEY */ .KL));
+    if (v2Entry) {
+        console.log('喵喵预设配置管理: 检测到旧版合并数据，正在迁移...');
+        try {
+            const configsArray = JSON.parse(v2Entry.content);
+            const migratedEntries = configsArray.map((config) => ({
+                name: config.name || config.id,
+                strategy: { type: 'constant', keys: [config.id] },
+                content: JSON.stringify(config),
+                enabled: false,
+            }));
+            const otherEntries = worldbookEntries.filter((entry) => !entry.strategy?.keys?.includes(___WEBPACK_IMPORTED_MODULE_0__/* .V2_MIGRATION_KEY */ .KL));
+            await TavernHelper.createOrReplaceWorldbook(___WEBPACK_IMPORTED_MODULE_0__/* .CONFIG_LOREBOOK_NAME */ .Db, [...otherEntries, ...migratedEntries]);
+            toastr.info('喵喵预设配置管理：已自动升级数据格式。');
+            worldbookEntries = await TavernHelper.getWorldbook(___WEBPACK_IMPORTED_MODULE_0__/* .CONFIG_LOREBOOK_NAME */ .Db);
+        }
+        catch (e) {
+            console.error('迁移配置失败:', e);
+            toastr.error('自动迁移配置数据失败，请检查控制台。');
+        }
+    }
+    const configs = {};
+    for (const entry of worldbookEntries) {
+        try {
+            const configData = JSON.parse(entry.content);
+            if (configData.id && configData.name && Array.isArray(configData.states)) {
+                configs[configData.id] = configData;
+            }
+        }
+        catch (e) {
+            // 忽略解析失败的条目
+        }
+    }
+    // 更新缓存
+    configCache = configs;
+    lastCacheTime = now;
+    return configs;
+}
+// 清除配置缓存
+function clearConfigCache() {
+    configCache = null;
+    lastCacheTime = 0;
+}
+// 通过识别条目ID获取预设名称
+async function getPresetNameByIdentifier(identifierId) {
+    try {
+        console.log(`正在查找识别条目ID: ${identifierId}`);
+        const presetNames = TavernHelper.getPresetNames();
+        console.log(`可用预设列表:`, presetNames);
+        for (const presetName of presetNames) {
+            const preset = TavernHelper.getPreset(presetName);
+            if (preset && preset.prompts) {
+                // 检查 prompts 和 prompts_unused 两个数组
+                const allPrompts = [...preset.prompts, ...(preset.prompts_unused || [])];
+                const hasIdentifier = allPrompts.some((p) => p.id === identifierId);
+                if (hasIdentifier) {
+                    console.log(`在预设 "${presetName}" 中找到识别条目ID: ${identifierId}`);
+                    return presetName;
+                }
+            }
+        }
+        console.warn(`未找到识别条目ID: ${identifierId}`);
+        return null;
+    }
+    catch (error) {
+        console.error('通过识别条目获取预设名称失败:', error);
+        return null;
+    }
+}
+async function setStoredConfigs(configsObject) {
+    try {
+        const nameCounts = {};
+        const entries = Object.values(configsObject).map(config => {
+            let entryName = config.name;
+            nameCounts[entryName] = (nameCounts[entryName] || 0) + 1;
+            if (nameCounts[entryName] > 1) {
+                entryName = `${entryName} (${config.id.slice(-5)})`;
+            }
+            return {
+                name: entryName,
+                strategy: { type: 'constant', keys: [config.id] },
+                content: JSON.stringify(config),
+                enabled: false,
+                comment: `MiaoMiao Preset Config: ${config.name} (ID: ${config.id})`,
+            };
+        });
+        await TavernHelper.createOrReplaceWorldbook(___WEBPACK_IMPORTED_MODULE_0__/* .CONFIG_LOREBOOK_NAME */ .Db, entries);
+    }
+    catch (error) {
+        console.error('写入配置到世界书失败:', error);
+        toastr.error('配置保存/更新失败，请检查控制台日志。');
+    }
+}
+async function renderConfigsList() {
+    const configsObject = await getStoredConfigs();
+    const configs = Object.values(configsObject);
+    const listElement = $('#preset-manager-list');
+    listElement.empty();
+    if (configs.length === 0) {
+        listElement.append('<li style="color:#888; padding:10px;">暂无已保存的配置。</li>');
+        return;
+    }
+    // 使用异步分组，优先通过识别条目ID获取预设名称
+    const groupedConfigs = {};
+    for (const config of configs) {
+        let groupName = '未分类';
+        if (config.identifierId) {
+            // 优先使用识别条目ID获取预设名称
+            const presetName = await getPresetNameByIdentifier(config.identifierId);
+            if (presetName) {
+                // 如果找到的是"in_use"，需要转换为当前正在使用的实际预设名称
+                if (presetName === 'in_use') {
+                    const currentPresetName = TavernHelper.getLoadedPresetName();
+                    groupName = currentPresetName !== 'in_use' ? currentPresetName : 'in_use';
+                    console.log(`配置 "${config.name}" 找到in_use，转换为当前预设: ${groupName}`);
+                }
+                else {
+                    groupName = presetName;
+                    console.log(`配置 "${config.name}" 通过识别条目ID找到预设: ${presetName}`);
+                }
+            }
+            else if (config.presetName && config.presetName !== 'in_use') {
+                // 回退到预设名称，但排除"in_use"
+                groupName = config.presetName;
+                console.log(`配置 "${config.name}" 使用预设名称: ${config.presetName}`);
+            }
+            else {
+                console.warn(`配置 "${config.name}" 无法找到有效预设名称，使用默认分组`);
+            }
+        }
+        else if (config.presetName && config.presetName !== 'in_use') {
+            // 向后兼容：使用预设名称，但排除"in_use"
+            groupName = config.presetName;
+            console.log(`配置 "${config.name}" 使用预设名称（向后兼容）: ${config.presetName}`);
+        }
+        else {
+            console.warn(`配置 "${config.name}" 没有有效的预设信息，使用默认分组`);
+        }
+        if (!groupedConfigs[groupName])
+            groupedConfigs[groupName] = [];
+        groupedConfigs[groupName].push(config);
+    }
+    const sortedGroupNames = Object.keys(groupedConfigs).sort((a, b) => {
+        if (a === '未分类')
+            return 1;
+        if (b === '未分类')
+            return -1;
+        return a.localeCompare(b);
+    });
+    for (const groupName of sortedGroupNames) {
+        const configsInGroup = groupedConfigs[groupName];
+        const safeGroupName = $('<div/>').text(groupName).html();
+        const isUncategorized = groupName === '未分类';
+        const groupElement = $(`
+            <details class="pm-config-group" ${isUncategorized ? 'open' : ''}>
+                <summary class="pm-config-group-summary">${safeGroupName} <span class="pm-config-count">(${configsInGroup.length})</span></summary>
+                <ul class="pm-config-sublist"></ul>
+            </details>
+        `);
+        const sublist = groupElement.find('.pm-config-sublist');
+        for (const configData of configsInGroup) {
+            const boundCharDisplay = configData.boundCharName
+                ? `<span style="color:#4CAF50; margin-left: 8px; font-weight:bold;">(绑定: ${configData.boundCharName})</span>`
+                : '';
+            const listItem = $(`
+                <li style="display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom: 1px solid #f0e2d0; font-size:14px;">
+                    <div style="display:flex; flex-direction:column; align-items:flex-start; overflow:hidden; margin-right: 10px; flex: 1; min-width: 0;">
+                        <span style="font-weight:bold; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width: 100%;" title="${$('<div/>').text(configData.name).html()}">${$('<div/>').text(configData.name).html()}${boundCharDisplay}</span>
+                    </div>
+                    <div class="pm-actions-container">
+                        <button data-id="${configData.id}" name="load-config" style="background-color:#f9d6a5; color:#3a2c2c;">加载</button>
+                        <button data-id="${configData.id}" name="delete-config" style="background-color:#f5a8a0; color:#fff;">删除</button>
+                        <div class="pm-more-btn-wrapper">
+                            <button name="more-actions" style="background-color:#b0bec5; color:#fff;">更多</button>
+                            <div class="pm-submenu">
+                                <button data-id="${configData.id}" name="view-config">查看</button>
+                                <button data-id="${configData.id}" name="update-config">更新</button>
+                                <button data-id="${configData.id}" name="rename-config">重命名</button>
+                                <button data-id="${configData.id}" name="bind-regex">正则</button>
+                                <button data-id="${configData.id}" name="export-config">导出</button>
+                                <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
+                                <button name="close-submenu" style="color: #888; text-align: center;">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            `);
+            sublist.append(listItem);
+        }
+        listElement.append(groupElement);
+    }
+    // 绑定按钮事件
+    // 使用动态导入避免循环引用，添加延迟确保DOM完全更新
+    setTimeout(() => {
+        Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 516))
+            .then(({ bindConfigListEvents }) => {
+            bindConfigListEvents();
+        })
+            .catch(error => {
+            console.error('绑定按钮事件失败:', error);
+        });
+    }, 100);
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/导入导出功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/导入导出功能.ts ***!
-  \********************************/
+/***/ 411:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   exportConfig: () => (/* binding */ exportConfig),\n/* harmony export */   handleFileImport: () => (/* binding */ handleFileImport)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./正则绑定功能 */ \"./src/喵喵预设配置管理/正则绑定功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n\n\n\n\nasync function exportConfig(configId) {\n    try {\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const configData = configs[configId];\n        if (!configData) {\n            toastr.error(`配置不存在，无法导出。`);\n            return;\n        }\n        const configName = configData.name;\n        let userRemark = '';\n        const addRemarkChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"是否要为此导出添加备注信息？\"`);\n        if (addRemarkChoice === '1') {\n            userRemark = await triggerSlash(`/input multiline=true placeholder=\"请输入备注，例如预设用途、来源等...\" \"添加备注\"`);\n        }\n        const exportBundle = {\n            type: 'MiaoMiaoPresetBundle',\n            version: 1,\n            remark: userRemark || '',\n            presetConfig: configData,\n            presetData: null,\n            regexData: null,\n            groupingConfig: null,\n        };\n        const configPresetName = configData.presetName;\n        if (configPresetName && TavernHelper.getPresetNames().includes(configPresetName)) {\n            const includePresetChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"此配置关联了预设 \\\\\"${configPresetName}\\\\\"。是否要将预设文件本身一起打包导出？\"`);\n            if (includePresetChoice === '1') {\n                const presetData = TavernHelper.getPreset(configPresetName);\n                if (presetData) {\n                    presetData.name = configPresetName;\n                    exportBundle.presetData = presetData;\n                    toastr.info(`已将预设 \"${configPresetName}\" 打包。`);\n                }\n                else {\n                    toastr.warning(`无法获取预设 \"${configPresetName}\" 的数据。`);\n                }\n            }\n        }\n        if (configData.regexStates && configData.regexStates.length > 0) {\n            const userChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"此配置绑定了正则。是否选择要一起导出的正则？\"`);\n            if (userChoice === '1') {\n                const boundRegexIds = new Set(configData.regexStates.map(r => r.id));\n                const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n                const boundRegexes = allGlobalRegexes.filter((r) => boundRegexIds.has(r.id));\n                const { showRegexExportSelectionPopup } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\"));\n                const selectedRegexes = await showRegexExportSelectionPopup(boundRegexes);\n                if (selectedRegexes) {\n                    exportBundle.regexData = selectedRegexes;\n                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包导出。`);\n                }\n                else {\n                    toastr.info('已取消导出正则。');\n                }\n            }\n        }\n        // 检查是否包含分组配置\n        const groupingPresetName = configData.presetName;\n        if (groupingPresetName) {\n            const groupingConfig = (0,___WEBPACK_IMPORTED_MODULE_1__.exportPresetGrouping)(groupingPresetName);\n            if (groupingConfig) {\n                const includeGroupingChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"预设 \\\\\"${groupingPresetName}\\\\\" 包含条目分组设置。是否要一起导出？\"`);\n                if (includeGroupingChoice === '1') {\n                    exportBundle.groupingConfig = groupingConfig;\n                    toastr.info('已将分组设置打包导出。');\n                }\n            }\n        }\n        const defaultFileName = `${configName}_bundle`;\n        let userFileName = await triggerSlash(`/input default=\"${defaultFileName}\" \"请输入导出的文件名（无需后缀）\"`);\n        if (!userFileName || userFileName.trim() === '') {\n            userFileName = defaultFileName;\n            toastr.info('文件名为空，已使用默认名称。');\n        }\n        userFileName = userFileName.trim().replace(/\\.json$/, '');\n        const jsonString = JSON.stringify(exportBundle, null, 2);\n        const blob = new Blob([jsonString], { type: 'application/json' });\n        const url = URL.createObjectURL(blob);\n        const a = document.createElement('a');\n        a.href = url;\n        a.download = `${userFileName}.json`;\n        document.body.appendChild(a);\n        a.click();\n        URL.revokeObjectURL(url);\n        a.remove();\n        toastr.success(`配置包 \"${configName}\" 已导出。`);\n    }\n    catch (error) {\n        console.error('导出配置失败:', error);\n        toastr.error('导出配置失败，请检查控制台获取更多信息。');\n    }\n}\nasync function handleFileImport(event) {\n    const file = event.target.files[0];\n    if (!file)\n        return;\n    const reader = new FileReader();\n    reader.onload = async (e) => {\n        try {\n            const content = e.target?.result;\n            const parsedContent = JSON.parse(content);\n            if (parsedContent.entries && typeof parsedContent.entries === 'object') {\n                toastr.info('检测到世界书备份文件。');\n                const configsToImport = [];\n                for (const entry of Object.values(parsedContent.entries)) {\n                    if (entry.content) {\n                        try {\n                            const config = JSON.parse(entry.content);\n                            if (config.id && config.name && Array.isArray(config.states)) {\n                                configsToImport.push(config);\n                            }\n                        }\n                        catch (err) {\n                            // 忽略解析失败的条目\n                        }\n                    }\n                }\n                if (configsToImport.length > 0) {\n                    const { startBatchImportFlow } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./批量操作功能 */ \"./src/喵喵预设配置管理/批量操作功能.ts\"));\n                    await startBatchImportFlow(configsToImport);\n                }\n                else {\n                    toastr.warning('世界书文件中未找到有效的喵喵配置数据。');\n                }\n                return;\n            }\n            if (parsedContent.remark) {\n                const { showRemarkPopup } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\"));\n                await showRemarkPopup(parsedContent.remark);\n            }\n            if (parsedContent.type === 'MiaoMiaoPresetMegaBundle') {\n                const { handleMegaBundleImport } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./批量操作功能 */ \"./src/喵喵预设配置管理/批量操作功能.ts\"));\n                await handleMegaBundleImport(parsedContent);\n                return;\n            }\n            let configToImport, presetToImport, regexToImport, groupingToImport;\n            if (parsedContent.type === 'MiaoMiaoPresetBundle') {\n                console.log('检测到整合包文件，版本:', parsedContent.version);\n                toastr.info('检测到整合包文件。');\n                configToImport = parsedContent.presetConfig;\n                presetToImport = parsedContent.presetData;\n                regexToImport = parsedContent.regexData;\n                groupingToImport = parsedContent.groupingConfig;\n                console.log('分组配置:', groupingToImport);\n            }\n            else {\n                configToImport = parsedContent;\n            }\n            if (!configToImport || typeof configToImport.presetName !== 'string' || !Array.isArray(configToImport.states)) {\n                toastr.error('导入失败：配置数据格式不正确。');\n                return;\n            }\n            if (presetToImport) {\n                const importPresetChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"此文件包含预设文件 \\\\\"${presetToImport.name}\\\\\"。是否导入/覆盖？\"`);\n                if (importPresetChoice === '1') {\n                    await TavernHelper.createOrReplacePreset(presetToImport.name, presetToImport);\n                    toastr.success(`预设文件 \"${presetToImport.name}\" 已导入。`);\n                }\n            }\n            if (regexToImport && regexToImport.length > 0) {\n                await (0,___WEBPACK_IMPORTED_MODULE_2__.importRegexLogic)(regexToImport);\n            }\n            // 处理分组配置导入\n            if (groupingToImport && Array.isArray(groupingToImport) && groupingToImport.length > 0) {\n                if (configToImport.presetName) {\n                    try {\n                        console.log('导入分组配置:', groupingToImport);\n                        (0,___WEBPACK_IMPORTED_MODULE_1__.importPresetGrouping)(configToImport.presetName, groupingToImport);\n                        toastr.success('已成功导入并应用分组设置到预设。');\n                    }\n                    catch (error) {\n                        console.error('导入分组配置失败:', error);\n                        toastr.error('导入分组配置失败：' + error.message);\n                    }\n                }\n                else {\n                    console.warn('配置中没有预设名称，无法导入分组配置');\n                }\n            }\n            const initialName = configToImport.name || file.name.replace(/_bundle\\.json$/i, '').replace(/\\.json$/i, '');\n            let configName = await triggerSlash(`/input default=\"${initialName}\" \"请输入导入配置的名称\"`);\n            configName = configName.trim();\n            if (!configName) {\n                toastr.info('导入已取消。');\n                return;\n            }\n            const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n            configToImport.name = configName;\n            configToImport.id = (0,___WEBPACK_IMPORTED_MODULE_0__.generateUniqueId)(); // Always generate new ID for single import\n            configs[configToImport.id] = configToImport;\n            await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(configs);\n            toastr.success(`配置 \"${configName}\" 已成功导入。`);\n            await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n        }\n        catch (error) {\n            console.error('导入文件失败:', error);\n            toastr.error('导入文件失败，请检查控制台获取更多信息。');\n        }\n        finally {\n            $(event.target).val('');\n        }\n    };\n    reader.readAsText(file);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+WvvOWFpeWvvOWHuuWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBNEM7QUFDdUM7QUFDdkM7QUFDc0M7QUFFM0UsS0FBSyxVQUFVLFlBQVksQ0FBQyxRQUFnQjtJQUNqRCxJQUFJLENBQUM7UUFDSCxNQUFNLE9BQU8sR0FBRyxNQUFNLG1EQUFnQixFQUFFLENBQUM7UUFDekMsTUFBTSxVQUFVLEdBQUcsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBRXJDLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztZQUNoQixNQUFNLENBQUMsS0FBSyxDQUFDLGFBQWEsQ0FBQyxDQUFDO1lBQzVCLE9BQU87UUFDVCxDQUFDO1FBQ0QsTUFBTSxVQUFVLEdBQUcsVUFBVSxDQUFDLElBQUksQ0FBQztRQUVuQyxJQUFJLFVBQVUsR0FBRyxFQUFFLENBQUM7UUFDcEIsTUFBTSxlQUFlLEdBQUcsTUFBTSxZQUFZLENBQ3hDLG1FQUFtRSxDQUNwRSxDQUFDO1FBQ0YsSUFBSSxlQUFlLEtBQUssR0FBRyxFQUFFLENBQUM7WUFDNUIsVUFBVSxHQUFHLE1BQU0sWUFBWSxDQUM3QixnRUFBZ0UsQ0FDakUsQ0FBQztRQUNKLENBQUM7UUFFRCxNQUFNLFlBQVksR0FBRztZQUNuQixJQUFJLEVBQUUsc0JBQXNCO1lBQzVCLE9BQU8sRUFBRSxDQUFDO1lBQ1YsTUFBTSxFQUFFLFVBQVUsSUFBSSxFQUFFO1lBQ3hCLFlBQVksRUFBRSxVQUFVO1lBQ3hCLFVBQVUsRUFBRSxJQUFJO1lBQ2hCLFNBQVMsRUFBRSxJQUFJO1lBQ2YsY0FBYyxFQUFFLElBQUk7U0FDckIsQ0FBQztRQUVGLE1BQU0sZ0JBQWdCLEdBQUcsVUFBVSxDQUFDLFVBQVUsQ0FBQztRQUMvQyxJQUFJLGdCQUFnQixJQUFJLFlBQVksQ0FBQyxjQUFjLEVBQUUsQ0FBQyxRQUFRLENBQUMsZ0JBQWdCLENBQUMsRUFBRSxDQUFDO1lBQ2pGLE1BQU0sbUJBQW1CLEdB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TyxVQUFVLFVBQVUsQ0FBQyxDQUFDO1lBQzVDLE1BQU0sb0RBQWlCLEVBQUUsQ0FBQztRQUM1QixDQUFDO1FBQUMsT0FBTyxLQUFLLEVBQUUsQ0FBQztZQUNmLE9BQU8sQ0FBQyxLQUFLLENBQUMsU0FBUyxFQUFFLEtBQUssQ0FBQyxDQUFDO1lBQ2hDLE1BQU0sQ0FBQyxLQUFLLENBQUMsc0JBQXNCLENBQUMsQ0FBQztRQUN2QyxDQUFDO2dCQUFTLENBQUM7WUFDVCxDQUFDLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUMxQixDQUFDO0lBQ0gsQ0FBQyxDQUFDO0lBQ0YsTUFBTSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsQ0FBQztBQUMxQixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGF2ZXJuX2hlbHBlcl90ZW1wbGF0ZS8uL3NyYy/llrXllrXpooTorr7phY3nva7nrqHnkIYv5a+85YWl5a+85Ye65Yqf6IO9LnRzPyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBnZW5lcmF0ZVVuaXF1ZUlkIH0gZnJvbSAnLi/liJ3lp4vljJblkozphY3nva4nO1xuaW1wb3J0IHsgZXhwb3J0UHJlc2V0R3JvdXBpbmcsIGltcG9ydFByZXNldEdyb3VwaW5nLCBQcm9tcHRHcm91cCB9IGZyb20gJy4v5p2h55uu5YiG57uE5Yqf6IO9JztcbmltcG9ydCB7IGltcG9ydFJlZ2V4TG9naWMgfSBmcm9tICcuL+ato+WImee7keWumuWKn+iDvSc7XG5pbXBvcnQgeyBnZXRTdG9yZWRDb25maWdzLCByZW5kZXJDb25maWdzTGlzdCwgc2V0U3RvcmVkQ29uZmlncyB9IGZyb20gJy4v6YWN572u5a2Y5YKo5ZKM6K+75Y+WJztcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGV4cG9ydENvbmZpZyhjb25maWdJZDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPiB7XG4gIHRyeSB7XG4gICAgY29uc3QgY29uZmlncyA9IGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKTtcbiAgICBjb25zdCBjb25maWdEYXRhID0gY29uZmlnc1tjb25maWdJZF07XG5cbiAgICBpZiAoIWNvbmZpZ0RhdGEpIHtcbiAgICAgIHRvYXN0ci5lcnJvcihg6YWN572u5LiN5a2Y5Zyo77yM5peg5rOV5a+85Ye644CCYCk7XG4gICAgICByZXR1cm47XG4gICAgfVxuICAgIGNvbnN0IGNvbmZpZ05hbWUgPSBjb25maWdEYXRhLm5hbWU7XG5cbiAgICBsZXQgdXNlclJlbWFyayA9ICcnO1xuICAgIGNvbnN0IGFkZFJlbWFya0Nob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLmmK9cIiBjYW5jZWxCdXR0b249XCLlkKZcIiByZXN1bHQ9dHJ1ZSBcIuaYr+WQpuimgeS4uuatpOWvvOWHuua3u+WKoOWkh+azqOS/oeaBr++8n1wiYCxcbiAgICApO1xuICAgIGlmIChhZGRSZW1hcmtDaG9pY2UgPT09ICcxJykge1xuICAgICAgdXNlclJlbWFyayA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgICAgYC9pbnB1dCBtdWx0aWxpbmU9dHJ1ZSBwbGFjZWhvbGRlcj1cIuivt+i+k+WFpeWkh+azqO+8jOS+i+WmgumihOiuvueUqOmAlOOAgeadpea6kOetiS4uLlwiIFwi5re75Yqg5aSH5rOoXCJgLFxuICAgICAgKTtcbiAgICB9XG5cbiAgICBjb25zdCBleHBvcnRCdW5kbGUgPSB7XG4gICAgICB0eXBlOiAnTWlhb01pYW9QcmVzZXRCdW5kbGUnLFxuICAgICAgdmVyc2lvbjogMSxcbiAgICAgIHJlbWFyazogdXNlclJlbWFyayB8fCAnJyxcbiAgICAgIHByZXNldENvbmZpZzogY29uZmlnRGF0YSxcbiAgICAgIHByZXNldERhdGE6IG51bGwsXG4gICAgICByZWdleERhdGE6IG51bGwsXG4gICAgICBncm91cGluZ0NvbmZpZzogbnVsbCxcbiAgICB9O1xuXG4gICAgY29uc3QgY29uZmlnUHJlc2V0TmFtZSA9IGNvbmZpZ0RhdGEucHJlc2V0TmFtZTtcbiAgICBpZiAoY29uZmlnUHJlc2V0TmFtZSAmJiBUYXZlcm5IZWxwZXIuZ2V0UHJlc2V0TmFtZXMoKS5pbmNsdWRlcyhjb25maWdQcmVzZXROYW1lKSkge1xuICAgICAgY29uc3QgaW5jbHVkZVByZXNldENob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgICAgYC9wb3B1cCBva0J1dHRvbj1cIuaYr1wiIGNhbmNlbEJ1dHRvbj1cIuWQplwiIHJlc3VsdD10cnVlIFwi5q2k6YWN572u5YWz6IGU5LqG6aKE6K6+IFxcXFxcIiR7Y29uZmlnUHJlc2V0TmFtZX1cXFxcXCLjgILmmK/lkKbopoHlsIbpooTorr7mlofku7bmnKzouqvkuIDotbfmiZPljIXlr7zlh7rvvJ9cImAsXG4gICAgICApO1xuICAgICAgaWYgKGluY2x1ZGVQcmVzZXRDaG9pY2UgPT09ICcxJykge1xuICAgICAgICBjb25zdCBwcmVzZXREYXRhID0gVGF2ZXJuSGVscGVyLmdldFByZXNldChjb25maWdQcmVzZXROYW1lKTtcbiAgICAgICAgaWYgKHByZXNldERhdGEpIHtcbiAgICAgICAgICAocHJlc2V0RGF0YSBhcyBhbnkpLm5hbWUgPSBjb25maWdQcmVzZXROYW1lO1xuICAgICAgICAgIChleHBvcnRCdW5kbGUgYXMgYW55KS5wcmVzZXREYXRhID0gcHJlc2V0RGF0YTtcbiAgICAgICAgICB0b2FzdHIuaW5mbyhg5bey5bCG6aKE6K6+IFwiJHtjb25maWdQcmVzZXROYW1lfVwiIOaJk+WMheOAgmApO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIHRvYXN0ci53YXJuaW5nKGDml6Dms5Xojrflj5bpooTorr4gXCIke2NvbmZpZ1ByZXNldE5hbWV9XCIg55qE5pWw5o2u44CCYCk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG5cbiAgICBpZiAoY29uZmlnRGF0YS5yZWdleFN0YXRlcyAmJiBjb25maWdEYXRhLnJlZ2V4U3RhdGVzLmxlbmd0aCA+IDApIHtcbiAgICAgIGNvbnN0IHVzZXJDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLmmK9cIiBjYW5jZWxCdXR0b249XCLlkKZcIiByZXN1bHQ9dHJ1ZSBcIuatpOmFjee9rue7keWumuS6huato+WImeOAguaYr+WQpumAieaLqeimgeS4gOi1t+WvvOWHuueahOato+WIme+8n1wiYCxcbiAgICAgICk7XG4gICAgICBpZiAodXNlckNob2ljZSA9PT0gJzEnKSB7XG4gICAgICAgIGNvbnN0IGJvdW5kUmVnZXhJZHMgPSBuZXcgU2V0KGNvbmZpZ0RhdGEucmVnZXhTdGF0ZXMubWFwKHIgPT4gci5pZCkpO1xuICAgICAgICBjb25zdCBhbGxHbG9iYWxSZWdleGVzID0gYXdhaXQgVGF2ZXJuSGVscGVyLmdldFRhdmVyblJlZ2V4ZXMoeyBzY29wZTogJ2dsb2JhbCcgfSk7XG4gICAgICAgIGNvbnN0IGJvdW5kUmVnZXhlcyA9IGFsbEdsb2JhbFJlZ2V4ZXMuZmlsdGVyKChyOiBhbnkpID0+IGJvdW5kUmVnZXhJZHMuaGFzKHIuaWQpKTtcblxuICAgICAgICBjb25zdCB7IHNob3dSZWdleEV4cG9ydFNlbGVjdGlvblBvcHVwIH0gPSBhd2FpdCBpbXBvcnQoJy4v6L6F5Yqp5by556qX5Yqf6IO9Jyk7XG4gICAgICAgIGNvbnN0IHNlbGVjdGVkUmVnZXhlcyA9IGF3YWl0IHNob3dSZWdleEV4cG9ydFNlbGVjdGlvblBvcHVwKGJvdW5kUmVnZXhlcyk7XG5cbiAgICAgICAgaWYgKHNlbGVjdGVkUmVnZXhlcykge1xuICAgICAgICAgIChleHBvcnRCdW5kbGUgYXMgYW55KS5yZWdleERhdGEgPSBzZWxlY3RlZFJlZ2V4ZXM7XG4gICAgICAgICAgdG9hc3RyLmluZm8oYOW3suWwhiAke3NlbGVjdGVkUmVnZXhlcy5sZW5ndGh9IOadoeato+WImeaJk+WMheWvvOWHuuOAgmApO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIHRvYXN0ci5pbmZvKCflt7Llj5bmtojlr7zlh7rmraPliJnjgIInKTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cblxuICAgIC8vIOajgOafpeaYr+WQpuWMheWQq+WIhue7hOmFjee9rlxuICAgIGNvbnN0IGdyb3VwaW5nUHJlc2V0TmFtZSA9IGNvbmZpZ0RhdGEucHJlc2V0TmFtZTtcbiAgICBpZiAoZ3JvdXBpbmdQcmVzZXROYW1lKSB7XG4gICAgICBjb25zdCBncm91cGluZ0NvbmZpZyA9IGV4cG9ydFByZXNldEdyb3VwaW5nKGdyb3VwaW5nUHJlc2V0TmFtZSk7XG4gICAgICBpZiAoZ3JvdXBpbmdDb25maWcpIHtcbiAgICAgICAgY29uc3QgaW5jbHVkZUdyb3VwaW5nQ2hvaWNlID0gYXdhaXQgdHJpZ2dlclNsYXNoKFxuICAgICAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLmmK9cIiBjYW5jZWxCdXR0b249XCLlkKZcIiByZXN1bHQ9dHJ1ZSBcIumihOiuviBcXFxcXCIke2dyb3VwaW5nUHJlc2V0TmFtZX1cXFxcXCIg5YyF5ZCr5p2h55uu5YiG57uE6K6+572u44CC5piv5ZCm6KaB5LiA6LW35a+85Ye677yfXCJgLFxuICAgICAgICApO1xuICAgICAgICBpZiAoaW5jbHVkZUdyb3VwaW5nQ2hvaWNlID09PSAnMScpIHtcbiAgICAgICAgICAoZXhwb3J0QnVuZGxlIGFzIGFueSkuZ3JvdXBpbmdDb25maWcgPSBncm91cGluZ0NvbmZpZztcbiAgICAgICAgICB0b2FzdHIuaW5mbygn5bey5bCG5YiG57uE6K6+572u5omT5YyF5a+85Ye644CCJyk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG5cbiAgICBjb25zdCBkZWZhdWx0RmlsZU5hbWUgPSBgJHtjb25maWdOYW1lfV9idW5kbGVgO1xuICAgIGxldCB1c2VyRmlsZU5hbWUgPSBhd2FpdCB0cmlnZ2VyU2xhc2goYC9pbnB1dCBkZWZhdWx0PVwiJHtkZWZhdWx0RmlsZU5hbWV9XCIgXCLor7fovpPlhaXlr7zlh7rnmoTmlofku7blkI3vvIjml6DpnIDlkI7nvIDvvIlcImApO1xuXG4gICAgaWYgKCF1c2VyRmlsZU5hbWUgfHwgdXNlckZpbGVOYW1lLnRyaW0oKSA9PT0gJycpIHtcbiAgICAgIHVzZXJGaWxlTmFtZSA9IGRlZmF1bHRGaWxlTmFtZTtcbiAgICAgIHRvYXN0ci5pbmZvKCfmlofku7blkI3kuLrnqbrvvIzlt7Lkvb/nlKjpu5jorqTlkI3np7DjgIInKTtcbiAgICB9XG4gICAgdXNlckZpbGVOYW1lID0gdXNlckZpbGVOYW1lLnRyaW0oKS5yZXBsYWNlKC9cXC5qc29uJC8sICcnKTtcblxuICAgIGNvbnN0IGpzb25TdHJpbmcgPSBKU09OLnN0cmluZ2lmeShleHBvcnRCdW5kbGUsIG51bGwsIDIpO1xuICAgIGNvbnN0IGJsb2IgPSBuZXcgQmxvYihbanNvblN0cmluZ10sIHsgdHlwZTogJ2FwcGxpY2F0aW9uL2pzb24nIH0pO1xuICAgIGNvbnN0IHVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwoYmxvYik7XG5cbiAgICBjb25zdCBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYScpO1xuICAgIGEuaHJlZiA9IHVybDtcbiAgICBhLmRvd25sb2FkID0gYCR7dXNlckZpbGVOYW1lfS5qc29uYDtcbiAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpO1xuICAgIGEuY2xpY2soKTtcbiAgICBVUkwucmV2b2tlT2JqZWN0VVJMKHVybCk7XG4gICAgYS5yZW1vdmUoKTtcblxuICAgIHRvYXN0ci5zdWNjZXNzKGDphY3nva7ljIUgXCIke2NvbmZpZ05hbWV9XCIg5bey5a+85Ye644CCYCk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5a+85Ye66YWN572u5aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+WvvOWHuumFjee9ruWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOiOt+WPluabtOWkmuS/oeaBr+OAgicpO1xuICB9XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBoYW5kbGVGaWxlSW1wb3J0KGV2ZW50OiBhbnkpOiBQcm9taXNlPHZvaWQ+IHtcbiAgY29uc3QgZmlsZSA9IGV2ZW50LnRhcmdldC5maWxlc1swXTtcbiAgaWYgKCFmaWxlKSByZXR1cm47XG5cbiAgY29uc3QgcmVhZGVyID0gbmV3IEZpbGVSZWFkZXIoKTtcbiAgcmVhZGVyLm9ubG9hZCA9IGFzeW5jIGUgPT4ge1xuICAgIHRyeSB7XG4gICAgICBjb25zdCBjb250ZW50ID0gZS50YXJnZXQ/LnJlc3VsdCBhcyBzdHJpbmc7XG4gICAgICBjb25zdCBwYXJzZWRDb250ZW50ID0gSlNPTi5wYXJzZShjb250ZW50KTtcblxuICAgICAgaWYgKHBhcnNlZENvbnRlbnQuZW50cmllcyAmJiB0eXBlb2YgcGFyc2VkQ29udGVudC5lbnRyaWVzID09PSAnb2JqZWN0Jykge1xuICAgICAgICB0b2FzdHIuaW5mbygn5qOA5rWL5Yiw5LiW55WM5Lmm5aSH5Lu95paH5Lu244CCJyk7XG4gICAgICAgIGNvbnN0IGNvbmZpZ3NUb0ltcG9ydCA9IFtdO1xuICAgICAgICBmb3IgKGNvbnN0IGVudHJ5IG9mIE9iamVjdC52YWx1ZXMocGFyc2VkQ29udGVudC5lbnRyaWVzKSkge1xuICAgICAgICAgIGlmICgoZW50cnkgYXMgYW55KS5jb250ZW50KSB7XG4gICAgICAgICAgICB0cnkge1xuICAgICAgICAgICAgICBjb25zdCBjb25maWcgPSBKU09OLnBhcnNlKChlbnRyeSBhcyBhbnkpLmNvbnRlbnQpO1xuICAgICAgICAgICAgICBpZiAoY29uZmlnLmlkICYmIGNvbmZpZy5uYW1lICYmIEFycmF5LmlzQXJyYXkoY29uZmlnLnN0YXRlcykpIHtcbiAgICAgICAgICAgICAgICBjb25maWdzVG9JbXBvcnQucHVzaChjb25maWcpO1xuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9IGNhdGNoIChlcnIpIHtcbiAgICAgICAgICAgICAgLy8g5b+955Wl6Kej5p6Q5aSx6LSl55qE5p2h55uuXG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIGlmIChjb25maWdzVG9JbXBvcnQubGVuZ3RoID4gMCkge1xuICAgICAgICAgIGNvbnN0IHsgc3RhcnRCYXRjaEltcG9ydEZsb3cgfSA9IGF3YWl0IGltcG9ydCgnLi/mibnph4/mk43kvZzlip/og70nKTtcbiAgICAgICAgICBhd2FpdCBzdGFydEJhdGNoSW1wb3J0Rmxvdyhjb25maWdzVG9JbXBvcnQpO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIHRvYXN0ci53YXJuaW5nKCfkuJbnlYzkuabmlofku7bkuK3mnKrmib7liLDmnInmlYjnmoTllrXllrXphY3nva7mlbDmja7jgIInKTtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm47XG4gICAgICB9XG5cbiAgICAgIGlmIChwYXJzZWRDb250ZW50LnJlbWFyaykge1xuICAgICAgICBjb25zdCB7IHNob3dSZW1hcmtQb3B1cCB9ID0gYXdhaXQgaW1wb3J0KCcuL+i+heWKqeW8ueeql+WKn+iDvScpO1xuICAgICAgICBhd2FpdCBzaG93UmVtYXJrUG9wdXAocGFyc2VkQ29udGVudC5yZW1hcmspO1xuICAgICAgfVxuXG4gICAgICBpZiAocGFyc2VkQ29udGVudC50eXBlID09PSAnTWlhb01pYW9QcmVzZXRNZWdhQnVuZGxlJykge1xuICAgICAgICBjb25zdCB7IGhhbmRsZU1lZ2FCdW5kbGVJbXBvcnQgfSA9IGF3YWl0IGltcG9ydCgnLi/mibnph4/mk43kvZzlip/og70nKTtcbiAgICAgICAgYXdhaXQgaGFuZGxlTWVnYUJ1bmRsZUltcG9ydChwYXJzZWRDb250ZW50KTtcbiAgICAgICAgcmV0dXJuO1xuICAgICAgfVxuXG4gICAgICBsZXQgY29uZmlnVG9JbXBvcnQsIHByZXNldFRvSW1wb3J0LCByZWdleFRvSW1wb3J0LCBncm91cGluZ1RvSW1wb3J0O1xuXG4gICAgICBpZiAocGFyc2VkQ29udGVudC50eXBlID09PSAnTWlhb01pYW9QcmVzZXRCdW5kbGUnKSB7XG4gICAgICAgIGNvbnNvbGUubG9nKCfmo4DmtYvliLDmlbTlkIjljIXmlofku7bvvIzniYjmnKw6JywgcGFyc2VkQ29udGVudC52ZXJzaW9uKTtcbiAgICAgICAgdG9hc3RyLmluZm8oJ+ajgOa1i+WIsOaVtOWQiOWMheaWh+S7tuOAgicpO1xuICAgICAgICBjb25maWdUb0ltcG9ydCA9IHBhcnNlZENvbnRlbnQucHJlc2V0Q29uZmlnO1xuICAgICAgICBwcmVzZXRUb0ltcG9ydCA9IHBhcnNlZENvbnRlbnQucHJlc2V0RGF0YTtcbiAgICAgICAgcmVnZXhUb0ltcG9ydCA9IHBhcnNlZENvbnRlbnQucmVnZXhEYXRhO1xuICAgICAgICBncm91cGluZ1RvSW1wb3J0ID0gcGFyc2VkQ29udGVudC5ncm91cGluZ0NvbmZpZztcbiAgICAgICAgY29uc29sZS5sb2coJ+WIhue7hOmFjee9rjonLCBncm91cGluZ1RvSW1wb3J0KTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGNvbmZpZ1RvSW1wb3J0ID0gcGFyc2VkQ29udGVudDtcbiAgICAgIH1cblxuICAgICAgaWYgKCFjb25maWdUb0ltcG9ydCB8fCB0eXBlb2YgY29uZmlnVG9JbXBvcnQucHJlc2V0TmFtZSAhPT0gJ3N0cmluZycgfHwgIUFycmF5LmlzQXJyYXkoY29uZmlnVG9JbXBvcnQuc3RhdGVzKSkge1xuICAgICAgICB0b2FzdHIuZXJyb3IoJ+WvvOWFpeWksei0pe+8mumFjee9ruaVsOaNruagvOW8j+S4jeato+ehruOAgicpO1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG5cbiAgICAgIGlmIChwcmVzZXRUb0ltcG9ydCkge1xuICAgICAgICBjb25zdCBpbXBvcnRQcmVzZXRDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICAgICAgYC9wb3B1cCBva0J1dHRvbj1cIuaYr1wiIGNhbmNlbEJ1dHRvbj1cIuWQplwiIHJlc3VsdD10cnVlIFwi5q2k5paH5Lu25YyF5ZCr6aKE6K6+5paH5Lu2IFxcXFxcIiR7cHJlc2V0VG9JbXBvcnQubmFtZX1cXFxcXCLjgILmmK/lkKblr7zlhaUv6KaG55uW77yfXCJgLFxuICAgICAgICApO1xuICAgICAgICBpZiAoaW1wb3J0UHJlc2V0Q2hvaWNlID09PSAnMScpIHtcbiAgICAgICAgICBhd2FpdCBUYXZlcm5IZWxwZXIuY3JlYXRlT3JSZXBsYWNlUHJlc2V0KHByZXNldFRvSW1wb3J0Lm5hbWUsIHByZXNldFRvSW1wb3J0KTtcbiAgICAgICAgICB0b2FzdHIuc3VjY2Vzcyhg6aKE6K6+5paH5Lu2IFwiJHtwcmVzZXRUb0ltcG9ydC5uYW1lfVwiIOW3suWvvOWFpeOAgmApO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIGlmIChyZWdleFRvSW1wb3J0ICYmIHJlZ2V4VG9JbXBvcnQubGVuZ3RoID4gMCkge1xuICAgICAgICBhd2FpdCBpbXBvcnRSZWdleExvZ2ljKHJlZ2V4VG9JbXBvcnQpO1xuICAgICAgfVxuXG4gICAgICAvLyDlpITnkIbliIbnu4TphY3nva7lr7zlhaVcbiAgICAgIGlmIChncm91cGluZ1RvSW1wb3J0ICYmIEFycmF5LmlzQXJyYXkoZ3JvdXBpbmdUb0ltcG9ydCkgJiYgZ3JvdXBpbmdUb0ltcG9ydC5sZW5ndGggPiAwKSB7XG4gICAgICAgIGlmIChjb25maWdUb0ltcG9ydC5wcmVzZXROYW1lKSB7XG4gICAgICAgICAgdHJ5IHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKCflr7zlhaXliIbnu4TphY3nva46JywgZ3JvdXBpbmdUb0ltcG9ydCk7XG4gICAgICAgICAgICBpbXBvcnRQcmVzZXRHcm91cGluZyhjb25maWdUb0ltcG9ydC5wcmVzZXROYW1lLCBncm91cGluZ1RvSW1wb3J0IGFzIFByb21wdEdyb3VwW10pO1xuICAgICAgICAgICAgdG9hc3RyLnN1Y2Nlc3MoJ+W3suaIkOWKn+WvvOWFpeW5tuW6lOeUqOWIhue7hOiuvue9ruWIsOmihOiuvuOAgicpO1xuICAgICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICAgICAgICBjb25zb2xlLmVycm9yKCflr7zlhaXliIbnu4TphY3nva7lpLHotKU6JywgZXJyb3IpO1xuICAgICAgICAgICAgdG9hc3RyLmVycm9yKCflr7zlhaXliIbnu4TphY3nva7lpLHotKXvvJonICsgKGVycm9yIGFzIEVycm9yKS5tZXNzYWdlKTtcbiAgICAgICAgICB9XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgY29uc29sZS53YXJuKCfphY3nva7kuK3msqHmnInpooTorr7lkI3np7DvvIzml6Dms5Xlr7zlhaXliIbnu4TphY3nva4nKTtcbiAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICBjb25zdCBpbml0aWFsTmFtZSA9IGNvbmZpZ1RvSW1wb3J0Lm5hbWUgfHwgZmlsZS5uYW1lLnJlcGxhY2UoL19idW5kbGVcXC5qc29uJC9pLCAnJykucmVwbGFjZSgvXFwuanNvbiQvaSwgJycpO1xuICAgICAgbGV0IGNvbmZpZ05hbWUgPSBhd2FpdCB0cmlnZ2VyU2xhc2goYC9pbnB1dCBkZWZhdWx0PVwiJHtpbml0aWFsTmFtZX1cIiBcIuivt+i+k+WFpeWvvOWFpemFjee9rueahOWQjeensFwiYCk7XG4gICAgICBjb25maWdOYW1lID0gY29uZmlnTmFtZS50cmltKCk7XG4gICAgICBpZiAoIWNvbmZpZ05hbWUpIHtcbiAgICAgICAgdG9hc3RyLmluZm8oJ+WvvOWFpeW3suWPlua2iOOAgicpO1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG5cbiAgICAgIGNvbnN0IGNvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gICAgICBjb25maWdUb0ltcG9ydC5uYW1lID0gY29uZmlnTmFtZTtcbiAgICAgIGNvbmZpZ1RvSW1wb3J0LmlkID0gZ2VuZXJhdGVVbmlxdWVJZCgpOyAvLyBBbHdheXMgZ2VuZXJhdGUgbmV3IElEIGZvciBzaW5nbGUgaW1wb3J0XG4gICAgICBjb25maWdzW2NvbmZpZ1RvSW1wb3J0LmlkXSA9IGNvbmZpZ1RvSW1wb3J0O1xuICAgICAgYXdhaXQgc2V0U3RvcmVkQ29uZmlncyhjb25maWdzKTtcblxuICAgICAgdG9hc3RyLnN1Y2Nlc3MoYOmFjee9riBcIiR7Y29uZmlnTmFtZX1cIiDlt7LmiJDlip/lr7zlhaXjgIJgKTtcbiAgICAgIGF3YWl0IHJlbmRlckNvbmZpZ3NMaXN0KCk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIGNvbnNvbGUuZXJyb3IoJ+WvvOWFpeaWh+S7tuWksei0pTonLCBlcnJvcik7XG4gICAgICB0b2FzdHIuZXJyb3IoJ+WvvOWFpeaWh+S7tuWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOiOt+WPluabtOWkmuS/oeaBr+OAgicpO1xuICAgIH0gZmluYWxseSB7XG4gICAgICAkKGV2ZW50LnRhcmdldCkudmFsKCcnKTtcbiAgICB9XG4gIH07XG4gIHJlYWRlci5yZWFkQXNUZXh0KGZpbGUpO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/导入导出功能.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   exportConfig: () => (/* binding */ exportConfig),
+/* harmony export */   k: () => (/* binding */ handleFileImport)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(65);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(320);
+
+
+
+
+async function exportConfig(configId) {
+    try {
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+        const configData = configs[configId];
+        if (!configData) {
+            toastr.error(`配置不存在，无法导出。`);
+            return;
+        }
+        const configName = configData.name;
+        let userRemark = '';
+        const addRemarkChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否要为此导出添加备注信息？"`);
+        if (addRemarkChoice === '1') {
+            userRemark = await triggerSlash(`/input multiline=true placeholder="请输入备注，例如预设用途、来源等..." "添加备注"`);
+        }
+        const exportBundle = {
+            type: 'MiaoMiaoPresetBundle',
+            version: 1,
+            remark: userRemark || '',
+            presetConfig: configData,
+            presetData: null,
+            regexData: null,
+            groupingConfig: null,
+        };
+        const configPresetName = configData.presetName;
+        if (configPresetName && TavernHelper.getPresetNames().includes(configPresetName)) {
+            const includePresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置关联了预设 \\"${configPresetName}\\"。是否要将预设文件本身一起打包导出？"`);
+            if (includePresetChoice === '1') {
+                const presetData = TavernHelper.getPreset(configPresetName);
+                if (presetData) {
+                    presetData.name = configPresetName;
+                    exportBundle.presetData = presetData;
+                    toastr.info(`已将预设 "${configPresetName}" 打包。`);
+                }
+                else {
+                    toastr.warning(`无法获取预设 "${configPresetName}" 的数据。`);
+                }
+            }
+        }
+        if (configData.regexStates && configData.regexStates.length > 0) {
+            const userChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此配置绑定了正则。是否选择要一起导出的正则？"`);
+            if (userChoice === '1') {
+                const boundRegexIds = new Set(configData.regexStates.map(r => r.id));
+                const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+                const boundRegexes = allGlobalRegexes.filter((r) => boundRegexIds.has(r.id));
+                const { showRegexExportSelectionPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 780));
+                const selectedRegexes = await showRegexExportSelectionPopup(boundRegexes);
+                if (selectedRegexes) {
+                    exportBundle.regexData = selectedRegexes;
+                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包导出。`);
+                }
+                else {
+                    toastr.info('已取消导出正则。');
+                }
+            }
+        }
+        // 检查是否包含分组配置
+        const groupingPresetName = configData.presetName;
+        if (groupingPresetName) {
+            const groupingConfig = (0,___WEBPACK_IMPORTED_MODULE_1__/* .exportPresetGrouping */ .pM)(groupingPresetName);
+            if (groupingConfig) {
+                const includeGroupingChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "预设 \\"${groupingPresetName}\\" 包含条目分组设置。是否要一起导出？"`);
+                if (includeGroupingChoice === '1') {
+                    exportBundle.groupingConfig = groupingConfig;
+                    toastr.info('已将分组设置打包导出。');
+                }
+            }
+        }
+        const defaultFileName = `${configName}_bundle`;
+        let userFileName = await triggerSlash(`/input default="${defaultFileName}" "请输入导出的文件名（无需后缀）"`);
+        if (!userFileName || userFileName.trim() === '') {
+            userFileName = defaultFileName;
+            toastr.info('文件名为空，已使用默认名称。');
+        }
+        userFileName = userFileName.trim().replace(/\.json$/, '');
+        const jsonString = JSON.stringify(exportBundle, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${userFileName}.json`;
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+        a.remove();
+        toastr.success(`配置包 "${configName}" 已导出。`);
+    }
+    catch (error) {
+        console.error('导出配置失败:', error);
+        toastr.error('导出配置失败，请检查控制台获取更多信息。');
+    }
+}
+async function handleFileImport(event) {
+    const file = event.target.files[0];
+    if (!file)
+        return;
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+        try {
+            const content = e.target?.result;
+            const parsedContent = JSON.parse(content);
+            if (parsedContent.entries && typeof parsedContent.entries === 'object') {
+                toastr.info('检测到世界书备份文件。');
+                const configsToImport = [];
+                for (const entry of Object.values(parsedContent.entries)) {
+                    if (entry.content) {
+                        try {
+                            const config = JSON.parse(entry.content);
+                            if (config.id && config.name && Array.isArray(config.states)) {
+                                configsToImport.push(config);
+                            }
+                        }
+                        catch (err) {
+                            // 忽略解析失败的条目
+                        }
+                    }
+                }
+                if (configsToImport.length > 0) {
+                    const { startBatchImportFlow } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 723));
+                    await startBatchImportFlow(configsToImport);
+                }
+                else {
+                    toastr.warning('世界书文件中未找到有效的喵喵配置数据。');
+                }
+                return;
+            }
+            if (parsedContent.remark) {
+                const { showRemarkPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 780));
+                await showRemarkPopup(parsedContent.remark);
+            }
+            if (parsedContent.type === 'MiaoMiaoPresetMegaBundle') {
+                const { handleMegaBundleImport } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 723));
+                await handleMegaBundleImport(parsedContent);
+                return;
+            }
+            let configToImport, presetToImport, regexToImport, groupingToImport;
+            if (parsedContent.type === 'MiaoMiaoPresetBundle') {
+                console.log('检测到整合包文件，版本:', parsedContent.version);
+                toastr.info('检测到整合包文件。');
+                configToImport = parsedContent.presetConfig;
+                presetToImport = parsedContent.presetData;
+                regexToImport = parsedContent.regexData;
+                groupingToImport = parsedContent.groupingConfig;
+                console.log('分组配置:', groupingToImport);
+            }
+            else {
+                configToImport = parsedContent;
+            }
+            if (!configToImport || typeof configToImport.presetName !== 'string' || !Array.isArray(configToImport.states)) {
+                toastr.error('导入失败：配置数据格式不正确。');
+                return;
+            }
+            if (presetToImport) {
+                const importPresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此文件包含预设文件 \\"${presetToImport.name}\\"。是否导入/覆盖？"`);
+                if (importPresetChoice === '1') {
+                    await TavernHelper.createOrReplacePreset(presetToImport.name, presetToImport);
+                    toastr.success(`预设文件 "${presetToImport.name}" 已导入。`);
+                }
+            }
+            if (regexToImport && regexToImport.length > 0) {
+                await (0,___WEBPACK_IMPORTED_MODULE_2__/* .importRegexLogic */ .P)(regexToImport);
+            }
+            // 处理分组配置导入
+            if (groupingToImport && Array.isArray(groupingToImport) && groupingToImport.length > 0) {
+                if (configToImport.presetName) {
+                    try {
+                        console.log('导入分组配置:', groupingToImport);
+                        (0,___WEBPACK_IMPORTED_MODULE_1__/* .importPresetGrouping */ .q$)(configToImport.presetName, groupingToImport);
+                        toastr.success('已成功导入并应用分组设置到预设。');
+                    }
+                    catch (error) {
+                        console.error('导入分组配置失败:', error);
+                        toastr.error('导入分组配置失败：' + error.message);
+                    }
+                }
+                else {
+                    console.warn('配置中没有预设名称，无法导入分组配置');
+                }
+            }
+            const initialName = configToImport.name || file.name.replace(/_bundle\.json$/i, '').replace(/\.json$/i, '');
+            let configName = await triggerSlash(`/input default="${initialName}" "请输入导入配置的名称"`);
+            configName = configName.trim();
+            if (!configName) {
+                toastr.info('导入已取消。');
+                return;
+            }
+            const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+            configToImport.name = configName;
+            configToImport.id = (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)(); // Always generate new ID for single import
+            configs[configToImport.id] = configToImport;
+            await (0,___WEBPACK_IMPORTED_MODULE_3__/* .setStoredConfigs */ .BR)(configs);
+            toastr.success(`配置 "${configName}" 已成功导入。`);
+            await (0,___WEBPACK_IMPORTED_MODULE_3__/* .renderConfigsList */ .sd)();
+        }
+        catch (error) {
+            console.error('导入文件失败:', error);
+            toastr.error('导入文件失败，请检查控制台获取更多信息。');
+        }
+        finally {
+            $(event.target).val('');
+        }
+    };
+    reader.readAsText(file);
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/批量操作功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/批量操作功能.ts ***!
-  \********************************/
+/***/ 516:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   handleMegaBundleImport: () => (/* binding */ handleMegaBundleImport),\n/* harmony export */   showBatchDeletePopup: () => (/* binding */ showBatchDeletePopup),\n/* harmony export */   showBatchExportPopup: () => (/* binding */ showBatchExportPopup),\n/* harmony export */   startBatchImportFlow: () => (/* binding */ startBatchImportFlow)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./正则绑定功能 */ \"./src/喵喵预设配置管理/正则绑定功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n\n\n\n\nasync function showBatchExportPopup() {\n    const popupId = 'preset-manager-batch-export-popup';\n    $(`#${popupId}`).remove();\n    const configs = Object.values(await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)());\n    if (configs.length === 0) {\n        toastr.info('没有可导出的配置。');\n        return;\n    }\n    const configsHtml = configs\n        .map(config => {\n        const safeName = $('<div/>').text(config.name).html();\n        return `\n            <div style=\"padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center;\">\n                <label style=\"cursor:pointer; display:flex; align-items:center; width: 100%;\">\n                    <input type=\"checkbox\" class=\"pm-batch-export-item\" value=\"${config.id}\" style=\"margin-right: 10px; transform: scale(1.2);\">\n                    <span>${safeName}</span>\n                </label>\n            </div>\n        `;\n    })\n        .join('');\n    const popupHtml = `\n        <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n            <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                <h4 style=\"margin-top:0; color:#6a4226; text-align: center;\">选择要批量导出的配置</h4>\n                <div style=\"margin: 10px 0; display: flex; justify-content: space-around;\">\n                   <button id=\"batch-export-select-all\" style=\"padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;\">全选</button>\n                   <button id=\"batch-export-deselect-all\" style=\"padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;\">全不选</button>\n                </div>\n                <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                    ${configsHtml}\n                </div>\n                <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                    <button id=\"batch-export-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                    <button id=\"batch-export-confirm\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">确认导出</button>\n                </div>\n            </div>\n        </div>\n    `;\n    $('body').append(popupHtml);\n    const mobileStyles = `<style>\n        @media (max-width: 600px) { #${popupId} > div { margin-top: 5vh; } }\n    </style>`;\n    $(`#${popupId}`).append(mobileStyles);\n    $('#batch-export-select-all').on('click', () => $('.pm-batch-export-item').prop('checked', true));\n    $('#batch-export-deselect-all').on('click', () => $('.pm-batch-export-item').prop('checked', false));\n    $('#batch-export-cancel').on('click', () => $(`#${popupId}`).remove());\n    $('#batch-export-confirm').on('click', async () => {\n        const selectedIds = new Set();\n        $('.pm-batch-export-item:checked').each(function () {\n            selectedIds.add($(this).val());\n        });\n        const allConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const selectedConfigs = Object.values(allConfigs).filter(c => selectedIds.has(c.id));\n        batchExportConfigs(selectedConfigs);\n        $(`#${popupId}`).remove();\n    });\n}\nasync function batchExportConfigs(selectedConfigs) {\n    if (selectedConfigs.length === 0) {\n        toastr.info('未选择任何配置。');\n        return;\n    }\n    try {\n        let userRemark = '';\n        const addRemarkChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"是否要为这个批量导出的整合包添加备注信息？\"`);\n        if (addRemarkChoice === '1') {\n            userRemark = await triggerSlash(`/input multiline=true placeholder=\"请输入备注，例如这批配置的共同特点...\" \"为整合包添加备注\"`);\n        }\n        const megaBundle = {\n            type: 'MiaoMiaoPresetMegaBundle',\n            version: 1,\n            remark: userRemark || '',\n            presetConfigs: {},\n            presets: {},\n            regexData: [],\n        };\n        const uniquePresetNames = new Set();\n        for (const configData of selectedConfigs) {\n            megaBundle.presetConfigs[configData.id] = configData;\n            if (configData.presetName) {\n                uniquePresetNames.add(configData.presetName);\n            }\n        }\n        if (uniquePresetNames.size > 0) {\n            const presetList = Array.from(uniquePresetNames).join(', ');\n            const includePresetsChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"您选择的配置关联了以下预设：${presetList}。是否要将这些预设文件一同打包导出？\"`);\n            if (includePresetsChoice === '1') {\n                let includedCount = 0;\n                for (const presetName of uniquePresetNames) {\n                    if (TavernHelper.getPresetNames().includes(presetName)) {\n                        const presetData = TavernHelper.getPreset(presetName);\n                        if (presetData) {\n                            megaBundle.presets[presetName] = presetData;\n                            includedCount++;\n                        }\n                    }\n                }\n                toastr.info(`已将 ${includedCount} 个预设文件打包。`);\n            }\n            else {\n                toastr.info('跳过预设文件导出。');\n            }\n        }\n        const includeRegexChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"是否需要选择一些全局正则脚本一同打包导出？\"`);\n        if (includeRegexChoice === '1') {\n            const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n            if (allGlobalRegexes.length === 0) {\n                toastr.info('没有可供导出的全局正则脚本。');\n            }\n            else {\n                const selectedRegexes = await (0,___WEBPACK_IMPORTED_MODULE_2__.showRegexExportSelectionPopup)(allGlobalRegexes);\n                if (selectedRegexes) {\n                    megaBundle.regexData = selectedRegexes;\n                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包。`);\n                }\n                else {\n                    toastr.info('已取消选择正则，将不导出任何正则脚本。');\n                }\n            }\n        }\n        else {\n            toastr.info('跳过正则导出。');\n        }\n        const defaultFileName = 'MiaoMiao_Batch_Export';\n        let userFileName = await triggerSlash(`/input default=\"${defaultFileName}\" \"请输入批量导出的文件名（无需后缀）\"`);\n        if (!userFileName || userFileName.trim() === '') {\n            userFileName = defaultFileName;\n            toastr.info('文件名为空，已使用默认名称。');\n        }\n        userFileName = userFileName.trim().replace(/\\.json$/, '');\n        const jsonString = JSON.stringify(megaBundle, null, 2);\n        const blob = new Blob([jsonString], { type: 'application/json' });\n        const url = URL.createObjectURL(blob);\n        const a = document.createElement('a');\n        a.href = url;\n        a.download = `${userFileName}.json`;\n        document.body.appendChild(a);\n        a.click();\n        URL.revokeObjectURL(url);\n        a.remove();\n        toastr.success(`已成功导出 ${selectedConfigs.length} 个配置的整合包。`);\n    }\n    catch (error) {\n        console.error('批量导出失败:', error);\n        toastr.error('批量导出失败，请检查控制台。');\n    }\n}\nasync function startBatchImportFlow(configsToImport) {\n    const userChoices = await (0,___WEBPACK_IMPORTED_MODULE_2__.showBatchImportConfigSelectionPopup)(configsToImport);\n    if (!userChoices) {\n        toastr.info('配置导入已取消。');\n        return;\n    }\n    const importList = userChoices.filter((choice) => choice.import);\n    if (importList.length === 0) {\n        toastr.info('未选择要导入的配置。');\n        return;\n    }\n    const storedConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n    importList.forEach((choice) => {\n        const config = configsToImport.find(c => c.id === choice.originalId);\n        if (config) {\n            const newConfig = { ...config }; // Create a copy\n            newConfig.name = choice.newName;\n            newConfig.id = (0,___WEBPACK_IMPORTED_MODULE_0__.generateUniqueId)(); // Assign a new unique ID on import\n            storedConfigs[newConfig.id] = newConfig;\n        }\n    });\n    await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(storedConfigs);\n    toastr.success(`成功导入 ${importList.length} 个配置。`);\n    await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n}\nasync function handleMegaBundleImport(megaBundle) {\n    // 1. 导入预设\n    const presetsToImport = megaBundle.presets;\n    if (presetsToImport && Object.keys(presetsToImport).length > 0) {\n        const presetNames = Object.keys(presetsToImport).join(', ');\n        const importPresetChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"此文件包含预设: ${presetNames}。是否全部导入/覆盖？\"`);\n        if (importPresetChoice === '1') {\n            for (const presetName in presetsToImport) {\n                await TavernHelper.createOrReplacePreset(presetName, presetsToImport[presetName]);\n            }\n            toastr.success(`已导入 ${Object.keys(presetsToImport).length} 个预设。`);\n        }\n    }\n    // 2. 导入正则\n    const regexToImport = megaBundle.regexData;\n    if (regexToImport && regexToImport.length > 0) {\n        const importRegexChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"此文件包含 ${regexToImport.length} 条正则脚本。是否导入？\"`);\n        if (importRegexChoice === '1') {\n            await (0,___WEBPACK_IMPORTED_MODULE_1__.importRegexLogic)(regexToImport);\n        }\n    }\n    // 3. 导入配置\n    const configsToImport = Object.values(megaBundle.presetConfigs);\n    await startBatchImportFlow(configsToImport);\n}\nasync function showBatchDeletePopup() {\n    const popupId = 'preset-manager-batch-delete-popup';\n    $(`#${popupId}`).remove();\n    const configs = Object.values(await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)());\n    if (configs.length === 0) {\n        toastr.info('没有可删除的配置。');\n        return;\n    }\n    const configsHtml = configs\n        .map(config => {\n        const safeName = $('<div/>').text(config.name).html();\n        return `\n            <div style=\"padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center;\">\n                <label style=\"cursor:pointer; display:flex; align-items:center; width: 100%;\">\n                    <input type=\"checkbox\" class=\"pm-batch-delete-item\" value=\"${config.id}\" style=\"margin-right: 10px; transform: scale(1.2);\">\n                    <span title=\"${safeName}\">${safeName}</span>\n                </label>\n            </div>\n        `;\n    })\n        .join('');\n    const popupHtml = `\n        <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n            <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                <h4 style=\"margin-top:0; color:#c62828; text-align: center;\">选择要批量删除的配置</h4>\n                <div style=\"margin: 10px 0; display: flex; justify-content: space-around;\">\n                   <button id=\"batch-delete-select-all\" style=\"padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;\">全选</button>\n                   <button id=\"batch-delete-deselect-all\" style=\"padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;\">全不选</button>\n                </div>\n                <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                    ${configsHtml}\n                </div>\n                <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                    <button id=\"batch-delete-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                    <button id=\"batch-delete-confirm\" style=\"padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;\">确认删除</button>\n                </div>\n            </div>\n        </div>\n    `;\n    $('body').append(popupHtml);\n    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 200px; } }</style>`;\n    $(`#${popupId}`).append(mobileStyles);\n    $('#batch-delete-select-all').on('click', () => $('.pm-batch-delete-item').prop('checked', true));\n    $('#batch-delete-deselect-all').on('click', () => $('.pm-batch-delete-item').prop('checked', false));\n    $('#batch-delete-cancel').on('click', () => $(`#${popupId}`).remove());\n    $('#batch-delete-confirm').on('click', () => {\n        const selectedIds = [];\n        $('.pm-batch-delete-item:checked').each(function () {\n            selectedIds.push($(this).val());\n        });\n        batchDeleteConfigs(selectedIds);\n        $(`#${popupId}`).remove();\n    });\n}\nasync function batchDeleteConfigs(configIds) {\n    if (configIds.length === 0) {\n        toastr.info('未选择任何要删除的配置。');\n        return;\n    }\n    const confirm = await triggerSlash(`/popup okButton=\"确认删除\" cancelButton=\"取消\" result=true \"警告：您确定要删除选中的 ${configIds.length} 个配置吗？此操作无法撤销。\"`);\n    if (confirm !== '1') {\n        toastr.info('批量删除操作已取消。');\n        return;\n    }\n    try {\n        const storedConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const idsToDelete = new Set(configIds);\n        Object.keys(storedConfigs).forEach(id => {\n            if (idsToDelete.has(id))\n                delete storedConfigs[id];\n        });\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(storedConfigs);\n        toastr.success(`已成功删除 ${configIds.length} 个配置。`);\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n    }\n    catch (error) {\n        console.error('批量删除失败:', error);\n        toastr.error('批量删除失败，请检查控制台。');\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+aJuemHj+aTjeS9nOWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUE0QztBQUNBO0FBQ2tEO0FBQ0E7QUFFdkYsS0FBSyxVQUFVLG9CQUFvQjtJQUN4QyxNQUFNLE9BQU8sR0FBRyxtQ0FBbUMsQ0FBQztJQUNwRCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO0lBRTFCLE1BQU0sT0FBTyxHQUFHLE1BQU0sQ0FBQyxNQUFNLENBQUMsTUFBTSxtREFBZ0IsRUFBRSxDQUFDLENBQUM7SUFFeEQsSUFBSSxPQUFPLENBQUMsTUFBTSxLQUFLLENBQUMsRUFBRSxDQUFDO1FBQ3pCLE1BQU0sQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUM7UUFDekIsT0FBTztJQUNULENBQUM7SUFFRCxNQUFNLFdBQVcsR0FBRyxPQUFPO1NBQ3hCLEdBQUcsQ0FBQyxNQUFNLENBQUMsRUFBRTtRQUNaLE1BQU0sUUFBUSxHQUFHLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksRUFBRSxDQUFDO1FBQ3RELE9BQU87OztpRkFHb0UsTUFBTSxDQUFDLEVBQUU7NEJBQzlELFFBQVE7OztTQUczQixDQUFDO0lBQ04sQ0FBQyxDQUFDO1NBQ0QsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBRVosTUFBTSxTQUFTLEdBQUc7bUJBQ0QsT0FBTzs7Ozs7Ozs7c0JBUUosV0FBVzs7Ozs7Ozs7S0FRNUIsQ0FBQztJQUVKLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7SUFFNUIsTUFBTSxZQUFZLEdBQUc7dUNBQ2dCLE9BQU87YUFDakMsQ0FBQztJQUNaLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxDQUFDLFlBQVksQ0FBQyxDQUFDO0lBRXRD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QUUsT0FBTyxhQUFhLENBQUMsRUFBRSxDQUFDLENBQUM7UUFDcEQsQ0FBQyxDQUFDLENBQUM7UUFDSCxNQUFNLG1EQUFnQixDQUFDLGFBQWEsQ0FBQyxDQUFDO1FBQ3RDLE1BQU0sQ0FBQyxPQUFPLENBQUMsU0FBUyxTQUFTLENBQUMsTUFBTSxPQUFPLENBQUMsQ0FBQztRQUNqRCxNQUFNLG9EQUFpQixFQUFFLENBQUM7SUFDNUIsQ0FBQztJQUFDLE9BQU8sS0FBSyxFQUFFLENBQUM7UUFDZixPQUFPLENBQUMsS0FBSyxDQUFDLFNBQVMsRUFBRSxLQUFLLENBQUMsQ0FBQztRQUNoQyxNQUFNLENBQUMsS0FBSyxDQUFDLGdCQUFnQixDQUFDLENBQUM7SUFDakMsQ0FBQztBQUNILENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/mibnph4/mk43kvZzlip/og70udHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdlbmVyYXRlVW5pcXVlSWQgfSBmcm9tICcuL+WIneWni+WMluWSjOmFjee9ric7XG5pbXBvcnQgeyBpbXBvcnRSZWdleExvZ2ljIH0gZnJvbSAnLi/mraPliJnnu5Hlrprlip/og70nO1xuaW1wb3J0IHsgc2hvd0JhdGNoSW1wb3J0Q29uZmlnU2VsZWN0aW9uUG9wdXAsIHNob3dSZWdleEV4cG9ydFNlbGVjdGlvblBvcHVwIH0gZnJvbSAnLi/ovoXliqnlvLnnqpflip/og70nO1xuaW1wb3J0IHsgQ29uZmlnRGF0YSwgZ2V0U3RvcmVkQ29uZmlncywgcmVuZGVyQ29uZmlnc0xpc3QsIHNldFN0b3JlZENvbmZpZ3MgfSBmcm9tICcuL+mFjee9ruWtmOWCqOWSjOivu+WPlic7XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzaG93QmF0Y2hFeHBvcnRQb3B1cCgpOiBQcm9taXNlPHZvaWQ+IHtcbiAgY29uc3QgcG9wdXBJZCA9ICdwcmVzZXQtbWFuYWdlci1iYXRjaC1leHBvcnQtcG9wdXAnO1xuICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gIGNvbnN0IGNvbmZpZ3MgPSBPYmplY3QudmFsdWVzKGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKSk7XG5cbiAgaWYgKGNvbmZpZ3MubGVuZ3RoID09PSAwKSB7XG4gICAgdG9hc3RyLmluZm8oJ+ayoeacieWPr+WvvOWHuueahOmFjee9ruOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IGNvbmZpZ3NIdG1sID0gY29uZmlnc1xuICAgIC5tYXAoY29uZmlnID0+IHtcbiAgICAgIGNvbnN0IHNhZmVOYW1lID0gJCgnPGRpdi8+JykudGV4dChjb25maWcubmFtZSkuaHRtbCgpO1xuICAgICAgcmV0dXJuIGBcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJwYWRkaW5nOiA4cHggNXB4OyBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2VlZTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjtcIj5cbiAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJjdXJzb3I6cG9pbnRlcjsgZGlzcGxheTpmbGV4OyBhbGlnbi1pdGVtczpjZW50ZXI7IHdpZHRoOiAxMDAlO1wiPlxuICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cImNoZWNrYm94XCIgY2xhc3M9XCJwbS1iYXRjaC1leHBvcnQtaXRlbVwiIHZhbHVlPVwiJHtjb25maWcuaWR9XCIgc3R5bGU9XCJtYXJnaW4tcmlnaHQ6IDEwcHg7IHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcIj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4+JHtzYWZlTmFtZX08L3NwYW4+XG4gICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICBgO1xuICAgIH0pXG4gICAgLmpvaW4oJycpO1xuXG4gIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgPGRpdiBpZD1cIiR7cG9wdXBJZH1cIiBzdHlsZT1cInBvc2l0aW9uOiBmaXhlZDsgdG9wOiAwOyBsZWZ0OiAwOyB3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDAlOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMCwwLDAuNSk7IHotaW5kZXg6IDEwMDAxOyBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcIj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOGYwOyBjb2xvcjogIzNhMmMyYzsgYm9yZGVyLXJhZGl1czogMTZweDsgcGFkZGluZzogMjBweDsgd2lkdGg6IDkwJTsgbWF4LXdpZHRoOiA0NTBweDsgYm94LXNoYWRvdzogMCA0cHggMjVweCByZ2JhKDEyMCw5MCw2MCwuMjUpOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBtYXgtaGVpZ2h0OiA4MHZoO1wiPlxuICAgICAgICAgICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6IzZhNDIyNjsgdGV4dC1hbGlnbjogY2VudGVyO1wiPumAieaLqeimgeaJuemHj+WvvOWHuueahOmFjee9rjwvaDQ+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cIm1hcmdpbjogMTBweCAwOyBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcIj5cbiAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwiYmF0Y2gtZXhwb3J0LXNlbGVjdC1hbGxcIiBzdHlsZT1cInBhZGRpbmc6IDZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNhNWQ2Zjk7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7XCI+5YWo6YCJPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cImJhdGNoLWV4cG9ydC1kZXNlbGVjdC1hbGxcIiBzdHlsZT1cInBhZGRpbmc6IDZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNlMGUwZTA7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7XCI+5YWo5LiN6YCJPC9idXR0b24+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZsZXg6IDE7IG1pbi1oZWlnaHQ6IDA7IG92ZXJmbG93LXk6IGF1dG87IG1hcmdpbi1ib3R0b206IDIwcHg7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBlMmQwOyBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2YwZTJkMDsgcGFkZGluZzogNXB4IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICR7Y29uZmlnc0h0bWx9XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0OyBkaXNwbGF5OmZsZXg7IGp1c3RpZnktY29udGVudDpmbGV4LWVuZDsgZ2FwOiAxMHB4O1wiPlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwiYmF0Y2gtZXhwb3J0LWNhbmNlbFwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2UwZTBlMDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgY29sb3I6IzMzMztcIj7lj5bmtog8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cImJhdGNoLWV4cG9ydC1jb25maXJtXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZjRjNzhlOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojM2EyYzJjO1wiPuehruiupOWvvOWHujwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgIGA7XG5cbiAgJCgnYm9keScpLmFwcGVuZChwb3B1cEh0bWwpO1xuXG4gIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+XG4gICAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgeyAjJHtwb3B1cElkfSA+IGRpdiB7IG1hcmdpbi10b3A6IDV2aDsgfSB9XG4gICAgPC9zdHlsZT5gO1xuICAkKGAjJHtwb3B1cElkfWApLmFwcGVuZChtb2JpbGVTdHlsZXMpO1xuXG4gICQoJyNiYXRjaC1leHBvcnQtc2VsZWN0LWFsbCcpLm9uKCdjbGljaycsICgpID0+ICQoJy5wbS1iYXRjaC1leHBvcnQtaXRlbScpLnByb3AoJ2NoZWNrZWQnLCB0cnVlKSk7XG4gICQoJyNiYXRjaC1leHBvcnQtZGVzZWxlY3QtYWxsJykub24oJ2NsaWNrJywgKCkgPT4gJCgnLnBtLWJhdGNoLWV4cG9ydC1pdGVtJykucHJvcCgnY2hlY2tlZCcsIGZhbHNlKSk7XG4gICQoJyNiYXRjaC1leHBvcnQtY2FuY2VsJykub24oJ2NsaWNrJywgKCkgPT4gJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKSk7XG4gICQoJyNiYXRjaC1leHBvcnQtY29uZmlybScpLm9uKCdjbGljaycsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCBzZWxlY3RlZElkcyA9IG5ldyBTZXQ8c3RyaW5nPigpO1xuICAgICQoJy5wbS1iYXRjaC1leHBvcnQtaXRlbTpjaGVja2VkJykuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgICBzZWxlY3RlZElkcy5hZGQoJCh0aGlzKS52YWwoKSBhcyBzdHJpbmcpO1xuICAgIH0pO1xuICAgIGNvbnN0IGFsbENvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gICAgY29uc3Qgc2VsZWN0ZWRDb25maWdzID0gT2JqZWN0LnZhbHVlcyhhbGxDb25maWdzKS5maWx0ZXIoYyA9PiBzZWxlY3RlZElkcy5oYXMoYy5pZCkpO1xuICAgIGJhdGNoRXhwb3J0Q29uZmlncyhzZWxlY3RlZENvbmZpZ3MpO1xuICAgICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG4gIH0pO1xufVxuXG5hc3luYyBmdW5jdGlvbiBiYXRjaEV4cG9ydENvbmZpZ3Moc2VsZWN0ZWRDb25maWdzOiBDb25maWdEYXRhW10pOiBQcm9taXNlPHZvaWQ+IHtcbiAgaWYgKHNlbGVjdGVkQ29uZmlncy5sZW5ndGggPT09IDApIHtcbiAgICB0b2FzdHIuaW5mbygn5pyq6YCJ5oup5Lu75L2V6YWN572u44CCJyk7XG4gICAgcmV0dXJuO1xuICB9XG5cbiAgdHJ5IHtcbiAgICBsZXQgdXNlclJlbWFyayA9ICcnO1xuICAgIGNvbnN0IGFkZFJlbWFya0Nob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLmmK9cIiBjYW5jZWxCdXR0b249XCLlkKZcIiByZXN1bHQ9dHJ1ZSBcIuaYr+WQpuimgeS4uui/meS4quaJuemHj+WvvOWHuueahOaVtOWQiOWMhea3u+WKoOWkh+azqOS/oeaBr++8n1wiYCxcbiAgICApO1xuICAgIGlmIChhZGRSZW1hcmtDaG9pY2UgPT09ICcxJykge1xuICAgICAgdXNlclJlbWFyayA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgICAgYC9pbnB1dCBtdWx0aWxpbmU9dHJ1ZSBwbGFjZWhvbGRlcj1cIuivt+i+k+WFpeWkh+azqO+8jOS+i+Wmgui/meaJuemFjee9rueahOWFseWQjOeJueeCuS4uLlwiIFwi5Li65pW05ZCI5YyF5re75Yqg5aSH5rOoXCJgLFxuICAgICAgKTtcbiAgICB9XG5cbiAgICBjb25zdCBtZWdhQnVuZGxlID0ge1xuICAgICAgdHlwZTogJ01pYW9NaWFvUHJlc2V0TWVnYUJ1bmRsZScsXG4gICAgICB2ZXJzaW9uOiAxLFxuICAgICAgcmVtYXJrOiB1c2VyUmVtYXJrIHx8ICcnLFxuICAgICAgcHJlc2V0Q29uZmlnczoge30gYXMgUmVjb3JkPHN0cmluZywgQ29uZmlnRGF0YT4sXG4gICAgICBwcmVzZXRzOiB7fSBhcyBSZWNvcmQ8c3RyaW5nLCBhbnk+LFxuICAgICAgcmVnZXhEYXRhOiBbXSBhcyBhbnlbXSxcbiAgICB9O1xuXG4gICAgY29uc3QgdW5pcXVlUHJlc2V0TmFtZXMgPSBuZXcgU2V0PHN0cmluZz4oKTtcblxuICAgIGZvciAoY29uc3QgY29uZmlnRGF0YSBvZiBzZWxlY3RlZENvbmZpZ3MpIHtcbiAgICAgIG1lZ2FCdW5kbGUucHJlc2V0Q29uZmlnc1tjb25maWdEYXRhLmlkXSA9IGNvbmZpZ0RhdGE7XG4gICAgICBpZiAoY29uZmlnRGF0YS5wcmVzZXROYW1lKSB7XG4gICAgICAgIHVuaXF1ZVByZXNldE5hbWVzLmFkZChjb25maWdEYXRhLnByZXNldE5hbWUpO1xuICAgICAgfVxuICAgIH1cblxuICAgIGlmICh1bmlxdWVQcmVzZXROYW1lcy5zaXplID4gMCkge1xuICAgICAgY29uc3QgcHJlc2V0TGlzdCA9IEFycmF5LmZyb20odW5pcXVlUHJlc2V0TmFtZXMpLmpvaW4oJywgJyk7XG4gICAgICBjb25zdCBpbmNsdWRlUHJlc2V0c0Nob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgICAgYC9wb3B1cCBva0J1dHRvbj1cIuaYr1wiIGNhbmNlbEJ1dHRvbj1cIuWQplwiIHJlc3VsdD10cnVlIFwi5oKo6YCJ5oup55qE6YWN572u5YWz6IGU5LqG5Lul5LiL6aKE6K6+77yaJHtwcmVzZXRMaXN0feOAguaYr+WQpuimgeWwhui/meS6m+mihOiuvuaWh+S7tuS4gOWQjOaJk+WMheWvvOWHuu+8n1wiYCxcbiAgICAgICk7XG4gICAgICBpZiAoaW5jbHVkZVByZXNldHNDaG9pY2UgPT09ICcxJykge1xuICAgICAgICBsZXQgaW5jbHVkZWRDb3VudCA9IDA7XG4gICAgICAgIGZvciAoY29uc3QgcHJlc2V0TmFtZSBvZiB1bmlxdWVQcmVzZXROYW1lcykge1xuICAgICAgICAgIGlmIChUYXZlcm5IZWxwZXIuZ2V0UHJlc2V0TmFtZXMoKS5pbmNsdWRlcyhwcmVzZXROYW1lKSkge1xuICAgICAgICAgICAgY29uc3QgcHJlc2V0RGF0YSA9IFRhdmVybkhlbHBlci5nZXRQcmVzZXQocHJlc2V0TmFtZSk7XG4gICAgICAgICAgICBpZiAocHJlc2V0RGF0YSkge1xuICAgICAgICAgICAgICBtZWdhQnVuZGxlLnByZXNldHNbcHJlc2V0TmFtZV0gPSBwcmVzZXREYXRhO1xuICAgICAgICAgICAgICBpbmNsdWRlZENvdW50Kys7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHRvYXN0ci5pbmZvKGDlt7LlsIYgJHtpbmNsdWRlZENvdW50fSDkuKrpooTorr7mlofku7bmiZPljIXjgIJgKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHRvYXN0ci5pbmZvKCfot7Pov4fpooTorr7mlofku7blr7zlh7rjgIInKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBjb25zdCBpbmNsdWRlUmVnZXhDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICBgL3BvcHVwIG9rQnV0dG9uPVwi5pivXCIgY2FuY2VsQnV0dG9uPVwi5ZCmXCIgcmVzdWx0PXRydWUgXCLmmK/lkKbpnIDopoHpgInmi6nkuIDkupvlhajlsYDmraPliJnohJrmnKzkuIDlkIzmiZPljIXlr7zlh7rvvJ9cImAsXG4gICAgKTtcbiAgICBpZiAoaW5jbHVkZVJlZ2V4Q2hvaWNlID09PSAnMScpIHtcbiAgICAgIGNvbnN0IGFsbEdsb2JhbFJlZ2V4ZXMgPSBhd2FpdCBUYXZlcm5IZWxwZXIuZ2V0VGF2ZXJuUmVnZXhlcyh7IHNjb3BlOiAnZ2xvYmFsJyB9KTtcbiAgICAgIGlmIChhbGxHbG9iYWxSZWdleGVzLmxlbmd0aCA9PT0gMCkge1xuICAgICAgICB0b2FzdHIuaW5mbygn5rKh5pyJ5Y+v5L6b5a+85Ye655qE5YWo5bGA5q2j5YiZ6ISa5pys44CCJyk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBjb25zdCBzZWxlY3RlZFJlZ2V4ZXMgPSBhd2FpdCBzaG93UmVnZXhFeHBvcnRTZWxlY3Rpb25Qb3B1cChhbGxHbG9iYWxSZWdleGVzKTtcbiAgICAgICAgaWYgKHNlbGVjdGVkUmVnZXhlcykge1xuICAgICAgICAgIG1lZ2FCdW5kbGUucmVnZXhEYXRhID0gc2VsZWN0ZWRSZWdleGVzO1xuICAgICAgICAgIHRvYXN0ci5pbmZvKGDlt7LlsIYgJHtzZWxlY3RlZFJlZ2V4ZXMubGVuZ3RofSDmnaHmraPliJnmiZPljIXjgIJgKTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICB0b2FzdHIuaW5mbygn5bey5Y+W5raI6YCJ5oup5q2j5YiZ77yM5bCG5LiN5a+85Ye65Lu75L2V5q2j5YiZ6ISa5pys44CCJyk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9IGVsc2Uge1xuICAgICAgdG9hc3RyLmluZm8oJ+i3s+i/h+ato+WImeWvvOWHuuOAgicpO1xuICAgIH1cblxuICAgIGNvbnN0IGRlZmF1bHRGaWxlTmFtZSA9ICdNaWFvTWlhb19CYXRjaF9FeHBvcnQnO1xuICAgIGxldCB1c2VyRmlsZU5hbWUgPSBhd2FpdCB0cmlnZ2VyU2xhc2goYC9pbnB1dCBkZWZhdWx0PVwiJHtkZWZhdWx0RmlsZU5hbWV9XCIgXCLor7fovpPlhaXmibnph4/lr7zlh7rnmoTmlofku7blkI3vvIjml6DpnIDlkI7nvIDvvIlcImApO1xuXG4gICAgaWYgKCF1c2VyRmlsZU5hbWUgfHwgdXNlckZpbGVOYW1lLnRyaW0oKSA9PT0gJycpIHtcbiAgICAgIHVzZXJGaWxlTmFtZSA9IGRlZmF1bHRGaWxlTmFtZTtcbiAgICAgIHRvYXN0ci5pbmZvKCfmlofku7blkI3kuLrnqbrvvIzlt7Lkvb/nlKjpu5jorqTlkI3np7DjgIInKTtcbiAgICB9XG4gICAgdXNlckZpbGVOYW1lID0gdXNlckZpbGVOYW1lLnRyaW0oKS5yZXBsYWNlKC9cXC5qc29uJC8sICcnKTtcblxuICAgIGNvbnN0IGpzb25TdHJpbmcgPSBKU09OLnN0cmluZ2lmeShtZWdhQnVuZGxlLCBudWxsLCAyKTtcbiAgICBjb25zdCBibG9iID0gbmV3IEJsb2IoW2pzb25TdHJpbmddLCB7IHR5cGU6ICdhcHBsaWNhdGlvbi9qc29uJyB9KTtcbiAgICBjb25zdCB1cmwgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKGJsb2IpO1xuXG4gICAgY29uc3QgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2EnKTtcbiAgICBhLmhyZWYgPSB1cmw7XG4gICAgYS5kb3dubG9hZCA9IGAke3VzZXJGaWxlTmFtZX0uanNvbmA7XG4gICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTtcbiAgICBhLmNsaWNrKCk7XG4gICAgVVJMLnJldm9rZU9iamVjdFVSTCh1cmwpO1xuICAgIGEucmVtb3ZlKCk7XG5cbiAgICB0b2FzdHIuc3VjY2Vzcyhg5bey5oiQ5Yqf5a+85Ye6ICR7c2VsZWN0ZWRDb25maWdzLmxlbmd0aH0g5Liq6YWN572u55qE5pW05ZCI5YyF44CCYCk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5om56YeP5a+85Ye65aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+aJuemHj+WvvOWHuuWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOOAgicpO1xuICB9XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzdGFydEJhdGNoSW1wb3J0Rmxvdyhjb25maWdzVG9JbXBvcnQ6IENvbmZpZ0RhdGFbXSk6IFByb21pc2U8dm9pZD4ge1xuICBjb25zdCB1c2VyQ2hvaWNlcyA9IGF3YWl0IHNob3dCYXRjaEltcG9ydENvbmZpZ1NlbGVjdGlvblBvcHVwKGNvbmZpZ3NUb0ltcG9ydCk7XG5cbiAgaWYgKCF1c2VyQ2hvaWNlcykge1xuICAgIHRvYXN0ci5pbmZvKCfphY3nva7lr7zlhaXlt7Llj5bmtojjgIInKTtcbiAgICByZXR1cm47XG4gIH1cblxuICBjb25zdCBpbXBvcnRMaXN0ID0gdXNlckNob2ljZXMuZmlsdGVyKChjaG9pY2U6IGFueSkgPT4gY2hvaWNlLmltcG9ydCk7XG4gIGlmIChpbXBvcnRMaXN0Lmxlbmd0aCA9PT0gMCkge1xuICAgIHRvYXN0ci5pbmZvKCfmnKrpgInmi6nopoHlr7zlhaXnmoTphY3nva7jgIInKTtcbiAgICByZXR1cm47XG4gIH1cblxuICBjb25zdCBzdG9yZWRDb25maWdzID0gYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpO1xuICBpbXBvcnRMaXN0LmZvckVhY2goKGNob2ljZTogYW55KSA9PiB7XG4gICAgY29uc3QgY29uZmlnID0gY29uZmlnc1RvSW1wb3J0LmZpbmQoYyA9PiBjLmlkID09PSBjaG9pY2Uub3JpZ2luYWxJZCk7XG4gICAgaWYgKGNvbmZpZykge1xuICAgICAgY29uc3QgbmV3Q29uZmlnID0geyAuLi5jb25maWcgfTsgLy8gQ3JlYXRlIGEgY29weVxuICAgICAgbmV3Q29uZmlnLm5hbWUgPSBjaG9pY2UubmV3TmFtZTtcbiAgICAgIG5ld0NvbmZpZy5pZCA9IGdlbmVyYXRlVW5pcXVlSWQoKTsgLy8gQXNzaWduIGEgbmV3IHVuaXF1ZSBJRCBvbiBpbXBvcnRcbiAgICAgIHN0b3JlZENvbmZpZ3NbbmV3Q29uZmlnLmlkXSA9IG5ld0NvbmZpZztcbiAgICB9XG4gIH0pO1xuXG4gIGF3YWl0IHNldFN0b3JlZENvbmZpZ3Moc3RvcmVkQ29uZmlncyk7XG4gIHRvYXN0ci5zdWNjZXNzKGDmiJDlip/lr7zlhaUgJHtpbXBvcnRMaXN0Lmxlbmd0aH0g5Liq6YWN572u44CCYCk7XG4gIGF3YWl0IHJlbmRlckNvbmZpZ3NMaXN0KCk7XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBoYW5kbGVNZWdhQnVuZGxlSW1wb3J0KG1lZ2FCdW5kbGU6IGFueSk6IFByb21pc2U8dm9pZD4ge1xuICAvLyAxLiDlr7zlhaXpooTorr5cbiAgY29uc3QgcHJlc2V0c1RvSW1wb3J0ID0gbWVnYUJ1bmRsZS5wcmVzZXRzO1xuICBpZiAocHJlc2V0c1RvSW1wb3J0ICYmIE9iamVjdC5rZXlzKHByZXNldHNUb0ltcG9ydCkubGVuZ3RoID4gMCkge1xuICAgIGNvbnN0IHByZXNldE5hbWVzID0gT2JqZWN0LmtleXMocHJlc2V0c1RvSW1wb3J0KS5qb2luKCcsICcpO1xuICAgIGNvbnN0IGltcG9ydFByZXNldENob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLmmK9cIiBjYW5jZWxCdXR0b249XCLlkKZcIiByZXN1bHQ9dHJ1ZSBcIuatpOaWh+S7tuWMheWQq+mihOiuvjogJHtwcmVzZXROYW1lc33jgILmmK/lkKblhajpg6jlr7zlhaUv6KaG55uW77yfXCJgLFxuICAgICk7XG4gICAgaWYgKGltcG9ydFByZXNldENob2ljZSA9PT0gJzEnKSB7XG4gICAgICBmb3IgKGNvbnN0IHByZXNldE5hbWUgaW4gcHJlc2V0c1RvSW1wb3J0KSB7XG4gICAgICAgIGF3YWl0IFRhdmVybkhlbHBlci5jcmVhdGVPclJlcGxhY2VQcmVzZXQocHJlc2V0TmFtZSwgcHJlc2V0c1RvSW1wb3J0W3ByZXNldE5hbWVdKTtcbiAgICAgIH1cbiAgICAgIHRvYXN0ci5zdWNjZXNzKGDlt7Llr7zlhaUgJHtPYmplY3Qua2V5cyhwcmVzZXRzVG9JbXBvcnQpLmxlbmd0aH0g5Liq6aKE6K6+44CCYCk7XG4gICAgfVxuICB9XG5cbiAgLy8gMi4g5a+85YWl5q2j5YiZXG4gIGNvbnN0IHJlZ2V4VG9JbXBvcnQgPSBtZWdhQnVuZGxlLnJlZ2V4RGF0YTtcbiAgaWYgKHJlZ2V4VG9JbXBvcnQgJiYgcmVnZXhUb0ltcG9ydC5sZW5ndGggPiAwKSB7XG4gICAgY29uc3QgaW1wb3J0UmVnZXhDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICBgL3BvcHVwIG9rQnV0dG9uPVwi5pivXCIgY2FuY2VsQnV0dG9uPVwi5ZCmXCIgcmVzdWx0PXRydWUgXCLmraTmlofku7bljIXlkKsgJHtyZWdleFRvSW1wb3J0Lmxlbmd0aH0g5p2h5q2j5YiZ6ISa5pys44CC5piv5ZCm5a+85YWl77yfXCJgLFxuICAgICk7XG4gICAgaWYgKGltcG9ydFJlZ2V4Q2hvaWNlID09PSAnMScpIHtcbiAgICAgIGF3YWl0IGltcG9ydFJlZ2V4TG9naWMocmVnZXhUb0ltcG9ydCk7XG4gICAgfVxuICB9XG5cbiAgLy8gMy4g5a+85YWl6YWN572uXG4gIGNvbnN0IGNvbmZpZ3NUb0ltcG9ydCA9IE9iamVjdC52YWx1ZXMobWVnYUJ1bmRsZS5wcmVzZXRDb25maWdzKTtcbiAgYXdhaXQgc3RhcnRCYXRjaEltcG9ydEZsb3coY29uZmlnc1RvSW1wb3J0KTtcbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNob3dCYXRjaERlbGV0ZVBvcHVwKCk6IFByb21pc2U8dm9pZD4ge1xuICBjb25zdCBwb3B1cElkID0gJ3ByZXNldC1tYW5hZ2VyLWJhdGNoLWRlbGV0ZS1wb3B1cCc7XG4gICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG5cbiAgY29uc3QgY29uZmlncyA9IE9iamVjdC52YWx1ZXMoYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpKTtcbiAgaWYgKGNvbmZpZ3MubGVuZ3RoID09PSAwKSB7XG4gICAgdG9hc3RyLmluZm8oJ+ayoeacieWPr+WIoOmZpOeahOmFjee9ruOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IGNvbmZpZ3NIdG1sID0gY29uZmlnc1xuICAgIC5tYXAoY29uZmlnID0+IHtcbiAgICAgIGNvbnN0IHNhZmVOYW1lID0gJCgnPGRpdi8+JykudGV4dChjb25maWcubmFtZSkuaHRtbCgpO1xuICAgICAgcmV0dXJuIGBcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJwYWRkaW5nOiA4cHggNXB4OyBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2VlZTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjtcIj5cbiAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJjdXJzb3I6cG9pbnRlcjsgZGlzcGxheTpmbGV4OyBhbGlnbi1pdGVtczpjZW50ZXI7IHdpZHRoOiAxMDAlO1wiPlxuICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cImNoZWNrYm94XCIgY2xhc3M9XCJwbS1iYXRjaC1kZWxldGUtaXRlbVwiIHZhbHVlPVwiJHtjb25maWcuaWR9XCIgc3R5bGU9XCJtYXJnaW4tcmlnaHQ6IDEwcHg7IHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcIj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gdGl0bGU9XCIke3NhZmVOYW1lfVwiPiR7c2FmZU5hbWV9PC9zcGFuPlxuICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgYDtcbiAgICB9KVxuICAgIC5qb2luKCcnKTtcblxuICBjb25zdCBwb3B1cEh0bWwgPSBgXG4gICAgICAgIDxkaXYgaWQ9XCIke3BvcHVwSWR9XCIgc3R5bGU9XCJwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgbGVmdDogMDsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjUpOyB6LWluZGV4OiAxMDAwMTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XCI+XG4gICAgICAgICAgICA8ZGl2IHN0eWxlPVwiYmFja2dyb3VuZC1jb2xvcjogI2ZmZjhmMDsgY29sb3I6ICMzYTJjMmM7IGJvcmRlci1yYWRpdXM6IDE2cHg7IHBhZGRpbmc6IDIwcHg7IHdpZHRoOiA5MCU7IG1heC13aWR0aDogNDUwcHg7IGJveC1zaGFkb3c6IDAgNHB4IDI1cHggcmdiYSgxMjAsOTAsNjAsLjI1KTsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgbWF4LWhlaWdodDogODB2aDtcIj5cbiAgICAgICAgICAgICAgICA8aDQgc3R5bGU9XCJtYXJnaW4tdG9wOjA7IGNvbG9yOiNjNjI4Mjg7IHRleHQtYWxpZ246IGNlbnRlcjtcIj7pgInmi6nopoHmibnph4/liKDpmaTnmoTphY3nva48L2g0PlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJtYXJnaW46IDEwcHggMDsgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XCI+XG4gICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cImJhdGNoLWRlbGV0ZS1zZWxlY3QtYWxsXCIgc3R5bGU9XCJwYWRkaW5nOiA2cHggMTJweDsgYmFja2dyb3VuZC1jb2xvcjojYTVkNmY5OyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyO1wiPuWFqOmAiTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJiYXRjaC1kZWxldGUtZGVzZWxlY3QtYWxsXCIgc3R5bGU9XCJwYWRkaW5nOiA2cHggMTJweDsgYmFja2dyb3VuZC1jb2xvcjojZTBlMGUwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyO1wiPuWFqOS4jemAiTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxOyBtaW4taGVpZ2h0OiAwOyBvdmVyZmxvdy15OiBhdXRvOyBtYXJnaW4tYm90dG9tOiAyMHB4OyBib3JkZXItdG9wOiAxcHggc29saWQgI2YwZTJkMDsgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNmMGUyZDA7IHBhZGRpbmc6IDVweCAxMHB4O1wiPlxuICAgICAgICAgICAgICAgICAgICAke2NvbmZpZ3NIdG1sfVxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJ0ZXh0LWFsaWduOiByaWdodDsgZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6ZmxleC1lbmQ7IGdhcDogMTBweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cImJhdGNoLWRlbGV0ZS1jYW5jZWxcIiBzdHlsZT1cInBhZGRpbmc6IDhweCAxNnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNlMGUwZTA7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7IGNvbG9yOiMzMzM7XCI+5Y+W5raIPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJiYXRjaC1kZWxldGUtY29uZmlybVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0NDMzNjsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6I2ZmZjtcIj7noa7orqTliKDpmaQ8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICBgO1xuXG4gICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcbiAgY29uc3QgbW9iaWxlU3R5bGVzID0gYDxzdHlsZT5AbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHsgIyR7cG9wdXBJZH0geyBhbGlnbi1pdGVtczogZmxleC1zdGFydCAhaW1wb3J0YW50OyB9ICMke3BvcHVwSWR9ID4gZGl2IHsgbWFyZ2luLXRvcDogMjAwcHg7IH0gfTwvc3R5bGU+YDtcbiAgJChgIyR7cG9wdXBJZH1gKS5hcHBlbmQobW9iaWxlU3R5bGVzKTtcblxuICAkKCcjYmF0Y2gtZGVsZXRlLXNlbGVjdC1hbGwnKS5vbignY2xpY2snLCAoKSA9PiAkKCcucG0tYmF0Y2gtZGVsZXRlLWl0ZW0nKS5wcm9wKCdjaGVja2VkJywgdHJ1ZSkpO1xuICAkKCcjYmF0Y2gtZGVsZXRlLWRlc2VsZWN0LWFsbCcpLm9uKCdjbGljaycsICgpID0+ICQoJy5wbS1iYXRjaC1kZWxldGUtaXRlbScpLnByb3AoJ2NoZWNrZWQnLCBmYWxzZSkpO1xuICAkKCcjYmF0Y2gtZGVsZXRlLWNhbmNlbCcpLm9uKCdjbGljaycsICgpID0+ICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCkpO1xuICAkKCcjYmF0Y2gtZGVsZXRlLWNvbmZpcm0nKS5vbignY2xpY2snLCAoKSA9PiB7XG4gICAgY29uc3Qgc2VsZWN0ZWRJZHM6IHN0cmluZ1tdID0gW107XG4gICAgJCgnLnBtLWJhdGNoLWRlbGV0ZS1pdGVtOmNoZWNrZWQnKS5lYWNoKGZ1bmN0aW9uICgpIHtcbiAgICAgIHNlbGVjdGVkSWRzLnB1c2goJCh0aGlzKS52YWwoKSBhcyBzdHJpbmcpO1xuICAgIH0pO1xuICAgIGJhdGNoRGVsZXRlQ29uZmlncyhzZWxlY3RlZElkcyk7XG4gICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcbiAgfSk7XG59XG5cbmFzeW5jIGZ1bmN0aW9uIGJhdGNoRGVsZXRlQ29uZmlncyhjb25maWdJZHM6IHN0cmluZ1tdKTogUHJvbWlzZTx2b2lkPiB7XG4gIGlmIChjb25maWdJZHMubGVuZ3RoID09PSAwKSB7XG4gICAgdG9hc3RyLmluZm8oJ+acqumAieaLqeS7u+S9leimgeWIoOmZpOeahOmFjee9ruOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IGNvbmZpcm0gPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgYC9wb3B1cCBva0J1dHRvbj1cIuehruiupOWIoOmZpFwiIGNhbmNlbEJ1dHRvbj1cIuWPlua2iFwiIHJlc3VsdD10cnVlIFwi6K2m5ZGK77ya5oKo56Gu5a6a6KaB5Yig6Zmk6YCJ5Lit55qEICR7Y29uZmlnSWRzLmxlbmd0aH0g5Liq6YWN572u5ZCX77yf5q2k5pON5L2c5peg5rOV5pKk6ZSA44CCXCJgLFxuICApO1xuICBpZiAoY29uZmlybSAhPT0gJzEnKSB7XG4gICAgdG9hc3RyLmluZm8oJ+aJuemHj+WIoOmZpOaTjeS9nOW3suWPlua2iOOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIHRyeSB7XG4gICAgY29uc3Qgc3RvcmVkQ29uZmlncyA9IGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKTtcbiAgICBjb25zdCBpZHNUb0RlbGV0ZSA9IG5ldyBTZXQoY29uZmlnSWRzKTtcbiAgICBPYmplY3Qua2V5cyhzdG9yZWRDb25maWdzKS5mb3JFYWNoKGlkID0+IHtcbiAgICAgIGlmIChpZHNUb0RlbGV0ZS5oYXMoaWQpKSBkZWxldGUgc3RvcmVkQ29uZmlnc1tpZF07XG4gICAgfSk7XG4gICAgYXdhaXQgc2V0U3RvcmVkQ29uZmlncyhzdG9yZWRDb25maWdzKTtcbiAgICB0b2FzdHIuc3VjY2Vzcyhg5bey5oiQ5Yqf5Yig6ZmkICR7Y29uZmlnSWRzLmxlbmd0aH0g5Liq6YWN572u44CCYCk7XG4gICAgYXdhaXQgcmVuZGVyQ29uZmlnc0xpc3QoKTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICBjb25zb2xlLmVycm9yKCfmibnph4/liKDpmaTlpLHotKU6JywgZXJyb3IpO1xuICAgIHRvYXN0ci5lcnJvcign5om56YeP5Yig6Zmk5aSx6LSl77yM6K+35qOA5p+l5o6n5Yi25Y+w44CCJyk7XG4gIH1cbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/批量操作功能.ts\n\n}");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   bindConfigListEvents: () => (/* binding */ bindConfigListEvents)
+/* harmony export */ });
+// 配置列表的按钮事件绑定
+function bindConfigListEvents() {
+    const listElement = $('#preset-manager-list');
+    console.log('绑定配置列表事件，找到按钮数量:', listElement.find('button').length);
+    listElement.off('click', 'button').on('click', 'button', async function (e) {
+        const button = $(this);
+        const action = button.attr('name');
+        console.log('按钮点击事件触发，action:', action, 'configId:', button.data('id'));
+        if (action === 'more-actions') {
+            e.stopPropagation();
+            const submenu = button.siblings('.pm-submenu');
+            $('.pm-submenu').not(submenu).hide(); // Hide other open menus
+            submenu.toggle();
+            return;
+        }
+        if (action === 'close-submenu') {
+            button.closest('.pm-submenu').hide();
+            return;
+        }
+        const configId = button.data('id');
+        // 动态导入避免循环引用
+        switch (action) {
+            case 'rename-config': {
+                const { renameConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+                await renameConfig(configId);
+                break;
+            }
+            case 'update-config': {
+                const { updateConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+                await updateConfig(configId);
+                break;
+            }
+            case 'load-config': {
+                const { loadConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+                await loadConfig(configId);
+                break;
+            }
+            case 'export-config': {
+                const { exportConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 411));
+                await exportConfig(configId);
+                break;
+            }
+            case 'delete-config': {
+                const { deleteConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+                await deleteConfig(configId);
+                break;
+            }
+            case 'bind-regex': {
+                const { showRegexBindingPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 65));
+                await showRegexBindingPopup(configId);
+                break;
+            }
+            case 'view-config': {
+                const { showViewConfigPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 780));
+                await showViewConfigPopup(configId);
+                break;
+            }
+        }
+        button.closest('.pm-submenu').hide();
+    });
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/条目分组功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/条目分组功能.ts ***!
-  \********************************/
+/***/ 574:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   clearAllGrouping: () => (/* binding */ clearAllGrouping),\n/* harmony export */   clearPresetGrouping: () => (/* binding */ clearPresetGrouping),\n/* harmony export */   exportPresetGrouping: () => (/* binding */ exportPresetGrouping),\n/* harmony export */   forceRestoreGrouping: () => (/* binding */ forceRestoreGrouping),\n/* harmony export */   getAllPresetGroupings: () => (/* binding */ getAllPresetGroupings),\n/* harmony export */   getCurrentPresetPrompts: () => (/* binding */ getCurrentPresetPrompts),\n/* harmony export */   importPresetGrouping: () => (/* binding */ importPresetGrouping),\n/* harmony export */   restoreGroupingDelayed: () => (/* binding */ restoreGroupingDelayed),\n/* harmony export */   restoreGroupingFromConfig: () => (/* binding */ restoreGroupingFromConfig),\n/* harmony export */   showPromptGroupingUI: () => (/* binding */ showPromptGroupingUI),\n/* harmony export */   triggerGroupingRestore: () => (/* binding */ triggerGroupingRestore)\n/* harmony export */ });\n// 分组数据存储键名（基于预设名称）\nfunction getGroupingStorageKey(presetName) {\n    return `miaomiao_preset_groups_${presetName}`;\n}\n// 获取预设的分组配置\nfunction getPresetGrouping(presetName) {\n    try {\n        const stored = localStorage.getItem(getGroupingStorageKey(presetName));\n        return stored ? JSON.parse(stored) : [];\n    }\n    catch (error) {\n        console.error('获取分组配置失败:', error);\n        return [];\n    }\n}\n// 保存预设的分组配置\nfunction savePresetGrouping(presetName, groups) {\n    try {\n        localStorage.setItem(getGroupingStorageKey(presetName), JSON.stringify(groups));\n    }\n    catch (error) {\n        console.error('保存分组配置失败:', error);\n    }\n}\n// 缓存DOM查询结果\nlet cachedPromptElements = null;\nlet lastPromptQueryTime = 0;\nconst PROMPT_CACHE_DURATION = 3000; // 3秒缓存\n// 获取当前预设的所有条目\nfunction getCurrentPresetPrompts() {\n    const prompts = [];\n    // 检查缓存是否有效\n    const now = Date.now();\n    if (!cachedPromptElements || now - lastPromptQueryTime > PROMPT_CACHE_DURATION) {\n        cachedPromptElements = $('.completion_prompt_manager_prompt');\n        lastPromptQueryTime = now;\n    }\n    const promptElements = cachedPromptElements;\n    promptElements.each(function () {\n        const element = $(this);\n        const id = element.data('pm-identifier') || element.find('[data-pm-identifier]').data('pm-identifier');\n        if (!id)\n            return; // 早期跳出，避免不必要的DOM查询\n        const nameElement = element.find('.completion_prompt_manager_prompt_name');\n        const name = nameElement.find('a').text().trim() || nameElement.text().trim();\n        if (!name)\n            return; // 早期跳出\n        const isEnabled = element.find('.prompt-manager-toggle-action').hasClass('fa-toggle-on');\n        prompts.push({\n            id: id,\n            name: name,\n            element: element,\n            enabled: isEnabled,\n        });\n    });\n    return prompts;\n}\n// 显示条目分组界面\nasync function showPromptGroupingUI() {\n    const popupId = 'preset-manager-grouping-popup';\n    $(`#${popupId}`).remove();\n    const prompts = getCurrentPresetPrompts();\n    if (prompts.length === 0) {\n        toastr.warning('当前预设没有可分组的条目。');\n        return;\n    }\n    // 获取当前预设的分组信息\n    const currentPresetName = TavernHelper.getLoadedPresetName();\n    const existingGroups = getPresetGrouping(currentPresetName);\n    const promptsHtml = prompts\n        .map((prompt, index) => {\n        const isInGroup = existingGroups.some(group => group.promptIds.includes(prompt.id));\n        const groupName = existingGroups.find(group => group.promptIds.includes(prompt.id))?.name || '';\n        return `\n      <div class=\"prompt-item\" data-prompt-id=\"${prompt.id}\" data-index=\"${index}\" \n           style=\"display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 3px 0; border-radius: 6px; cursor: pointer; background-color: ${isInGroup ? '#e8f5e8' : '#fff'}; min-height: 44px;\">\n        <input type=\"checkbox\" class=\"prompt-checkbox\" style=\"margin-right: 12px; transform: scale(1.3); flex-shrink: 0;\">\n        <span style=\"flex: 1; font-weight: ${prompt.enabled ? 'bold' : 'normal'}; color: ${prompt.enabled ? '#000' : '#666'}; font-size: 14px; line-height: 1.4; word-wrap: break-word; overflow-wrap: break-word;\">\n          ${$('<div/>').text(prompt.name).html()}\n        </span>\n        ${isInGroup ? `<span style=\"font-size: 11px; color: #4CAF50; background: #e8f5e8; padding: 3px 8px; border-radius: 4px; margin-left: 8px; flex-shrink: 0; white-space: nowrap;\">${groupName}</span>` : ''}\n      </div>\n    `;\n    })\n        .join('');\n    const popupHtml = `\n    <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n      <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n        <h4 style=\"margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;\">预设条目分组管理</h4>\n        \n        <div style=\"margin: 15px 0;\">\n          <input type=\"text\" id=\"group-name-input\" placeholder=\"输入分组名称...\" style=\"width: 100%; padding: 8px 12px; border: 1px solid #d4b58b; border-radius: 6px; background: #fff; color: #333; font-size: 14px; margin-bottom: 10px;\">\n          <div style=\"display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; width: 100%; box-sizing: border-box;\">\n            <button id=\"create-group-btn\" style=\"padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;\">创建分组</button>\n            <button id=\"remove-group-btn\" style=\"padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;\">移除分组</button>\n            <button id=\"clear-all-groups-btn\" style=\"padding: 8px 16px; background-color:#ff5722; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; white-space: nowrap; flex: 1; min-width: 100px; box-sizing: border-box;\">清除所有</button>\n          </div>\n        </div>\n\n        <div style=\"margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;\">\n          <button id=\"select-all-btn\" style=\"padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;\">全选</button>\n          <button id=\"select-none-btn\" style=\"padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px; white-space: nowrap;\">全不选</button>\n        </div>\n\n        <div style=\"flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;\">\n          <div style=\"font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;\">提示：选中条目后可以创建分组，分组后的条目会在预设界面中折叠显示</div>\n          <div id=\"prompts-container\">\n            ${promptsHtml}\n          </div>\n        </div>\n\n        <div style=\"margin-bottom: 15px; padding: 12px; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid #2196F3;\">\n          <div style=\"font-size: 13px; color: #1976D2; font-weight: bold; margin-bottom: 6px;\">💡 分组说明</div>\n          <div style=\"font-size: 12px; color: #424242; line-height: 1.4;\">分组设置直接应用到预设界面，会自动保存到浏览器本地存储中，与预设绑定。</div>\n        </div>\n\n        <div style=\"display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;\">\n          <div id=\"existing-groups-info\" style=\"font-size: 12px; color: #666; flex: 1; min-width: 200px; word-wrap: break-word;\"></div>\n          <div style=\"display: flex; gap: 8px; flex-shrink: 0;\">\n            <button id=\"grouping-close\" style=\"padding: 10px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c; font-size: 14px;\">关闭</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  `;\n    $('body').append(popupHtml);\n    // 显示现有分组信息\n    updateExistingGroupsInfo(existingGroups);\n    // 绑定事件\n    bindGroupingEvents(prompts, existingGroups);\n    // 移动端样式\n    const mobileStyles = `<style>\n    @media (max-width: 600px) { \n      #${popupId} { \n        align-items: flex-start !important; \n        padding: 10px;\n      } \n      #${popupId} > div { \n        margin-top: 5vh; \n        max-height: 90vh !important; \n        width: 95% !important;\n        padding: 15px;\n        border-radius: 12px;\n      }\n      #${popupId} .prompt-item {\n        padding: 12px !important;\n        min-height: 48px !important;\n      }\n      #${popupId} .prompt-checkbox {\n        transform: scale(1.4) !important;\n        margin-right: 15px !important;\n      }\n      #${popupId} input[type=\"text\"] {\n        font-size: 16px !important;\n        padding: 10px 14px !important;\n        margin-bottom: 12px !important;\n      }\n      #${popupId} button {\n        font-size: 14px !important;\n        padding: 10px 14px !important;\n        min-height: 44px;\n      }\n      #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {\n        flex: 1 !important;\n        min-width: 60px !important;\n        margin: 2px !important;\n        font-size: 12px !important;\n        padding: 8px 6px !important;\n      }\n      #${popupId} #existing-groups-info {\n        font-size: 11px !important;\n        line-height: 1.3 !important;\n      }\n    }\n    @media (max-width: 480px) {\n      #${popupId} > div {\n        margin-top: 2vh !important;\n        max-height: 96vh !important;\n        padding: 12px;\n      }\n      #${popupId} h4 {\n        font-size: 16px !important;\n        margin-bottom: 15px !important;\n      }\n      #${popupId} .prompt-item {\n        padding: 14px !important;\n        min-height: 52px !important;\n      }\n      #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {\n        min-width: 50px !important;\n        font-size: 11px !important;\n        padding: 6px 4px !important;\n        margin: 1px !important;\n      }\n    }\n    @media (max-width: 360px) {\n      #${popupId} #create-group-btn, #${popupId} #remove-group-btn, #${popupId} #clear-all-groups-btn {\n        flex: none !important;\n        width: calc(33.333% - 4px) !important;\n        min-width: 45px !important;\n        font-size: 10px !important;\n        padding: 4px 2px !important;\n        margin: 1px !important;\n      }\n    }\n  </style>`;\n    $(`#${popupId}`).append(mobileStyles);\n}\nfunction updateExistingGroupsInfo(groups) {\n    const infoElement = $('#existing-groups-info');\n    if (groups.length === 0) {\n        infoElement.text('当前没有分组');\n    }\n    else {\n        infoElement.text(`现有分组: ${groups.map(g => g.name).join(', ')}`);\n    }\n}\nfunction bindGroupingEvents(_prompts, existingGroups) {\n    let selectedPrompts = [];\n    // 条目选择\n    $('.prompt-item').on('click', function (e) {\n        if (e.target.type === 'checkbox')\n            return;\n        const checkbox = $(this).find('.prompt-checkbox');\n        checkbox.prop('checked', !checkbox.prop('checked'));\n        updateSelectedPrompts();\n    });\n    $('.prompt-checkbox').on('change', updateSelectedPrompts);\n    function updateSelectedPrompts() {\n        selectedPrompts = [];\n        $('.prompt-checkbox:checked').each(function () {\n            const promptId = $(this).closest('.prompt-item').data('prompt-id');\n            selectedPrompts.push(promptId);\n        });\n    }\n    // 全选/全不选\n    $('#select-all-btn').on('click', () => {\n        $('.prompt-checkbox').prop('checked', true);\n        updateSelectedPrompts();\n    });\n    $('#select-none-btn').on('click', () => {\n        $('.prompt-checkbox').prop('checked', false);\n        updateSelectedPrompts();\n    });\n    // 创建分组\n    $('#create-group-btn').on('click', async () => {\n        const groupName = $('#group-name-input').val()?.toString().trim();\n        if (!groupName) {\n            toastr.error('请输入分组名称');\n            return;\n        }\n        if (selectedPrompts.length === 0) {\n            toastr.error('请选择要分组的条目');\n            return;\n        }\n        // 检查是否有重名分组\n        if (existingGroups.some(g => g.name === groupName)) {\n            toastr.error('分组名称已存在');\n            return;\n        }\n        // 检查选中的条目是否已经在其他分组中\n        const alreadyGroupedPrompts = [];\n        selectedPrompts.forEach(promptId => {\n            const existingGroup = existingGroups.find(group => group.promptIds.includes(promptId));\n            if (existingGroup) {\n                alreadyGroupedPrompts.push(promptId);\n            }\n        });\n        if (alreadyGroupedPrompts.length > 0) {\n            // 获取已分组条目的名称\n            const alreadyGroupedNames = alreadyGroupedPrompts.map(promptId => {\n                const promptItem = $(`.prompt-item[data-prompt-id=\"${promptId}\"]`);\n                return promptItem.find('span:first').text().trim();\n            });\n            toastr.error(`以下条目已在其他分组中，无法重复分组：${alreadyGroupedNames.slice(0, 3).join('、')}${alreadyGroupedNames.length > 3 ? '等' : ''}`);\n            return;\n        }\n        // 创建新分组\n        const newGroup = {\n            id: Date.now().toString(),\n            name: groupName,\n            promptIds: [...selectedPrompts],\n            collapsed: true,\n        };\n        existingGroups.push(newGroup);\n        // 更新UI\n        selectedPrompts.forEach(promptId => {\n            const item = $(`.prompt-item[data-prompt-id=\"${promptId}\"]`);\n            item.css('background-color', '#e8f5e8');\n            const existingTag = item.find('.group-tag');\n            if (existingTag.length) {\n                existingTag.text(groupName);\n            }\n            else {\n                item\n                    .find('span:last')\n                    .after(`<span class=\"group-tag\" style=\"font-size: 12px; color: #4CAF50; background: #e8f5e8; padding: 2px 6px; border-radius: 3px; margin-left: 8px;\">${groupName}</span>`);\n            }\n        });\n        updateExistingGroupsInfo(existingGroups);\n        $('#group-name-input').val('');\n        $('.prompt-checkbox').prop('checked', false);\n        selectedPrompts = [];\n        // 只保存分组配置，不立即应用（避免在分组界面打开时应用）\n        const currentPresetName = TavernHelper.getLoadedPresetName();\n        const validGroups = existingGroups.filter(g => g.promptIds.length > 0);\n        savePresetGrouping(currentPresetName, validGroups);\n        toastr.success(`分组 \"${groupName}\" 创建成功，将在关闭分组界面时应用`);\n    });\n    // 移除分组\n    $('#remove-group-btn').on('click', () => {\n        if (selectedPrompts.length === 0) {\n            toastr.error('请选择要移除分组的条目');\n            return;\n        }\n        // 从所有分组中移除选中的条目\n        existingGroups.forEach(group => {\n            group.promptIds = group.promptIds.filter(id => !selectedPrompts.includes(id));\n        });\n        // 移除空分组\n        const groupsToRemove = existingGroups.filter(group => group.promptIds.length === 0);\n        groupsToRemove.forEach(group => {\n            const index = existingGroups.indexOf(group);\n            if (index > -1)\n                existingGroups.splice(index, 1);\n        });\n        // 更新UI\n        selectedPrompts.forEach(promptId => {\n            const item = $(`.prompt-item[data-prompt-id=\"${promptId}\"]`);\n            item.css('background-color', '#fff');\n            item.find('.group-tag').remove();\n        });\n        updateExistingGroupsInfo(existingGroups);\n        $('.prompt-checkbox').prop('checked', false);\n        selectedPrompts = [];\n        // 只保存分组配置，不立即应用\n        const currentPresetName = TavernHelper.getLoadedPresetName();\n        const validGroups = existingGroups.filter(g => g.promptIds.length > 0);\n        savePresetGrouping(currentPresetName, validGroups);\n        toastr.success('已移除选中条目的分组，将在关闭分组界面时应用');\n    });\n    // 清除所有分组\n    $('#clear-all-groups-btn').on('click', async () => {\n        if (existingGroups.length === 0) {\n            toastr.info('当前没有分组需要清除');\n            return;\n        }\n        const confirmChoice = await triggerSlash(`/popup okButton=\"确认清除\" cancelButton=\"取消\" result=true \"确定要清除当前预设的所有分组吗？此操作不可撤销。\"`);\n        if (confirmChoice === '1') {\n            // 清空分组数组\n            existingGroups.length = 0;\n            // 更新UI显示\n            $('.prompt-item').each(function () {\n                $(this).css('background-color', '#fff');\n                $(this).find('.group-tag').remove();\n            });\n            updateExistingGroupsInfo(existingGroups);\n            $('.prompt-checkbox').prop('checked', false);\n            selectedPrompts = [];\n            // 只保存分组配置，不立即应用\n            const currentPresetName = TavernHelper.getLoadedPresetName();\n            const validGroups = existingGroups.filter(g => g.promptIds.length > 0);\n            savePresetGrouping(currentPresetName, validGroups);\n            toastr.success('已清除所有分组，将在关闭分组界面时应用');\n        }\n    });\n    // 关闭\n    $('#grouping-close').on('click', () => {\n        // 关闭前确保保存当前的分组状态\n        const currentPresetName = TavernHelper.getLoadedPresetName();\n        const validGroups = existingGroups.filter(g => g.promptIds.length > 0);\n        savePresetGrouping(currentPresetName, validGroups);\n        // 确保分组应用到预设界面\n        applyGroupingToDOM(validGroups);\n        $('#preset-manager-grouping-popup').remove();\n        console.log('分组界面关闭，已保存并应用分组配置');\n    });\n}\n// 应用分组到DOM\nfunction applyGroupingToDOM(groups) {\n    console.log('开始应用分组到DOM，分组数量:', groups.length);\n    // 检查是否有预设条目存在\n    const promptElements = $('.completion_prompt_manager_prompt');\n    if (promptElements.length === 0) {\n        console.warn('未找到预设条目，无法应用分组');\n        return;\n    }\n    console.log('找到预设条目数量:', promptElements.length);\n    // 先确保所有条目都从分组容器中移出，然后再移除分组容器\n    $('.prompt-group-container').each(function () {\n        const container = $(this);\n        const prompts = container.find('.completion_prompt_manager_prompt');\n        // 将条目移动到分组容器之前\n        container.before(prompts);\n    });\n    // 移除现有的分组容器\n    $('.prompt-group-container').remove();\n    groups.forEach(group => {\n        if (group.promptIds.length === 0)\n            return;\n        console.log('处理分组:', group.name, '条目数量:', group.promptIds.length);\n        // 找到分组中的第一个条目\n        const firstPromptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier=\"${group.promptIds[0]}\"]`);\n        if (firstPromptElement.length === 0) {\n            console.log('未找到分组第一个条目:', group.promptIds[0]);\n            return;\n        }\n        console.log('找到第一个条目，开始创建分组容器');\n        // 统计分组内启用的条目数量\n        const enabledCount = group.promptIds.filter(promptId => {\n            const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier=\"${promptId}\"]`);\n            return promptElement.find('.prompt-manager-toggle-action').hasClass('fa-toggle-on');\n        }).length;\n        // 创建分组容器\n        const groupContainer = $(`\n      <div class=\"prompt-group-container\" style=\"border: 1px solid rgba(128, 128, 128, 0.3); margin: 5px 0; background-color: rgba(0, 0, 0, 0.05);\">\n        <div class=\"prompt-group-header\" style=\"padding: 6px 10px; background-color: rgba(0, 0, 0, 0.08); cursor: pointer; display: flex; align-items: center;\">\n          <span class=\"group-toggle-icon\" style=\"margin-right: 6px; font-size: 12px; color: inherit;\">${group.collapsed ? '▶' : '▼'}</span>\n          <span style=\"font-weight: bold; color: inherit;\">${$('<div/>').text(group.name).html()}</span>\n          <span style=\"margin-left: 8px; font-size: 12px; color: #666;\">(${enabledCount}/${group.promptIds.length})</span>\n        </div>\n        <div class=\"prompt-group-content\" style=\"padding: 3px; ${group.collapsed ? 'display: none;' : ''}\"></div>\n      </div>\n    `);\n        // 将分组插入到第一个条目之前\n        firstPromptElement.before(groupContainer);\n        console.log('分组容器已插入到DOM');\n        // 将分组中的所有条目移动到分组容器中\n        group.promptIds.forEach(promptId => {\n            // 尝试多种选择器来查找条目\n            let promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier=\"${promptId}\"]`);\n            // 如果没找到，尝试在子元素中查找\n            if (promptElement.length === 0) {\n                promptElement = $(`.completion_prompt_manager_prompt`).filter(function () {\n                    return ($(this).data('pm-identifier') === promptId ||\n                        $(this).find('[data-pm-identifier]').data('pm-identifier') === promptId);\n                });\n            }\n            if (promptElement.length > 0) {\n                groupContainer.find('.prompt-group-content').append(promptElement);\n                console.log('移动条目到分组容器:', promptId);\n            }\n            else {\n                console.warn('未找到条目:', promptId, '当前所有条目ID:', $('.completion_prompt_manager_prompt')\n                    .map(function () {\n                    return $(this).data('pm-identifier') || $(this).find('[data-pm-identifier]').data('pm-identifier');\n                })\n                    .get());\n            }\n        });\n        console.log('分组容器创建完成，条目数量:', groupContainer.find('.completion_prompt_manager_prompt').length);\n        // 绑定展开/折叠事件\n        groupContainer.find('.prompt-group-header').on('click', function () {\n            const content = $(this).siblings('.prompt-group-content');\n            const icon = $(this).find('.group-toggle-icon');\n            if (content.is(':visible')) {\n                content.hide();\n                icon.text('▶');\n                group.collapsed = true;\n            }\n            else {\n                content.show();\n                icon.text('▼');\n                group.collapsed = false;\n            }\n        });\n    });\n}\n// 加载时恢复分组\nfunction restoreGroupingFromConfig() {\n    try {\n        const currentPresetName = TavernHelper.getLoadedPresetName();\n        const groups = getPresetGrouping(currentPresetName);\n        if (groups.length > 0) {\n            console.log(`恢复预设 \"${currentPresetName}\" 的分组配置，共 ${groups.length} 个分组`);\n            // 检查是否有预设条目存在\n            const promptElements = $('.completion_prompt_manager_prompt');\n            if (promptElements.length === 0) {\n                console.log('⚠️ 未找到预设条目，延迟恢复分组');\n                setTimeout(() => restoreGroupingFromConfig(), 500);\n                return;\n            }\n            // 延迟一点时间确保DOM已加载\n            setTimeout(() => {\n                applyGroupingToDOM(groups);\n            }, 200);\n        }\n        else {\n            console.log(`预设 \"${currentPresetName}\" 没有分组配置`);\n        }\n    }\n    catch (error) {\n        console.error('恢复分组配置失败:', error);\n    }\n}\n// 延迟恢复分组（用于DOM变化后）\n// 防抖恢复分组\nlet restoreTimeout = null;\nfunction restoreGroupingDelayed(delay = 500) {\n    if (restoreTimeout) {\n        clearTimeout(restoreTimeout);\n    }\n    restoreTimeout = window.setTimeout(() => {\n        console.log('🔄 延迟恢复分组开始...');\n        restoreGroupingFromConfig();\n        restoreTimeout = null;\n    }, delay);\n}\n// 强制恢复分组（多次尝试确保成功）\nfunction forceRestoreGrouping() {\n    const tryRestore = (attempt) => {\n        const currentPresetName = TavernHelper.getLoadedPresetName();\n        const groups = getPresetGrouping(currentPresetName);\n        const promptElements = $('.completion_prompt_manager_prompt');\n        console.log(`第${attempt}次尝试恢复分组，预设: ${currentPresetName}, 分组数: ${groups.length}, 条目数: ${promptElements.length}`);\n        if (groups.length > 0 && promptElements.length > 0) {\n            applyGroupingToDOM(groups);\n            console.log('✅ 分组恢复成功');\n        }\n        else if (attempt < 5) {\n            // 如果还没有条目或分组，继续尝试\n            setTimeout(() => tryRestore(attempt + 1), 500);\n        }\n        else {\n            console.log('⚠️ 分组恢复失败，已达到最大尝试次数');\n        }\n    };\n    tryRestore(1);\n}\n// 主动触发分组恢复（用于关键操作后）\nfunction triggerGroupingRestore() {\n    console.log('🔄 主动触发分组恢复...');\n    // 先清除现有的分组效果\n    clearAllGrouping();\n    // 然后延迟恢复\n    restoreGroupingDelayed(300);\n}\n// 清除所有分组\nfunction clearAllGrouping() {\n    $('.prompt-group-container').each(function () {\n        const prompts = $(this).find('.completion_prompt_manager_prompt');\n        $(this).before(prompts);\n        $(this).remove();\n    });\n}\n// 导出当前预设的分组配置\nfunction exportPresetGrouping(presetName) {\n    const groups = getPresetGrouping(presetName);\n    return groups.length > 0 ? groups : null;\n}\n// 导入分组配置到指定预设\nfunction importPresetGrouping(presetName, groups) {\n    if (!groups || !Array.isArray(groups) || groups.length === 0) {\n        console.warn('导入的分组配置为空或格式不正确');\n        return;\n    }\n    console.log('开始导入分组配置到预设:', presetName, '分组数量:', groups.length);\n    // 验证并修复分组数据结构\n    const validGroups = groups\n        .map(group => {\n        // 确保分组对象有所有必需的字段\n        const validGroup = {\n            id: group.id || Date.now().toString() + Math.random().toString(36).substr(2, 9),\n            name: group.name || '未命名分组',\n            promptIds: Array.isArray(group.promptIds) ? group.promptIds : [],\n            collapsed: typeof group.collapsed === 'boolean' ? group.collapsed : true,\n        };\n        console.log('处理分组:', validGroup.name, '条目数量:', validGroup.promptIds.length);\n        return validGroup;\n    })\n        .filter(group => group.promptIds.length > 0); // 只保留有条目的分组\n    if (validGroups.length === 0) {\n        console.warn('没有有效的分组配置');\n        return;\n    }\n    console.log('有效分组数量:', validGroups.length);\n    savePresetGrouping(presetName, validGroups);\n    // 如果是当前预设，立即应用\n    const currentPresetName = TavernHelper.getLoadedPresetName();\n    console.log('当前预设:', currentPresetName, '目标预设:', presetName);\n    if (currentPresetName === presetName) {\n        console.log('立即应用分组到当前预设');\n        setTimeout(() => {\n            applyGroupingToDOM(validGroups);\n        }, 100);\n    }\n}\n// 获取所有预设的分组配置（用于批量导出）\nfunction getAllPresetGroupings() {\n    const allGroupings = {};\n    // 遍历localStorage中所有的分组配置\n    for (let i = 0; i < localStorage.length; i++) {\n        const key = localStorage.key(i);\n        if (key && key.startsWith('miaomiao_preset_groups_')) {\n            const presetName = key.replace('miaomiao_preset_groups_', '');\n            const groups = getPresetGrouping(presetName);\n            if (groups.length > 0) {\n                allGroupings[presetName] = groups;\n            }\n        }\n    }\n    return allGroupings;\n}\n// 清除指定预设的分组配置\nfunction clearPresetGrouping(presetName) {\n    localStorage.removeItem(getGroupingStorageKey(presetName));\n    // 如果是当前预设，清除DOM中的分组\n    const currentPresetName = TavernHelper.getLoadedPresetName();\n    if (currentPresetName === presetName) {\n        clearAllGrouping();\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+adoeebruWIhue7hOWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQU9BLG1CQUFtQjtBQUNuQixTQUFTLHFCQUFxQixDQUFDLFVBQWtCO0lBQy9DLE9BQU8sMEJBQTBCLFVBQVUsRUFBRSxDQUFDO0FBQ2hELENBQUM7QUFFRCxZQUFZO0FBQ1osU0FBUyxpQkFBaUIsQ0FBQyxVQUFrQjtJQUMzQyxJQUFJLENBQUM7UUFDSCxNQUFNLE1BQU0sR0FBRyxZQUFZLENBQUMsT0FBTyxDQUFDLHFCQUFxQixDQUFDLFVBQVUsQ0FBQyxDQUFDLENBQUM7UUFDdkUsT0FBTyxNQUFNLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQztJQUMxQyxDQUFDO0lBQUMsT0FBTyxLQUFLLEVBQUUsQ0FBQztRQUNmLE9BQU8sQ0FBQyxLQUFLLENBQUMsV0FBVyxFQUFFLEtBQUssQ0FBQyxDQUFDO1FBQ2xDLE9BQU8sRUFBRSxDQUFDO0lBQ1osQ0FBQztBQUNILENBQUM7QUFFRCxZQUFZO0FBQ1osU0FBUyxrQkFBa0IsQ0FBQyxVQUFrQixFQUFFLE1BQXFCO0lBQ25FLElBQUksQ0FBQztRQUNILFlBQVksQ0FBQyxPQUFPLENBQUMscUJBQXFCLENBQUMsVUFBVSxDQUFDLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO0lBQ2xGLENBQUM7SUFBQyxPQUFPLEtBQUssRUFBRSxDQUFDO1FBQ2YsT0FBTyxDQUFDLEtBQUssQ0FBQyxXQUFXLEVBQUUsS0FBSyxDQUFDLENBQUM7SUFDcEMsQ0FBQztBQUNILENBQUM7QUFFRCxZQUFZO0FBQ1osSUFBSSxvQkFBb0IsR0FBa0IsSUFBSSxDQUFDO0FBQy9DLElBQUksbUJBQW1CLEdBQUcsQ0FBQyxDQUFDO0FBQzVCLE1BQU0scUJBQXFCLEdBQUcsSUFBSSxDQUFDLENB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QUFDLENBQUM7WUFDN0MsSUFBSSxNQUFNLENBQUMsTUFBTSxHQUFHLENBQUMsRUFBRSxDQUFDO2dCQUN0QixZQUFZLENBQUMsVUFBVSxDQUFDLEdBQUcsTUFBTSxDQUFDO1lBQ3BDLENBQUM7UUFDSCxDQUFDO0lBQ0gsQ0FBQztJQUVELE9BQU8sWUFBWSxDQUFDO0FBQ3RCLENBQUM7QUFFRCxjQUFjO0FBQ1AsU0FBUyxtQkFBbUIsQ0FBQyxVQUFrQjtJQUNwRCxZQUFZLENBQUMsVUFBVSxDQUFDLHFCQUFxQixDQUFDLFVBQVUsQ0FBQyxDQUFDLENBQUM7SUFFM0Qsb0JBQW9CO0lBQ3BCLE1BQU0saUJBQWlCLEdBQUcsWUFBWSxDQUFDLG1CQUFtQixFQUFFLENBQUM7SUFDN0QsSUFBSSxpQkFBaUIsS0FBSyxVQUFVLEVBQUUsQ0FBQztRQUNyQyxnQkFBZ0IsRUFBRSxDQUFDO0lBQ3JCLENBQUM7QUFDSCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGF2ZXJuX2hlbHBlcl90ZW1wbGF0ZS8uL3NyYy/llrXllrXpooTorr7phY3nva7nrqHnkIYv5p2h55uu5YiG57uE5Yqf6IO9LnRzPyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgaW50ZXJmYWNlIFByb21wdEdyb3VwIHtcbiAgaWQ6IHN0cmluZztcbiAgbmFtZTogc3RyaW5nO1xuICBwcm9tcHRJZHM6IHN0cmluZ1tdO1xuICBjb2xsYXBzZWQ6IGJvb2xlYW47XG59XG5cbi8vIOWIhue7hOaVsOaNruWtmOWCqOmUruWQje+8iOWfuuS6jumihOiuvuWQjeensO+8iVxuZnVuY3Rpb24gZ2V0R3JvdXBpbmdTdG9yYWdlS2V5KHByZXNldE5hbWU6IHN0cmluZyk6IHN0cmluZyB7XG4gIHJldHVybiBgbWlhb21pYW9fcHJlc2V0X2dyb3Vwc18ke3ByZXNldE5hbWV9YDtcbn1cblxuLy8g6I635Y+W6aKE6K6+55qE5YiG57uE6YWN572uXG5mdW5jdGlvbiBnZXRQcmVzZXRHcm91cGluZyhwcmVzZXROYW1lOiBzdHJpbmcpOiBQcm9tcHRHcm91cFtdIHtcbiAgdHJ5IHtcbiAgICBjb25zdCBzdG9yZWQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbShnZXRHcm91cGluZ1N0b3JhZ2VLZXkocHJlc2V0TmFtZSkpO1xuICAgIHJldHVybiBzdG9yZWQgPyBKU09OLnBhcnNlKHN0b3JlZCkgOiBbXTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICBjb25zb2xlLmVycm9yKCfojrflj5bliIbnu4TphY3nva7lpLHotKU6JywgZXJyb3IpO1xuICAgIHJldHVybiBbXTtcbiAgfVxufVxuXG4vLyDkv53lrZjpooTorr7nmoTliIbnu4TphY3nva5cbmZ1bmN0aW9uIHNhdmVQcmVzZXRHcm91cGluZyhwcmVzZXROYW1lOiBzdHJpbmcsIGdyb3VwczogUHJvbXB0R3JvdXBbXSk6IHZvaWQge1xuICB0cnkge1xuICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKGdldEdyb3VwaW5nU3RvcmFnZUtleShwcmVzZXROYW1lKSwgSlNPTi5zdHJpbmdpZnkoZ3JvdXBzKSk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5L+d5a2Y5YiG57uE6YWN572u5aSx6LSlOicsIGVycm9yKTtcbiAgfVxufVxuXG4vLyDnvJPlrZhET03mn6Xor6Lnu5PmnpxcbmxldCBjYWNoZWRQcm9tcHRFbGVtZW50czogSlF1ZXJ5IHwgbnVsbCA9IG51bGw7XG5sZXQgbGFzdFByb21wdFF1ZXJ5VGltZSA9IDA7XG5jb25zdCBQUk9NUFRfQ0FDSEVfRFVSQVRJT04gPSAzMDAwOyAvLyAz56eS57yT5a2YXG5cbi8vIOiOt+WPluW9k+WJjemihOiuvueahOaJgOacieadoeebrlxuZXhwb3J0IGZ1bmN0aW9uIGdldEN1cnJlbnRQcmVzZXRQcm9tcHRzKCk6IEFycmF5PHsgaWQ6IHN0cmluZzsgbmFtZTogc3RyaW5nOyBlbGVtZW50OiBKUXVlcnk7IGVuYWJsZWQ6IGJvb2xlYW4gfT4ge1xuICBjb25zdCBwcm9tcHRzOiBBcnJheTx7IGlkOiBzdHJpbmc7IG5hbWU6IHN0cmluZzsgZWxlbWVudDogSlF1ZXJ5OyBlbmFibGVkOiBib29sZWFuIH0+ID0gW107XG5cbiAgLy8g5qOA5p+l57yT5a2Y5piv5ZCm5pyJ5pWIXG4gIGNvbnN0IG5vdyA9IERhdGUubm93KCk7XG4gIGlmICghY2FjaGVkUHJvbXB0RWxlbWVudHMgfHwgbm93IC0gbGFzdFByb21wdFF1ZXJ5VGltZSA+IFBST01QVF9DQUNIRV9EVVJBVElPTikge1xuICAgIGNhY2hlZFByb21wdEVsZW1lbnRzID0gJCgnLmNvbXBsZXRpb25fcHJvbXB0X21hbmFnZXJfcHJvbXB0Jyk7XG4gICAgbGFzdFByb21wdFF1ZXJ5VGltZSA9IG5vdztcbiAgfVxuXG4gIGNvbnN0IHByb21wdEVsZW1lbnRzID0gY2FjaGVkUHJvbXB0RWxlbWVudHM7XG5cbiAgcHJvbXB0RWxlbWVudHMuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgY29uc3QgZWxlbWVudCA9ICQodGhpcyk7XG4gICAgY29uc3QgaWQgPSBlbGVtZW50LmRhdGEoJ3BtLWlkZW50aWZpZXInKSB8fCBlbGVtZW50LmZpbmQoJ1tkYXRhLXBtLWlkZW50aWZpZXJdJykuZGF0YSgncG0taWRlbnRpZmllcicpO1xuXG4gICAgaWYgKCFpZCkgcmV0dXJuOyAvLyDml6nmnJ/ot7Plh7rvvIzpgb/lhY3kuI3lv4XopoHnmoRET03mn6Xor6JcblxuICAgIGNvbnN0IG5hbWVFbGVtZW50ID0gZWxlbWVudC5maW5kKCcuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHRfbmFtZScpO1xuICAgIGNvbnN0IG5hbWUgPSBuYW1lRWxlbWVudC5maW5kKCdhJykudGV4dCgpLnRyaW0oKSB8fCBuYW1lRWxlbWVudC50ZXh0KCkudHJpbSgpO1xuXG4gICAgaWYgKCFuYW1lKSByZXR1cm47IC8vIOaXqeacn+i3s+WHulxuXG4gICAgY29uc3QgaXNFbmFibGVkID0gZWxlbWVudC5maW5kKCcucHJvbXB0LW1hbmFnZXItdG9nZ2xlLWFjdGlvbicpLmhhc0NsYXNzKCdmYS10b2dnbGUtb24nKTtcblxuICAgIHByb21wdHMucHVzaCh7XG4gICAgICBpZDogaWQsXG4gICAgICBuYW1lOiBuYW1lLFxuICAgICAgZWxlbWVudDogZWxlbWVudCxcbiAgICAgIGVuYWJsZWQ6IGlzRW5hYmxlZCxcbiAgICB9KTtcbiAgfSk7XG5cbiAgcmV0dXJuIHByb21wdHM7XG59XG5cbi8vIOaYvuekuuadoeebruWIhue7hOeVjOmdolxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNob3dQcm9tcHRHcm91cGluZ1VJKCk6IFByb21pc2U8dm9pZD4ge1xuICBjb25zdCBwb3B1cElkID0gJ3ByZXNldC1tYW5hZ2VyLWdyb3VwaW5nLXBvcHVwJztcbiAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcblxuICBjb25zdCBwcm9tcHRzID0gZ2V0Q3VycmVudFByZXNldFByb21wdHMoKTtcbiAgaWYgKHByb21wdHMubGVuZ3RoID09PSAwKSB7XG4gICAgdG9hc3RyLndhcm5pbmcoJ+W9k+WJjemihOiuvuayoeacieWPr+WIhue7hOeahOadoeebruOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIC8vIOiOt+WPluW9k+WJjemihOiuvueahOWIhue7hOS/oeaBr1xuICBjb25zdCBjdXJyZW50UHJlc2V0TmFtZSA9IFRhdmVybkhlbHBlci5nZXRMb2FkZWRQcmVzZXROYW1lKCk7XG4gIGNvbnN0IGV4aXN0aW5nR3JvdXBzID0gZ2V0UHJlc2V0R3JvdXBpbmcoY3VycmVudFByZXNldE5hbWUpO1xuXG4gIGNvbnN0IHByb21wdHNIdG1sID0gcHJvbXB0c1xuICAgIC5tYXAoKHByb21wdCwgaW5kZXgpID0+IHtcbiAgICAgIGNvbnN0IGlzSW5Hcm91cCA9IGV4aXN0aW5nR3JvdXBzLnNvbWUoZ3JvdXAgPT4gZ3JvdXAucHJvbXB0SWRzLmluY2x1ZGVzKHByb21wdC5pZCkpO1xuICAgICAgY29uc3QgZ3JvdXBOYW1lID0gZXhpc3RpbmdHcm91cHMuZmluZChncm91cCA9PiBncm91cC5wcm9tcHRJZHMuaW5jbHVkZXMocHJvbXB0LmlkKSk/Lm5hbWUgfHwgJyc7XG5cbiAgICAgIHJldHVybiBgXG4gICAgICA8ZGl2IGNsYXNzPVwicHJvbXB0LWl0ZW1cIiBkYXRhLXByb21wdC1pZD1cIiR7cHJvbXB0LmlkfVwiIGRhdGEtaW5kZXg9XCIke2luZGV4fVwiIFxuICAgICAgICAgICBzdHlsZT1cImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IHBhZGRpbmc6IDEwcHg7IGJvcmRlcjogMXB4IHNvbGlkICNlMGUwZTA7IG1hcmdpbjogM3B4IDA7IGJvcmRlci1yYWRpdXM6IDZweDsgY3Vyc29yOiBwb2ludGVyOyBiYWNrZ3JvdW5kLWNvbG9yOiAke2lzSW5Hcm91cCA/ICcjZThmNWU4JyA6ICcjZmZmJ307IG1pbi1oZWlnaHQ6IDQ0cHg7XCI+XG4gICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBjbGFzcz1cInByb21wdC1jaGVja2JveFwiIHN0eWxlPVwibWFyZ2luLXJpZ2h0OiAxMnB4OyB0cmFuc2Zvcm06IHNjYWxlKDEuMyk7IGZsZXgtc2hyaW5rOiAwO1wiPlxuICAgICAgICA8c3BhbiBzdHlsZT1cImZsZXg6IDE7IGZvbnQtd2VpZ2h0OiAke3Byb21wdC5lbmFibGVkID8gJ2JvbGQnIDogJ25vcm1hbCd9OyBjb2xvcjogJHtwcm9tcHQuZW5hYmxlZCA/ICcjMDAwJyA6ICcjNjY2J307IGZvbnQtc2l6ZTogMTRweDsgbGluZS1oZWlnaHQ6IDEuNDsgd29yZC13cmFwOiBicmVhay13b3JkOyBvdmVyZmxvdy13cmFwOiBicmVhay13b3JkO1wiPlxuICAgICAgICAgICR7JCgnPGRpdi8+JykudGV4dChwcm9tcHQubmFtZSkuaHRtbCgpfVxuICAgICAgICA8L3NwYW4+XG4gICAgICAgICR7aXNJbkdyb3VwID8gYDxzcGFuIHN0eWxlPVwiZm9udC1zaXplOiAxMXB4OyBjb2xvcjogIzRDQUY1MDsgYmFja2dyb3VuZDogI2U4ZjVlODsgcGFkZGluZzogM3B4IDhweDsgYm9yZGVyLXJhZGl1czogNHB4OyBtYXJnaW4tbGVmdDogOHB4OyBmbGV4LXNocmluazogMDsgd2hpdGUtc3BhY2U6IG5vd3JhcDtcIj4ke2dyb3VwTmFtZX08L3NwYW4+YCA6ICcnfVxuICAgICAgPC9kaXY+XG4gICAgYDtcbiAgICB9KVxuICAgIC5qb2luKCcnKTtcblxuICBjb25zdCBwb3B1cEh0bWwgPSBgXG4gICAgPGRpdiBpZD1cIiR7cG9wdXBJZH1cIiBzdHlsZT1cInBvc2l0aW9uOiBmaXhlZDsgdG9wOiAwOyBsZWZ0OiAwOyB3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDAlOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsMCwwLDAuNSk7IHotaW5kZXg6IDEwMDAxOyBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcIj5cbiAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOGYwOyBjb2xvcjogIzNhMmMyYzsgYm9yZGVyLXJhZGl1czogMTZweDsgcGFkZGluZzogMjBweDsgd2lkdGg6IDkwJTsgbWF4LXdpZHRoOiA2MDBweDsgYm94LXNoYWRvdzogMCA0cHggMjVweCByZ2JhKDEyMCw5MCw2MCwuMjUpOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBtYXgtaGVpZ2h0OiA4MHZoO1wiPlxuICAgICAgICA8aDQgc3R5bGU9XCJtYXJnaW4tdG9wOjA7IGNvbG9yOiM2YTQyMjY7IHRleHQtYWxpZ246IGNlbnRlcjsgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkICNmMGQ4YjY7IHBhZGRpbmctYm90dG9tOiAxMHB4O1wiPumihOiuvuadoeebruWIhue7hOeuoeeQhjwvaDQ+XG4gICAgICAgIFxuICAgICAgICA8ZGl2IHN0eWxlPVwibWFyZ2luOiAxNXB4IDA7XCI+XG4gICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgaWQ9XCJncm91cC1uYW1lLWlucHV0XCIgcGxhY2Vob2xkZXI9XCLovpPlhaXliIbnu4TlkI3np7AuLi5cIiBzdHlsZT1cIndpZHRoOiAxMDAlOyBwYWRkaW5nOiA4cHggMTJweDsgYm9yZGVyOiAxcHggc29saWQgI2Q0YjU4YjsgYm9yZGVyLXJhZGl1czogNnB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBjb2xvcjogIzMzMzsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tYm90dG9tOiAxMHB4O1wiPlxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBmbGV4LXdyYXA6IHdyYXA7IGdhcDogOHB4OyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgd2lkdGg6IDEwMCU7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7XCI+XG4gICAgICAgICAgICA8YnV0dG9uIGlkPVwiY3JlYXRlLWdyb3VwLWJ0blwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6IzRDQUY1MDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjb2xvcjojZmZmOyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgZm9udC1zaXplOiAxM3B4OyB3aGl0ZS1zcGFjZTogbm93cmFwOyBmbGV4OiAxOyBtaW4td2lkdGg6IDEwMHB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94O1wiPuWIm+W7uuWIhue7hDwvYnV0dG9uPlxuICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInJlbW92ZS1ncm91cC1idG5cIiBzdHlsZT1cInBhZGRpbmc6IDhweCAxNnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNmNDQzMzY7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6I2ZmZjsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7IGZvbnQtc2l6ZTogMTNweDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgZmxleDogMTsgbWluLXdpZHRoOiAxMDBweDsgYm94LXNpemluZzogYm9yZGVyLWJveDtcIj7np7vpmaTliIbnu4Q8L2J1dHRvbj5cbiAgICAgICAgICAgIDxidXR0b24gaWQ9XCJjbGVhci1hbGwtZ3JvdXBzLWJ0blwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2ZmNTcyMjsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjb2xvcjojZmZmOyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgZm9udC1zaXplOiAxM3B4OyB3aGl0ZS1zcGFjZTogbm93cmFwOyBmbGV4OiAxOyBtaW4td2lkdGg6IDEwMHB4OyBib3gtc2l6aW5nOiBib3JkZXItYm94O1wiPua4hemZpOaJgOaciTwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8ZGl2IHN0eWxlPVwibWFyZ2luLWJvdHRvbTogMTVweDsgZGlzcGxheTogZmxleDsgZ2FwOiA4cHg7IGZsZXgtd3JhcDogd3JhcDtcIj5cbiAgICAgICAgICA8YnV0dG9uIGlkPVwic2VsZWN0LWFsbC1idG5cIiBzdHlsZT1cInBhZGRpbmc6IDZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiMyMTk2RjM7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6I2ZmZjsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtc2l6ZToxM3B4OyB3aGl0ZS1zcGFjZTogbm93cmFwO1wiPuWFqOmAiTwvYnV0dG9uPlxuICAgICAgICAgIDxidXR0b24gaWQ9XCJzZWxlY3Qtbm9uZS1idG5cIiBzdHlsZT1cInBhZGRpbmc6IDZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiM5RTlFOUU7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6I2ZmZjsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtc2l6ZToxM3B4OyB3aGl0ZS1zcGFjZTogbm93cmFwO1wiPuWFqOS4jemAiTwvYnV0dG9uPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8ZGl2IHN0eWxlPVwiZmxleDogMTsgbWluLWhlaWdodDogMDsgb3ZlcmZsb3cteTogYXV0bzsgYm9yZGVyOiAxcHggc29saWQgI2YwZTJkMDsgYm9yZGVyLXJhZGl1czogOHB4OyBwYWRkaW5nOiAxMnB4OyBtYXJnaW4tYm90dG9tOiAxNXB4O1wiPlxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJmb250LXNpemU6IDEzcHg7IGNvbG9yOiAjNjY2OyBtYXJnaW4tYm90dG9tOiAxMnB4OyBsaW5lLWhlaWdodDogMS40O1wiPuaPkOekuu+8mumAieS4readoeebruWQjuWPr+S7peWIm+W7uuWIhue7hO+8jOWIhue7hOWQjueahOadoeebruS8muWcqOmihOiuvueVjOmdouS4reaKmOWPoOaYvuekujwvZGl2PlxuICAgICAgICAgIDxkaXYgaWQ9XCJwcm9tcHRzLWNvbnRhaW5lclwiPlxuICAgICAgICAgICAgJHtwcm9tcHRzSHRtbH1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBzdHlsZT1cIm1hcmdpbi1ib3R0b206IDE1cHg7IHBhZGRpbmc6IDEycHg7IGJhY2tncm91bmQtY29sb3I6ICNmMGY4ZmY7IGJvcmRlci1yYWRpdXM6IDhweDsgYm9yZGVyLWxlZnQ6IDRweCBzb2xpZCAjMjE5NkYzO1wiPlxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJmb250LXNpemU6IDEzcHg7IGNvbG9yOiAjMTk3NkQyOyBmb250LXdlaWdodDogYm9sZDsgbWFyZ2luLWJvdHRvbTogNnB4O1wiPvCfkqEg5YiG57uE6K+05piOPC9kaXY+XG4gICAgICAgICAgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICM0MjQyNDI7IGxpbmUtaGVpZ2h0OiAxLjQ7XCI+5YiG57uE6K6+572u55u05o6l5bqU55So5Yiw6aKE6K6+55WM6Z2i77yM5Lya6Ieq5Yqo5L+d5a2Y5Yiw5rWP6KeI5Zmo5pys5Zyw5a2Y5YKo5Lit77yM5LiO6aKE6K6+57uR5a6a44CCPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBmbGV4LXdyYXA6IHdyYXA7IGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6IGNlbnRlcjsgZ2FwOiAxMHB4O1wiPlxuICAgICAgICAgIDxkaXYgaWQ9XCJleGlzdGluZy1ncm91cHMtaW5mb1wiIHN0eWxlPVwiZm9udC1zaXplOiAxMnB4OyBjb2xvcjogIzY2NjsgZmxleDogMTsgbWluLXdpZHRoOiAyMDBweDsgd29yZC13cmFwOiBicmVhay13b3JkO1wiPjwvZGl2PlxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBnYXA6IDhweDsgZmxleC1zaHJpbms6IDA7XCI+XG4gICAgICAgICAgICA8YnV0dG9uIGlkPVwiZ3JvdXBpbmctY2xvc2VcIiBzdHlsZT1cInBhZGRpbmc6IDEwcHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZjRjNzhlOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojM2EyYzJjOyBmb250LXNpemU6IDE0cHg7XCI+5YWz6ZetPC9idXR0b24+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gIGA7XG5cbiAgJCgnYm9keScpLmFwcGVuZChwb3B1cEh0bWwpO1xuXG4gIC8vIOaYvuekuueOsOacieWIhue7hOS/oeaBr1xuICB1cGRhdGVFeGlzdGluZ0dyb3Vwc0luZm8oZXhpc3RpbmdHcm91cHMpO1xuXG4gIC8vIOe7keWumuS6i+S7tlxuICBiaW5kR3JvdXBpbmdFdmVudHMocHJvbXB0cywgZXhpc3RpbmdHcm91cHMpO1xuXG4gIC8vIOenu+WKqOerr+agt+W8j1xuICBjb25zdCBtb2JpbGVTdHlsZXMgPSBgPHN0eWxlPlxuICAgIEBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgeyBcbiAgICAgICMke3BvcHVwSWR9IHsgXG4gICAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0ICFpbXBvcnRhbnQ7IFxuICAgICAgICBwYWRkaW5nOiAxMHB4O1xuICAgICAgfSBcbiAgICAgICMke3BvcHVwSWR9ID4gZGl2IHsgXG4gICAgICAgIG1hcmdpbi10b3A6IDV2aDsgXG4gICAgICAgIG1heC1oZWlnaHQ6IDkwdmggIWltcG9ydGFudDsgXG4gICAgICAgIHdpZHRoOiA5NSUgIWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZzogMTVweDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTJweDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IC5wcm9tcHQtaXRlbSB7XG4gICAgICAgIHBhZGRpbmc6IDEycHggIWltcG9ydGFudDtcbiAgICAgICAgbWluLWhlaWdodDogNDhweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgICAgIyR7cG9wdXBJZH0gLnByb21wdC1jaGVja2JveCB7XG4gICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMS40KSAhaW1wb3J0YW50O1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDE1cHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IGlucHV0W3R5cGU9XCJ0ZXh0XCJdIHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmc6IDEwcHggMTRweCAhaW1wb3J0YW50O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMnB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSBidXR0b24ge1xuICAgICAgICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZzogMTBweCAxNHB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIG1pbi1oZWlnaHQ6IDQ0cHg7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSAjY3JlYXRlLWdyb3VwLWJ0biwgIyR7cG9wdXBJZH0gI3JlbW92ZS1ncm91cC1idG4sICMke3BvcHVwSWR9ICNjbGVhci1hbGwtZ3JvdXBzLWJ0biB7XG4gICAgICAgIGZsZXg6IDEgIWltcG9ydGFudDtcbiAgICAgICAgbWluLXdpZHRoOiA2MHB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIG1hcmdpbjogMnB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIGZvbnQtc2l6ZTogMTJweCAhaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nOiA4cHggNnB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSAjZXhpc3RpbmctZ3JvdXBzLWluZm8ge1xuICAgICAgICBmb250LXNpemU6IDExcHggIWltcG9ydGFudDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuMyAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cbiAgICBAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgICAgICMke3BvcHVwSWR9ID4gZGl2IHtcbiAgICAgICAgbWFyZ2luLXRvcDogMnZoICFpbXBvcnRhbnQ7XG4gICAgICAgIG1heC1oZWlnaHQ6IDk2dmggIWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZzogMTJweDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IGg0IHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDE1cHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IC5wcm9tcHQtaXRlbSB7XG4gICAgICAgIHBhZGRpbmc6IDE0cHggIWltcG9ydGFudDtcbiAgICAgICAgbWluLWhlaWdodDogNTJweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgICAgIyR7cG9wdXBJZH0gI2NyZWF0ZS1ncm91cC1idG4sICMke3BvcHVwSWR9ICNyZW1vdmUtZ3JvdXAtYnRuLCAjJHtwb3B1cElkfSAjY2xlYXItYWxsLWdyb3Vwcy1idG4ge1xuICAgICAgICBtaW4td2lkdGg6IDUwcHggIWltcG9ydGFudDtcbiAgICAgICAgZm9udC1zaXplOiAxMXB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmc6IDZweCA0cHggIWltcG9ydGFudDtcbiAgICAgICAgbWFyZ2luOiAxcHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICB9XG4gICAgQG1lZGlhIChtYXgtd2lkdGg6IDM2MHB4KSB7XG4gICAgICAjJHtwb3B1cElkfSAjY3JlYXRlLWdyb3VwLWJ0biwgIyR7cG9wdXBJZH0gI3JlbW92ZS1ncm91cC1idG4sICMke3BvcHVwSWR9ICNjbGVhci1hbGwtZ3JvdXBzLWJ0biB7XG4gICAgICAgIGZsZXg6IG5vbmUgIWltcG9ydGFudDtcbiAgICAgICAgd2lkdGg6IGNhbGMoMzMuMzMzJSAtIDRweCkgIWltcG9ydGFudDtcbiAgICAgICAgbWluLXdpZHRoOiA0NXB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIGZvbnQtc2l6ZTogMTBweCAhaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nOiA0cHggMnB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIG1hcmdpbjogMXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuICA8L3N0eWxlPmA7XG4gICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG59XG5cbmZ1bmN0aW9uIHVwZGF0ZUV4aXN0aW5nR3JvdXBzSW5mbyhncm91cHM6IFByb21wdEdyb3VwW10pOiB2b2lkIHtcbiAgY29uc3QgaW5mb0VsZW1lbnQgPSAkKCcjZXhpc3RpbmctZ3JvdXBzLWluZm8nKTtcbiAgaWYgKGdyb3Vwcy5sZW5ndGggPT09IDApIHtcbiAgICBpbmZvRWxlbWVudC50ZXh0KCflvZPliY3msqHmnInliIbnu4QnKTtcbiAgfSBlbHNlIHtcbiAgICBpbmZvRWxlbWVudC50ZXh0KGDnjrDmnInliIbnu4Q6ICR7Z3JvdXBzLm1hcChnID0+IGcubmFtZSkuam9pbignLCAnKX1gKTtcbiAgfVxufVxuXG5mdW5jdGlvbiBiaW5kR3JvdXBpbmdFdmVudHMoXG4gIF9wcm9tcHRzOiBBcnJheTx7IGlkOiBzdHJpbmc7IG5hbWU6IHN0cmluZzsgZWxlbWVudDogSlF1ZXJ5OyBlbmFibGVkOiBib29sZWFuIH0+LFxuICBleGlzdGluZ0dyb3VwczogUHJvbXB0R3JvdXBbXSxcbik6IHZvaWQge1xuICBsZXQgc2VsZWN0ZWRQcm9tcHRzOiBzdHJpbmdbXSA9IFtdO1xuXG4gIC8vIOadoeebrumAieaLqVxuICAkKCcucHJvbXB0LWl0ZW0nKS5vbignY2xpY2snLCBmdW5jdGlvbiAoZSkge1xuICAgIGlmICgoZS50YXJnZXQgYXMgSFRNTElucHV0RWxlbWVudCkudHlwZSA9PT0gJ2NoZWNrYm94JykgcmV0dXJuO1xuXG4gICAgY29uc3QgY2hlY2tib3ggPSAkKHRoaXMpLmZpbmQoJy5wcm9tcHQtY2hlY2tib3gnKTtcbiAgICBjaGVja2JveC5wcm9wKCdjaGVja2VkJywgIWNoZWNrYm94LnByb3AoJ2NoZWNrZWQnKSk7XG4gICAgdXBkYXRlU2VsZWN0ZWRQcm9tcHRzKCk7XG4gIH0pO1xuXG4gICQoJy5wcm9tcHQtY2hlY2tib3gnKS5vbignY2hhbmdlJywgdXBkYXRlU2VsZWN0ZWRQcm9tcHRzKTtcblxuICBmdW5jdGlvbiB1cGRhdGVTZWxlY3RlZFByb21wdHMoKTogdm9pZCB7XG4gICAgc2VsZWN0ZWRQcm9tcHRzID0gW107XG4gICAgJCgnLnByb21wdC1jaGVja2JveDpjaGVja2VkJykuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgICBjb25zdCBwcm9tcHRJZCA9ICQodGhpcykuY2xvc2VzdCgnLnByb21wdC1pdGVtJykuZGF0YSgncHJvbXB0LWlkJyk7XG4gICAgICBzZWxlY3RlZFByb21wdHMucHVzaChwcm9tcHRJZCk7XG4gICAgfSk7XG4gIH1cblxuICAvLyDlhajpgIkv5YWo5LiN6YCJXG4gICQoJyNzZWxlY3QtYWxsLWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICAkKCcucHJvbXB0LWNoZWNrYm94JykucHJvcCgnY2hlY2tlZCcsIHRydWUpO1xuICAgIHVwZGF0ZVNlbGVjdGVkUHJvbXB0cygpO1xuICB9KTtcblxuICAkKCcjc2VsZWN0LW5vbmUtYnRuJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICQoJy5wcm9tcHQtY2hlY2tib3gnKS5wcm9wKCdjaGVja2VkJywgZmFsc2UpO1xuICAgIHVwZGF0ZVNlbGVjdGVkUHJvbXB0cygpO1xuICB9KTtcblxuICAvLyDliJvlu7rliIbnu4RcbiAgJCgnI2NyZWF0ZS1ncm91cC1idG4nKS5vbignY2xpY2snLCBhc3luYyAoKSA9PiB7XG4gICAgY29uc3QgZ3JvdXBOYW1lID0gJCgnI2dyb3VwLW5hbWUtaW5wdXQnKS52YWwoKT8udG9TdHJpbmcoKS50cmltKCk7XG4gICAgaWYgKCFncm91cE5hbWUpIHtcbiAgICAgIHRvYXN0ci5lcnJvcign6K+36L6T5YWl5YiG57uE5ZCN56ewJyk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgaWYgKHNlbGVjdGVkUHJvbXB0cy5sZW5ndGggPT09IDApIHtcbiAgICAgIHRvYXN0ci5lcnJvcign6K+36YCJ5oup6KaB5YiG57uE55qE5p2h55uuJyk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgLy8g5qOA5p+l5piv5ZCm5pyJ6YeN5ZCN5YiG57uEXG4gICAgaWYgKGV4aXN0aW5nR3JvdXBzLnNvbWUoZyA9PiBnLm5hbWUgPT09IGdyb3VwTmFtZSkpIHtcbiAgICAgIHRvYXN0ci5lcnJvcign5YiG57uE5ZCN56ew5bey5a2Y5ZyoJyk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgLy8g5qOA5p+l6YCJ5Lit55qE5p2h55uu5piv5ZCm5bey57uP5Zyo5YW25LuW5YiG57uE5LitXG4gICAgY29uc3QgYWxyZWFkeUdyb3VwZWRQcm9tcHRzOiBzdHJpbmdbXSA9IFtdO1xuICAgIHNlbGVjdGVkUHJvbXB0cy5mb3JFYWNoKHByb21wdElkID0+IHtcbiAgICAgIGNvbnN0IGV4aXN0aW5nR3JvdXAgPSBleGlzdGluZ0dyb3Vwcy5maW5kKGdyb3VwID0+IGdyb3VwLnByb21wdElkcy5pbmNsdWRlcyhwcm9tcHRJZCkpO1xuICAgICAgaWYgKGV4aXN0aW5nR3JvdXApIHtcbiAgICAgICAgYWxyZWFkeUdyb3VwZWRQcm9tcHRzLnB1c2gocHJvbXB0SWQpO1xuICAgICAgfVxuICAgIH0pO1xuXG4gICAgaWYgKGFscmVhZHlHcm91cGVkUHJvbXB0cy5sZW5ndGggPiAwKSB7XG4gICAgICAvLyDojrflj5blt7LliIbnu4TmnaHnm67nmoTlkI3np7BcbiAgICAgIGNvbnN0IGFscmVhZHlHcm91cGVkTmFtZXMgPSBhbHJlYWR5R3JvdXBlZFByb21wdHMubWFwKHByb21wdElkID0+IHtcbiAgICAgICAgY29uc3QgcHJvbXB0SXRlbSA9ICQoYC5wcm9tcHQtaXRlbVtkYXRhLXByb21wdC1pZD1cIiR7cHJvbXB0SWR9XCJdYCk7XG4gICAgICAgIHJldHVybiBwcm9tcHRJdGVtLmZpbmQoJ3NwYW46Zmlyc3QnKS50ZXh0KCkudHJpbSgpO1xuICAgICAgfSk7XG5cbiAgICAgIHRvYXN0ci5lcnJvcihcbiAgICAgICAgYOS7peS4i+adoeebruW3suWcqOWFtuS7luWIhue7hOS4re+8jOaXoOazlemHjeWkjeWIhue7hO+8miR7YWxyZWFkeUdyb3VwZWROYW1lcy5zbGljZSgwLCAzKS5qb2luKCfjgIEnKX0ke2FscmVhZHlHcm91cGVkTmFtZXMubGVuZ3RoID4gMyA/ICfnrYknIDogJyd9YCxcbiAgICAgICk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgLy8g5Yib5bu65paw5YiG57uEXG4gICAgY29uc3QgbmV3R3JvdXA6IFByb21wdEdyb3VwID0ge1xuICAgICAgaWQ6IERhdGUubm93KCkudG9TdHJpbmcoKSxcbiAgICAgIG5hbWU6IGdyb3VwTmFtZSxcbiAgICAgIHByb21wdElkczogWy4uLnNlbGVjdGVkUHJvbXB0c10sXG4gICAgICBjb2xsYXBzZWQ6IHRydWUsXG4gICAgfTtcblxuICAgIGV4aXN0aW5nR3JvdXBzLnB1c2gobmV3R3JvdXApO1xuXG4gICAgLy8g5pu05pawVUlcbiAgICBzZWxlY3RlZFByb21wdHMuZm9yRWFjaChwcm9tcHRJZCA9PiB7XG4gICAgICBjb25zdCBpdGVtID0gJChgLnByb21wdC1pdGVtW2RhdGEtcHJvbXB0LWlkPVwiJHtwcm9tcHRJZH1cIl1gKTtcbiAgICAgIGl0ZW0uY3NzKCdiYWNrZ3JvdW5kLWNvbG9yJywgJyNlOGY1ZTgnKTtcbiAgICAgIGNvbnN0IGV4aXN0aW5nVGFnID0gaXRlbS5maW5kKCcuZ3JvdXAtdGFnJyk7XG4gICAgICBpZiAoZXhpc3RpbmdUYWcubGVuZ3RoKSB7XG4gICAgICAgIGV4aXN0aW5nVGFnLnRleHQoZ3JvdXBOYW1lKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGl0ZW1cbiAgICAgICAgICAuZmluZCgnc3BhbjpsYXN0JylcbiAgICAgICAgICAuYWZ0ZXIoXG4gICAgICAgICAgICBgPHNwYW4gY2xhc3M9XCJncm91cC10YWdcIiBzdHlsZT1cImZvbnQtc2l6ZTogMTJweDsgY29sb3I6ICM0Q0FGNTA7IGJhY2tncm91bmQ6ICNlOGY1ZTg7IHBhZGRpbmc6IDJweCA2cHg7IGJvcmRlci1yYWRpdXM6IDNweDsgbWFyZ2luLWxlZnQ6IDhweDtcIj4ke2dyb3VwTmFtZX08L3NwYW4+YCxcbiAgICAgICAgICApO1xuICAgICAgfVxuICAgIH0pO1xuXG4gICAgdXBkYXRlRXhpc3RpbmdHcm91cHNJbmZvKGV4aXN0aW5nR3JvdXBzKTtcbiAgICAkKCcjZ3JvdXAtbmFtZS1pbnB1dCcpLnZhbCgnJyk7XG4gICAgJCgnLnByb21wdC1jaGVja2JveCcpLnByb3AoJ2NoZWNrZWQnLCBmYWxzZSk7XG4gICAgc2VsZWN0ZWRQcm9tcHRzID0gW107XG5cbiAgICAvLyDlj6rkv53lrZjliIbnu4TphY3nva7vvIzkuI3nq4vljbPlupTnlKjvvIjpgb/lhY3lnKjliIbnu4TnlYzpnaLmiZPlvIDml7blupTnlKjvvIlcbiAgICBjb25zdCBjdXJyZW50UHJlc2V0TmFtZSA9IFRhdmVybkhlbHBlci5nZXRMb2FkZWRQcmVzZXROYW1lKCk7XG4gICAgY29uc3QgdmFsaWRHcm91cHMgPSBleGlzdGluZ0dyb3Vwcy5maWx0ZXIoZyA9PiBnLnByb21wdElkcy5sZW5ndGggPiAwKTtcbiAgICBzYXZlUHJlc2V0R3JvdXBpbmcoY3VycmVudFByZXNldE5hbWUsIHZhbGlkR3JvdXBzKTtcblxuICAgIHRvYXN0ci5zdWNjZXNzKGDliIbnu4QgXCIke2dyb3VwTmFtZX1cIiDliJvlu7rmiJDlip/vvIzlsIblnKjlhbPpl63liIbnu4TnlYzpnaLml7blupTnlKhgKTtcbiAgfSk7XG5cbiAgLy8g56e76Zmk5YiG57uEXG4gICQoJyNyZW1vdmUtZ3JvdXAtYnRuJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgIGlmIChzZWxlY3RlZFByb21wdHMubGVuZ3RoID09PSAwKSB7XG4gICAgICB0b2FzdHIuZXJyb3IoJ+ivt+mAieaLqeimgeenu+mZpOWIhue7hOeahOadoeebricpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIC8vIOS7juaJgOacieWIhue7hOS4reenu+mZpOmAieS4reeahOadoeebrlxuICAgIGV4aXN0aW5nR3JvdXBzLmZvckVhY2goZ3JvdXAgPT4ge1xuICAgICAgZ3JvdXAucHJvbXB0SWRzID0gZ3JvdXAucHJvbXB0SWRzLmZpbHRlcihpZCA9PiAhc2VsZWN0ZWRQcm9tcHRzLmluY2x1ZGVzKGlkKSk7XG4gICAgfSk7XG5cbiAgICAvLyDnp7vpmaTnqbrliIbnu4RcbiAgICBjb25zdCBncm91cHNUb1JlbW92ZSA9IGV4aXN0aW5nR3JvdXBzLmZpbHRlcihncm91cCA9PiBncm91cC5wcm9tcHRJZHMubGVuZ3RoID09PSAwKTtcbiAgICBncm91cHNUb1JlbW92ZS5mb3JFYWNoKGdyb3VwID0+IHtcbiAgICAgIGNvbnN0IGluZGV4ID0gZXhpc3RpbmdHcm91cHMuaW5kZXhPZihncm91cCk7XG4gICAgICBpZiAoaW5kZXggPiAtMSkgZXhpc3RpbmdHcm91cHMuc3BsaWNlKGluZGV4LCAxKTtcbiAgICB9KTtcblxuICAgIC8vIOabtOaWsFVJXG4gICAgc2VsZWN0ZWRQcm9tcHRzLmZvckVhY2gocHJvbXB0SWQgPT4ge1xuICAgICAgY29uc3QgaXRlbSA9ICQoYC5wcm9tcHQtaXRlbVtkYXRhLXByb21wdC1pZD1cIiR7cHJvbXB0SWR9XCJdYCk7XG4gICAgICBpdGVtLmNzcygnYmFja2dyb3VuZC1jb2xvcicsICcjZmZmJyk7XG4gICAgICBpdGVtLmZpbmQoJy5ncm91cC10YWcnKS5yZW1vdmUoKTtcbiAgICB9KTtcblxuICAgIHVwZGF0ZUV4aXN0aW5nR3JvdXBzSW5mbyhleGlzdGluZ0dyb3Vwcyk7XG4gICAgJCgnLnByb21wdC1jaGVja2JveCcpLnByb3AoJ2NoZWNrZWQnLCBmYWxzZSk7XG4gICAgc2VsZWN0ZWRQcm9tcHRzID0gW107XG5cbiAgICAvLyDlj6rkv53lrZjliIbnu4TphY3nva7vvIzkuI3nq4vljbPlupTnlKhcbiAgICBjb25zdCBjdXJyZW50UHJlc2V0TmFtZSA9IFRhdmVybkhlbHBlci5nZXRMb2FkZWRQcmVzZXROYW1lKCk7XG4gICAgY29uc3QgdmFsaWRHcm91cHMgPSBleGlzdGluZ0dyb3Vwcy5maWx0ZXIoZyA9PiBnLnByb21wdElkcy5sZW5ndGggPiAwKTtcbiAgICBzYXZlUHJlc2V0R3JvdXBpbmcoY3VycmVudFByZXNldE5hbWUsIHZhbGlkR3JvdXBzKTtcblxuICAgIHRvYXN0ci5zdWNjZXNzKCflt7Lnp7vpmaTpgInkuK3mnaHnm67nmoTliIbnu4TvvIzlsIblnKjlhbPpl63liIbnu4TnlYzpnaLml7blupTnlKgnKTtcbiAgfSk7XG5cbiAgLy8g5riF6Zmk5omA5pyJ5YiG57uEXG4gICQoJyNjbGVhci1hbGwtZ3JvdXBzLWJ0bicpLm9uKCdjbGljaycsIGFzeW5jICgpID0+IHtcbiAgICBpZiAoZXhpc3RpbmdHcm91cHMubGVuZ3RoID09PSAwKSB7XG4gICAgICB0b2FzdHIuaW5mbygn5b2T5YmN5rKh5pyJ5YiG57uE6ZyA6KaB5riF6ZmkJyk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgY29uc3QgY29uZmlybUNob2ljZSA9IGF3YWl0IHRyaWdnZXJTbGFzaChcbiAgICAgIGAvcG9wdXAgb2tCdXR0b249XCLnoa7orqTmuIXpmaRcIiBjYW5jZWxCdXR0b249XCLlj5bmtohcIiByZXN1bHQ9dHJ1ZSBcIuehruWumuimgea4hemZpOW9k+WJjemihOiuvueahOaJgOacieWIhue7hOWQl++8n+atpOaTjeS9nOS4jeWPr+aSpOmUgOOAglwiYCxcbiAgICApO1xuICAgIGlmIChjb25maXJtQ2hvaWNlID09PSAnMScpIHtcbiAgICAgIC8vIOa4heepuuWIhue7hOaVsOe7hFxuICAgICAgZXhpc3RpbmdHcm91cHMubGVuZ3RoID0gMDtcblxuICAgICAgLy8g5pu05pawVUnmmL7npLpcbiAgICAgICQoJy5wcm9tcHQtaXRlbScpLmVhY2goZnVuY3Rpb24gKCkge1xuICAgICAgICAkKHRoaXMpLmNzcygnYmFja2dyb3VuZC1jb2xvcicsICcjZmZmJyk7XG4gICAgICAgICQodGhpcykuZmluZCgnLmdyb3VwLXRhZycpLnJlbW92ZSgpO1xuICAgICAgfSk7XG5cbiAgICAgIHVwZGF0ZUV4aXN0aW5nR3JvdXBzSW5mbyhleGlzdGluZ0dyb3Vwcyk7XG4gICAgICAkKCcucHJvbXB0LWNoZWNrYm94JykucHJvcCgnY2hlY2tlZCcsIGZhbHNlKTtcbiAgICAgIHNlbGVjdGVkUHJvbXB0cyA9IFtdO1xuXG4gICAgICAvLyDlj6rkv53lrZjliIbnu4TphY3nva7vvIzkuI3nq4vljbPlupTnlKhcbiAgICAgIGNvbnN0IGN1cnJlbnRQcmVzZXROYW1lID0gVGF2ZXJuSGVscGVyLmdldExvYWRlZFByZXNldE5hbWUoKTtcbiAgICAgIGNvbnN0IHZhbGlkR3JvdXBzID0gZXhpc3RpbmdHcm91cHMuZmlsdGVyKGcgPT4gZy5wcm9tcHRJZHMubGVuZ3RoID4gMCk7XG4gICAgICBzYXZlUHJlc2V0R3JvdXBpbmcoY3VycmVudFByZXNldE5hbWUsIHZhbGlkR3JvdXBzKTtcblxuICAgICAgdG9hc3RyLnN1Y2Nlc3MoJ+W3sua4hemZpOaJgOacieWIhue7hO+8jOWwhuWcqOWFs+mXreWIhue7hOeVjOmdouaXtuW6lOeUqCcpO1xuICAgIH1cbiAgfSk7XG5cbiAgLy8g5YWz6ZetXG4gICQoJyNncm91cGluZy1jbG9zZScpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICAvLyDlhbPpl63liY3noa7kv53kv53lrZjlvZPliY3nmoTliIbnu4TnirbmgIFcbiAgICBjb25zdCBjdXJyZW50UHJlc2V0TmFtZSA9IFRhdmVybkhlbHBlci5nZXRMb2FkZWRQcmVzZXROYW1lKCk7XG4gICAgY29uc3QgdmFsaWRHcm91cHMgPSBleGlzdGluZ0dyb3Vwcy5maWx0ZXIoZyA9PiBnLnByb21wdElkcy5sZW5ndGggPiAwKTtcbiAgICBzYXZlUHJlc2V0R3JvdXBpbmcoY3VycmVudFByZXNldE5hbWUsIHZhbGlkR3JvdXBzKTtcblxuICAgIC8vIOehruS/neWIhue7hOW6lOeUqOWIsOmihOiuvueVjOmdolxuICAgIGFwcGx5R3JvdXBpbmdUb0RPTSh2YWxpZEdyb3Vwcyk7XG5cbiAgICAkKCcjcHJlc2V0LW1hbmFnZXItZ3JvdXBpbmctcG9wdXAnKS5yZW1vdmUoKTtcbiAgICBjb25zb2xlLmxvZygn5YiG57uE55WM6Z2i5YWz6Zet77yM5bey5L+d5a2Y5bm25bqU55So5YiG57uE6YWN572uJyk7XG4gIH0pO1xufVxuXG4vLyDlupTnlKjliIbnu4TliLBET01cbmZ1bmN0aW9uIGFwcGx5R3JvdXBpbmdUb0RPTShncm91cHM6IFByb21wdEdyb3VwW10pOiB2b2lkIHtcbiAgY29uc29sZS5sb2coJ+W8gOWni+W6lOeUqOWIhue7hOWIsERPTe+8jOWIhue7hOaVsOmHjzonLCBncm91cHMubGVuZ3RoKTtcblxuICAvLyDmo4Dmn6XmmK/lkKbmnInpooTorr7mnaHnm67lrZjlnKhcbiAgY29uc3QgcHJvbXB0RWxlbWVudHMgPSAkKCcuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHQnKTtcbiAgaWYgKHByb21wdEVsZW1lbnRzLmxlbmd0aCA9PT0gMCkge1xuICAgIGNvbnNvbGUud2Fybign5pyq5om+5Yiw6aKE6K6+5p2h55uu77yM5peg5rOV5bqU55So5YiG57uEJyk7XG4gICAgcmV0dXJuO1xuICB9XG5cbiAgY29uc29sZS5sb2coJ+aJvuWIsOmihOiuvuadoeebruaVsOmHjzonLCBwcm9tcHRFbGVtZW50cy5sZW5ndGgpO1xuXG4gIC8vIOWFiOehruS/neaJgOacieadoeebrumDveS7juWIhue7hOWuueWZqOS4reenu+WHuu+8jOeEtuWQjuWGjeenu+mZpOWIhue7hOWuueWZqFxuICAkKCcucHJvbXB0LWdyb3VwLWNvbnRhaW5lcicpLmVhY2goZnVuY3Rpb24gKCkge1xuICAgIGNvbnN0IGNvbnRhaW5lciA9ICQodGhpcyk7XG4gICAgY29uc3QgcHJvbXB0cyA9IGNvbnRhaW5lci5maW5kKCcuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHQnKTtcbiAgICAvLyDlsIbmnaHnm67np7vliqjliLDliIbnu4TlrrnlmajkuYvliY1cbiAgICBjb250YWluZXIuYmVmb3JlKHByb21wdHMpO1xuICB9KTtcblxuICAvLyDnp7vpmaTnjrDmnInnmoTliIbnu4TlrrnlmahcbiAgJCgnLnByb21wdC1ncm91cC1jb250YWluZXInKS5yZW1vdmUoKTtcblxuICBncm91cHMuZm9yRWFjaChncm91cCA9PiB7XG4gICAgaWYgKGdyb3VwLnByb21wdElkcy5sZW5ndGggPT09IDApIHJldHVybjtcblxuICAgIGNvbnNvbGUubG9nKCflpITnkIbliIbnu4Q6JywgZ3JvdXAubmFtZSwgJ+adoeebruaVsOmHjzonLCBncm91cC5wcm9tcHRJZHMubGVuZ3RoKTtcblxuICAgIC8vIOaJvuWIsOWIhue7hOS4reeahOesrOS4gOS4quadoeebrlxuICAgIGNvbnN0IGZpcnN0UHJvbXB0RWxlbWVudCA9ICQoYC5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdFtkYXRhLXBtLWlkZW50aWZpZXI9XCIke2dyb3VwLnByb21wdElkc1swXX1cIl1gKTtcbiAgICBpZiAoZmlyc3RQcm9tcHRFbGVtZW50Lmxlbmd0aCA9PT0gMCkge1xuICAgICAgY29uc29sZS5sb2coJ+acquaJvuWIsOWIhue7hOesrOS4gOS4quadoeebrjonLCBncm91cC5wcm9tcHRJZHNbMF0pO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIGNvbnNvbGUubG9nKCfmib7liLDnrKzkuIDkuKrmnaHnm67vvIzlvIDlp4vliJvlu7rliIbnu4TlrrnlmagnKTtcblxuICAgIC8vIOe7n+iuoeWIhue7hOWGheWQr+eUqOeahOadoeebruaVsOmHj1xuICAgIGNvbnN0IGVuYWJsZWRDb3VudCA9IGdyb3VwLnByb21wdElkcy5maWx0ZXIocHJvbXB0SWQgPT4ge1xuICAgICAgY29uc3QgcHJvbXB0RWxlbWVudCA9ICQoYC5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdFtkYXRhLXBtLWlkZW50aWZpZXI9XCIke3Byb21wdElkfVwiXWApO1xuICAgICAgcmV0dXJuIHByb21wdEVsZW1lbnQuZmluZCgnLnByb21wdC1tYW5hZ2VyLXRvZ2dsZS1hY3Rpb24nKS5oYXNDbGFzcygnZmEtdG9nZ2xlLW9uJyk7XG4gICAgfSkubGVuZ3RoO1xuXG4gICAgLy8g5Yib5bu65YiG57uE5a655ZmoXG4gICAgY29uc3QgZ3JvdXBDb250YWluZXIgPSAkKGBcbiAgICAgIDxkaXYgY2xhc3M9XCJwcm9tcHQtZ3JvdXAtY29udGFpbmVyXCIgc3R5bGU9XCJib3JkZXI6IDFweCBzb2xpZCByZ2JhKDEyOCwgMTI4LCAxMjgsIDAuMyk7IG1hcmdpbjogNXB4IDA7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4wNSk7XCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJwcm9tcHQtZ3JvdXAtaGVhZGVyXCIgc3R5bGU9XCJwYWRkaW5nOiA2cHggMTBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjA4KTsgY3Vyc29yOiBwb2ludGVyOyBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgICAgIDxzcGFuIGNsYXNzPVwiZ3JvdXAtdG9nZ2xlLWljb25cIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogNnB4OyBmb250LXNpemU6IDEycHg7IGNvbG9yOiBpbmhlcml0O1wiPiR7Z3JvdXAuY29sbGFwc2VkID8gJ+KWticgOiAn4pa8J308L3NwYW4+XG4gICAgICAgICAgPHNwYW4gc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgY29sb3I6IGluaGVyaXQ7XCI+JHskKCc8ZGl2Lz4nKS50ZXh0KGdyb3VwLm5hbWUpLmh0bWwoKX08L3NwYW4+XG4gICAgICAgICAgPHNwYW4gc3R5bGU9XCJtYXJnaW4tbGVmdDogOHB4OyBmb250LXNpemU6IDEycHg7IGNvbG9yOiAjNjY2O1wiPigke2VuYWJsZWRDb3VudH0vJHtncm91cC5wcm9tcHRJZHMubGVuZ3RofSk8L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzPVwicHJvbXB0LWdyb3VwLWNvbnRlbnRcIiBzdHlsZT1cInBhZGRpbmc6IDNweDsgJHtncm91cC5jb2xsYXBzZWQgPyAnZGlzcGxheTogbm9uZTsnIDogJyd9XCI+PC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICBgKTtcblxuICAgIC8vIOWwhuWIhue7hOaPkuWFpeWIsOesrOS4gOS4quadoeebruS5i+WJjVxuICAgIGZpcnN0UHJvbXB0RWxlbWVudC5iZWZvcmUoZ3JvdXBDb250YWluZXIpO1xuICAgIGNvbnNvbGUubG9nKCfliIbnu4Tlrrnlmajlt7Lmj5LlhaXliLBET00nKTtcblxuICAgIC8vIOWwhuWIhue7hOS4reeahOaJgOacieadoeebruenu+WKqOWIsOWIhue7hOWuueWZqOS4rVxuICAgIGdyb3VwLnByb21wdElkcy5mb3JFYWNoKHByb21wdElkID0+IHtcbiAgICAgIC8vIOWwneivleWkmuenjemAieaLqeWZqOadpeafpeaJvuadoeebrlxuICAgICAgbGV0IHByb21wdEVsZW1lbnQgPSAkKGAuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHRbZGF0YS1wbS1pZGVudGlmaWVyPVwiJHtwcm9tcHRJZH1cIl1gKTtcblxuICAgICAgLy8g5aaC5p6c5rKh5om+5Yiw77yM5bCd6K+V5Zyo5a2Q5YWD57Sg5Lit5p+l5om+XG4gICAgICBpZiAocHJvbXB0RWxlbWVudC5sZW5ndGggPT09IDApIHtcbiAgICAgICAgcHJvbXB0RWxlbWVudCA9ICQoYC5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdGApLmZpbHRlcihmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICQodGhpcykuZGF0YSgncG0taWRlbnRpZmllcicpID09PSBwcm9tcHRJZCB8fFxuICAgICAgICAgICAgJCh0aGlzKS5maW5kKCdbZGF0YS1wbS1pZGVudGlmaWVyXScpLmRhdGEoJ3BtLWlkZW50aWZpZXInKSA9PT0gcHJvbXB0SWRcbiAgICAgICAgICApO1xuICAgICAgICB9KTtcbiAgICAgIH1cblxuICAgICAgaWYgKHByb21wdEVsZW1lbnQubGVuZ3RoID4gMCkge1xuICAgICAgICBncm91cENvbnRhaW5lci5maW5kKCcucHJvbXB0LWdyb3VwLWNvbnRlbnQnKS5hcHBlbmQocHJvbXB0RWxlbWVudCk7XG4gICAgICAgIGNvbnNvbGUubG9nKCfnp7vliqjmnaHnm67liLDliIbnu4Tlrrnlmag6JywgcHJvbXB0SWQpO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgY29uc29sZS53YXJuKFxuICAgICAgICAgICfmnKrmib7liLDmnaHnm646JyxcbiAgICAgICAgICBwcm9tcHRJZCxcbiAgICAgICAgICAn5b2T5YmN5omA5pyJ5p2h55uuSUQ6JyxcbiAgICAgICAgICAkKCcuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHQnKVxuICAgICAgICAgICAgLm1hcChmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAgIHJldHVybiAkKHRoaXMpLmRhdGEoJ3BtLWlkZW50aWZpZXInKSB8fCAkKHRoaXMpLmZpbmQoJ1tkYXRhLXBtLWlkZW50aWZpZXJdJykuZGF0YSgncG0taWRlbnRpZmllcicpO1xuICAgICAgICAgICAgfSlcbiAgICAgICAgICAgIC5nZXQoKSxcbiAgICAgICAgKTtcbiAgICAgIH1cbiAgICB9KTtcblxuICAgIGNvbnNvbGUubG9nKCfliIbnu4TlrrnlmajliJvlu7rlrozmiJDvvIzmnaHnm67mlbDph486JywgZ3JvdXBDb250YWluZXIuZmluZCgnLmNvbXBsZXRpb25fcHJvbXB0X21hbmFnZXJfcHJvbXB0JykubGVuZ3RoKTtcblxuICAgIC8vIOe7keWumuWxleW8gC/mipjlj6Dkuovku7ZcbiAgICBncm91cENvbnRhaW5lci5maW5kKCcucHJvbXB0LWdyb3VwLWhlYWRlcicpLm9uKCdjbGljaycsIGZ1bmN0aW9uICgpIHtcbiAgICAgIGNvbnN0IGNvbnRlbnQgPSAkKHRoaXMpLnNpYmxpbmdzKCcucHJvbXB0LWdyb3VwLWNvbnRlbnQnKTtcbiAgICAgIGNvbnN0IGljb24gPSAkKHRoaXMpLmZpbmQoJy5ncm91cC10b2dnbGUtaWNvbicpO1xuXG4gICAgICBpZiAoY29udGVudC5pcygnOnZpc2libGUnKSkge1xuICAgICAgICBjb250ZW50LmhpZGUoKTtcbiAgICAgICAgaWNvbi50ZXh0KCfilrYnKTtcbiAgICAgICAgZ3JvdXAuY29sbGFwc2VkID0gdHJ1ZTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGNvbnRlbnQuc2hvdygpO1xuICAgICAgICBpY29uLnRleHQoJ+KWvCcpO1xuICAgICAgICBncm91cC5jb2xsYXBzZWQgPSBmYWxzZTtcbiAgICAgIH1cbiAgICB9KTtcbiAgfSk7XG59XG5cbi8vIOWKoOi9veaXtuaBouWkjeWIhue7hFxuZXhwb3J0IGZ1bmN0aW9uIHJlc3RvcmVHcm91cGluZ0Zyb21Db25maWcoKTogdm9pZCB7XG4gIHRyeSB7XG4gICAgY29uc3QgY3VycmVudFByZXNldE5hbWUgPSBUYXZlcm5IZWxwZXIuZ2V0TG9hZGVkUHJlc2V0TmFtZSgpO1xuICAgIGNvbnN0IGdyb3VwcyA9IGdldFByZXNldEdyb3VwaW5nKGN1cnJlbnRQcmVzZXROYW1lKTtcblxuICAgIGlmIChncm91cHMubGVuZ3RoID4gMCkge1xuICAgICAgY29uc29sZS5sb2coYOaBouWkjemihOiuviBcIiR7Y3VycmVudFByZXNldE5hbWV9XCIg55qE5YiG57uE6YWN572u77yM5YWxICR7Z3JvdXBzLmxlbmd0aH0g5Liq5YiG57uEYCk7XG5cbiAgICAgIC8vIOajgOafpeaYr+WQpuaciemihOiuvuadoeebruWtmOWcqFxuICAgICAgY29uc3QgcHJvbXB0RWxlbWVudHMgPSAkKCcuY29tcGxldGlvbl9wcm9tcHRfbWFuYWdlcl9wcm9tcHQnKTtcbiAgICAgIGlmIChwcm9tcHRFbGVtZW50cy5sZW5ndGggPT09IDApIHtcbiAgICAgICAgY29uc29sZS5sb2coJ+KaoO+4jyDmnKrmib7liLDpooTorr7mnaHnm67vvIzlu7bov5/mgaLlpI3liIbnu4QnKTtcbiAgICAgICAgc2V0VGltZW91dCgoKSA9PiByZXN0b3JlR3JvdXBpbmdGcm9tQ29uZmlnKCksIDUwMCk7XG4gICAgICAgIHJldHVybjtcbiAgICAgIH1cblxuICAgICAgLy8g5bu26L+f5LiA54K55pe26Ze056Gu5L+dRE9N5bey5Yqg6L29XG4gICAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgYXBwbHlHcm91cGluZ1RvRE9NKGdyb3Vwcyk7XG4gICAgICB9LCAyMDApO1xuICAgIH0gZWxzZSB7XG4gICAgICBjb25zb2xlLmxvZyhg6aKE6K6+IFwiJHtjdXJyZW50UHJlc2V0TmFtZX1cIiDmsqHmnInliIbnu4TphY3nva5gKTtcbiAgICB9XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5oGi5aSN5YiG57uE6YWN572u5aSx6LSlOicsIGVycm9yKTtcbiAgfVxufVxuXG4vLyDlu7bov5/mgaLlpI3liIbnu4TvvIjnlKjkuo5ET03lj5jljJblkI7vvIlcbi8vIOmYsuaKluaBouWkjeWIhue7hFxubGV0IHJlc3RvcmVUaW1lb3V0OiBudW1iZXIgfCBudWxsID0gbnVsbDtcblxuZXhwb3J0IGZ1bmN0aW9uIHJlc3RvcmVHcm91cGluZ0RlbGF5ZWQoZGVsYXk6IG51bWJlciA9IDUwMCk6IHZvaWQge1xuICBpZiAocmVzdG9yZVRpbWVvdXQpIHtcbiAgICBjbGVhclRpbWVvdXQocmVzdG9yZVRpbWVvdXQpO1xuICB9XG4gIHJlc3RvcmVUaW1lb3V0ID0gd2luZG93LnNldFRpbWVvdXQoKCkgPT4ge1xuICAgIGNvbnNvbGUubG9nKCfwn5SEIOW7tui/n+aBouWkjeWIhue7hOW8gOWniy4uLicpO1xuICAgIHJlc3RvcmVHcm91cGluZ0Zyb21Db25maWcoKTtcbiAgICByZXN0b3JlVGltZW91dCA9IG51bGw7XG4gIH0sIGRlbGF5KTtcbn1cblxuLy8g5by65Yi25oGi5aSN5YiG57uE77yI5aSa5qyh5bCd6K+V56Gu5L+d5oiQ5Yqf77yJXG5leHBvcnQgZnVuY3Rpb24gZm9yY2VSZXN0b3JlR3JvdXBpbmcoKTogdm9pZCB7XG4gIGNvbnN0IHRyeVJlc3RvcmUgPSAoYXR0ZW1wdDogbnVtYmVyKSA9PiB7XG4gICAgY29uc3QgY3VycmVudFByZXNldE5hbWUgPSBUYXZlcm5IZWxwZXIuZ2V0TG9hZGVkUHJlc2V0TmFtZSgpO1xuICAgIGNvbnN0IGdyb3VwcyA9IGdldFByZXNldEdyb3VwaW5nKGN1cnJlbnRQcmVzZXROYW1lKTtcbiAgICBjb25zdCBwcm9tcHRFbGVtZW50cyA9ICQoJy5jb21wbGV0aW9uX3Byb21wdF9tYW5hZ2VyX3Byb21wdCcpO1xuXG4gICAgY29uc29sZS5sb2coXG4gICAgICBg56ysJHthdHRlbXB0feasoeWwneivleaBouWkjeWIhue7hO+8jOmihOiuvjogJHtjdXJyZW50UHJlc2V0TmFtZX0sIOWIhue7hOaVsDogJHtncm91cHMubGVuZ3RofSwg5p2h55uu5pWwOiAke3Byb21wdEVsZW1lbnRzLmxlbmd0aH1gLFxuICAgICk7XG5cbiAgICBpZiAoZ3JvdXBzLmxlbmd0aCA+IDAgJiYgcHJvbXB0RWxlbWVudHMubGVuZ3RoID4gMCkge1xuICAgICAgYXBwbHlHcm91cGluZ1RvRE9NKGdyb3Vwcyk7XG4gICAgICBjb25zb2xlLmxvZygn4pyFIOWIhue7hOaBouWkjeaIkOWKnycpO1xuICAgIH0gZWxzZSBpZiAoYXR0ZW1wdCA8IDUpIHtcbiAgICAgIC8vIOWmguaenOi/mOayoeacieadoeebruaIluWIhue7hO+8jOe7p+e7reWwneivlVxuICAgICAgc2V0VGltZW91dCgoKSA9PiB0cnlSZXN0b3JlKGF0dGVtcHQgKyAxKSwgNTAwKTtcbiAgICB9IGVsc2Uge1xuICAgICAgY29uc29sZS5sb2coJ+KaoO+4jyDliIbnu4TmgaLlpI3lpLHotKXvvIzlt7Lovr7liLDmnIDlpKflsJ3or5XmrKHmlbAnKTtcbiAgICB9XG4gIH07XG5cbiAgdHJ5UmVzdG9yZSgxKTtcbn1cblxuLy8g5Li75Yqo6Kem5Y+R5YiG57uE5oGi5aSN77yI55So5LqO5YWz6ZSu5pON5L2c5ZCO77yJXG5leHBvcnQgZnVuY3Rpb24gdHJpZ2dlckdyb3VwaW5nUmVzdG9yZSgpOiB2b2lkIHtcbiAgY29uc29sZS5sb2coJ/CflIQg5Li75Yqo6Kem5Y+R5YiG57uE5oGi5aSNLi4uJyk7XG4gIC8vIOWFiOa4hemZpOeOsOacieeahOWIhue7hOaViOaenFxuICBjbGVhckFsbEdyb3VwaW5nKCk7XG4gIC8vIOeEtuWQjuW7tui/n+aBouWkjVxuICByZXN0b3JlR3JvdXBpbmdEZWxheWVkKDMwMCk7XG59XG5cbi8vIOa4hemZpOaJgOacieWIhue7hFxuZXhwb3J0IGZ1bmN0aW9uIGNsZWFyQWxsR3JvdXBpbmcoKTogdm9pZCB7XG4gICQoJy5wcm9tcHQtZ3JvdXAtY29udGFpbmVyJykuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgY29uc3QgcHJvbXB0cyA9ICQodGhpcykuZmluZCgnLmNvbXBsZXRpb25fcHJvbXB0X21hbmFnZXJfcHJvbXB0Jyk7XG4gICAgJCh0aGlzKS5iZWZvcmUocHJvbXB0cyk7XG4gICAgJCh0aGlzKS5yZW1vdmUoKTtcbiAgfSk7XG59XG5cbi8vIOWvvOWHuuW9k+WJjemihOiuvueahOWIhue7hOmFjee9rlxuZXhwb3J0IGZ1bmN0aW9uIGV4cG9ydFByZXNldEdyb3VwaW5nKHByZXNldE5hbWU6IHN0cmluZyk6IFByb21wdEdyb3VwW10gfCBudWxsIHtcbiAgY29uc3QgZ3JvdXBzID0gZ2V0UHJlc2V0R3JvdXBpbmcocHJlc2V0TmFtZSk7XG4gIHJldHVybiBncm91cHMubGVuZ3RoID4gMCA/IGdyb3VwcyA6IG51bGw7XG59XG5cbi8vIOWvvOWFpeWIhue7hOmFjee9ruWIsOaMh+WumumihOiuvlxuZXhwb3J0IGZ1bmN0aW9uIGltcG9ydFByZXNldEdyb3VwaW5nKHByZXNldE5hbWU6IHN0cmluZywgZ3JvdXBzOiBQcm9tcHRHcm91cFtdKTogdm9pZCB7XG4gIGlmICghZ3JvdXBzIHx8ICFBcnJheS5pc0FycmF5KGdyb3VwcykgfHwgZ3JvdXBzLmxlbmd0aCA9PT0gMCkge1xuICAgIGNvbnNvbGUud2Fybign5a+85YWl55qE5YiG57uE6YWN572u5Li656m65oiW5qC85byP5LiN5q2j56GuJyk7XG4gICAgcmV0dXJuO1xuICB9XG5cbiAgY29uc29sZS5sb2coJ+W8gOWni+WvvOWFpeWIhue7hOmFjee9ruWIsOmihOiuvjonLCBwcmVzZXROYW1lLCAn5YiG57uE5pWw6YePOicsIGdyb3Vwcy5sZW5ndGgpO1xuXG4gIC8vIOmqjOivgeW5tuS/ruWkjeWIhue7hOaVsOaNrue7k+aehFxuICBjb25zdCB2YWxpZEdyb3VwcyA9IGdyb3Vwc1xuICAgIC5tYXAoZ3JvdXAgPT4ge1xuICAgICAgLy8g56Gu5L+d5YiG57uE5a+56LGh5pyJ5omA5pyJ5b+F6ZyA55qE5a2X5q61XG4gICAgICBjb25zdCB2YWxpZEdyb3VwOiBQcm9tcHRHcm91cCA9IHtcbiAgICAgICAgaWQ6IGdyb3VwLmlkIHx8IERhdGUubm93KCkudG9TdHJpbmcoKSArIE1hdGgucmFuZG9tKCkudG9TdHJpbmcoMzYpLnN1YnN0cigyLCA5KSxcbiAgICAgICAgbmFtZTogZ3JvdXAubmFtZSB8fCAn5pyq5ZG95ZCN5YiG57uEJyxcbiAgICAgICAgcHJvbXB0SWRzOiBBcnJheS5pc0FycmF5KGdyb3VwLnByb21wdElkcykgPyBncm91cC5wcm9tcHRJZHMgOiBbXSxcbiAgICAgICAgY29sbGFwc2VkOiB0eXBlb2YgZ3JvdXAuY29sbGFwc2VkID09PSAnYm9vbGVhbicgPyBncm91cC5jb2xsYXBzZWQgOiB0cnVlLFxuICAgICAgfTtcblxuICAgICAgY29uc29sZS5sb2coJ+WkhOeQhuWIhue7hDonLCB2YWxpZEdyb3VwLm5hbWUsICfmnaHnm67mlbDph486JywgdmFsaWRHcm91cC5wcm9tcHRJZHMubGVuZ3RoKTtcbiAgICAgIHJldHVybiB2YWxpZEdyb3VwO1xuICAgIH0pXG4gICAgLmZpbHRlcihncm91cCA9PiBncm91cC5wcm9tcHRJZHMubGVuZ3RoID4gMCk7IC8vIOWPquS/neeVmeacieadoeebrueahOWIhue7hFxuXG4gIGlmICh2YWxpZEdyb3Vwcy5sZW5ndGggPT09IDApIHtcbiAgICBjb25zb2xlLndhcm4oJ+ayoeacieacieaViOeahOWIhue7hOmFjee9ricpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnNvbGUubG9nKCfmnInmlYjliIbnu4TmlbDph486JywgdmFsaWRHcm91cHMubGVuZ3RoKTtcbiAgc2F2ZVByZXNldEdyb3VwaW5nKHByZXNldE5hbWUsIHZhbGlkR3JvdXBzKTtcblxuICAvLyDlpoLmnpzmmK/lvZPliY3pooTorr7vvIznq4vljbPlupTnlKhcbiAgY29uc3QgY3VycmVudFByZXNldE5hbWUgPSBUYXZlcm5IZWxwZXIuZ2V0TG9hZGVkUHJlc2V0TmFtZSgpO1xuICBjb25zb2xlLmxvZygn5b2T5YmN6aKE6K6+OicsIGN1cnJlbnRQcmVzZXROYW1lLCAn55uu5qCH6aKE6K6+OicsIHByZXNldE5hbWUpO1xuICBpZiAoY3VycmVudFByZXNldE5hbWUgPT09IHByZXNldE5hbWUpIHtcbiAgICBjb25zb2xlLmxvZygn56uL5Y2z5bqU55So5YiG57uE5Yiw5b2T5YmN6aKE6K6+Jyk7XG4gICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICBhcHBseUdyb3VwaW5nVG9ET00odmFsaWRHcm91cHMpO1xuICAgIH0sIDEwMCk7XG4gIH1cbn1cblxuLy8g6I635Y+W5omA5pyJ6aKE6K6+55qE5YiG57uE6YWN572u77yI55So5LqO5om56YeP5a+85Ye677yJXG5leHBvcnQgZnVuY3Rpb24gZ2V0QWxsUHJlc2V0R3JvdXBpbmdzKCk6IFJlY29yZDxzdHJpbmcsIFByb21wdEdyb3VwW10+IHtcbiAgY29uc3QgYWxsR3JvdXBpbmdzOiBSZWNvcmQ8c3RyaW5nLCBQcm9tcHRHcm91cFtdPiA9IHt9O1xuXG4gIC8vIOmBjeWOhmxvY2FsU3RvcmFnZeS4reaJgOacieeahOWIhue7hOmFjee9rlxuICBmb3IgKGxldCBpID0gMDsgaSA8IGxvY2FsU3RvcmFnZS5sZW5ndGg7IGkrKykge1xuICAgIGNvbnN0IGtleSA9IGxvY2FsU3RvcmFnZS5rZXkoaSk7XG4gICAgaWYgKGtleSAmJiBrZXkuc3RhcnRzV2l0aCgnbWlhb21pYW9fcHJlc2V0X2dyb3Vwc18nKSkge1xuICAgICAgY29uc3QgcHJlc2V0TmFtZSA9IGtleS5yZXBsYWNlKCdtaWFvbWlhb19wcmVzZXRfZ3JvdXBzXycsICcnKTtcbiAgICAgIGNvbnN0IGdyb3VwcyA9IGdldFByZXNldEdyb3VwaW5nKHByZXNldE5hbWUpO1xuICAgICAgaWYgKGdyb3Vwcy5sZW5ndGggPiAwKSB7XG4gICAgICAgIGFsbEdyb3VwaW5nc1twcmVzZXROYW1lXSA9IGdyb3VwcztcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICByZXR1cm4gYWxsR3JvdXBpbmdzO1xufVxuXG4vLyDmuIXpmaTmjIflrprpooTorr7nmoTliIbnu4TphY3nva5cbmV4cG9ydCBmdW5jdGlvbiBjbGVhclByZXNldEdyb3VwaW5nKHByZXNldE5hbWU6IHN0cmluZyk6IHZvaWQge1xuICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbShnZXRHcm91cGluZ1N0b3JhZ2VLZXkocHJlc2V0TmFtZSkpO1xuXG4gIC8vIOWmguaenOaYr+W9k+WJjemihOiuvu+8jOa4hemZpERPTeS4reeahOWIhue7hFxuICBjb25zdCBjdXJyZW50UHJlc2V0TmFtZSA9IFRhdmVybkhlbHBlci5nZXRMb2FkZWRQcmVzZXROYW1lKCk7XG4gIGlmIChjdXJyZW50UHJlc2V0TmFtZSA9PT0gcHJlc2V0TmFtZSkge1xuICAgIGNsZWFyQWxsR3JvdXBpbmcoKTtcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/条目分组功能.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RD: () => (/* binding */ createUI),
+/* harmony export */   jS: () => (/* binding */ toggleUI),
+/* harmony export */   oz: () => (/* binding */ updateConfigListCache)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(411);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(723);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(780);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(320);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(884);
+
+
+
+
+
+
+
+function createUI() {
+    if ($(`#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}`).length > 0) {
+        // UI已存在，只需重新绑定事件
+        bindUIEvents();
+        return;
+    }
+    const uiContainer = $(`
+        <div id="${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}">
+            <style>
+                #${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;background-color:#fff8f0;color:#3a2c2c;border:1px solid #e0c9a6;border-radius:16px;padding:20px;box-shadow:0 4px 25px rgba(120,90,60,.25);width:90%;max-width:550px;max-height:80vh;font-family:'Segoe UI',sans-serif;display:flex;flex-direction:column}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} h4{margin-top:0;border-bottom:2px solid #f0d8b6;padding-bottom:10px;color:#6a4226}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} h5{margin:8px 0;color:#7a5235}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} button{transition:all .2s ease}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} button:hover{opacity:.85}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} #preset-manager-list-section{flex:1;overflow-y:auto}@media (max-width:600px){#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}{top:0;left:0;transform:none;width:100%;height:100vh;max-width:none;max-height:none;border-radius:0;padding:10px;box-shadow:none;display:flex;flex-direction:column}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} h4{font-size:18px;text-align:center;padding:12px 0;margin:0;border-bottom:2px solid #f0d8b6}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} #preset-manager-close{top:10px;right:10px;font-size:28px}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} #preset-manager-save-section{flex-wrap:wrap}#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl} #preset-manager-name-input{width:100%;margin-left:0;margin-bottom:10px}}
+                .pm-switch{position:relative;display:inline-block;width:40px;height:20px;flex-shrink:0}.pm-switch input{opacity:0;width:0;height:0}.pm-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;transition:.4s;border-radius:20px}.pm-slider:before{position:absolute;content:"";height:16px;width:16px;left:2px;bottom:2px;background-color:#fff;transition:.4s;border-radius:50%}input:checked+.pm-slider{background-color:#4CAF50}input:checked+.pm-slider:before{transform:translateX(20px)}
+                #preset-manager-tips-section { margin-top: 15px; padding: 10px; background-color: #f9f3ea; border-radius: 8px; font-size: 12px; color: #7a5235; text-align: center; flex-shrink: 0; }
+                .pm-config-group summary { cursor: pointer; padding: 8px; background-color: #f7f0e4; border-radius: 6px; margin-top: 5px; font-weight: bold; } .pm-config-group summary:hover { background-color: #f0e2d0; } .pm-config-count { color: #888; font-weight: normal; margin-left: 5px; } .pm-config-sublist { list-style: none; padding-left: 15px; border-left: 2px solid #f0e2d0; margin-left: 8px; }
+                .pm-actions-container { display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
+                .pm-actions-container > button, .pm-more-btn-wrapper > button { flex-shrink: 0; padding: 6px 12px; font-size: 13px; font-weight: 500; border-radius: 6px; cursor: pointer; border: none; }
+                .pm-more-btn-wrapper { position: relative; }
+                .pm-submenu { display: none; position: absolute; right: 0; top: calc(100% + 5px); background-color: #fff; border: 1px solid #e0c9a6; border-radius: 8px; box-shadow: 0 3px 15px rgba(120,90,60,.15); z-index: 10003; padding: 5px; min-width: 100px; }
+                .pm-submenu button { display: block; width: 100%; text-align: left; padding: 8px 12px; border: none; background: none; font-size: 13px; border-radius: 4px; color: #3a2c2c; cursor: pointer; }
+                .pm-submenu button:hover { background-color: #f0e2d0; }
+            </style>
+
+            <h4>喵喵预设配置管理by小n</h4>
+            <button id="preset-manager-close" style="position:absolute; top:12px; right:16px; background:none; border:none; color:#9a6b4f; font-size:24px; cursor:pointer;">&times;</button>
+            
+            <div id="preset-manager-save-section" style="margin-bottom: 20px; margin-top:15px;">
+                <div style="display:flex; flex-wrap: wrap; align-items:center;">
+                    <label for="preset-manager-name-input" style="font-weight:bold; flex-shrink:0;">配置名称:</label>
+                    <input type="text" id="preset-manager-name-input" placeholder="例如：仅破限" style="flex:1; min-width: 100px; margin-left: 10px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 6px 8px; border-radius: 6px; font-size:14px;" />
+                    <button id="preset-manager-save-btn" style="margin-left: 10px; padding:6px 12px; background-color:#f4c78e; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">保存</button>
+                </div>
+                <div style="margin-top: 10px; display:flex; align-items:center; padding-left: 5px;">
+                   <label for="preset-manager-bind-char" style="cursor:pointer;">绑定到当前角色</label>
+                   <label class="pm-switch" style="margin-left: auto;">
+                      <input type="checkbox" id="preset-manager-bind-char"/>
+                      <span class="pm-slider"></span>
+                   </label>
+                </div>
+                <!-- 分割线 -->
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e0c9a6; opacity: 0.6;">
+                <div style="display:flex; flex-wrap: wrap; gap: 10px; align-items:center;">
+                    <button id="preset-manager-help-btn" style="padding:6px 12px; background-color:#bcaaa4; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">使用说明</button>
+                    <button id="preset-manager-import-btn" style="padding:6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">导入</button>
+                    <button id="preset-manager-batch-export-btn" style="padding:6px 12px; background-color:#81c784; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">批量导出</button>
+                    <button id="preset-manager-batch-delete-btn" style="padding:6px 12px; background-color:#ef9a9a; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">批量删除</button>
+                    <button id="preset-manager-grouping-btn" style="padding:6px 12px; background-color:#9c27b0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">预设编辑器</button>
+                </div>
+            </div>
+
+            <div id="preset-manager-list-section">
+                <h5>已保存的配置:</h5>
+                <ul id="preset-manager-list" style="list-style:none; padding:0; margin:0;"></ul>
+            </div>
+
+            <div id="preset-manager-tips-section"></div>
+        </div>
+    `);
+    $('body').append(uiContainer);
+    $('body').append('<input type="file" id="preset-manager-import-file" accept=".json" style="display:none;">');
+    $(`#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}`).hide();
+    // 绑定事件处理器
+    bindUIEvents();
+}
+function bindUIEvents() {
+    console.log('🔗 开始绑定UI事件...');
+    // 先解绑所有事件，避免重复绑定
+    $('#preset-manager-close').off('click');
+    $('#preset-manager-help-btn').off('click');
+    $('#preset-manager-save-btn').off('click');
+    $('#preset-manager-import-btn').off('click');
+    $('#preset-manager-batch-export-btn').off('click');
+    $('#preset-manager-batch-delete-btn').off('click');
+    $('#preset-manager-grouping-btn').off('click');
+    $('#preset-manager-import-file').off('change');
+    $('#preset-manager-close').on('click', () => {
+        console.log('🖱️ 关闭按钮被点击');
+        toggleUI();
+    });
+    $('#preset-manager-help-btn').on('click', () => {
+        console.log('🖱️ 帮助按钮被点击');
+        (0,___WEBPACK_IMPORTED_MODULE_4__/* .showHelpPopup */ .V9)();
+    });
+    $('#preset-manager-save-btn').on('click', () => {
+        console.log('🖱️ 保存按钮被点击');
+        (0,___WEBPACK_IMPORTED_MODULE_6__.saveCurrentConfig)();
+    });
+    $('#preset-manager-import-btn').on('click', () => {
+        console.log('🖱️ 导入按钮被点击');
+        $('#preset-manager-import-file').click();
+    });
+    $('#preset-manager-batch-export-btn').on('click', () => {
+        console.log('🖱️ 批量导出按钮被点击');
+        (0,___WEBPACK_IMPORTED_MODULE_2__/* .showBatchExportPopup */ .c)();
+    });
+    $('#preset-manager-batch-delete-btn').on('click', () => {
+        console.log('🖱️ 批量删除按钮被点击');
+        (0,___WEBPACK_IMPORTED_MODULE_2__/* .showBatchDeletePopup */ .x)();
+    });
+    $('#preset-manager-grouping-btn').on('click', () => {
+        console.log('🖱️ 条目分组按钮被点击');
+        (0,___WEBPACK_IMPORTED_MODULE_3__/* .showPromptGroupingUI */ .XZ)();
+    });
+    $('#preset-manager-import-file').on('change', event => {
+        console.log('🖱️ 文件选择发生变化');
+        (0,___WEBPACK_IMPORTED_MODULE_1__/* .handleFileImport */ .k)(event);
+    });
+    console.log('✅ UI事件绑定完成');
+}
+// 缓存配置列表，避免重复渲染
+let configListCache = null;
+let lastConfigUpdateTime = 0;
+const CACHE_DURATION = 5000; // 5秒缓存
+function toggleUI() {
+    const ui = $(`#${___WEBPACK_IMPORTED_MODULE_0__/* .UI_ID */ .Xl}`);
+    if (ui.is(':visible')) {
+        ui.fadeOut(200); // 减少动画时间
+    }
+    else {
+        // 检查缓存是否有效
+        const now = Date.now();
+        if (!configListCache || now - lastConfigUpdateTime > CACHE_DURATION) {
+            (0,___WEBPACK_IMPORTED_MODULE_5__/* .renderConfigsList */ .sd)();
+            lastConfigUpdateTime = now;
+        }
+        else {
+            // 使用缓存的配置列表
+            $('#preset-manager-list').html(configListCache);
+        }
+        const randomTip = ___WEBPACK_IMPORTED_MODULE_0__/* .TIPS */ .df[Math.floor(Math.random() * ___WEBPACK_IMPORTED_MODULE_0__/* .TIPS */ .df.length)];
+        $('#preset-manager-tips-section').text('小贴士：' + randomTip);
+        ui.fadeIn(200); // 减少动画时间
+    }
+}
+// 更新缓存
+function updateConfigListCache() {
+    configListCache = $('#preset-manager-list').html();
+    lastConfigUpdateTime = Date.now();
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/正则绑定功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/正则绑定功能.ts ***!
-  \********************************/
+/***/ 723:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   importRegexLogic: () => (/* binding */ importRegexLogic),\n/* harmony export */   showRegexBindingPopup: () => (/* binding */ showRegexBindingPopup),\n/* harmony export */   sortRegexes: () => (/* binding */ sortRegexes)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n\n\nasync function showRegexBindingPopup(configId) {\n    const popupId = 'preset-manager-regex-popup';\n    $(`#${popupId}`).remove();\n    try {\n        const allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n        if (allRegexes.length === 0) {\n            toastr.info('没有可绑定的全局正则。');\n            return;\n        }\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();\n        const currentConfig = configs[configId];\n        if (!currentConfig)\n            return;\n        const savedStates = new Map(currentConfig.regexStates?.map(r => [r.id, r.enabled]) ?? []);\n        const regexesHtml = allRegexes\n            .map((regex) => {\n            const isChecked = savedStates.has(regex.id) ? savedStates.get(regex.id) : regex.enabled;\n            const safeName = $('<div/>').text(regex.script_name).html();\n            return `\n                <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;\">\n                    <label for=\"regex-toggle-${regex.id}\" style=\"cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\" title=\"${safeName}\">${safeName}</label>\n                    <label class=\"pm-switch\">\n                       <input type=\"checkbox\" id=\"regex-toggle-${regex.id}\" data-id=\"${regex.id}\" ${isChecked ? 'checked' : ''}/>\n                       <span class=\"pm-slider\"></span>\n                    </label>\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                    <h4 style=\"margin-top:0; color:#c62828; text-align: center;\">请选择绑定正则</h4>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                        ${regexesHtml}\n                    </div>\n                    <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                        <button id=\"regex-bind-clear\" style=\"padding: 8px 16px; background-color:#f5a8a0; border:none; border-radius:6px; cursor:pointer; color:#fff;\">清除绑定</button>\n                        <button id=\"regex-bind-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                        <button id=\"regex-bind-save\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">保存</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#regex-bind-cancel').on('click', () => $(`#${popupId}`).remove());\n        $('#regex-bind-clear').on('click', async () => {\n            const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();\n            if (configs[configId] && configs[configId].regexStates) {\n                delete configs[configId].regexStates;\n                await (0,___WEBPACK_IMPORTED_MODULE_1__.setStoredConfigs)(configs);\n                toastr.success(`配置 \"${configs[configId].name}\" 的正则绑定已清除。`);\n            }\n            else {\n                toastr.info(`配置没有正则绑定。`);\n            }\n            $(`#${popupId}`).remove();\n            (0,___WEBPACK_IMPORTED_MODULE_1__.renderConfigsList)();\n        });\n        $('#regex-bind-save').on('click', async () => {\n            const newRegexStates = allRegexes.map((regex) => ({\n                id: regex.id,\n                enabled: $(`#regex-toggle-${regex.id}`).is(':checked'),\n            }));\n            const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();\n            if (!configs[configId])\n                return;\n            configs[configId].regexStates = newRegexStates;\n            await (0,___WEBPACK_IMPORTED_MODULE_1__.setStoredConfigs)(configs);\n            toastr.success(`配置 \"${configs[configId].name}\" 的正则绑定已保存。`);\n            $(`#${popupId}`).remove();\n            (0,___WEBPACK_IMPORTED_MODULE_1__.renderConfigsList)();\n            const currentPresetName = configs[configId].presetName;\n            if (!currentPresetName)\n                return;\n            const otherConfigIds = Object.keys(configs).filter(id => id !== configId && configs[id].presetName === currentPresetName);\n            if (otherConfigIds.length > 0) {\n                const confirmMessage = `是否要将此正则绑定应用到其他使用预设 \"${currentPresetName}\" 的 ${otherConfigIds.length} 个配置上？`;\n                const userChoice = await triggerSlash(`/popup okButton=\"应用\" cancelButton=\"取消\" result=true \"${confirmMessage}\"`);\n                if (userChoice === '1') {\n                    otherConfigIds.forEach(id => {\n                        configs[id].regexStates = newRegexStates;\n                    });\n                    await (0,___WEBPACK_IMPORTED_MODULE_1__.setStoredConfigs)(configs);\n                    toastr.success(`已成功将正则绑定应用到 ${otherConfigIds.length} 个同名预设配置上。`);\n                }\n            }\n        });\n    }\n    catch (error) {\n        console.error('打开正则绑定界面失败:', error);\n        toastr.error('无法加载全局正则列表。');\n    }\n}\nfunction sortRegexes(regexes) {\n    const getSortNumber = (name) => {\n        const match = name.trim().match(/^(?:\\[|【|\\(|（)?(\\d+)(?:\\]|】|\\)|）|\\.|-|_|\\s)?/);\n        if (match && match[1]) {\n            return parseInt(match[1], 10);\n        }\n        return Infinity;\n    };\n    return regexes.sort((a, b) => {\n        const numA = getSortNumber(a.script_name);\n        const numB = getSortNumber(b.script_name);\n        if (numA !== numB) {\n            return numA - numB;\n        }\n        return a.script_name.localeCompare(b.script_name);\n    });\n}\nasync function importRegexLogic(regexToImport) {\n    const currentRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n    let remainingRegexes = currentRegexes;\n    if (currentRegexes && currentRegexes.length > 0) {\n        remainingRegexes = await (0,___WEBPACK_IMPORTED_MODULE_0__.showRegexDeletionPopup)(currentRegexes);\n    }\n    const combinedRegexes = [...regexToImport, ...remainingRegexes];\n    const sortedRegexes = sortRegexes(combinedRegexes);\n    await TavernHelper.replaceTavernRegexes(sortedRegexes, { scope: 'global' });\n    toastr.success(`成功导入 ${regexToImport.length} 条正则，并重新排序。`);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+ato+WImee7keWumuWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFrRDtBQUNnQztBQUUzRSxLQUFLLFVBQVUscUJBQXFCLENBQUMsUUFBZ0I7SUFDMUQsTUFBTSxPQUFPLEdBQUcsNEJBQTRCLENBQUM7SUFDN0MsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztJQUUxQixJQUFJLENBQUM7UUFDSCxNQUFNLFVBQVUsR0FBRyxNQUFNLFlBQVksQ0FBQyxnQkFBZ0IsQ0FBQyxFQUFFLEtBQUssRUFBRSxRQUFRLEVBQUUsQ0FBQyxDQUFDO1FBQzVFLElBQUksVUFBVSxDQUFDLE1BQU0sS0FBSyxDQUFDLEVBQUUsQ0FBQztZQUM1QixNQUFNLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDO1lBQzNCLE9BQU87UUFDVCxDQUFDO1FBRUQsTUFBTSxPQUFPLEdBQUcsTUFBTSxtREFBZ0IsRUFBRSxDQUFDO1FBQ3pDLE1BQU0sYUFBYSxHQUFHLE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUN4QyxJQUFJLENBQUMsYUFBYTtZQUFFLE9BQU87UUFDM0IsTUFBTSxXQUFXLEdBQUcsSUFBSSxHQUFHLENBQUMsYUFBYSxDQUFDLFdBQVcsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFLEVBQUUsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxDQUFDLElBQUksRUFBRSxDQUFDLENBQUM7UUFFMUYsTUFBTSxXQUFXLEdBQUcsVUFBVTthQUMzQixHQUFHLENBQUMsQ0FBQyxLQUFVLEVBQUUsRUFBRTtZQUNsQixNQUFNLFNBQVMsR0FBRyxXQUFXLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxD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QUM7SUFFRCxNQUFNLGVBQWUsR0FBRyxDQUFDLEdBQUcsYUFBYSxFQUFFLEdBQUcsZ0JBQWdCLENBQUMsQ0FBQztJQUNoRSxNQUFNLGFBQWEsR0FBRyxXQUFXLENBQUMsZUFBZSxDQUFDLENBQUM7SUFFbkQsTUFBTSxZQUFZLENBQUMsb0JBQW9CLENBQUMsYUFBYSxFQUFFLEVBQUUsS0FBSyxFQUFFLFFBQVEsRUFBRSxDQUFDLENBQUM7SUFDNUUsTUFBTSxDQUFDLE9BQU8sQ0FBQyxRQUFRLGFBQWEsQ0FBQyxNQUFNLGFBQWEsQ0FBQyxDQUFDO0FBQzVELENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/mraPliJnnu5Hlrprlip/og70udHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHNob3dSZWdleERlbGV0aW9uUG9wdXAgfSBmcm9tICcuL+i+heWKqeW8ueeql+WKn+iDvSc7XG5pbXBvcnQgeyBnZXRTdG9yZWRDb25maWdzLCByZW5kZXJDb25maWdzTGlzdCwgc2V0U3RvcmVkQ29uZmlncyB9IGZyb20gJy4v6YWN572u5a2Y5YKo5ZKM6K+75Y+WJztcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNob3dSZWdleEJpbmRpbmdQb3B1cChjb25maWdJZDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPiB7XG4gIGNvbnN0IHBvcHVwSWQgPSAncHJlc2V0LW1hbmFnZXItcmVnZXgtcG9wdXAnO1xuICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gIHRyeSB7XG4gICAgY29uc3QgYWxsUmVnZXhlcyA9IGF3YWl0IFRhdmVybkhlbHBlci5nZXRUYXZlcm5SZWdleGVzKHsgc2NvcGU6ICdnbG9iYWwnIH0pO1xuICAgIGlmIChhbGxSZWdleGVzLmxlbmd0aCA9PT0gMCkge1xuICAgICAgdG9hc3RyLmluZm8oJ+ayoeacieWPr+e7keWumueahOWFqOWxgOato+WImeOAgicpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIGNvbnN0IGNvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gICAgY29uc3QgY3VycmVudENvbmZpZyA9IGNvbmZpZ3NbY29uZmlnSWRdO1xuICAgIGlmICghY3VycmVudENvbmZpZykgcmV0dXJuO1xuICAgIGNvbnN0IHNhdmVkU3RhdGVzID0gbmV3IE1hcChjdXJyZW50Q29uZmlnLnJlZ2V4U3RhdGVzPy5tYXAociA9PiBbci5pZCwgci5lbmFibGVkXSkgPz8gW10pO1xuXG4gICAgY29uc3QgcmVnZXhlc0h0bWwgPSBhbGxSZWdleGVzXG4gICAgICAubWFwKChyZWdleDogYW55KSA9PiB7XG4gICAgICAgIGNvbnN0IGlzQ2hlY2tlZCA9IHNhdmVkU3RhdGVzLmhhcyhyZWdleC5pZCkgPyBzYXZlZFN0YXRlcy5nZXQocmVnZXguaWQpIDogcmVnZXguZW5hYmxlZDtcbiAgICAgICAgY29uc3Qgc2FmZU5hbWUgPSAkKCc8ZGl2Lz4nKS50ZXh0KHJlZ2V4LnNjcmlwdF9uYW1lKS5odG1sKCk7XG4gICAgICAgIHJldHVybiBgXG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZzogMTBweCA1cHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwicmVnZXgtdG9nZ2xlLSR7cmVnZXguaWR9XCIgc3R5bGU9XCJjdXJzb3I6IHBvaW50ZXI7IGZsZXg6IDE7IG1hcmdpbi1yaWdodDogMTBweDsgb3ZlcmZsb3c6IGhpZGRlbjsgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7IHdoaXRlLXNwYWNlOiBub3dyYXA7XCIgdGl0bGU9XCIke3NhZmVOYW1lfVwiPiR7c2FmZU5hbWV9PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzPVwicG0tc3dpdGNoXCI+XG4gICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBpZD1cInJlZ2V4LXRvZ2dsZS0ke3JlZ2V4LmlkfVwiIGRhdGEtaWQ9XCIke3JlZ2V4LmlkfVwiICR7aXNDaGVja2VkID8gJ2NoZWNrZWQnIDogJyd9Lz5cbiAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJwbS1zbGlkZXJcIj48L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBgO1xuICAgICAgfSlcbiAgICAgIC5qb2luKCcnKTtcblxuICAgIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgICAgIDxkaXYgaWQ9XCIke3BvcHVwSWR9XCIgc3R5bGU9XCJwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgbGVmdDogMDsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjUpOyB6LWluZGV4OiAxMDAwMTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDQ1MHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDgwdmg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6I2M2MjgyODsgdGV4dC1hbGlnbjogY2VudGVyO1wiPuivt+mAieaLqee7keWumuato+WImTwvaDQ+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxOyBtaW4taGVpZ2h0OiAwOyBvdmVyZmxvdy15OiBhdXRvOyBtYXJnaW46IDE1cHggMDsgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNmMGUyZDA7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjBlMmQwOyBwYWRkaW5nOiA1cHggMTBweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICR7cmVnZXhlc0h0bWx9XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7IGRpc3BsYXk6ZmxleDsganVzdGlmeS1jb250ZW50OmZsZXgtZW5kOyBnYXA6IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwicmVnZXgtYmluZC1jbGVhclwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y1YThhMDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgY29sb3I6I2ZmZjtcIj7muIXpmaTnu5Hlrpo8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJyZWdleC1iaW5kLWNhbmNlbFwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2UwZTBlMDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgY29sb3I6IzMzMztcIj7lj5bmtog8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJyZWdleC1iaW5kLXNhdmVcIiBzdHlsZT1cInBhZGRpbmc6IDhweCAxNnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNmNGM3OGU7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7IGNvbG9yOiMzYTJjMmM7XCI+5L+d5a2YPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIGA7XG4gICAgJCgnYm9keScpLmFwcGVuZChwb3B1cEh0bWwpO1xuICAgIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+QG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7ICMke3BvcHVwSWR9IHsgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQgIWltcG9ydGFudDsgfSAjJHtwb3B1cElkfSA+IGRpdiB7IG1hcmdpbi10b3A6IDV2aDsgfSB9PC9zdHlsZT5gO1xuICAgICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG5cbiAgICAkKCcjcmVnZXgtYmluZC1jYW5jZWwnKS5vbignY2xpY2snLCAoKSA9PiAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpKTtcblxuICAgICQoJyNyZWdleC1iaW5kLWNsZWFyJykub24oJ2NsaWNrJywgYXN5bmMgKCkgPT4ge1xuICAgICAgY29uc3QgY29uZmlncyA9IGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKTtcbiAgICAgIGlmIChjb25maWdzW2NvbmZpZ0lkXSAmJiBjb25maWdzW2NvbmZpZ0lkXS5yZWdleFN0YXRlcykge1xuICAgICAgICBkZWxldGUgY29uZmlnc1tjb25maWdJZF0ucmVnZXhTdGF0ZXM7XG4gICAgICAgIGF3YWl0IHNldFN0b3JlZENvbmZpZ3MoY29uZmlncyk7XG4gICAgICAgIHRvYXN0ci5zdWNjZXNzKGDphY3nva4gXCIke2NvbmZpZ3NbY29uZmlnSWRdLm5hbWV9XCIg55qE5q2j5YiZ57uR5a6a5bey5riF6Zmk44CCYCk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICB0b2FzdHIuaW5mbyhg6YWN572u5rKh5pyJ5q2j5YiZ57uR5a6a44CCYCk7XG4gICAgICB9XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVuZGVyQ29uZmlnc0xpc3QoKTtcbiAgICB9KTtcblxuICAgICQoJyNyZWdleC1iaW5kLXNhdmUnKS5vbignY2xpY2snLCBhc3luYyAoKSA9PiB7XG4gICAgICBjb25zdCBuZXdSZWdleFN0YXRlcyA9IGFsbFJlZ2V4ZXMubWFwKChyZWdleDogYW55KSA9PiAoe1xuICAgICAgICBpZDogcmVnZXguaWQsXG4gICAgICAgIGVuYWJsZWQ6ICQoYCNyZWdleC10b2dnbGUtJHtyZWdleC5pZH1gKS5pcygnOmNoZWNrZWQnKSxcbiAgICAgIH0pKTtcblxuICAgICAgY29uc3QgY29uZmlncyA9IGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKTtcbiAgICAgIGlmICghY29uZmlnc1tjb25maWdJZF0pIHJldHVybjtcblxuICAgICAgY29uZmlnc1tjb25maWdJZF0ucmVnZXhTdGF0ZXMgPSBuZXdSZWdleFN0YXRlcztcbiAgICAgIGF3YWl0IHNldFN0b3JlZENvbmZpZ3MoY29uZmlncyk7XG5cbiAgICAgIHRvYXN0ci5zdWNjZXNzKGDphY3nva4gXCIke2NvbmZpZ3NbY29uZmlnSWRdLm5hbWV9XCIg55qE5q2j5YiZ57uR5a6a5bey5L+d5a2Y44CCYCk7XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVuZGVyQ29uZmlnc0xpc3QoKTtcblxuICAgICAgY29uc3QgY3VycmVudFByZXNldE5hbWUgPSBjb25maWdzW2NvbmZpZ0lkXS5wcmVzZXROYW1lO1xuICAgICAgaWYgKCFjdXJyZW50UHJlc2V0TmFtZSkgcmV0dXJuO1xuXG4gICAgICBjb25zdCBvdGhlckNvbmZpZ0lkcyA9IE9iamVjdC5rZXlzKGNvbmZpZ3MpLmZpbHRlcihcbiAgICAgICAgaWQgPT4gaWQgIT09IGNvbmZpZ0lkICYmIGNvbmZpZ3NbaWRdLnByZXNldE5hbWUgPT09IGN1cnJlbnRQcmVzZXROYW1lLFxuICAgICAgKTtcblxuICAgICAgaWYgKG90aGVyQ29uZmlnSWRzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgY29uc3QgY29uZmlybU1lc3NhZ2UgPSBg5piv5ZCm6KaB5bCG5q2k5q2j5YiZ57uR5a6a5bqU55So5Yiw5YW25LuW5L2/55So6aKE6K6+IFwiJHtjdXJyZW50UHJlc2V0TmFtZX1cIiDnmoQgJHtvdGhlckNvbmZpZ0lkcy5sZW5ndGh9IOS4qumFjee9ruS4iu+8n2A7XG4gICAgICAgIGNvbnN0IHVzZXJDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICAgICAgYC9wb3B1cCBva0J1dHRvbj1cIuW6lOeUqFwiIGNhbmNlbEJ1dHRvbj1cIuWPlua2iFwiIHJlc3VsdD10cnVlIFwiJHtjb25maXJtTWVzc2FnZX1cImAsXG4gICAgICAgICk7XG5cbiAgICAgICAgaWYgKHVzZXJDaG9pY2UgPT09ICcxJykge1xuICAgICAgICAgIG90aGVyQ29uZmlnSWRzLmZvckVhY2goaWQgPT4ge1xuICAgICAgICAgICAgY29uZmlnc1tpZF0ucmVnZXhTdGF0ZXMgPSBuZXdSZWdleFN0YXRlcztcbiAgICAgICAgICB9KTtcbiAgICAgICAgICBhd2FpdCBzZXRTdG9yZWRDb25maWdzKGNvbmZpZ3MpO1xuICAgICAgICAgIHRvYXN0ci5zdWNjZXNzKGDlt7LmiJDlip/lsIbmraPliJnnu5HlrprlupTnlKjliLAgJHtvdGhlckNvbmZpZ0lkcy5sZW5ndGh9IOS4quWQjOWQjemihOiuvumFjee9ruS4iuOAgmApO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfSk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5omT5byA5q2j5YiZ57uR5a6a55WM6Z2i5aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+aXoOazleWKoOi9veWFqOWxgOato+WImeWIl+ihqOOAgicpO1xuICB9XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBzb3J0UmVnZXhlcyhyZWdleGVzOiBhbnlbXSk6IGFueVtdIHtcbiAgY29uc3QgZ2V0U29ydE51bWJlciA9IChuYW1lOiBzdHJpbmcpOiBudW1iZXIgPT4ge1xuICAgIGNvbnN0IG1hdGNoID0gbmFtZS50cmltKCkubWF0Y2goL14oPzpcXFt844CQfFxcKHzvvIgpPyhcXGQrKSg/OlxcXXzjgJF8XFwpfO+8iXxcXC58LXxffFxccyk/Lyk7XG4gICAgaWYgKG1hdGNoICYmIG1hdGNoWzFdKSB7XG4gICAgICByZXR1cm4gcGFyc2VJbnQobWF0Y2hbMV0sIDEwKTtcbiAgICB9XG4gICAgcmV0dXJuIEluZmluaXR5O1xuICB9O1xuXG4gIHJldHVybiByZWdleGVzLnNvcnQoKGEsIGIpID0+IHtcbiAgICBjb25zdCBudW1BID0gZ2V0U29ydE51bWJlcihhLnNjcmlwdF9uYW1lKTtcbiAgICBjb25zdCBudW1CID0gZ2V0U29ydE51bWJlcihiLnNjcmlwdF9uYW1lKTtcblxuICAgIGlmIChudW1BICE9PSBudW1CKSB7XG4gICAgICByZXR1cm4gbnVtQSAtIG51bUI7XG4gICAgfVxuICAgIHJldHVybiBhLnNjcmlwdF9uYW1lLmxvY2FsZUNvbXBhcmUoYi5zY3JpcHRfbmFtZSk7XG4gIH0pO1xufVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gaW1wb3J0UmVnZXhMb2dpYyhyZWdleFRvSW1wb3J0OiBhbnlbXSk6IFByb21pc2U8dm9pZD4ge1xuICBjb25zdCBjdXJyZW50UmVnZXhlcyA9IGF3YWl0IFRhdmVybkhlbHBlci5nZXRUYXZlcm5SZWdleGVzKHsgc2NvcGU6ICdnbG9iYWwnIH0pO1xuICBsZXQgcmVtYWluaW5nUmVnZXhlcyA9IGN1cnJlbnRSZWdleGVzO1xuXG4gIGlmIChjdXJyZW50UmVnZXhlcyAmJiBjdXJyZW50UmVnZXhlcy5sZW5ndGggPiAwKSB7XG4gICAgcmVtYWluaW5nUmVnZXhlcyA9IGF3YWl0IHNob3dSZWdleERlbGV0aW9uUG9wdXAoY3VycmVudFJlZ2V4ZXMpO1xuICB9XG5cbiAgY29uc3QgY29tYmluZWRSZWdleGVzID0gWy4uLnJlZ2V4VG9JbXBvcnQsIC4uLnJlbWFpbmluZ1JlZ2V4ZXNdO1xuICBjb25zdCBzb3J0ZWRSZWdleGVzID0gc29ydFJlZ2V4ZXMoY29tYmluZWRSZWdleGVzKTtcblxuICBhd2FpdCBUYXZlcm5IZWxwZXIucmVwbGFjZVRhdmVyblJlZ2V4ZXMoc29ydGVkUmVnZXhlcywgeyBzY29wZTogJ2dsb2JhbCcgfSk7XG4gIHRvYXN0ci5zdWNjZXNzKGDmiJDlip/lr7zlhaUgJHtyZWdleFRvSW1wb3J0Lmxlbmd0aH0g5p2h5q2j5YiZ77yM5bm26YeN5paw5o6S5bqP44CCYCk7XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/正则绑定功能.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   c: () => (/* binding */ showBatchExportPopup),
+/* harmony export */   handleMegaBundleImport: () => (/* binding */ handleMegaBundleImport),
+/* harmony export */   startBatchImportFlow: () => (/* binding */ startBatchImportFlow),
+/* harmony export */   x: () => (/* binding */ showBatchDeletePopup)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(65);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(780);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(320);
+
+
+
+
+async function showBatchExportPopup() {
+    const popupId = 'preset-manager-batch-export-popup';
+    $(`#${popupId}`).remove();
+    const configs = Object.values(await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)());
+    if (configs.length === 0) {
+        toastr.info('没有可导出的配置。');
+        return;
+    }
+    const configsHtml = configs
+        .map(config => {
+        const safeName = $('<div/>').text(config.name).html();
+        return `
+            <div style="padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                <label style="cursor:pointer; display:flex; align-items:center; width: 100%;">
+                    <input type="checkbox" class="pm-batch-export-item" value="${config.id}" style="margin-right: 10px; transform: scale(1.2);">
+                    <span>${safeName}</span>
+                </label>
+            </div>
+        `;
+    })
+        .join('');
+    const popupHtml = `
+        <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+            <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                <h4 style="margin-top:0; color:#6a4226; text-align: center;">选择要批量导出的配置</h4>
+                <div style="margin: 10px 0; display: flex; justify-content: space-around;">
+                   <button id="batch-export-select-all" style="padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;">全选</button>
+                   <button id="batch-export-deselect-all" style="padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;">全不选</button>
+                </div>
+                <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                    ${configsHtml}
+                </div>
+                <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                    <button id="batch-export-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                    <button id="batch-export-confirm" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">确认导出</button>
+                </div>
+            </div>
+        </div>
+    `;
+    $('body').append(popupHtml);
+    const mobileStyles = `<style>
+        @media (max-width: 600px) { #${popupId} > div { margin-top: 5vh; } }
+    </style>`;
+    $(`#${popupId}`).append(mobileStyles);
+    $('#batch-export-select-all').on('click', () => $('.pm-batch-export-item').prop('checked', true));
+    $('#batch-export-deselect-all').on('click', () => $('.pm-batch-export-item').prop('checked', false));
+    $('#batch-export-cancel').on('click', () => $(`#${popupId}`).remove());
+    $('#batch-export-confirm').on('click', async () => {
+        const selectedIds = new Set();
+        $('.pm-batch-export-item:checked').each(function () {
+            selectedIds.add($(this).val());
+        });
+        const allConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+        const selectedConfigs = Object.values(allConfigs).filter(c => selectedIds.has(c.id));
+        batchExportConfigs(selectedConfigs);
+        $(`#${popupId}`).remove();
+    });
+}
+async function batchExportConfigs(selectedConfigs) {
+    if (selectedConfigs.length === 0) {
+        toastr.info('未选择任何配置。');
+        return;
+    }
+    try {
+        let userRemark = '';
+        const addRemarkChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否要为这个批量导出的整合包添加备注信息？"`);
+        if (addRemarkChoice === '1') {
+            userRemark = await triggerSlash(`/input multiline=true placeholder="请输入备注，例如这批配置的共同特点..." "为整合包添加备注"`);
+        }
+        const megaBundle = {
+            type: 'MiaoMiaoPresetMegaBundle',
+            version: 1,
+            remark: userRemark || '',
+            presetConfigs: {},
+            presets: {},
+            regexData: [],
+        };
+        const uniquePresetNames = new Set();
+        for (const configData of selectedConfigs) {
+            megaBundle.presetConfigs[configData.id] = configData;
+            if (configData.presetName) {
+                uniquePresetNames.add(configData.presetName);
+            }
+        }
+        if (uniquePresetNames.size > 0) {
+            const presetList = Array.from(uniquePresetNames).join(', ');
+            const includePresetsChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "您选择的配置关联了以下预设：${presetList}。是否要将这些预设文件一同打包导出？"`);
+            if (includePresetsChoice === '1') {
+                let includedCount = 0;
+                for (const presetName of uniquePresetNames) {
+                    if (TavernHelper.getPresetNames().includes(presetName)) {
+                        const presetData = TavernHelper.getPreset(presetName);
+                        if (presetData) {
+                            megaBundle.presets[presetName] = presetData;
+                            includedCount++;
+                        }
+                    }
+                }
+                toastr.info(`已将 ${includedCount} 个预设文件打包。`);
+            }
+            else {
+                toastr.info('跳过预设文件导出。');
+            }
+        }
+        const includeRegexChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否需要选择一些全局正则脚本一同打包导出？"`);
+        if (includeRegexChoice === '1') {
+            const allGlobalRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+            if (allGlobalRegexes.length === 0) {
+                toastr.info('没有可供导出的全局正则脚本。');
+            }
+            else {
+                const selectedRegexes = await (0,___WEBPACK_IMPORTED_MODULE_2__.showRegexExportSelectionPopup)(allGlobalRegexes);
+                if (selectedRegexes) {
+                    megaBundle.regexData = selectedRegexes;
+                    toastr.info(`已将 ${selectedRegexes.length} 条正则打包。`);
+                }
+                else {
+                    toastr.info('已取消选择正则，将不导出任何正则脚本。');
+                }
+            }
+        }
+        else {
+            toastr.info('跳过正则导出。');
+        }
+        const defaultFileName = 'MiaoMiao_Batch_Export';
+        let userFileName = await triggerSlash(`/input default="${defaultFileName}" "请输入批量导出的文件名（无需后缀）"`);
+        if (!userFileName || userFileName.trim() === '') {
+            userFileName = defaultFileName;
+            toastr.info('文件名为空，已使用默认名称。');
+        }
+        userFileName = userFileName.trim().replace(/\.json$/, '');
+        const jsonString = JSON.stringify(megaBundle, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${userFileName}.json`;
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+        a.remove();
+        toastr.success(`已成功导出 ${selectedConfigs.length} 个配置的整合包。`);
+    }
+    catch (error) {
+        console.error('批量导出失败:', error);
+        toastr.error('批量导出失败，请检查控制台。');
+    }
+}
+async function startBatchImportFlow(configsToImport) {
+    const userChoices = await (0,___WEBPACK_IMPORTED_MODULE_2__/* .showBatchImportConfigSelectionPopup */ .HA)(configsToImport);
+    if (!userChoices) {
+        toastr.info('配置导入已取消。');
+        return;
+    }
+    const importList = userChoices.filter((choice) => choice.import);
+    if (importList.length === 0) {
+        toastr.info('未选择要导入的配置。');
+        return;
+    }
+    const storedConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+    importList.forEach((choice) => {
+        const config = configsToImport.find(c => c.id === choice.originalId);
+        if (config) {
+            const newConfig = { ...config }; // Create a copy
+            newConfig.name = choice.newName;
+            newConfig.id = (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)(); // Assign a new unique ID on import
+            storedConfigs[newConfig.id] = newConfig;
+        }
+    });
+    await (0,___WEBPACK_IMPORTED_MODULE_3__/* .setStoredConfigs */ .BR)(storedConfigs);
+    toastr.success(`成功导入 ${importList.length} 个配置。`);
+    await (0,___WEBPACK_IMPORTED_MODULE_3__/* .renderConfigsList */ .sd)();
+}
+async function handleMegaBundleImport(megaBundle) {
+    // 1. 导入预设
+    const presetsToImport = megaBundle.presets;
+    if (presetsToImport && Object.keys(presetsToImport).length > 0) {
+        const presetNames = Object.keys(presetsToImport).join(', ');
+        const importPresetChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此文件包含预设: ${presetNames}。是否全部导入/覆盖？"`);
+        if (importPresetChoice === '1') {
+            for (const presetName in presetsToImport) {
+                await TavernHelper.createOrReplacePreset(presetName, presetsToImport[presetName]);
+            }
+            toastr.success(`已导入 ${Object.keys(presetsToImport).length} 个预设。`);
+        }
+    }
+    // 2. 导入正则
+    const regexToImport = megaBundle.regexData;
+    if (regexToImport && regexToImport.length > 0) {
+        const importRegexChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "此文件包含 ${regexToImport.length} 条正则脚本。是否导入？"`);
+        if (importRegexChoice === '1') {
+            await (0,___WEBPACK_IMPORTED_MODULE_1__/* .importRegexLogic */ .P)(regexToImport);
+        }
+    }
+    // 3. 导入配置
+    const configsToImport = Object.values(megaBundle.presetConfigs);
+    await startBatchImportFlow(configsToImport);
+}
+async function showBatchDeletePopup() {
+    const popupId = 'preset-manager-batch-delete-popup';
+    $(`#${popupId}`).remove();
+    const configs = Object.values(await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)());
+    if (configs.length === 0) {
+        toastr.info('没有可删除的配置。');
+        return;
+    }
+    const configsHtml = configs
+        .map(config => {
+        const safeName = $('<div/>').text(config.name).html();
+        return `
+            <div style="padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                <label style="cursor:pointer; display:flex; align-items:center; width: 100%;">
+                    <input type="checkbox" class="pm-batch-delete-item" value="${config.id}" style="margin-right: 10px; transform: scale(1.2);">
+                    <span title="${safeName}">${safeName}</span>
+                </label>
+            </div>
+        `;
+    })
+        .join('');
+    const popupHtml = `
+        <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+            <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                <h4 style="margin-top:0; color:#c62828; text-align: center;">选择要批量删除的配置</h4>
+                <div style="margin: 10px 0; display: flex; justify-content: space-around;">
+                   <button id="batch-delete-select-all" style="padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;">全选</button>
+                   <button id="batch-delete-deselect-all" style="padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;">全不选</button>
+                </div>
+                <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                    ${configsHtml}
+                </div>
+                <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                    <button id="batch-delete-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                    <button id="batch-delete-confirm" style="padding: 8px 16px; background-color:#f44336; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;">确认删除</button>
+                </div>
+            </div>
+        </div>
+    `;
+    $('body').append(popupHtml);
+    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 200px; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
+    $('#batch-delete-select-all').on('click', () => $('.pm-batch-delete-item').prop('checked', true));
+    $('#batch-delete-deselect-all').on('click', () => $('.pm-batch-delete-item').prop('checked', false));
+    $('#batch-delete-cancel').on('click', () => $(`#${popupId}`).remove());
+    $('#batch-delete-confirm').on('click', () => {
+        const selectedIds = [];
+        $('.pm-batch-delete-item:checked').each(function () {
+            selectedIds.push($(this).val());
+        });
+        batchDeleteConfigs(selectedIds);
+        $(`#${popupId}`).remove();
+    });
+}
+async function batchDeleteConfigs(configIds) {
+    if (configIds.length === 0) {
+        toastr.info('未选择任何要删除的配置。');
+        return;
+    }
+    const confirm = await triggerSlash(`/popup okButton="确认删除" cancelButton="取消" result=true "警告：您确定要删除选中的 ${configIds.length} 个配置吗？此操作无法撤销。"`);
+    if (confirm !== '1') {
+        toastr.info('批量删除操作已取消。');
+        return;
+    }
+    try {
+        const storedConfigs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();
+        const idsToDelete = new Set(configIds);
+        Object.keys(storedConfigs).forEach(id => {
+            if (idsToDelete.has(id))
+                delete storedConfigs[id];
+        });
+        await (0,___WEBPACK_IMPORTED_MODULE_3__/* .setStoredConfigs */ .BR)(storedConfigs);
+        toastr.success(`已成功删除 ${configIds.length} 个配置。`);
+        await (0,___WEBPACK_IMPORTED_MODULE_3__/* .renderConfigsList */ .sd)();
+    }
+    catch (error) {
+        console.error('批量删除失败:', error);
+        toastr.error('批量删除失败，请检查控制台。');
+    }
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/界面创建和管理.ts":
-/*!*********************************!*\
-  !*** ./src/喵喵预设配置管理/界面创建和管理.ts ***!
-  \*********************************/
+/***/ 780:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createUI: () => (/* binding */ createUI),\n/* harmony export */   toggleUI: () => (/* binding */ toggleUI),\n/* harmony export */   updateConfigListCache: () => (/* binding */ updateConfigListCache)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./导入导出功能 */ \"./src/喵喵预设配置管理/导入导出功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./批量操作功能 */ \"./src/喵喵预设配置管理/批量操作功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\");\n\n\n\n\n\n\n\nfunction createUI() {\n    if ($(`#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}`).length > 0) {\n        // UI已存在，只需重新绑定事件\n        bindUIEvents();\n        return;\n    }\n    const uiContainer = $(`\n        <div id=\"${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}\">\n            <style>\n                #${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;background-color:#fff8f0;color:#3a2c2c;border:1px solid #e0c9a6;border-radius:16px;padding:20px;box-shadow:0 4px 25px rgba(120,90,60,.25);width:90%;max-width:550px;max-height:80vh;font-family:'Segoe UI',sans-serif;display:flex;flex-direction:column}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} h4{margin-top:0;border-bottom:2px solid #f0d8b6;padding-bottom:10px;color:#6a4226}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} h5{margin:8px 0;color:#7a5235}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} button{transition:all .2s ease}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} button:hover{opacity:.85}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} #preset-manager-list-section{flex:1;overflow-y:auto}@media (max-width:600px){#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}{top:0;left:0;transform:none;width:100%;height:100vh;max-width:none;max-height:none;border-radius:0;padding:10px;box-shadow:none;display:flex;flex-direction:column}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} h4{font-size:18px;text-align:center;padding:12px 0;margin:0;border-bottom:2px solid #f0d8b6}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} #preset-manager-close{top:10px;right:10px;font-size:28px}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} #preset-manager-save-section{flex-wrap:wrap}#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID} #preset-manager-name-input{width:100%;margin-left:0;margin-bottom:10px}}\n                .pm-switch{position:relative;display:inline-block;width:40px;height:20px;flex-shrink:0}.pm-switch input{opacity:0;width:0;height:0}.pm-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;transition:.4s;border-radius:20px}.pm-slider:before{position:absolute;content:\"\";height:16px;width:16px;left:2px;bottom:2px;background-color:#fff;transition:.4s;border-radius:50%}input:checked+.pm-slider{background-color:#4CAF50}input:checked+.pm-slider:before{transform:translateX(20px)}\n                #preset-manager-tips-section { margin-top: 15px; padding: 10px; background-color: #f9f3ea; border-radius: 8px; font-size: 12px; color: #7a5235; text-align: center; flex-shrink: 0; }\n                .pm-config-group summary { cursor: pointer; padding: 8px; background-color: #f7f0e4; border-radius: 6px; margin-top: 5px; font-weight: bold; } .pm-config-group summary:hover { background-color: #f0e2d0; } .pm-config-count { color: #888; font-weight: normal; margin-left: 5px; } .pm-config-sublist { list-style: none; padding-left: 15px; border-left: 2px solid #f0e2d0; margin-left: 8px; }\n                .pm-actions-container { display: flex; align-items: center; gap: 5px; justify-content: flex-end; }\n                .pm-actions-container > button, .pm-more-btn-wrapper > button { flex-shrink: 0; padding: 6px 12px; font-size: 13px; font-weight: 500; border-radius: 6px; cursor: pointer; border: none; }\n                .pm-more-btn-wrapper { position: relative; }\n                .pm-submenu { display: none; position: absolute; right: 0; top: calc(100% + 5px); background-color: #fff; border: 1px solid #e0c9a6; border-radius: 8px; box-shadow: 0 3px 15px rgba(120,90,60,.15); z-index: 10003; padding: 5px; min-width: 100px; }\n                .pm-submenu button { display: block; width: 100%; text-align: left; padding: 8px 12px; border: none; background: none; font-size: 13px; border-radius: 4px; color: #3a2c2c; cursor: pointer; }\n                .pm-submenu button:hover { background-color: #f0e2d0; }\n            </style>\n\n            <h4>喵喵预设配置管理by小n</h4>\n            <button id=\"preset-manager-close\" style=\"position:absolute; top:12px; right:16px; background:none; border:none; color:#9a6b4f; font-size:24px; cursor:pointer;\">&times;</button>\n            \n            <div id=\"preset-manager-save-section\" style=\"margin-bottom: 20px; margin-top:15px;\">\n                <div style=\"display:flex; flex-wrap: wrap; align-items:center;\">\n                    <label for=\"preset-manager-name-input\" style=\"font-weight:bold; flex-shrink:0;\">配置名称:</label>\n                    <input type=\"text\" id=\"preset-manager-name-input\" placeholder=\"例如：仅破限\" style=\"flex:1; min-width: 100px; margin-left: 10px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 6px 8px; border-radius: 6px; font-size:14px;\" />\n                    <button id=\"preset-manager-save-btn\" style=\"margin-left: 10px; padding:6px 12px; background-color:#f4c78e; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;\">保存</button>\n                </div>\n                <div style=\"margin-top: 10px; display:flex; align-items:center; padding-left: 5px;\">\n                   <label for=\"preset-manager-bind-char\" style=\"cursor:pointer;\">绑定到当前角色</label>\n                   <label class=\"pm-switch\" style=\"margin-left: auto;\">\n                      <input type=\"checkbox\" id=\"preset-manager-bind-char\"/>\n                      <span class=\"pm-slider\"></span>\n                   </label>\n                </div>\n                <!-- 分割线 -->\n                <hr style=\"margin: 15px 0; border: none; border-top: 1px solid #e0c9a6; opacity: 0.6;\">\n                <div style=\"display:flex; flex-wrap: wrap; gap: 10px; align-items:center;\">\n                    <button id=\"preset-manager-help-btn\" style=\"padding:6px 12px; background-color:#bcaaa4; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;\">使用说明</button>\n                    <button id=\"preset-manager-import-btn\" style=\"padding:6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;\">导入</button>\n                    <button id=\"preset-manager-batch-export-btn\" style=\"padding:6px 12px; background-color:#81c784; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;\">批量导出</button>\n                    <button id=\"preset-manager-batch-delete-btn\" style=\"padding:6px 12px; background-color:#ef9a9a; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;\">批量删除</button>\n                    <button id=\"preset-manager-grouping-btn\" style=\"padding:6px 12px; background-color:#9c27b0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;\">条目分组</button>\n                </div>\n            </div>\n\n            <div id=\"preset-manager-list-section\">\n                <h5>已保存的配置:</h5>\n                <ul id=\"preset-manager-list\" style=\"list-style:none; padding:0; margin:0;\"></ul>\n            </div>\n\n            <div id=\"preset-manager-tips-section\"></div>\n        </div>\n    `);\n    $('body').append(uiContainer);\n    $('body').append('<input type=\"file\" id=\"preset-manager-import-file\" accept=\".json\" style=\"display:none;\">');\n    $(`#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}`).hide();\n    // 绑定事件处理器\n    bindUIEvents();\n}\nfunction bindUIEvents() {\n    console.log('🔗 开始绑定UI事件...');\n    // 先解绑所有事件，避免重复绑定\n    $('#preset-manager-close').off('click');\n    $('#preset-manager-help-btn').off('click');\n    $('#preset-manager-save-btn').off('click');\n    $('#preset-manager-import-btn').off('click');\n    $('#preset-manager-batch-export-btn').off('click');\n    $('#preset-manager-batch-delete-btn').off('click');\n    $('#preset-manager-grouping-btn').off('click');\n    $('#preset-manager-import-file').off('change');\n    $('#preset-manager-close').on('click', () => {\n        console.log('🖱️ 关闭按钮被点击');\n        toggleUI();\n    });\n    $('#preset-manager-help-btn').on('click', () => {\n        console.log('🖱️ 帮助按钮被点击');\n        (0,___WEBPACK_IMPORTED_MODULE_4__.showHelpPopup)();\n    });\n    $('#preset-manager-save-btn').on('click', () => {\n        console.log('🖱️ 保存按钮被点击');\n        (0,___WEBPACK_IMPORTED_MODULE_6__.saveCurrentConfig)();\n    });\n    $('#preset-manager-import-btn').on('click', () => {\n        console.log('🖱️ 导入按钮被点击');\n        $('#preset-manager-import-file').click();\n    });\n    $('#preset-manager-batch-export-btn').on('click', () => {\n        console.log('🖱️ 批量导出按钮被点击');\n        (0,___WEBPACK_IMPORTED_MODULE_2__.showBatchExportPopup)();\n    });\n    $('#preset-manager-batch-delete-btn').on('click', () => {\n        console.log('🖱️ 批量删除按钮被点击');\n        (0,___WEBPACK_IMPORTED_MODULE_2__.showBatchDeletePopup)();\n    });\n    $('#preset-manager-grouping-btn').on('click', () => {\n        console.log('🖱️ 条目分组按钮被点击');\n        (0,___WEBPACK_IMPORTED_MODULE_3__.showPromptGroupingUI)();\n    });\n    $('#preset-manager-import-file').on('change', event => {\n        console.log('🖱️ 文件选择发生变化');\n        (0,___WEBPACK_IMPORTED_MODULE_1__.handleFileImport)(event);\n    });\n    console.log('✅ UI事件绑定完成');\n}\n// 缓存配置列表，避免重复渲染\nlet configListCache = null;\nlet lastConfigUpdateTime = 0;\nconst CACHE_DURATION = 5000; // 5秒缓存\nfunction toggleUI() {\n    const ui = $(`#${___WEBPACK_IMPORTED_MODULE_0__.UI_ID}`);\n    if (ui.is(':visible')) {\n        ui.fadeOut(200); // 减少动画时间\n    }\n    else {\n        // 检查缓存是否有效\n        const now = Date.now();\n        if (!configListCache || now - lastConfigUpdateTime > CACHE_DURATION) {\n            (0,___WEBPACK_IMPORTED_MODULE_5__.renderConfigsList)();\n            lastConfigUpdateTime = now;\n        }\n        else {\n            // 使用缓存的配置列表\n            $('#preset-manager-list').html(configListCache);\n        }\n        const randomTip = ___WEBPACK_IMPORTED_MODULE_0__.TIPS[Math.floor(Math.random() * ___WEBPACK_IMPORTED_MODULE_0__.TIPS.length)];\n        $('#preset-manager-tips-section').text('小贴士：' + randomTip);\n        ui.fadeIn(200); // 减少动画时间\n    }\n}\n// 更新缓存\nfunction updateConfigListCache() {\n    configListCache = $('#preset-manager-list').html();\n    lastConfigUpdateTime = Date.now();\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+eVjOmdouWIm+W7uuWSjOeuoeeQhi50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQXVDO0FBQ0s7QUFDMEI7QUFDdEI7QUFDUDtBQUNLO0FBQ0Q7QUFFdEMsU0FBUyxRQUFRO0lBQ3RCLElBQUksQ0FBQyxDQUFDLElBQUksb0NBQUssRUFBRSxDQUFDLENBQUMsTUFBTSxHQUFHLENBQUMsRUFBRSxDQUFDO1FBQzlCLGlCQUFpQjtRQUNqQixZQUFZLEVBQUUsQ0FBQztRQUNmLE9BQU87SUFDVCxDQUFDO0lBRUQsTUFBTSxXQUFXLEdBQUcsQ0FBQyxDQUFDO21CQUNMLG9DQUFLOzttQkFFTCxvQ0FBSyx3VkFBd1Ysb0NBQUssdUZBQXVGLG9DQUFLLG1DQUFtQyxvQ0FBSyxvQ0FBb0Msb0NBQUssOEJBQThCLG9DQUFLLGtGQUFrRixvQ0FBSyx3S0FBd0ssb0NBQUssaUdBQWlHLG9DQUFLLDhEQUE4RCxvQ0FBSyxpREFBaUQsb0NBQUs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7S0E4Q25pQyxDQUFDLENBQUM7SUFDTCxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsTUFBTSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0lBQzlCLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsMEZBQTBGLENBQUMsQ0FBQztJQUU3RyxDQUFDLENBQUMsSUFBSSxvQ0FBSyxFQUFFLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUV0QixVQUFVO0lBQ1YsWUFBWSxFQUFFLENBQUM7QUFDakIsQ0FBQztBQUVELFNBQVMsWUFBWTtJQUNuQixPQUFPLENBQUMsR0FBRyxDQUFDLGdCQUFnQixDQUFDLENBQUM7SUFFOUIsaUJBQWlCO0lBQ2pCLENBQUMsQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsQ0FBQztJQUN4QyxDQUFDLENBQUMsMEJBQTBCLENBQUMs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QyxDQUFDLElBQUksb0NBQUssRUFBRSxDQUFDLENBQUM7SUFDMUIsSUFBSSxFQUFFLENBQUMsRUFBRSxDQUFDLFVBQVUsQ0FBQyxFQUFFLENBQUM7UUFDdEIsRUFBRSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLFNBQVM7SUFDNUIsQ0FBQztTQUFNLENBQUM7UUFDTixXQUFXO1FBQ1gsTUFBTSxHQUFHLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxDQUFDO1FBQ3ZCLElBQUksQ0FBQyxlQUFlLElBQUksR0FBRyxHQUFHLG9CQUFvQixHQUFHLGNBQWMsRUFBRSxDQUFDO1lBQ3BFLG9EQUFpQixFQUFFLENBQUM7WUFDcEIsb0JBQW9CLEdBQUcsR0FBRyxDQUFDO1FBQzdCLENBQUM7YUFBTSxDQUFDO1lBQ04sWUFBWTtZQUNaLENBQUMsQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQztRQUNsRCxDQUFDO1FBRUQsTUFBTSxTQUFTLEdBQUcsbUNBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBRyxtQ0FBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUM7UUFDaEUsQ0FBQyxDQUFDLDhCQUE4QixDQUFDLENBQUMsSUFBSSxDQUFDLE1BQU0sR0FBRyxTQUFTLENBQUMsQ0FBQztRQUMzRCxFQUFFLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsU0FBUztJQUMzQixDQUFDO0FBQ0gsQ0FBQztBQUVELE9BQU87QUFDQSxTQUFTLHFCQUFxQjtJQUNuQyxlQUFlLEdBQUcsQ0FBQyxDQUFDLHNCQUFzQixDQUFDLENBQUMsSUFBSSxFQUFFLENBQUM7SUFDbkQsb0JBQW9CLEdBQUcsSUFBSSxDQUFDLEdBQUcsRUFBRSxDQUFDO0FBQ3BDLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/nlYzpnaLliJvlu7rlkoznrqHnkIYudHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFRJUFMsIFVJX0lEIH0gZnJvbSAnLi/liJ3lp4vljJblkozphY3nva4nO1xuaW1wb3J0IHsgaGFuZGxlRmlsZUltcG9ydCB9IGZyb20gJy4v5a+85YWl5a+85Ye65Yqf6IO9JztcbmltcG9ydCB7IHNob3dCYXRjaERlbGV0ZVBvcHVwLCBzaG93QmF0Y2hFeHBvcnRQb3B1cCB9IGZyb20gJy4v5om56YeP5pON5L2c5Yqf6IO9JztcbmltcG9ydCB7IHNob3dQcm9tcHRHcm91cGluZ1VJIH0gZnJvbSAnLi/mnaHnm67liIbnu4Tlip/og70nO1xuaW1wb3J0IHsgc2hvd0hlbHBQb3B1cCB9IGZyb20gJy4v6L6F5Yqp5by556qX5Yqf6IO9JztcbmltcG9ydCB7IHJlbmRlckNvbmZpZ3NMaXN0IH0gZnJvbSAnLi/phY3nva7lrZjlgqjlkozor7vlj5YnO1xuaW1wb3J0IHsgc2F2ZUN1cnJlbnRDb25maWcgfSBmcm9tICcuL+mFjee9ruaTjeS9nOWKn+iDvSc7XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVVSSgpOiB2b2lkIHtcbiAgaWYgKCQoYCMke1VJX0lEfWApLmxlbmd0aCA+IDApIHtcbiAgICAvLyBVSeW3suWtmOWcqO+8jOWPqumcgOmHjeaWsOe7keWumuS6i+S7tlxuICAgIGJpbmRVSUV2ZW50cygpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IHVpQ29udGFpbmVyID0gJChgXG4gICAgICAgIDxkaXYgaWQ9XCIke1VJX0lEfVwiPlxuICAgICAgICAgICAgPHN0eWxlPlxuICAgICAgICAgICAgICAgICMke1VJX0lEfXtkaXNwbGF5Om5vbmU7cG9zaXRpb246Zml4ZWQ7dG9wOjUwJTtsZWZ0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7ei1pbmRleDoxMDAwMDtiYWNrZ3JvdW5kLWNvbG9yOiNmZmY4ZjA7Y29sb3I6IzNhMmMyYztib3JkZXI6MXB4IHNvbGlkICNlMGM5YTY7Ym9yZGVyLXJhZGl1czoxNnB4O3BhZGRpbmc6MjBweDtib3gtc2hhZG93OjAgNHB4IDI1cHggcmdiYSgxMjAsOTAsNjAsLjI1KTt3aWR0aDo5MCU7bWF4LXdpZHRoOjU1MHB4O21heC1oZWlnaHQ6ODB2aDtmb250LWZhbWlseTonU2Vnb2UgVUknLHNhbnMtc2VyaWY7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbn0jJHtVSV9JRH0gaDR7bWFyZ2luLXRvcDowO2JvcmRlci1ib3R0b206MnB4IHNvbGlkICNmMGQ4YjY7cGFkZGluZy1ib3R0b206MTBweDtjb2xvcjojNmE0MjI2fSMke1VJX0lEfSBoNXttYXJnaW46OHB4IDA7Y29sb3I6IzdhNTIzNX0jJHtVSV9JRH0gYnV0dG9ue3RyYW5zaXRpb246YWxsIC4ycyBlYXNlfSMke1VJX0lEfSBidXR0b246aG92ZXJ7b3BhY2l0eTouODV9IyR7VUlfSUR9ICNwcmVzZXQtbWFuYWdlci1saXN0LXNlY3Rpb257ZmxleDoxO292ZXJmbG93LXk6YXV0b31AbWVkaWEgKG1heC13aWR0aDo2MDBweCl7IyR7VUlfSUR9e3RvcDowO2xlZnQ6MDt0cmFuc2Zvcm06bm9uZTt3aWR0aDoxMDAlO2hlaWdodDoxMDB2aDttYXgtd2lkdGg6bm9uZTttYXgtaGVpZ2h0Om5vbmU7Ym9yZGVyLXJhZGl1czowO3BhZGRpbmc6MTBweDtib3gtc2hhZG93Om5vbmU7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbn0jJHtVSV9JRH0gaDR7Zm9udC1zaXplOjE4cHg7dGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZzoxMnB4IDA7bWFyZ2luOjA7Ym9yZGVyLWJvdHRvbToycHggc29saWQgI2YwZDhiNn0jJHtVSV9JRH0gI3ByZXNldC1tYW5hZ2VyLWNsb3Nle3RvcDoxMHB4O3JpZ2h0OjEwcHg7Zm9udC1zaXplOjI4cHh9IyR7VUlfSUR9ICNwcmVzZXQtbWFuYWdlci1zYXZlLXNlY3Rpb257ZmxleC13cmFwOndyYXB9IyR7VUlfSUR9ICNwcmVzZXQtbWFuYWdlci1uYW1lLWlucHV0e3dpZHRoOjEwMCU7bWFyZ2luLWxlZnQ6MDttYXJnaW4tYm90dG9tOjEwcHh9fVxuICAgICAgICAgICAgICAgIC5wbS1zd2l0Y2h7cG9zaXRpb246cmVsYXRpdmU7ZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6NDBweDtoZWlnaHQ6MjBweDtmbGV4LXNocmluazowfS5wbS1zd2l0Y2ggaW5wdXR7b3BhY2l0eTowO3dpZHRoOjA7aGVpZ2h0OjB9LnBtLXNsaWRlcntwb3NpdGlvbjphYnNvbHV0ZTtjdXJzb3I6cG9pbnRlcjt0b3A6MDtsZWZ0OjA7cmlnaHQ6MDtib3R0b206MDtiYWNrZ3JvdW5kLWNvbG9yOiNjY2M7dHJhbnNpdGlvbjouNHM7Ym9yZGVyLXJhZGl1czoyMHB4fS5wbS1zbGlkZXI6YmVmb3Jle3Bvc2l0aW9uOmFic29sdXRlO2NvbnRlbnQ6XCJcIjtoZWlnaHQ6MTZweDt3aWR0aDoxNnB4O2xlZnQ6MnB4O2JvdHRvbToycHg7YmFja2dyb3VuZC1jb2xvcjojZmZmO3RyYW5zaXRpb246LjRzO2JvcmRlci1yYWRpdXM6NTAlfWlucHV0OmNoZWNrZWQrLnBtLXNsaWRlcntiYWNrZ3JvdW5kLWNvbG9yOiM0Q0FGNTB9aW5wdXQ6Y2hlY2tlZCsucG0tc2xpZGVyOmJlZm9yZXt0cmFuc2Zvcm06dHJhbnNsYXRlWCgyMHB4KX1cbiAgICAgICAgICAgICAgICAjcHJlc2V0LW1hbmFnZXItdGlwcy1zZWN0aW9uIHsgbWFyZ2luLXRvcDogMTVweDsgcGFkZGluZzogMTBweDsgYmFja2dyb3VuZC1jb2xvcjogI2Y5ZjNlYTsgYm9yZGVyLXJhZGl1czogOHB4OyBmb250LXNpemU6IDEycHg7IGNvbG9yOiAjN2E1MjM1OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGZsZXgtc2hyaW5rOiAwOyB9XG4gICAgICAgICAgICAgICAgLnBtLWNvbmZpZy1ncm91cCBzdW1tYXJ5IHsgY3Vyc29yOiBwb2ludGVyOyBwYWRkaW5nOiA4cHg7IGJhY2tncm91bmQtY29sb3I6ICNmN2YwZTQ7IGJvcmRlci1yYWRpdXM6IDZweDsgbWFyZ2luLXRvcDogNXB4OyBmb250LXdlaWdodDogYm9sZDsgfSAucG0tY29uZmlnLWdyb3VwIHN1bW1hcnk6aG92ZXIgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjZjBlMmQwOyB9IC5wbS1jb25maWctY291bnQgeyBjb2xvcjogIzg4ODsgZm9udC13ZWlnaHQ6IG5vcm1hbDsgbWFyZ2luLWxlZnQ6IDVweDsgfSAucG0tY29uZmlnLXN1Ymxpc3QgeyBsaXN0LXN0eWxlOiBub25lOyBwYWRkaW5nLWxlZnQ6IDE1cHg7IGJvcmRlci1sZWZ0OiAycHggc29saWQgI2YwZTJkMDsgbWFyZ2luLWxlZnQ6IDhweDsgfVxuICAgICAgICAgICAgICAgIC5wbS1hY3Rpb25zLWNvbnRhaW5lciB7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGdhcDogNXB4OyBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kOyB9XG4gICAgICAgICAgICAgICAgLnBtLWFjdGlvbnMtY29udGFpbmVyID4gYnV0dG9uLCAucG0tbW9yZS1idG4td3JhcHBlciA+IGJ1dHRvbiB7IGZsZXgtc2hyaW5rOiAwOyBwYWRkaW5nOiA2cHggMTJweDsgZm9udC1zaXplOiAxM3B4OyBmb250LXdlaWdodDogNTAwOyBib3JkZXItcmFkaXVzOiA2cHg7IGN1cnNvcjogcG9pbnRlcjsgYm9yZGVyOiBub25lOyB9XG4gICAgICAgICAgICAgICAgLnBtLW1vcmUtYnRuLXdyYXBwZXIgeyBwb3NpdGlvbjogcmVsYXRpdmU7IH1cbiAgICAgICAgICAgICAgICAucG0tc3VibWVudSB7IGRpc3BsYXk6IG5vbmU7IHBvc2l0aW9uOiBhYnNvbHV0ZTsgcmlnaHQ6IDA7IHRvcDogY2FsYygxMDAlICsgNXB4KTsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgYm9yZGVyOiAxcHggc29saWQgI2UwYzlhNjsgYm9yZGVyLXJhZGl1czogOHB4OyBib3gtc2hhZG93OiAwIDNweCAxNXB4IHJnYmEoMTIwLDkwLDYwLC4xNSk7IHotaW5kZXg6IDEwMDAzOyBwYWRkaW5nOiA1cHg7IG1pbi13aWR0aDogMTAwcHg7IH1cbiAgICAgICAgICAgICAgICAucG0tc3VibWVudSBidXR0b24geyBkaXNwbGF5OiBibG9jazsgd2lkdGg6IDEwMCU7IHRleHQtYWxpZ246IGxlZnQ7IHBhZGRpbmc6IDhweCAxMnB4OyBib3JkZXI6IG5vbmU7IGJhY2tncm91bmQ6IG5vbmU7IGZvbnQtc2l6ZTogMTNweDsgYm9yZGVyLXJhZGl1czogNHB4OyBjb2xvcjogIzNhMmMyYzsgY3Vyc29yOiBwb2ludGVyOyB9XG4gICAgICAgICAgICAgICAgLnBtLXN1Ym1lbnUgYnV0dG9uOmhvdmVyIHsgYmFja2dyb3VuZC1jb2xvcjogI2YwZTJkMDsgfVxuICAgICAgICAgICAgPC9zdHlsZT5cblxuICAgICAgICAgICAgPGg0PuWWteWWtemihOiuvumFjee9rueuoeeQhmJ55bCPbjwvaDQ+XG4gICAgICAgICAgICA8YnV0dG9uIGlkPVwicHJlc2V0LW1hbmFnZXItY2xvc2VcIiBzdHlsZT1cInBvc2l0aW9uOmFic29sdXRlOyB0b3A6MTJweDsgcmlnaHQ6MTZweDsgYmFja2dyb3VuZDpub25lOyBib3JkZXI6bm9uZTsgY29sb3I6IzlhNmI0ZjsgZm9udC1zaXplOjI0cHg7IGN1cnNvcjpwb2ludGVyO1wiPiZ0aW1lczs8L2J1dHRvbj5cbiAgICAgICAgICAgIFxuICAgICAgICAgICAgPGRpdiBpZD1cInByZXNldC1tYW5hZ2VyLXNhdmUtc2VjdGlvblwiIHN0eWxlPVwibWFyZ2luLWJvdHRvbTogMjBweDsgbWFyZ2luLXRvcDoxNXB4O1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OmZsZXg7IGZsZXgtd3JhcDogd3JhcDsgYWxpZ24taXRlbXM6Y2VudGVyO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwicHJlc2V0LW1hbmFnZXItbmFtZS1pbnB1dFwiIHN0eWxlPVwiZm9udC13ZWlnaHQ6Ym9sZDsgZmxleC1zaHJpbms6MDtcIj7phY3nva7lkI3np7A6PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgaWQ9XCJwcmVzZXQtbWFuYWdlci1uYW1lLWlucHV0XCIgcGxhY2Vob2xkZXI9XCLkvovlpoLvvJrku4XnoLTpmZBcIiBzdHlsZT1cImZsZXg6MTsgbWluLXdpZHRoOiAxMDBweDsgbWFyZ2luLWxlZnQ6IDEwcHg7IGJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlcjogMXB4IHNvbGlkICNkNGI1OGI7IGNvbG9yOiMzYTJjMmM7IHBhZGRpbmc6IDZweCA4cHg7IGJvcmRlci1yYWRpdXM6IDZweDsgZm9udC1zaXplOjE0cHg7XCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInByZXNldC1tYW5hZ2VyLXNhdmUtYnRuXCIgc3R5bGU9XCJtYXJnaW4tbGVmdDogMTBweDsgcGFkZGluZzo2cHggMTJweDsgYmFja2dyb3VuZC1jb2xvcjojZjRjNzhlOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGNvbG9yOiMzYTJjMmM7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkO1wiPuS/neWtmDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJtYXJnaW4tdG9wOiAxMHB4OyBkaXNwbGF5OmZsZXg7IGFsaWduLWl0ZW1zOmNlbnRlcjsgcGFkZGluZy1sZWZ0OiA1cHg7XCI+XG4gICAgICAgICAgICAgICAgICAgPGxhYmVsIGZvcj1cInByZXNldC1tYW5hZ2VyLWJpbmQtY2hhclwiIHN0eWxlPVwiY3Vyc29yOnBvaW50ZXI7XCI+57uR5a6a5Yiw5b2T5YmN6KeS6ImyPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9XCJwbS1zd2l0Y2hcIiBzdHlsZT1cIm1hcmdpbi1sZWZ0OiBhdXRvO1wiPlxuICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBpZD1cInByZXNldC1tYW5hZ2VyLWJpbmQtY2hhclwiLz5cbiAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz1cInBtLXNsaWRlclwiPjwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwhLS0g5YiG5Ymy57q/IC0tPlxuICAgICAgICAgICAgICAgIDxociBzdHlsZT1cIm1hcmdpbjogMTVweCAwOyBib3JkZXI6IG5vbmU7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjZTBjOWE2OyBvcGFjaXR5OiAwLjY7XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImRpc3BsYXk6ZmxleDsgZmxleC13cmFwOiB3cmFwOyBnYXA6IDEwcHg7IGFsaWduLWl0ZW1zOmNlbnRlcjtcIj5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInByZXNldC1tYW5hZ2VyLWhlbHAtYnRuXCIgc3R5bGU9XCJwYWRkaW5nOjZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNiY2FhYTQ7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6IzNhMmMyYzsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7XCI+5L2/55So6K+05piOPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJwcmVzZXQtbWFuYWdlci1pbXBvcnQtYnRuXCIgc3R5bGU9XCJwYWRkaW5nOjZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNhNWQ2Zjk7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6IzNhMmMyYzsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7XCI+5a+85YWlPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJwcmVzZXQtbWFuYWdlci1iYXRjaC1leHBvcnQtYnRuXCIgc3R5bGU9XCJwYWRkaW5nOjZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiM4MWM3ODQ7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6IzNhMmMyYzsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7XCI+5om56YeP5a+85Ye6PC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJwcmVzZXQtbWFuYWdlci1iYXRjaC1kZWxldGUtYnRuXCIgc3R5bGU9XCJwYWRkaW5nOjZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNlZjlhOWE7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY29sb3I6I2ZmZjsgY3Vyc29yOnBvaW50ZXI7IGZvbnQtd2VpZ2h0OmJvbGQ7XCI+5om56YeP5Yig6ZmkPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJwcmVzZXQtbWFuYWdlci1ncm91cGluZy1idG5cIiBzdHlsZT1cInBhZGRpbmc6NnB4IDEycHg7IGJhY2tncm91bmQtY29sb3I6IzljMjdiMDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjb2xvcjojZmZmOyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDtcIj7mnaHnm67liIbnu4Q8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGlkPVwicHJlc2V0LW1hbmFnZXItbGlzdC1zZWN0aW9uXCI+XG4gICAgICAgICAgICAgICAgPGg1PuW3suS/neWtmOeahOmFjee9rjo8L2g1PlxuICAgICAgICAgICAgICAgIDx1bCBpZD1cInByZXNldC1tYW5hZ2VyLWxpc3RcIiBzdHlsZT1cImxpc3Qtc3R5bGU6bm9uZTsgcGFkZGluZzowOyBtYXJnaW46MDtcIj48L3VsPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgaWQ9XCJwcmVzZXQtbWFuYWdlci10aXBzLXNlY3Rpb25cIj48L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgYCk7XG4gICQoJ2JvZHknKS5hcHBlbmQodWlDb250YWluZXIpO1xuICAkKCdib2R5JykuYXBwZW5kKCc8aW5wdXQgdHlwZT1cImZpbGVcIiBpZD1cInByZXNldC1tYW5hZ2VyLWltcG9ydC1maWxlXCIgYWNjZXB0PVwiLmpzb25cIiBzdHlsZT1cImRpc3BsYXk6bm9uZTtcIj4nKTtcblxuICAkKGAjJHtVSV9JRH1gKS5oaWRlKCk7XG5cbiAgLy8g57uR5a6a5LqL5Lu25aSE55CG5ZmoXG4gIGJpbmRVSUV2ZW50cygpO1xufVxuXG5mdW5jdGlvbiBiaW5kVUlFdmVudHMoKTogdm9pZCB7XG4gIGNvbnNvbGUubG9nKCfwn5SXIOW8gOWni+e7keWumlVJ5LqL5Lu2Li4uJyk7XG5cbiAgLy8g5YWI6Kej57uR5omA5pyJ5LqL5Lu277yM6YG/5YWN6YeN5aSN57uR5a6aXG4gICQoJyNwcmVzZXQtbWFuYWdlci1jbG9zZScpLm9mZignY2xpY2snKTtcbiAgJCgnI3ByZXNldC1tYW5hZ2VyLWhlbHAtYnRuJykub2ZmKCdjbGljaycpO1xuICAkKCcjcHJlc2V0LW1hbmFnZXItc2F2ZS1idG4nKS5vZmYoJ2NsaWNrJyk7XG4gICQoJyNwcmVzZXQtbWFuYWdlci1pbXBvcnQtYnRuJykub2ZmKCdjbGljaycpO1xuICAkKCcjcHJlc2V0LW1hbmFnZXItYmF0Y2gtZXhwb3J0LWJ0bicpLm9mZignY2xpY2snKTtcbiAgJCgnI3ByZXNldC1tYW5hZ2VyLWJhdGNoLWRlbGV0ZS1idG4nKS5vZmYoJ2NsaWNrJyk7XG4gICQoJyNwcmVzZXQtbWFuYWdlci1ncm91cGluZy1idG4nKS5vZmYoJ2NsaWNrJyk7XG4gICQoJyNwcmVzZXQtbWFuYWdlci1pbXBvcnQtZmlsZScpLm9mZignY2hhbmdlJyk7XG5cbiAgJCgnI3ByZXNldC1tYW5hZ2VyLWNsb3NlJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgIGNvbnNvbGUubG9nKCfwn5ax77iPIOWFs+mXreaMiemSruiiq+eCueWHuycpO1xuICAgIHRvZ2dsZVVJKCk7XG4gIH0pO1xuXG4gICQoJyNwcmVzZXQtbWFuYWdlci1oZWxwLWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygn8J+Wse+4jyDluK7liqnmjInpkq7ooqvngrnlh7snKTtcbiAgICBzaG93SGVscFBvcHVwKCk7XG4gIH0pO1xuXG4gICQoJyNwcmVzZXQtbWFuYWdlci1zYXZlLWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygn8J+Wse+4jyDkv53lrZjmjInpkq7ooqvngrnlh7snKTtcbiAgICBzYXZlQ3VycmVudENvbmZpZygpO1xuICB9KTtcblxuICAkKCcjcHJlc2V0LW1hbmFnZXItaW1wb3J0LWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygn8J+Wse+4jyDlr7zlhaXmjInpkq7ooqvngrnlh7snKTtcbiAgICAkKCcjcHJlc2V0LW1hbmFnZXItaW1wb3J0LWZpbGUnKS5jbGljaygpO1xuICB9KTtcblxuICAkKCcjcHJlc2V0LW1hbmFnZXItYmF0Y2gtZXhwb3J0LWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygn8J+Wse+4jyDmibnph4/lr7zlh7rmjInpkq7ooqvngrnlh7snKTtcbiAgICBzaG93QmF0Y2hFeHBvcnRQb3B1cCgpO1xuICB9KTtcblxuICAkKCcjcHJlc2V0LW1hbmFnZXItYmF0Y2gtZGVsZXRlLWJ0bicpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygn8J+Wse+4jyDmibnph4/liKDpmaTmjInpkq7ooqvngrnlh7snKTtcbiAgICBzaG93QmF0Y2hEZWxldGVQb3B1cCgpO1xuICB9KTtcblxuICAkKCcjcHJlc2V0LW1hbmFnZXItZ3JvdXBpbmctYnRuJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgIGNvbnNvbGUubG9nKCfwn5ax77iPIOadoeebruWIhue7hOaMiemSruiiq+eCueWHuycpO1xuICAgIHNob3dQcm9tcHRHcm91cGluZ1VJKCk7XG4gIH0pO1xuXG4gICQoJyNwcmVzZXQtbWFuYWdlci1pbXBvcnQtZmlsZScpLm9uKCdjaGFuZ2UnLCBldmVudCA9PiB7XG4gICAgY29uc29sZS5sb2coJ/CflrHvuI8g5paH5Lu26YCJ5oup5Y+R55Sf5Y+Y5YyWJyk7XG4gICAgaGFuZGxlRmlsZUltcG9ydChldmVudCk7XG4gIH0pO1xuXG4gIGNvbnNvbGUubG9nKCfinIUgVUnkuovku7bnu5HlrprlrozmiJAnKTtcbn1cblxuLy8g57yT5a2Y6YWN572u5YiX6KGo77yM6YG/5YWN6YeN5aSN5riy5p+TXG5sZXQgY29uZmlnTGlzdENhY2hlOiBzdHJpbmcgfCBudWxsID0gbnVsbDtcbmxldCBsYXN0Q29uZmlnVXBkYXRlVGltZSA9IDA7XG5jb25zdCBDQUNIRV9EVVJBVElPTiA9IDUwMDA7IC8vIDXnp5LnvJPlrZhcblxuZXhwb3J0IGZ1bmN0aW9uIHRvZ2dsZVVJKCk6IHZvaWQge1xuICBjb25zdCB1aSA9ICQoYCMke1VJX0lEfWApO1xuICBpZiAodWkuaXMoJzp2aXNpYmxlJykpIHtcbiAgICB1aS5mYWRlT3V0KDIwMCk7IC8vIOWHj+WwkeWKqOeUu+aXtumXtFxuICB9IGVsc2Uge1xuICAgIC8vIOajgOafpee8k+WtmOaYr+WQpuacieaViFxuICAgIGNvbnN0IG5vdyA9IERhdGUubm93KCk7XG4gICAgaWYgKCFjb25maWdMaXN0Q2FjaGUgfHwgbm93IC0gbGFzdENvbmZpZ1VwZGF0ZVRpbWUgPiBDQUNIRV9EVVJBVElPTikge1xuICAgICAgcmVuZGVyQ29uZmlnc0xpc3QoKTtcbiAgICAgIGxhc3RDb25maWdVcGRhdGVUaW1lID0gbm93O1xuICAgIH0gZWxzZSB7XG4gICAgICAvLyDkvb/nlKjnvJPlrZjnmoTphY3nva7liJfooahcbiAgICAgICQoJyNwcmVzZXQtbWFuYWdlci1saXN0JykuaHRtbChjb25maWdMaXN0Q2FjaGUpO1xuICAgIH1cblxuICAgIGNvbnN0IHJhbmRvbVRpcCA9IFRJUFNbTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogVElQUy5sZW5ndGgpXTtcbiAgICAkKCcjcHJlc2V0LW1hbmFnZXItdGlwcy1zZWN0aW9uJykudGV4dCgn5bCP6LS05aOr77yaJyArIHJhbmRvbVRpcCk7XG4gICAgdWkuZmFkZUluKDIwMCk7IC8vIOWHj+WwkeWKqOeUu+aXtumXtFxuICB9XG59XG5cbi8vIOabtOaWsOe8k+WtmFxuZXhwb3J0IGZ1bmN0aW9uIHVwZGF0ZUNvbmZpZ0xpc3RDYWNoZSgpOiB2b2lkIHtcbiAgY29uZmlnTGlzdENhY2hlID0gJCgnI3ByZXNldC1tYW5hZ2VyLWxpc3QnKS5odG1sKCk7XG4gIGxhc3RDb25maWdVcGRhdGVUaW1lID0gRGF0ZS5ub3coKTtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/界面创建和管理.ts\n\n}");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HA: () => (/* binding */ showBatchImportConfigSelectionPopup),
+/* harmony export */   V9: () => (/* binding */ showHelpPopup),
+/* harmony export */   eS: () => (/* binding */ showNewEntriesPopup),
+/* harmony export */   rb: () => (/* binding */ showRegexDeletionPopup),
+/* harmony export */   showConfigSelectionPopup: () => (/* binding */ showConfigSelectionPopup),
+/* harmony export */   showRegexExportSelectionPopup: () => (/* binding */ showRegexExportSelectionPopup),
+/* harmony export */   showRemarkPopup: () => (/* binding */ showRemarkPopup),
+/* harmony export */   showViewConfigPopup: () => (/* binding */ showViewConfigPopup)
+/* harmony export */ });
+function showHelpPopup() {
+    const popupId = 'preset-manager-help-popup';
+    $(`#${popupId}`).remove();
+    const helpContent = `
+        <div style="padding: 0 10px; font-size: 14px; line-height: 1.6;">
+            <h5>主要功能</h5>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <b>保存/更新配置:</b> 保存或更新当前预设中所有"条目"的启用/禁用状态。更新时可选择是否同步正则状态。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2196F3;">
+                    <b>加载配置:</b> 一键切换到指定的预设并将所有"条目"恢复到已保存的状态。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #FF9800;">
+                    <b>查看配置:</b> 在"更多"菜单中点击"查看"，可详细查看配置的基本信息、条目状态统计、启用/禁用的具体条目列表和绑定的正则信息。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #9C27B0;">
+                    <b>预设编辑器:</b> 强大的条目管理工具，支持创建、编辑、删除条目，以及多级分组管理。所有修改会实时保存到浏览器本地存储，分组设置与当前预设绑定。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #00BCD4;">
+                    <b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身、绑定的正则和分组配置。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #795548;">
+                    <b>兼容世界书导入:</b> 支持直接导入通过酒馆世界书功能导出的、含有本插件数据的备份文件。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #607D8B;">
+                    <b>批量导入/导出:</b> 一次性分享多个配置、关联的预设和正则脚本，方便备份和迁移。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #F44336;">
+                    <b>批量删除:</b> 在主界面勾选多个配置进行一次性删除，方便清理。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #E91E63;">
+                    <b>角色绑定:</b> 将配置与特定角色关联，切换到该角色时会自动提示加载。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #3F51B5;">
+                    <b>正则绑定:</b> 将配置与一组全局正则的开关状态关联，加载配置时会自动应用。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #FF5722;">
+                    <b>重命名与分组:</b> 您可以重命名任何配置，同名预设的配置会自动折叠在一个分组下，使界面更清晰。
+                </li>
+            </ul>
+        </div>
+    `;
+    const usageNotice = `
+        <div style="padding: 12px; font-size: 14px; line-height: 1.6; background-color: #f9f3ea; border-radius: 8px; margin-top: 15px;">
+            <h5 style="color: #c62828; margin-top:0;">使用须知</h5>
+            <p style="font-weight: bold; margin-bottom: 0;">
+                本脚本免费在旅程、喵喵电波服务器发布，作者MoM小n，不允许某个虐男char预设与该作者另一个梦女预设使用，也不支持鉴抄MoM那位的预设使用。
+            </p>
+        </div>
+    `;
+    const popupHtml = `
+        <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+            <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px; flex-shrink: 0;">喵喵预设配置管理 - 使用说明</h4>
+                <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;">
+                    ${helpContent}
+                </div>
+                ${usageNotice}
+                <div style="text-align: right; margin-top: 15px; flex-shrink: 0;">
+                    <button id="help-popup-close" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">关闭</button>
+                </div>
+            </div>
+        </div>
+    `;
+    $('body').append(popupHtml);
+    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 10vh; max-height: 75vh !important; } }</style>`;
+    $(`#${popupId}`).append(mobileStyles);
+    $('#help-popup-close').on('click', () => $(`#${popupId}`).remove());
+}
+function showRemarkPopup(remarkText) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-remark-popup';
+        $(`#${popupId}`).remove();
+        // Simple Markdown to HTML converter
+        function convertMarkdown(text) {
+            const sanitize = (s) => $('<div/>').text(s).html();
+            const lines = text.split('\n');
+            let html = '';
+            let inList = false;
+            const processInline = (line) => {
+                return sanitize(line)
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    .replace(/`(.*?)`/g, '<code>$1</code>');
+            };
+            for (const line of lines) {
+                const trimmedLine = line.trim();
+                const isList = trimmedLine.startsWith('* ') || trimmedLine.startsWith('- ');
+                if (inList && !isList && trimmedLine) {
+                    html += '</ul>';
+                    inList = false;
+                }
+                if (trimmedLine.startsWith('# ')) {
+                    html += `<h1>${processInline(trimmedLine.substring(2))}</h1>`;
+                }
+                else if (trimmedLine.startsWith('## ')) {
+                    html += `<h2>${processInline(trimmedLine.substring(3))}</h2>`;
+                }
+                else if (trimmedLine.startsWith('### ')) {
+                    html += `<h3>${processInline(trimmedLine.substring(4))}</h3>`;
+                }
+                else if (isList) {
+                    if (!inList) {
+                        html += '<ul>';
+                        inList = true;
+                    }
+                    html += `<li>${processInline(trimmedLine.substring(2))}</li>`;
+                }
+                else if (trimmedLine) {
+                    html += `<p>${processInline(line)}</p>`;
+                }
+            }
+            if (inList)
+                html += '</ul>';
+            return html;
+        }
+        const contentHtml = convertMarkdown(remarkText);
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                    <style>
+                        #${popupId} .remark-content h1, #${popupId} .remark-content h2, #${popupId} .remark-content h3 { margin: 12px 0 6px 0; padding-bottom: 6px; border-bottom: 1px solid #e0c9a6; }
+                        #${popupId} .remark-content h1 { font-size: 1.4em; color: #6a4226; }
+                        #${popupId} .remark-content h2 { font-size: 1.2em; color: #7a5235; }
+                        #${popupId} .remark-content h3 { font-size: 1.1em; color: #7a5235; }
+                        #${popupId} .remark-content p { margin: 0 0 10px 0; }
+                        #${popupId} .remark-content ul { margin: 10px 0; padding-left: 25px; }
+                        #${popupId} .remark-content li { margin-bottom: 5px; }
+                        #${popupId} .remark-content code { background-color: #e0d8cd; padding: 2px 5px; border-radius: 4px; font-family: monospace; color: #3a2c2c; font-size: 0.9em; }
+                    </style>
+                    <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">导入备注</h4>
+                    <div class="remark-content" style="flex: 1; min-height: 200px; overflow-y: auto; margin: 15px 0; background-color: #fdfaf5; border: 1px solid #f0e2d0; border-radius: 8px; padding: 15px; line-height: 1.6; word-wrap: break-word;">
+                        ${contentHtml}
+                    </div>
+                    <div style="text-align: right;">
+                        <button id="remark-popup-continue" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">继续导入</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#remark-popup-continue').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(true);
+        });
+    });
+}
+function showNewEntriesPopup(newEntries, promptIdToNameMap) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-new-entries-popup';
+        $(`#${popupId}`).remove();
+        const entriesHtml = newEntries
+            .map((entry, index) => {
+            const entryName = promptIdToNameMap.get(entry.id) || `未知条目 (ID: ${entry.id})`;
+            const isChecked = entry.enabled ? 'checked' : '';
+            const safeEntryName = $('<div/>').text(entryName).html();
+            return `
+                <div class="entry-item" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee;">
+                    <label for="new-entry-toggle-${index}" style="cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeEntryName}">${safeEntryName}</label>
+                    <label class="pm-switch">
+                       <input type="checkbox" id="new-entry-toggle-${index}" data-id="${entry.id}" ${isChecked}/>
+                       <span class="pm-slider"></span>
+                    </label>
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh; box-sizing: border-box;">
+                    <h4 style="margin-top:0; color:#6a4226; text-align: center;">检测到新条目</h4>
+                    <p style="font-size: 14px; color: #6a4226; margin: 10px 0; flex-shrink: 0;">请选择以下新增条目的默认启用状态(勾选为需要启用)：</p>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                        ${entriesHtml}
+                    </div>
+                    <div class="button-container" style="text-align: right; margin-top: auto; flex-shrink: 0; display:flex; justify-content:flex-end;">
+                        <button id="new-entries-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333; margin-right: 10px;">取消</button>
+                        <button id="new-entries-confirm" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">确认</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>@media (max-width: 600px) {#${popupId} { align-items: flex-start !important; } #${popupId} > div{ margin-top: 5vh; width: 95% !important;max-width: none !important;height: auto !important;max-height: 85vh !important;border-radius: 12px !important;padding: 15px !important;}#${popupId} h4{font-size: 18px !important;margin-bottom: 10px !important;}#${popupId} p{font-size: 14px !important;margin: 5px 0 15px 0 !important;}#${popupId} .entry-item{padding: 10px 0 !important;}#${popupId} .button-container{flex-direction: row !important;gap: 10px !important;justify-content: flex-end;}#${popupId} .button-container button{width: auto !important;margin: 0 !important;flex-grow: 1;}}</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#new-entries-confirm').on('click', () => {
+            const updatedEntries = newEntries.map((entry, index) => ({
+                ...entry,
+                enabled: $(`#new-entry-toggle-${index}`).is(':checked'),
+            }));
+            $(`#${popupId}`).remove();
+            resolve(updatedEntries);
+        });
+        $('#new-entries-cancel').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(null);
+        });
+    });
+}
+function showConfigSelectionPopup(configs, charName) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-config-selection-popup';
+        $(`#${popupId}`).remove();
+        const configsHtml = configs
+            .map((config, index) => {
+            const safeName = $('<div/>').text(config.name).html();
+            return `
+                <div class="config-item" style="padding: 10px 5px; border-bottom: 1px solid #eee; cursor: pointer; border-radius: 4px; display: flex; align-items: center;">
+                    <input type="radio" id="config-select-${index}" name="config-selection" value="${config.id}" style="margin-right: 10px; transform: scale(1.2);">
+                    <label for="config-select-${index}" style="cursor: pointer; width: 100%;">${safeName}</label>
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 400px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh;">
+                    <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择配置</h4>
+                    <p style="font-size: 14px; color: #6a4226; margin: 15px 0; text-align: center;">角色 "${$('<div/>').text(charName).html()}" 绑定了多个配置，请选择一个进行加载：</p>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; padding: 5px;">
+                        ${configsHtml}
+                    </div>
+                    <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                        <button id="config-select-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                        <button id="config-select-confirm" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">加载</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style> @media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        if (configs.length > 0)
+            $(`#config-select-0`).prop('checked', true);
+        $(`#${popupId} .config-item`).on('click', function () {
+            $(this).find('input[type="radio"]').prop('checked', true);
+        });
+        $('#config-select-confirm').on('click', () => {
+            const selectedId = $('input[name="config-selection"]:checked').val();
+            if (selectedId) {
+                $(`#${popupId}`).remove();
+                resolve(selectedId);
+            }
+            else {
+                toastr.warning('请选择一个配置。');
+            }
+        });
+        $('#config-select-cancel').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(null);
+        });
+    });
+}
+function showRegexExportSelectionPopup(boundRegexes) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-regex-export-popup';
+        $(`#${popupId}`).remove();
+        const regexesHtml = boundRegexes
+            .map(regex => {
+            const safeName = $('<div/>').text(regex.script_name).html();
+            return `
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;">
+                    <label for="regex-export-toggle-${regex.id}" style="cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeName}">${safeName}</label>
+                    <label class="pm-switch">
+                       <input type="checkbox" class="regex-export-checkbox" id="regex-export-toggle-${regex.id}" data-id="${regex.id}" checked/>
+                       <span class="pm-slider"></span>
+                    </label>
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                    <h4 style="margin-top:0; color:#6a4226; text-align: center;">选择要导出的正则</h4>
+                    <div style="margin: 10px 0; display: flex; justify-content: space-around;">
+                       <button id="regex-export-select-all" style="padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;">全选</button>
+                       <button id="regex-export-deselect-all" style="padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;">全不选</button>
+                    </div>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                        ${regexesHtml}
+                    </div>
+                    <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                        <button id="regex-export-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                        <button id="regex-export-confirm" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">确认导出</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#regex-export-select-all').on('click', () => $('.regex-export-checkbox').prop('checked', true));
+        $('#regex-export-deselect-all').on('click', () => $('.regex-export-checkbox').prop('checked', false));
+        $('#regex-export-cancel').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(null);
+        });
+        $('#regex-export-confirm').on('click', () => {
+            const selectedIds = new Set();
+            $('.regex-export-checkbox:checked').each(function () {
+                selectedIds.add($(this).data('id'));
+            });
+            const selectedRegexes = boundRegexes.filter(r => selectedIds.has(r.id));
+            $(`#${popupId}`).remove();
+            resolve(selectedRegexes);
+        });
+    });
+}
+function showRegexDeletionPopup(existingRegexes) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-regex-delete-popup';
+        $(`#${popupId}`).remove();
+        const regexesHtml = existingRegexes
+            .map(regex => {
+            const safeName = $('<div/>').text(regex.script_name).html();
+            return `
+                <div style="display: flex; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;">
+                    <input type="checkbox" class="regex-delete-checkbox" id="regex-delete-toggle-${regex.id}" data-id="${regex.id}" style="margin-right: 15px; transform: scale(1.3);">
+                    <label for="regex-delete-toggle-${regex.id}" style="cursor: pointer; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${safeName}">${safeName}</label>
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+            <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                    <h4 style="margin-top:0; color:#c62828; text-align: center;">删除已有正则 (可选)</h4>
+                    <p style="font-size: 13px; color: #777; text-align: center; margin-bottom: 15px;">在导入新正则前，你可以选择删除一些不再需要的旧正则。</p>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                        ${regexesHtml}
+                    </div>
+                    <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                        <button id="regex-delete-skip" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">跳过并导入</button>
+                        <button id="regex-delete-confirm" style="padding: 8px 16px; background-color:#f5a8a0; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;">删除选中并导入</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#regex-delete-skip').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(existingRegexes);
+        });
+        $('#regex-delete-confirm').on('click', () => {
+            const idsToDelete = new Set();
+            $('.regex-delete-checkbox:checked').each(function () {
+                idsToDelete.add($(this).data('id'));
+            });
+            const remainingRegexes = existingRegexes.filter(r => !idsToDelete.has(r.id));
+            if (idsToDelete.size > 0) {
+                toastr.info(`已删除 ${idsToDelete.size} 条旧正则。`);
+            }
+            $(`#${popupId}`).remove();
+            resolve(remainingRegexes);
+        });
+    });
+}
+function showBatchImportConfigSelectionPopup(configsToImport) {
+    return new Promise(resolve => {
+        const popupId = 'preset-manager-batch-import-popup';
+        $(`#${popupId}`).remove();
+        const configsHtml = configsToImport
+            .map(config => {
+            const safeName = $('<div/>').text(config.name).html();
+            return `
+                <div style="padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" class="pm-batch-import-checkbox" data-original-id="${config.id}" checked style="transform: scale(1.2);">
+                    <label style="font-weight: bold; flex-shrink: 0;" title="${safeName}">${safeName}</label>
+                    <input type="text" class="pm-batch-import-newname" value="${safeName}" style="flex: 1; min-width: 100px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 4px 6px; border-radius: 4px; font-size:13px;">
+                </div>
+            `;
+        })
+            .join('');
+        const popupHtml = `
+             <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+                    <h4 style="margin-top:0; color:#6a4226; text-align: center;">选择要导入的配置</h4>
+                    <p style="font-size: 13px; color: #777; text-align: center; margin-bottom: 15px;">勾选要导入的配置，可修改导入后的名称。</p>
+                    <div style="flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;">
+                        ${configsHtml}
+                    </div>
+                    <div style="text-align: right; display:flex; justify-content:flex-end; gap: 10px;">
+                        <button id="batch-import-cancel" style="padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;">取消</button>
+                        <button id="batch-import-confirm" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">导入选中项</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        $('body').append(popupHtml);
+        const mobileStyles = `<style>
+            @media (max-width: 600px) { #${popupId} > div { margin-top: 600px; } }
+        </style>`;
+        $(`#${popupId}`).append(mobileStyles);
+        $('#batch-import-cancel').on('click', () => {
+            $(`#${popupId}`).remove();
+            resolve(null);
+        });
+        $('#batch-import-confirm').on('click', () => {
+            const choices = [];
+            let hasError = false;
+            $('#preset-manager-batch-import-popup .pm-batch-import-checkbox').each(function () {
+                const checkbox = $(this);
+                const newName = checkbox.siblings('.pm-batch-import-newname').val()?.toString().trim();
+                if (!newName && checkbox.is(':checked')) {
+                    toastr.error(`有已勾选的配置新名称为空。`);
+                    hasError = true;
+                    return false;
+                }
+                choices.push({
+                    originalId: checkbox.data('original-id'),
+                    newName: newName,
+                    import: checkbox.is(':checked'),
+                });
+            });
+            if (!hasError) {
+                $(`#${popupId}`).remove();
+                resolve(choices);
+            }
+        });
+    });
+}
+// 显示查看配置弹窗
+async function showViewConfigPopup(configId) {
+    const { getStoredConfigs } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 320));
+    const configs = await getStoredConfigs();
+    const configData = configs[configId];
+    if (!configData) {
+        toastr.error('配置不存在');
+        return;
+    }
+    // 获取所有正则信息，用于显示名称
+    let allRegexes = [];
+    try {
+        allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+    }
+    catch (error) {
+        console.warn('获取正则信息失败:', error);
+    }
+    const popupId = 'preset-manager-view-config-popup';
+    $(`#${popupId}`).remove();
+    // 统计配置信息
+    const totalStates = configData.states.length;
+    const enabledStates = configData.states.filter((state) => state.enabled).length;
+    const disabledStates = totalStates - enabledStates;
+    // 分组显示状态
+    const enabledStatesHtml = configData.states
+        .filter((state) => state.enabled)
+        .map((state) => `<div style="padding: 4px 8px; margin: 2px; background-color: #e8f5e8; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+        .join('');
+    const disabledStatesHtml = configData.states
+        .filter((state) => !state.enabled)
+        .map((state) => `<div style="padding: 4px 8px; margin: 2px; background-color: #ffebee; border-radius: 4px; font-size: 12px;">${$('<div/>').text(state.name).html()}</div>`)
+        .join('');
+    // 正则绑定信息
+    const regexInfo = configData.regexStates && configData.regexStates.length > 0
+        ? `<div style="margin-top: 15px;">
+         <h5 style="color: #6a4226; margin-bottom: 8px;">绑定正则 (${configData.regexStates.length}个)</h5>
+         <div class="item-list" style="max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+           ${configData.regexStates
+            .map((regex) => {
+            // 从所有正则中查找对应的正则信息
+            const fullRegexInfo = allRegexes.find(r => r.id === regex.id);
+            const regexName = fullRegexInfo?.script_name ||
+                fullRegexInfo?.scriptName ||
+                regex.scriptName ||
+                regex.script_name ||
+                regex.name ||
+                `正则ID: ${regex.id}`;
+            return `<div style="padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;">
+                ${$('<div/>').text(regexName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}
+              </div>`;
+        })
+            .join('')}
+         </div>
+       </div>`
+        : '';
+    const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">查看配置详情</h4>
+        
+        <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;">
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">基本信息</h5>
+            <div style="background-color: #f9f3ea; padding: 10px; border-radius: 6px;">
+              <div><strong>配置名称:</strong> ${$('<div/>').text(configData.name).html()}</div>
+              <div><strong>关联预设:</strong> ${$('<div/>').text(configData.presetName).html()}</div>
+              <div><strong>创建时间:</strong> ${new Date(configData.id).toLocaleString()}</div>
+              ${configData.boundCharName ? `<div><strong>绑定角色:</strong> <span style="color: #4CAF50;">${$('<div/>').text(configData.boundCharName).html()}</span></div>` : ''}
+            </div>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">条目状态统计</h5>
+            <div class="stats-container" style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <div class="stats-item" style="background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #2e7d32;">启用</div>
+                <div style="font-size: 18px; font-weight: bold;">${enabledStates}</div>
+              </div>
+              <div class="stats-item" style="background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #c62828;">禁用</div>
+                <div style="font-size: 18px; font-weight: bold;">${disabledStates}</div>
+              </div>
+              <div class="stats-item" style="background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;">
+                <div style="font-weight: bold; color: #546e7a;">总计</div>
+                <div style="font-size: 18px; font-weight: bold;">${totalStates}</div>
+              </div>
+            </div>
+          </div>
+
+          ${enabledStates > 0
+        ? `
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">启用的条目 (${enabledStates}个)</h5>
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+              ${enabledStatesHtml}
+            </div>
+          </div>
+          `
+        : ''}
+
+          ${disabledStates > 0
+        ? `
+          <div style="margin-bottom: 15px;">
+            <h5 style="color: #6a4226; margin-bottom: 8px;">禁用的条目 (${disabledStates}个)</h5>
+            <div class="item-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;">
+              ${disabledStatesHtml}
+            </div>
+          </div>
+          `
+        : ''}
+
+          ${regexInfo}
+        </div>
+
+        <div style="text-align: right; margin-top: 15px; display: flex; gap: 10px; justify-content: flex-end;">
+          <button id="view-config-load" data-id="${configId}" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;">加载此配置</button>
+          <button id="view-config-close" style="padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">关闭</button>
+        </div>
+      </div>
+    </div>
+  `;
+    $('body').append(popupHtml);
+    // 绑定事件
+    $('#view-config-close').on('click', () => {
+        $(`#${popupId}`).remove();
+    });
+    $('#view-config-load').on('click', async () => {
+        const configId = $('#view-config-load').data('id');
+        $(`#${popupId}`).remove();
+        const { loadConfig } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 884));
+        await loadConfig(configId);
+    });
+    // 移动端样式
+    const mobileStyles = `<style>
+    @media (max-width: 600px) { 
+      #${popupId} { 
+        align-items: flex-start !important; 
+        padding: 10px;
+      } 
+      #${popupId} > div { 
+        margin-top: 5vh; 
+        max-height: 90vh !important; 
+        width: 95% !important;
+        padding: 15px;
+        border-radius: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+      }
+      #${popupId} h5 {
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+      }
+      #${popupId} button {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+        min-height: 44px;
+      }
+      #${popupId} .stats-container {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+      #${popupId} .stats-item {
+        flex: none !important;
+        padding: 12px !important;
+      }
+      #${popupId} .item-list {
+        max-height: 120px !important;
+        font-size: 13px !important;
+      }
+      #${popupId} .item-list div {
+        padding: 6px 10px !important;
+        margin: 3px !important;
+        font-size: 12px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      #${popupId} > div {
+        margin-top: 2vh !important;
+        max-height: 96vh !important;
+        padding: 12px;
+      }
+      #${popupId} h4 {
+        font-size: 16px !important;
+      }
+      #${popupId} .stats-item {
+        padding: 10px !important;
+      }
+      #${popupId} .stats-item div:first-child {
+        font-size: 13px !important;
+      }
+      #${popupId} .stats-item div:last-child {
+        font-size: 16px !important;
+      }
+    }
+  </style>`;
+    $(`#${popupId}`).append(mobileStyles);
+}
+
 
 /***/ }),
 
-/***/ "./src/喵喵预设配置管理/角色绑定功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/角色绑定功能.ts ***!
-  \********************************/
+/***/ 884:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   onChatChanged: () => (/* binding */ onChatChanged)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n\n\n\n\nasync function onChatChanged() {\n    try {\n        await new Promise(resolve => setTimeout(resolve, 250));\n        const charData = await TavernHelper.getCharData('current');\n        if (!charData || !charData.avatar || charData.avatar === ___WEBPACK_IMPORTED_MODULE_0__.lastProcessedCharAvatar) {\n            if (!charData || !charData.avatar)\n                (0,___WEBPACK_IMPORTED_MODULE_0__.setLastProcessedCharAvatar)(null);\n            return;\n        }\n        (0,___WEBPACK_IMPORTED_MODULE_0__.setLastProcessedCharAvatar)(charData.avatar);\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_1__.getStoredConfigs)();\n        const boundConfigs = Object.values(configs).filter(config => config.boundCharAvatar === charData.avatar);\n        if (boundConfigs.length === 0)\n            return;\n        let configIdToLoad = null;\n        if (boundConfigs.length === 1) {\n            const singleConfig = boundConfigs[0];\n            const popupText = `角色 \"${charData.name}\" 拥有绑定的配置 \"${singleConfig.name}\"。是否要加载此配置？`;\n            const userChoice = await triggerSlash(`/popup okButton=\"加载\" cancelButton=\"取消\" result=true \"${popupText}\"`);\n            if (userChoice === '1')\n                configIdToLoad = singleConfig.id;\n        }\n        else {\n            const { showConfigSelectionPopup } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\"));\n            configIdToLoad = await showConfigSelectionPopup(boundConfigs, charData.name);\n        }\n        if (configIdToLoad) {\n            await (0,___WEBPACK_IMPORTED_MODULE_2__.loadConfig)(configIdToLoad, false);\n            // 角色切换后触发分组恢复\n            setTimeout(() => {\n                (0,___WEBPACK_IMPORTED_MODULE_3__.triggerGroupingRestore)();\n            }, 800);\n        }\n    }\n    catch (error) {\n        console.error('检查绑定配置时出错:', error);\n        toastr.error('检查角色绑定配置时出错。');\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+inkuiJsue7keWumuWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUErRTtBQUNsQztBQUNQO0FBQ1k7QUFFM0MsS0FBSyxVQUFVLGFBQWE7SUFDakMsSUFBSSxDQUFDO1FBQ0gsTUFBTSxJQUFJLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRSxDQUFDLFVBQVUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQztRQUN2RCxNQUFNLFFBQVEsR0FBRyxNQUFNLFlBQVksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLENBQUM7UUFFM0QsSUFBSSxDQUFDLFFBQVEsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLElBQUksUUFBUSxDQUFDLE1BQU0sS0FBSyxzREFBdUIsRUFBRSxDQUFDO1lBQ2pGLElBQUksQ0FBQyxRQUFRLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTTtnQkFBRSw2REFBMEIsQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUNwRSxPQUFPO1FBQ1QsQ0FBQztRQUVELDZEQUEwQixDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUU1QyxNQUFNLE9BQU8sR0FBRyxNQUFNLG1EQUFnQixFQUFFLENBQUM7UUFDekMsTUFBTSxZQUFZLEdBQUcsTUFBTSxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxNQUFNLENBQUMsZUFBZSxLQUFLLFFBQVEsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUV6RyxJQUFJLFlBQVksQ0FBQyxNQUFNLEtBQUssQ0FBQztZQUFFLE9BQU87UUFFdEMsSUFBSSxjQUFjLEdBQWtCLElBQUksQ0FBQztRQUV6QyxJQUFJLFlBQVksQ0FBQyxNQUFNLEtBQUssQ0FBQyxFQUFFLENBQUM7WUFDOUIsTUFBTSxZQUFZLEdBQUcsWUFBWSxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBQ3JDLE1BQU0sU0FBUyxHQUFHLE9BQU8sUUFBUSxDQUFDLElBQUksY0FBYyxZQUFZLENBQUMsSUFBSSxhQUFhLENBQUM7WUFDbkYsTUFBTSxVQUFVLEdBQUcsTUFBTSxZQUFZLENBQUMsdURBQXVELFNBQVMsR0FBRyxDQUFDLENBQUM7WUFDM0csSUFBSSxVQUFVLEtBQUssR0FBRztnQkFBRSxjQUFjLEdBQUcsWUFBWSxDQUFDLEVBQUUsQ0FBQztRQUMzRCxDQUFDO2FBQU0sQ0FBQztZQUNOLE1BQU0sRUFBRSx3QkFBd0IsRUFBRSxHQUFHLE1BQU0sZ0lBQWtCLENBQUM7WUFDOUQsY0FBYyxHQUFHLE1BQU0sd0JBQXdCLENBQUMsWUFBWSxFQUFFLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUMvRSxDQUFDO1FBRUQsSUFBSSxjQUFjLEVBQUUsQ0FBQztZQUNuQixNQUFNLDZDQUFVLENBQUMsY0FBYyxFQUFFLEtBQUssQ0FBQyxDQUFDO1lBQ3hDLGNBQWM7WUFDZCxVQUFVLENBQUMsR0FBRyxFQUFFO2dCQUNkLHlEQUFzQixFQUFFLENBQUM7WUFDM0IsQ0FBQyxFQUFFLEdBQUcsQ0FBQyxDQUFDO1FBQ1YsQ0FBQztJQUNILENBQUM7SUFBQyxPQUFPLEtBQUssRUFBRSxDQUFDO1FBQ2YsT0FBTyxDQUFDLEtBQUssQ0FBQyxZQUFZLEVBQUUsS0FBSyxDQUFDLENBQUM7UUFDbkMsTUFBTSxDQUFDLEtBQUssQ0FBQyxjQUFjLENBQUMsQ0FBQztJQUMvQixDQUFDO0FBQ0gsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3RhdmVybl9oZWxwZXJfdGVtcGxhdGUvLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+inkuiJsue7keWumuWKn+iDvS50cz8iXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgbGFzdFByb2Nlc3NlZENoYXJBdmF0YXIsIHNldExhc3RQcm9jZXNzZWRDaGFyQXZhdGFyIH0gZnJvbSAnLi/liJ3lp4vljJblkozphY3nva4nO1xuaW1wb3J0IHsgZ2V0U3RvcmVkQ29uZmlncyB9IGZyb20gJy4v6YWN572u5a2Y5YKo5ZKM6K+75Y+WJztcbmltcG9ydCB7IGxvYWRDb25maWcgfSBmcm9tICcuL+mFjee9ruaTjeS9nOWKn+iDvSc7XG5pbXBvcnQgeyB0cmlnZ2VyR3JvdXBpbmdSZXN0b3JlIH0gZnJvbSAnLi/mnaHnm67liIbnu4Tlip/og70nO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gb25DaGF0Q2hhbmdlZCgpOiBQcm9taXNlPHZvaWQ+IHtcbiAgdHJ5IHtcbiAgICBhd2FpdCBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHNldFRpbWVvdXQocmVzb2x2ZSwgMjUwKSk7XG4gICAgY29uc3QgY2hhckRhdGEgPSBhd2FpdCBUYXZlcm5IZWxwZXIuZ2V0Q2hhckRhdGEoJ2N1cnJlbnQnKTtcblxuICAgIGlmICghY2hhckRhdGEgfHwgIWNoYXJEYXRhLmF2YXRhciB8fCBjaGFyRGF0YS5hdmF0YXIgPT09IGxhc3RQcm9jZXNzZWRDaGFyQXZhdGFyKSB7XG4gICAgICBpZiAoIWNoYXJEYXRhIHx8ICFjaGFyRGF0YS5hdmF0YXIpIHNldExhc3RQcm9jZXNzZWRDaGFyQXZhdGFyKG51bGwpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIHNldExhc3RQcm9jZXNzZWRDaGFyQXZhdGFyKGNoYXJEYXRhLmF2YXRhcik7XG5cbiAgICBjb25zdCBjb25maWdzID0gYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpO1xuICAgIGNvbnN0IGJvdW5kQ29uZmlncyA9IE9iamVjdC52YWx1ZXMoY29uZmlncykuZmlsdGVyKGNvbmZpZyA9PiBjb25maWcuYm91bmRDaGFyQXZhdGFyID09PSBjaGFyRGF0YS5hdmF0YXIpO1xuXG4gICAgaWYgKGJvdW5kQ29uZmlncy5sZW5ndGggPT09IDApIHJldHVybjtcblxuICAgIGxldCBjb25maWdJZFRvTG9hZDogc3RyaW5nIHwgbnVsbCA9IG51bGw7XG5cbiAgICBpZiAoYm91bmRDb25maWdzLmxlbmd0aCA9PT0gMSkge1xuICAgICAgY29uc3Qgc2luZ2xlQ29uZmlnID0gYm91bmRDb25maWdzWzBdO1xuICAgICAgY29uc3QgcG9wdXBUZXh0ID0gYOinkuiJsiBcIiR7Y2hhckRhdGEubmFtZX1cIiDmi6XmnInnu5HlrprnmoTphY3nva4gXCIke3NpbmdsZUNvbmZpZy5uYW1lfVwi44CC5piv5ZCm6KaB5Yqg6L295q2k6YWN572u77yfYDtcbiAgICAgIGNvbnN0IHVzZXJDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goYC9wb3B1cCBva0J1dHRvbj1cIuWKoOi9vVwiIGNhbmNlbEJ1dHRvbj1cIuWPlua2iFwiIHJlc3VsdD10cnVlIFwiJHtwb3B1cFRleHR9XCJgKTtcbiAgICAgIGlmICh1c2VyQ2hvaWNlID09PSAnMScpIGNvbmZpZ0lkVG9Mb2FkID0gc2luZ2xlQ29uZmlnLmlkO1xuICAgIH0gZWxzZSB7XG4gICAgICBjb25zdCB7IHNob3dDb25maWdTZWxlY3Rpb25Qb3B1cCB9ID0gYXdhaXQgaW1wb3J0KCcuL+i+heWKqeW8ueeql+WKn+iDvScpO1xuICAgICAgY29uZmlnSWRUb0xvYWQgPSBhd2FpdCBzaG93Q29uZmlnU2VsZWN0aW9uUG9wdXAoYm91bmRDb25maWdzLCBjaGFyRGF0YS5uYW1lKTtcbiAgICB9XG5cbiAgICBpZiAoY29uZmlnSWRUb0xvYWQpIHtcbiAgICAgIGF3YWl0IGxvYWRDb25maWcoY29uZmlnSWRUb0xvYWQsIGZhbHNlKTtcbiAgICAgIC8vIOinkuiJsuWIh+aNouWQjuinpuWPkeWIhue7hOaBouWkjVxuICAgICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICAgIHRyaWdnZXJHcm91cGluZ1Jlc3RvcmUoKTtcbiAgICAgIH0sIDgwMCk7XG4gICAgfVxuICB9IGNhdGNoIChlcnJvcikge1xuICAgIGNvbnNvbGUuZXJyb3IoJ+ajgOafpee7keWumumFjee9ruaXtuWHuumUmTonLCBlcnJvcik7XG4gICAgdG9hc3RyLmVycm9yKCfmo4Dmn6Xop5LoibLnu5HlrprphY3nva7ml7blh7rplJnjgIInKTtcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/角色绑定功能.ts\n\n}");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   autoCreateIdentifiersForAllPresets: () => (/* binding */ autoCreateIdentifiersForAllPresets),
+/* harmony export */   createIdentifierForCurrentPreset: () => (/* binding */ createIdentifierForCurrentPreset),
+/* harmony export */   deleteConfig: () => (/* binding */ deleteConfig),
+/* harmony export */   loadConfig: () => (/* binding */ loadConfig),
+/* harmony export */   renameConfig: () => (/* binding */ renameConfig),
+/* harmony export */   saveCurrentConfig: () => (/* binding */ saveCurrentConfig),
+/* harmony export */   updateConfig: () => (/* binding */ updateConfig)
+/* harmony export */ });
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(291);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(574);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(780);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(320);
 
-/***/ }),
 
-/***/ "./src/喵喵预设配置管理/辅助弹窗功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/辅助弹窗功能.ts ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   showBatchImportConfigSelectionPopup: () => (/* binding */ showBatchImportConfigSelectionPopup),\n/* harmony export */   showConfigSelectionPopup: () => (/* binding */ showConfigSelectionPopup),\n/* harmony export */   showHelpPopup: () => (/* binding */ showHelpPopup),\n/* harmony export */   showNewEntriesPopup: () => (/* binding */ showNewEntriesPopup),\n/* harmony export */   showRegexDeletionPopup: () => (/* binding */ showRegexDeletionPopup),\n/* harmony export */   showRegexExportSelectionPopup: () => (/* binding */ showRegexExportSelectionPopup),\n/* harmony export */   showRemarkPopup: () => (/* binding */ showRemarkPopup),\n/* harmony export */   showViewConfigPopup: () => (/* binding */ showViewConfigPopup)\n/* harmony export */ });\nfunction showHelpPopup() {\n    const popupId = 'preset-manager-help-popup';\n    $(`#${popupId}`).remove();\n    const helpContent = `\n        <div style=\"padding: 0 10px; font-size: 14px; line-height: 1.6;\">\n            <h5>主要功能</h5>\n            <ul>\n                <li><b>保存/更新配置:</b> 保存或更新当前预设中所有\"条目\"的启用/禁用状态。更新时可选择是否同步正则状态。</li>\n                <li><b>加载配置:</b> 一键切换到指定的预设并将所有\"条目\"恢复到已保存的状态。</li>\n                <li><b>查看配置:</b> 在\"更多\"菜单中点击\"查看\"，可详细查看配置的基本信息、条目状态统计、启用/禁用的具体条目列表和绑定的正则信息。</li>\n                <li><b>条目分组:</b> 可以将预设条目创建分组，分组后的条目会在预设界面中折叠显示，让界面更加整洁。支持创建、移除和清除分组，分组设置会自动保存。</li>\n                <li><b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身、绑定的正则和分组配置。</li>\n                <li><b>兼容世界书导入:</b> 支持直接导入通过酒馆世界书功能导出的、含有本插件数据的备份文件。</li>\n                <li><b>批量导入/导出:</b> 一次性分享多个配置、关联的预设和正则脚本，方便备份和迁移。</li>\n                <li><b>批量删除:</b> 在主界面勾选多个配置进行一次性删除，方便清理。</li>\n                <li><b>角色绑定:</b> 将配置与特定角色关联，切换到该角色时会自动提示加载。</li>\n                <li><b>正则绑定:</b> 将配置与一组全局正则的开关状态关联，加载配置时会自动应用。</li>\n                <li><b>重命名与分组:</b> 您可以重命名任何配置，同名预设的配置会自动折叠在一个分组下，使界面更清晰。</li>\n            </ul>\n        </div>\n    `;\n    const usageNotice = `\n        <div style=\"padding: 12px; font-size: 14px; line-height: 1.6; background-color: #f9f3ea; border-radius: 8px; margin-top: 15px;\">\n            <h5 style=\"color: #c62828; margin-top:0;\">使用须知</h5>\n            <p style=\"font-weight: bold; margin-bottom: 0;\">\n                本脚本免费在旅程、喵喵电波服务器发布，作者MoM小n，不允许某个虐男char预设与该作者另一个梦女预设使用，也不支持鉴抄MoM那位的预设使用。\n            </p>\n        </div>\n    `;\n    const popupHtml = `\n        <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;\">\n            <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                <h4 style=\"margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px; flex-shrink: 0;\">喵喵预设配置管理 - 使用说明</h4>\n                <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;\">\n                    ${helpContent}\n                </div>\n                ${usageNotice}\n                <div style=\"text-align: right; margin-top: 15px; flex-shrink: 0;\">\n                    <button id=\"help-popup-close\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">关闭</button>\n                </div>\n            </div>\n        </div>\n    `;\n    $('body').append(popupHtml);\n    const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 10vh; max-height: 75vh !important; } }</style>`;\n    $(`#${popupId}`).append(mobileStyles);\n    $('#help-popup-close').on('click', () => $(`#${popupId}`).remove());\n}\nfunction showRemarkPopup(remarkText) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-remark-popup';\n        $(`#${popupId}`).remove();\n        // Simple Markdown to HTML converter\n        function convertMarkdown(text) {\n            const sanitize = (s) => $('<div/>').text(s).html();\n            let lines = text.split('\\n');\n            let html = '';\n            let inList = false;\n            const processInline = (line) => {\n                return sanitize(line)\n                    .replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>')\n                    .replace(/\\*(.*?)\\*/g, '<em>$1</em>')\n                    .replace(/`(.*?)`/g, '<code>$1</code>');\n            };\n            for (const line of lines) {\n                const trimmedLine = line.trim();\n                const isList = trimmedLine.startsWith('* ') || trimmedLine.startsWith('- ');\n                if (inList && !isList && trimmedLine) {\n                    html += '</ul>';\n                    inList = false;\n                }\n                if (trimmedLine.startsWith('# ')) {\n                    html += `<h1>${processInline(trimmedLine.substring(2))}</h1>`;\n                }\n                else if (trimmedLine.startsWith('## ')) {\n                    html += `<h2>${processInline(trimmedLine.substring(3))}</h2>`;\n                }\n                else if (trimmedLine.startsWith('### ')) {\n                    html += `<h3>${processInline(trimmedLine.substring(4))}</h3>`;\n                }\n                else if (isList) {\n                    if (!inList) {\n                        html += '<ul>';\n                        inList = true;\n                    }\n                    html += `<li>${processInline(trimmedLine.substring(2))}</li>`;\n                }\n                else if (trimmedLine) {\n                    html += `<p>${processInline(line)}</p>`;\n                }\n            }\n            if (inList)\n                html += '</ul>';\n            return html;\n        }\n        const contentHtml = convertMarkdown(remarkText);\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                    <style>\n                        #${popupId} .remark-content h1, #${popupId} .remark-content h2, #${popupId} .remark-content h3 { margin: 12px 0 6px 0; padding-bottom: 6px; border-bottom: 1px solid #e0c9a6; }\n                        #${popupId} .remark-content h1 { font-size: 1.4em; color: #6a4226; }\n                        #${popupId} .remark-content h2 { font-size: 1.2em; color: #7a5235; }\n                        #${popupId} .remark-content h3 { font-size: 1.1em; color: #7a5235; }\n                        #${popupId} .remark-content p { margin: 0 0 10px 0; }\n                        #${popupId} .remark-content ul { margin: 10px 0; padding-left: 25px; }\n                        #${popupId} .remark-content li { margin-bottom: 5px; }\n                        #${popupId} .remark-content code { background-color: #e0d8cd; padding: 2px 5px; border-radius: 4px; font-family: monospace; color: #3a2c2c; font-size: 0.9em; }\n                    </style>\n                    <h4 style=\"margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;\">导入备注</h4>\n                    <div class=\"remark-content\" style=\"flex: 1; min-height: 200px; overflow-y: auto; margin: 15px 0; background-color: #fdfaf5; border: 1px solid #f0e2d0; border-radius: 8px; padding: 15px; line-height: 1.6; word-wrap: break-word;\">\n                        ${contentHtml}\n                    </div>\n                    <div style=\"text-align: right;\">\n                        <button id=\"remark-popup-continue\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">继续导入</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#remark-popup-continue').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(true);\n        });\n    });\n}\nfunction showNewEntriesPopup(newEntries, promptIdToNameMap) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-new-entries-popup';\n        $(`#${popupId}`).remove();\n        const entriesHtml = newEntries\n            .map((entry, index) => {\n            const entryName = promptIdToNameMap.get(entry.id) || `未知条目 (ID: ${entry.id})`;\n            const isChecked = entry.enabled ? 'checked' : '';\n            const safeEntryName = $('<div/>').text(entryName).html();\n            return `\n                <div class=\"entry-item\" style=\"display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee;\">\n                    <label for=\"new-entry-toggle-${index}\" style=\"cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\" title=\"${safeEntryName}\">${safeEntryName}</label>\n                    <label class=\"pm-switch\">\n                       <input type=\"checkbox\" id=\"new-entry-toggle-${index}\" data-id=\"${entry.id}\" ${isChecked}/>\n                       <span class=\"pm-slider\"></span>\n                    </label>\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh; box-sizing: border-box;\">\n                    <h4 style=\"margin-top:0; color:#6a4226; text-align: center;\">检测到新条目</h4>\n                    <p style=\"font-size: 14px; color: #6a4226; margin: 10px 0; flex-shrink: 0;\">请选择以下新增条目的默认启用状态(勾选为需要启用)：</p>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                        ${entriesHtml}\n                    </div>\n                    <div class=\"button-container\" style=\"text-align: right; margin-top: auto; flex-shrink: 0; display:flex; justify-content:flex-end;\">\n                        <button id=\"new-entries-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333; margin-right: 10px;\">取消</button>\n                        <button id=\"new-entries-confirm\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">确认</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>@media (max-width: 600px) {#${popupId} { align-items: flex-start !important; } #${popupId} > div{ margin-top: 5vh; width: 95% !important;max-width: none !important;height: auto !important;max-height: 85vh !important;border-radius: 12px !important;padding: 15px !important;}#${popupId} h4{font-size: 18px !important;margin-bottom: 10px !important;}#${popupId} p{font-size: 14px !important;margin: 5px 0 15px 0 !important;}#${popupId} .entry-item{padding: 10px 0 !important;}#${popupId} .button-container{flex-direction: row !important;gap: 10px !important;justify-content: flex-end;}#${popupId} .button-container button{width: auto !important;margin: 0 !important;flex-grow: 1;}}</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#new-entries-confirm').on('click', () => {\n            const updatedEntries = newEntries.map((entry, index) => ({\n                ...entry,\n                enabled: $(`#new-entry-toggle-${index}`).is(':checked'),\n            }));\n            $(`#${popupId}`).remove();\n            resolve(updatedEntries);\n        });\n        $('#new-entries-cancel').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(null);\n        });\n    });\n}\nfunction showConfigSelectionPopup(configs, charName) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-config-selection-popup';\n        $(`#${popupId}`).remove();\n        const configsHtml = configs\n            .map((config, index) => {\n            const safeName = $('<div/>').text(config.name).html();\n            return `\n                <div class=\"config-item\" style=\"padding: 10px 5px; border-bottom: 1px solid #eee; cursor: pointer; border-radius: 4px; display: flex; align-items: center;\">\n                    <input type=\"radio\" id=\"config-select-${index}\" name=\"config-selection\" value=\"${config.id}\" style=\"margin-right: 10px; transform: scale(1.2);\">\n                    <label for=\"config-select-${index}\" style=\"cursor: pointer; width: 100%;\">${safeName}</label>\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 400px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 90vh;\">\n                    <h4 style=\"margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;\">选择配置</h4>\n                    <p style=\"font-size: 14px; color: #6a4226; margin: 15px 0; text-align: center;\">角色 \"${$('<div/>').text(charName).html()}\" 绑定了多个配置，请选择一个进行加载：</p>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; padding: 5px;\">\n                        ${configsHtml}\n                    </div>\n                    <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                        <button id=\"config-select-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                        <button id=\"config-select-confirm\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">加载</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style> @media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; max-height: 85vh !important; } }</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        if (configs.length > 0)\n            $(`#config-select-0`).prop('checked', true);\n        $(`#${popupId} .config-item`).on('click', function () {\n            $(this).find('input[type=\"radio\"]').prop('checked', true);\n        });\n        $('#config-select-confirm').on('click', () => {\n            const selectedId = $('input[name=\"config-selection\"]:checked').val();\n            if (selectedId) {\n                $(`#${popupId}`).remove();\n                resolve(selectedId);\n            }\n            else {\n                toastr.warning('请选择一个配置。');\n            }\n        });\n        $('#config-select-cancel').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(null);\n        });\n    });\n}\nfunction showRegexExportSelectionPopup(boundRegexes) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-regex-export-popup';\n        $(`#${popupId}`).remove();\n        const regexesHtml = boundRegexes\n            .map(regex => {\n            const safeName = $('<div/>').text(regex.script_name).html();\n            return `\n                <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;\">\n                    <label for=\"regex-export-toggle-${regex.id}\" style=\"cursor: pointer; flex: 1; margin-right: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\" title=\"${safeName}\">${safeName}</label>\n                    <label class=\"pm-switch\">\n                       <input type=\"checkbox\" class=\"regex-export-checkbox\" id=\"regex-export-toggle-${regex.id}\" data-id=\"${regex.id}\" checked/>\n                       <span class=\"pm-slider\"></span>\n                    </label>\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                    <h4 style=\"margin-top:0; color:#6a4226; text-align: center;\">选择要导出的正则</h4>\n                    <div style=\"margin: 10px 0; display: flex; justify-content: space-around;\">\n                       <button id=\"regex-export-select-all\" style=\"padding: 6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; cursor:pointer;\">全选</button>\n                       <button id=\"regex-export-deselect-all\" style=\"padding: 6px 12px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer;\">全不选</button>\n                    </div>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                        ${regexesHtml}\n                    </div>\n                    <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                        <button id=\"regex-export-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                        <button id=\"regex-export-confirm\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">确认导出</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#regex-export-select-all').on('click', () => $('.regex-export-checkbox').prop('checked', true));\n        $('#regex-export-deselect-all').on('click', () => $('.regex-export-checkbox').prop('checked', false));\n        $('#regex-export-cancel').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(null);\n        });\n        $('#regex-export-confirm').on('click', () => {\n            const selectedIds = new Set();\n            $('.regex-export-checkbox:checked').each(function () {\n                selectedIds.add($(this).data('id'));\n            });\n            const selectedRegexes = boundRegexes.filter(r => selectedIds.has(r.id));\n            $(`#${popupId}`).remove();\n            resolve(selectedRegexes);\n        });\n    });\n}\nfunction showRegexDeletionPopup(existingRegexes) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-regex-delete-popup';\n        $(`#${popupId}`).remove();\n        const regexesHtml = existingRegexes\n            .map(regex => {\n            const safeName = $('<div/>').text(regex.script_name).html();\n            return `\n                <div style=\"display: flex; align-items: center; padding: 10px 5px; border-bottom: 1px solid #eee;\">\n                    <input type=\"checkbox\" class=\"regex-delete-checkbox\" id=\"regex-delete-toggle-${regex.id}\" data-id=\"${regex.id}\" style=\"margin-right: 15px; transform: scale(1.3);\">\n                    <label for=\"regex-delete-toggle-${regex.id}\" style=\"cursor: pointer; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\" title=\"${safeName}\">${safeName}</label>\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n            <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 450px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                    <h4 style=\"margin-top:0; color:#c62828; text-align: center;\">删除已有正则 (可选)</h4>\n                    <p style=\"font-size: 13px; color: #777; text-align: center; margin-bottom: 15px;\">在导入新正则前，你可以选择删除一些不再需要的旧正则。</p>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                        ${regexesHtml}\n                    </div>\n                    <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                        <button id=\"regex-delete-skip\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">跳过并导入</button>\n                        <button id=\"regex-delete-confirm\" style=\"padding: 8px 16px; background-color:#f5a8a0; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;\">删除选中并导入</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 5vh; } }</style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#regex-delete-skip').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(existingRegexes);\n        });\n        $('#regex-delete-confirm').on('click', () => {\n            const idsToDelete = new Set();\n            $('.regex-delete-checkbox:checked').each(function () {\n                idsToDelete.add($(this).data('id'));\n            });\n            const remainingRegexes = existingRegexes.filter(r => !idsToDelete.has(r.id));\n            if (idsToDelete.size > 0) {\n                toastr.info(`已删除 ${idsToDelete.size} 条旧正则。`);\n            }\n            $(`#${popupId}`).remove();\n            resolve(remainingRegexes);\n        });\n    });\n}\nfunction showBatchImportConfigSelectionPopup(configsToImport) {\n    return new Promise(resolve => {\n        const popupId = 'preset-manager-batch-import-popup';\n        $(`#${popupId}`).remove();\n        const configsHtml = configsToImport\n            .map(config => {\n            const safeName = $('<div/>').text(config.name).html();\n            return `\n                <div style=\"padding: 8px 5px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;\">\n                    <input type=\"checkbox\" class=\"pm-batch-import-checkbox\" data-original-id=\"${config.id}\" checked style=\"transform: scale(1.2);\">\n                    <label style=\"font-weight: bold; flex-shrink: 0;\" title=\"${safeName}\">${safeName}</label>\n                    <input type=\"text\" class=\"pm-batch-import-newname\" value=\"${safeName}\" style=\"flex: 1; min-width: 100px; background-color: #fff; border: 1px solid #d4b58b; color:#3a2c2c; padding: 4px 6px; border-radius: 4px; font-size:13px;\">\n                </div>\n            `;\n        })\n            .join('');\n        const popupHtml = `\n             <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10001; display: flex; align-items: center; justify-content: center;\">\n                <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n                    <h4 style=\"margin-top:0; color:#6a4226; text-align: center;\">选择要导入的配置</h4>\n                    <p style=\"font-size: 13px; color: #777; text-align: center; margin-bottom: 15px;\">勾选要导入的配置，可修改导入后的名称。</p>\n                    <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin-bottom: 20px; border-top: 1px solid #f0e2d0; border-bottom: 1px solid #f0e2d0; padding: 5px 10px;\">\n                        ${configsHtml}\n                    </div>\n                    <div style=\"text-align: right; display:flex; justify-content:flex-end; gap: 10px;\">\n                        <button id=\"batch-import-cancel\" style=\"padding: 8px 16px; background-color:#e0e0e0; border:none; border-radius:6px; cursor:pointer; color:#333;\">取消</button>\n                        <button id=\"batch-import-confirm\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">导入选中项</button>\n                    </div>\n                </div>\n            </div>\n        `;\n        $('body').append(popupHtml);\n        const mobileStyles = `<style>\n            @media (max-width: 600px) { #${popupId} > div { margin-top: 600px; } }\n        </style>`;\n        $(`#${popupId}`).append(mobileStyles);\n        $('#batch-import-cancel').on('click', () => {\n            $(`#${popupId}`).remove();\n            resolve(null);\n        });\n        $('#batch-import-confirm').on('click', () => {\n            const choices = [];\n            let hasError = false;\n            $('#preset-manager-batch-import-popup .pm-batch-import-checkbox').each(function () {\n                const checkbox = $(this);\n                const newName = checkbox.siblings('.pm-batch-import-newname').val()?.toString().trim();\n                if (!newName && checkbox.is(':checked')) {\n                    toastr.error(`有已勾选的配置新名称为空。`);\n                    hasError = true;\n                    return false;\n                }\n                choices.push({\n                    originalId: checkbox.data('original-id'),\n                    newName: newName,\n                    import: checkbox.is(':checked'),\n                });\n            });\n            if (!hasError) {\n                $(`#${popupId}`).remove();\n                resolve(choices);\n            }\n        });\n    });\n}\n// 显示查看配置弹窗\nasync function showViewConfigPopup(configId) {\n    const { getStoredConfigs } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\"));\n    const configs = await getStoredConfigs();\n    const configData = configs[configId];\n    if (!configData) {\n        toastr.error('配置不存在');\n        return;\n    }\n    // 获取所有正则信息，用于显示名称\n    let allRegexes = [];\n    try {\n        allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n    }\n    catch (error) {\n        console.warn('获取正则信息失败:', error);\n    }\n    const popupId = 'preset-manager-view-config-popup';\n    $(`#${popupId}`).remove();\n    // 统计配置信息\n    const totalStates = configData.states.length;\n    const enabledStates = configData.states.filter((state) => state.enabled).length;\n    const disabledStates = totalStates - enabledStates;\n    // 分组显示状态\n    const enabledStatesHtml = configData.states\n        .filter((state) => state.enabled)\n        .map((state) => `<div style=\"padding: 4px 8px; margin: 2px; background-color: #e8f5e8; border-radius: 4px; font-size: 12px;\">${$('<div/>').text(state.name).html()}</div>`)\n        .join('');\n    const disabledStatesHtml = configData.states\n        .filter((state) => !state.enabled)\n        .map((state) => `<div style=\"padding: 4px 8px; margin: 2px; background-color: #ffebee; border-radius: 4px; font-size: 12px;\">${$('<div/>').text(state.name).html()}</div>`)\n        .join('');\n    // 正则绑定信息\n    const regexInfo = configData.regexStates && configData.regexStates.length > 0\n        ? `<div style=\"margin-top: 15px;\">\n         <h5 style=\"color: #6a4226; margin-bottom: 8px;\">绑定正则 (${configData.regexStates.length}个)</h5>\n         <div class=\"item-list\" style=\"max-height: 100px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;\">\n           ${configData.regexStates\n            .map((regex) => {\n            // 从所有正则中查找对应的正则信息\n            const fullRegexInfo = allRegexes.find(r => r.id === regex.id);\n            const regexName = fullRegexInfo?.script_name ||\n                fullRegexInfo?.scriptName ||\n                regex.scriptName ||\n                regex.script_name ||\n                regex.name ||\n                `正则ID: ${regex.id}`;\n            return `<div style=\"padding: 4px 8px; margin: 2px; background-color: ${regex.enabled ? '#e3f2fd' : '#fafafa'}; border-radius: 4px; font-size: 12px;\">\n                ${$('<div/>').text(regexName).html()} ${regex.enabled ? '(启用)' : '(禁用)'}\n              </div>`;\n        })\n            .join('')}\n         </div>\n       </div>`\n        : '';\n    const popupHtml = `\n    <div id=\"${popupId}\" style=\"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;\">\n      <div style=\"background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 600px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;\">\n        <h4 style=\"margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;\">查看配置详情</h4>\n        \n        <div style=\"flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;\">\n          <div style=\"margin-bottom: 15px;\">\n            <h5 style=\"color: #6a4226; margin-bottom: 8px;\">基本信息</h5>\n            <div style=\"background-color: #f9f3ea; padding: 10px; border-radius: 6px;\">\n              <div><strong>配置名称:</strong> ${$('<div/>').text(configData.name).html()}</div>\n              <div><strong>关联预设:</strong> ${$('<div/>').text(configData.presetName).html()}</div>\n              <div><strong>创建时间:</strong> ${new Date(configData.id).toLocaleString()}</div>\n              ${configData.boundCharName ? `<div><strong>绑定角色:</strong> <span style=\"color: #4CAF50;\">${$('<div/>').text(configData.boundCharName).html()}</span></div>` : ''}\n            </div>\n          </div>\n\n          <div style=\"margin-bottom: 15px;\">\n            <h5 style=\"color: #6a4226; margin-bottom: 8px;\">条目状态统计</h5>\n            <div class=\"stats-container\" style=\"display: flex; gap: 10px; margin-bottom: 10px;\">\n              <div class=\"stats-item\" style=\"background-color: #e8f5e8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;\">\n                <div style=\"font-weight: bold; color: #2e7d32;\">启用</div>\n                <div style=\"font-size: 18px; font-weight: bold;\">${enabledStates}</div>\n              </div>\n              <div class=\"stats-item\" style=\"background-color: #ffebee; padding: 8px; border-radius: 6px; flex: 1; text-align: center;\">\n                <div style=\"font-weight: bold; color: #c62828;\">禁用</div>\n                <div style=\"font-size: 18px; font-weight: bold;\">${disabledStates}</div>\n              </div>\n              <div class=\"stats-item\" style=\"background-color: #f0f4f8; padding: 8px; border-radius: 6px; flex: 1; text-align: center;\">\n                <div style=\"font-weight: bold; color: #546e7a;\">总计</div>\n                <div style=\"font-size: 18px; font-weight: bold;\">${totalStates}</div>\n              </div>\n            </div>\n          </div>\n\n          ${enabledStates > 0\n        ? `\n          <div style=\"margin-bottom: 15px;\">\n            <h5 style=\"color: #6a4226; margin-bottom: 8px;\">启用的条目 (${enabledStates}个)</h5>\n            <div class=\"item-list\" style=\"max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;\">\n              ${enabledStatesHtml}\n            </div>\n          </div>\n          `\n        : ''}\n\n          ${disabledStates > 0\n        ? `\n          <div style=\"margin-bottom: 15px;\">\n            <h5 style=\"color: #6a4226; margin-bottom: 8px;\">禁用的条目 (${disabledStates}个)</h5>\n            <div class=\"item-list\" style=\"max-height: 150px; overflow-y: auto; border: 1px solid #e0c9a6; border-radius: 4px; padding: 8px;\">\n              ${disabledStatesHtml}\n            </div>\n          </div>\n          `\n        : ''}\n\n          ${regexInfo}\n        </div>\n\n        <div style=\"text-align: right; margin-top: 15px; display: flex; gap: 10px; justify-content: flex-end;\">\n          <button id=\"view-config-load\" data-id=\"${configId}\" style=\"padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff;\">加载此配置</button>\n          <button id=\"view-config-close\" style=\"padding: 8px 16px; background-color:#f4c78e; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;\">关闭</button>\n        </div>\n      </div>\n    </div>\n  `;\n    $('body').append(popupHtml);\n    // 绑定事件\n    $('#view-config-close').on('click', () => {\n        $(`#${popupId}`).remove();\n    });\n    $('#view-config-load').on('click', async () => {\n        const configId = $('#view-config-load').data('id');\n        $(`#${popupId}`).remove();\n        const { loadConfig } = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./配置操作功能 */ \"./src/喵喵预设配置管理/配置操作功能.ts\"));\n        await loadConfig(configId);\n    });\n    // 移动端样式\n    const mobileStyles = `<style>\n    @media (max-width: 600px) { \n      #${popupId} { \n        align-items: flex-start !important; \n        padding: 10px;\n      } \n      #${popupId} > div { \n        margin-top: 5vh; \n        max-height: 90vh !important; \n        width: 95% !important;\n        padding: 15px;\n        border-radius: 12px;\n      }\n      #${popupId} h4 {\n        font-size: 18px !important;\n        margin-bottom: 15px !important;\n      }\n      #${popupId} h5 {\n        font-size: 15px !important;\n        margin-bottom: 10px !important;\n      }\n      #${popupId} button {\n        font-size: 14px !important;\n        padding: 10px 16px !important;\n        min-height: 44px;\n      }\n      #${popupId} .stats-container {\n        flex-direction: column !important;\n        gap: 8px !important;\n      }\n      #${popupId} .stats-item {\n        flex: none !important;\n        padding: 12px !important;\n      }\n      #${popupId} .item-list {\n        max-height: 120px !important;\n        font-size: 13px !important;\n      }\n      #${popupId} .item-list div {\n        padding: 6px 10px !important;\n        margin: 3px !important;\n        font-size: 12px !important;\n      }\n    }\n    @media (max-width: 480px) {\n      #${popupId} > div {\n        margin-top: 2vh !important;\n        max-height: 96vh !important;\n        padding: 12px;\n      }\n      #${popupId} h4 {\n        font-size: 16px !important;\n      }\n      #${popupId} .stats-item {\n        padding: 10px !important;\n      }\n      #${popupId} .stats-item div:first-child {\n        font-size: 13px !important;\n      }\n      #${popupId} .stats-item div:last-child {\n        font-size: 16px !important;\n      }\n    }\n  </style>`;\n    $(`#${popupId}`).append(mobileStyles);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+i+heWKqeW8ueeql+WKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUVPLFNBQVMsYUFBYTtJQUMzQixNQUFNLE9BQU8sR0FBRywyQkFBMkIsQ0FBQztJQUM1QyxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO0lBRTFCLE1BQU0sV0FBVyxHQUFHOzs7Ozs7Ozs7Ozs7Ozs7OztLQWlCakIsQ0FBQztJQUVKLE1BQU0sV0FBVyxHQUFHOzs7Ozs7O0tBT2pCLENBQUM7SUFFSixNQUFNLFNBQVMsR0FBRzttQkFDRCxPQUFPOzs7O3NCQUlKLFdBQVc7O2tCQUVmLFdBQVc7Ozs7OztLQU14QixDQUFDO0lBQ0osQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsQ0FBQztJQUM1QixNQUFNLFlBQVksR0FBRyx1Q0FBdUMsT0FBTyw2Q0FBNkMsT0FBTyxxRUFBcUUsQ0FBQztJQUM3TCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxZQUFZLENBQUMsQ0FBQztJQUN0QyxDQUFDLENBQUMsbUJBQW1CLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQztBQUN0RSxDQUFDO0FBRU0sU0FBUyxlQUFlLENBQUMsVUFBa0I7SUFDaEQsT0FBTyxJQUFJLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRTtRQUMzQixNQUFNLE9BQU8sR0FBRyw2QkFBNkIsQ0FBQztRQUM5QyxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBRTFCLG9DQUFvQztRQUNwQyxTQUFTLGVBQWUsQ0FBQyxJQUFZO1lBQ25DLE1BQU0sUUFBUSxHQUFHLENBQUMsQ0FBUyxFQUFFLEVBQUUsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksRUFBRSxDQUFDO1lBQzNELElBQUksS0FBSyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDN0IsSUFBSSxJQUFJLEdBQUcsRUFBRSxDQUFDO1lBQ2QsSUFBSSxNQUFNLEdBQUcsS0FBSyxDQUFDO1lBRW5CLE1BQU0sYUFBYSxHQUFHLENBQUMsSUFBWSxFQUFFLEVBQUU7Z0JBQ3JDLE9BQU8sUUFBUSxDQUFDLElBQUksQ0FBQztxQkFDbEIsT0FBTyxDQUFDLGdCQUFnQixFQUFFLHFCQUFxQixDQUFDO3FCQUNoRCxPQUFPLENBQUMsWUFBWSxFQUFFLGFBQWEsQ0FBQztxQkFDcEMsT0FBTyxDQUFDLFVBQVUsRUFBRSxpQkFBaUIsQ0FBQyxDQUFDO1lBQzVDLENBQUMsQ0FBQztZQUVGLEtBQUssTUFBTSxJQUFJLElBQUksS0FBSyxFQUFFLENBQUM7Z0JBQ3pCLE1BQU0sV0FBVyxHQUFHLElBQUksQ0FBQyxJQUFJLEVBQUUsQ0FBQztnQkFDaEMsTUFBTSxNQUFNLEdBQUcsV0FBVyxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsSUFBSSxXQUFXLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUU1RSxJQUFJLE1BQU0sSUFBSSxDQUFDLE1BQU0sSUFBSSxXQUFXLEVBQUUsQ0FBQztvQkFDckMsSUFBSSxJQUFJLE9BQU8sQ0FBQztvQkFDaEIsTUFBTSxHQUFHLEtBQUssQ0FBQztnQkFDakIsQ0FBQztnQkFFRCxJQUFJLFdBQVcsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQztvQkFDakMsSUFBSSxJQUFJLE9BQU8sYUFBYSxDQUFDLFdBQVcsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLENBQUMsT0FBTyxDQUFDO2dCQUNoRSxDQUFDO3FCQUFNLElBQUksV0FBVyxDQUFDLFVBQVUsQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDO29CQUN6QyxJQUFJLElBQUksT0FBTyxhQUFhLENBQUMsV0FBVyxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQUM7Z0JBQ2hFLENBQUM7cUJBQU0sSUFBSSxXQUFXLENBQUMsVUFBVSxDQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUM7b0JBQzFDLElBQUksSUFBSSxPQUFPLGFBQWEsQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQztnQkFDaEUsQ0FBQztxQkFBTSxJQUFJLE1BQU0sRUFBRSxDQUFDO29CQUNsQixJQUFJLENBQUMsTUFBTSxFQUFFLENBQUM7d0JBQ1osSUFBSSxJQUFJLE1BQU0sQ0FBQzt3QkFDZixNQUFNLEdBQUcsSUFBSSxDQUFDO29CQUNoQixDQUFDO29CQUNELElBQUksSUFBSSxPQUFPLGFBQWEsQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQztnQkFDaEUsQ0FBQztxQkFBTSxJQUFJLFdBQVcsRUFBRSxDQUFDO29CQUN2QixJQUFJLElBQUksTUFBTSxhQUFhLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQztnQkFDMUMsQ0FBQztZQUNILENBQUM7WUFDRCxJQUFJLE1BQU07Z0JBQUUsSUFBSSxJQUFJLE9BQU8sQ0FBQztZQUM1QixPQUFPLElBQUksQ0FBQztRQUNkLENBQUM7UUFFRCxNQUFNLFdBQVcsR0FBRyxlQUFlLENBQUMsVUFBVSxDQUFDLENBQUM7UUFFaEQsTUFBTSxTQUFTLEdBQUc7dUJBQ0MsT0FBTzs7OzJCQUdILE9BQU8seUJBQXlCLE9BQU8seUJBQXlCLE9BQU87MkJBQ3ZFLE9BQU87MkJBQ1AsT0FBTzsyQkFDUCxPQUFPOzJCQUNQLE9BQU87MkJBQ1AsT0FBTzsyQkFDUCxPQUFPOzJCQUNQLE9BQU87Ozs7MEJBSVIsV0FBVzs7Ozs7OztTQU81QixDQUFDO1FBRU4sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUM1QixNQUFNLFlBQVksR0FBRyx1Q0FBdUMsT0FBTyw2Q0FBNkMsT0FBTyxvRUFBb0UsQ0FBQztRQUM1TCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxZQUFZLENBQUMsQ0FBQztRQUV0QyxDQUFDLENBQUMsd0JBQXdCLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLEdBQUcsRUFBRTtZQUMzQyxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQzFCLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUNoQixDQUFDLENBQUMsQ0FBQztJQUNMLENBQUMsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQUVNLFNBQVMsbUJBQW1CLENBQUMsVUFBaUIsRUFBRSxpQkFBc0M7SUFDM0YsT0FBTyxJQUFJLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRTtRQUMzQixNQUFNLE9BQU8sR0FBRyxrQ0FBa0MsQ0FBQztRQUNuRCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBRTFCLE1BQU0sV0FBVyxHQUFHLFVBQVU7YUFDM0IsR0FBRyxDQUFDLENBQUMsS0FBSyxFQUFFLEtBQUssRUFBRSxFQUFFO1lBQ3BCLE1BQU0sU0FBUyxHQUFHLGlCQUFpQixDQUFDLEdBQUcsQ0FBQyxLQUFLLENBQUMsRUFBRSxDQUFDLElBQUksYUFBYSxLQUFLLENBQUMsRUFBRSxHQUFHLENBQUM7WUFDOUUsTUFBTSxTQUFTLEdBQUcsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUM7WUFDakQsTUFBTSxhQUFhLEdBQUcsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUN6RCxPQUFPOzttREFFb0MsS0FBSyxrSUFBa0ksYUFBYSxLQUFLLGFBQWE7O3FFQUVwSixLQUFLLGNBQWMsS0FBSyxDQUFDLEVBQUUsS0FBSyxTQUFTOzs7O2FBSWpHLENBQUM7UUFDUixDQUFDLENBQUM7YUFDRCxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7UUFFWixNQUFNLFNBQVMsR0FBRzt1QkFDQyxPQUFPOzs7OzswQkFLSixXQUFXOzs7Ozs7OztTQVE1QixDQUFDO1FBRU4sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUU1QixNQUFNLFlBQVksR0FBRyxzQ0FBc0MsT0FBTyw2Q0FBNkMsT0FBTywyTEFBMkwsT0FBTyxtRUFBbUUsT0FBTyxtRUFBbUUsT0FBTyw2Q0FBNkMsT0FBTyxzR0FBc0csT0FBTywrRkFBK0YsQ0FBQztRQUM3c0IsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLENBQUMsWUFBWSxDQUFDLENBQUM7UUFFdEMsQ0FBQyxDQUFDLHNCQUFzQixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxHQUFHLEVBQUU7WUFDekMsTUFBTSxjQUFjLEdBQUcsVUFBVSxDQUFDLEdBQUcsQ0FBQyxDQUFDLEtBQUssRUFBRSxLQUFLLEVBQUUsRUFBRSxDQUFDLENBQUM7Z0JBQ3ZELEdBQUcsS0FBSztnQkFDUixPQUFPLEVBQUUsQ0FBQyxDQUFDLHFCQUFxQixLQUFLLEVBQUUsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxVQUFVLENBQUM7YUFDeEQsQ0FBQyxDQUFDLENBQUM7WUFDSixDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQzFCLE9BQU8sQ0FBQyxjQUFjLENBQUMsQ0FBQztRQUMxQixDQUFDLENBQUMsQ0FBQztRQUVILENBQUMsQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFO1lBQ3hDLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7WUFDMUIsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ2hCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDO0FBRU0sU0FBUyx3QkFBd0IsQ0FBQyxPQUFxQixFQUFFLFFBQWdCO0lBQzlFLE9BQU8sSUFBSSxPQUFPLENBQUMsT0FBTyxDQUFDLEVBQUU7UUFDM0IsTUFBTSxPQUFPLEdBQUcsdUNBQXVDLENBQUM7UUFDeEQsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztRQUUxQixNQUFNLFdBQVcsR0FBRyxPQUFPO2FBQ3hCLEdBQUcsQ0FBQyxDQUFDLE1BQU0sRUFBRSxLQUFLLEVBQUUsRUFBRTtZQUNyQixNQUFNLFFBQVEsR0FBRyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUN0RCxPQUFPOzs0REFFNkMsS0FBSyxvQ0FBb0MsTUFBTSxDQUFDLEVBQUU7Z0RBQzlELEtBQUssMkNBQTJDLFFBQVE7O2FBRTNGLENBQUM7UUFDUixDQUFDLENBQUM7YUFDRCxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7UUFFWixNQUFNLFNBQVMsR0FBRzt1QkFDQyxPQUFPOzs7MEdBRzRFLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxFQUFFOzswQkFFakgsV0FBVzs7Ozs7Ozs7U0FRNUIsQ0FBQztRQUVOLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDNUIsTUFBTSxZQUFZLEdBQUcsd0NBQXdDLE9BQU8sNkNBQTZDLE9BQU8sb0VBQW9FLENBQUM7UUFDN0wsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLENBQUMsWUFBWSxDQUFDLENBQUM7UUFFdEMsSUFBSSxPQUFPLENBQUMsTUFBTSxHQUFHLENBQUM7WUFBRSxDQUFDLENBQUMsa0JBQWtCLENBQUMsQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFLElBQUksQ0FBQyxDQUFDO1FBRXBFLENBQUMsQ0FBQyxJQUFJLE9BQU8sZUFBZSxDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRTtZQUN4QyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsSUFBSSxDQUFDLHFCQUFxQixDQUFDLENBQUMsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLENBQUMsQ0FBQztRQUM1RCxDQUFDLENBQUMsQ0FBQztRQUVILENBQUMsQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFO1lBQzNDLE1BQU0sVUFBVSxHQUFHLENBQUMsQ0FBQyx3Q0FBd0MsQ0FBQyxDQUFDLEdBQUcsRUFBWSxDQUFDO1lBQy9FLElBQUksVUFBVSxFQUFFLENBQUM7Z0JBQ2YsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztnQkFDMUIsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQ3RCLENBQUM7aUJBQU0sQ0FBQztnQkFDTixNQUFNLENBQUMsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQzdCLENBQUM7UUFDSCxDQUFDLENBQUMsQ0FBQztRQUVILENBQUMsQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFO1lBQzFDLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7WUFDMUIsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ2hCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDO0FBRU0sU0FBUyw2QkFBNkIsQ0FBQyxZQUFtQjtJQUMvRCxPQUFPLElBQUksT0FBTyxDQUFDLE9BQU8sQ0FBQyxFQUFFO1FBQzNCLE1BQU0sT0FBTyxHQUFHLG1DQUFtQyxDQUFDO1FBQ3BELENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7UUFFMUIsTUFBTSxXQUFXLEdBQUcsWUFBWTthQUM3QixHQUFHLENBQUMsS0FBSyxDQUFDLEVBQUU7WUFDWCxNQUFNLFFBQVEsR0FBRyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxXQUFXLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUM1RCxPQUFPOztzREFFdUMsS0FBSyxDQUFDLEVBQUUsa0lBQWtJLFFBQVEsS0FBSyxRQUFROztzR0FFL0csS0FBSyxDQUFDLEVBQUUsY0FBYyxLQUFLLENBQUMsRUFBRTs7OzthQUl2SCxDQUFDO1FBQ1IsQ0FBQyxDQUFDO2FBQ0QsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO1FBRVosTUFBTSxTQUFTLEdBQUc7dUJBQ0MsT0FBTzs7Ozs7Ozs7MEJBUUosV0FBVzs7Ozs7Ozs7U0FRNUIsQ0FBQztRQUVOLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDNUIsTUFBTSxZQUFZLEdBQUcsdUNBQXVDLE9BQU8sNkNBQTZDLE9BQU8sdUNBQXVDLENBQUM7UUFDL0osQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLENBQUMsWUFBWSxDQUFDLENBQUM7UUFFdEMsQ0FBQyxDQUFDLDBCQUEwQixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsd0JBQXdCLENBQUMsQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFLElBQUksQ0FBQyxDQUFDLENBQUM7UUFDbkcsQ0FBQyxDQUFDLDRCQUE0QixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsd0JBQXdCLENBQUMsQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7UUFDdEcsQ0FBQyxDQUFDLHNCQUFzQixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxHQUFHLEVBQUU7WUFDekMsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztZQUMxQixPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDaEIsQ0FBQyxDQUFDLENBQUM7UUFDSCxDQUFDLENBQUMsdUJBQXVCLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLEdBQUcsRUFBRTtZQUMxQyxNQUFNLFdBQVcsR0FBRyxJQUFJLEdBQUcsRUFBVSxDQUFDO1lBQ3RDLENBQUMsQ0FBQyxnQ0FBZ0MsQ0FBQyxDQUFDLElBQUksQ0FBQztnQkFDdkMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUM7WUFDdEMsQ0FBQyxDQUFDLENBQUM7WUFDSCxNQUFNLGVBQWUsR0FBRyxZQUFZLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQztZQUN4RSxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQzFCLE9BQU8sQ0FBQyxlQUFlLENBQUMsQ0FBQztRQUMzQixDQUFDLENBQUMsQ0FBQztJQUNMLENBQUMsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQUVNLFNBQVMsc0JBQXNCLENBQUMsZUFBc0I7SUFDM0QsT0FBTyxJQUFJLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRTtRQUMzQixNQUFNLE9BQU8sR0FBRyxtQ0FBbUMsQ0FBQztRQUNwRCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBRTFCLE1BQU0sV0FBVyxHQUFHLGVBQWU7YUFDaEMsR0FBRyxDQUFDLEtBQUssQ0FBQyxFQUFFO1lBQ1gsTUFBTSxRQUFRLEdBQUcsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsV0FBVyxDQUFDLENBQUMsSUFBSSxFQUFFLENBQUM7WUFDNUQsT0FBTzs7bUdBRW9GLEtBQUssQ0FBQyxFQUFFLGNBQWMsS0FBSyxDQUFDLEVBQUU7c0RBQzNFLEtBQUssQ0FBQyxFQUFFLDhHQUE4RyxRQUFRLEtBQUssUUFBUTs7YUFFcEwsQ0FBQztRQUNSLENBQUMsQ0FBQzthQUNELElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUVaLE1BQU0sU0FBUyxHQUFHO3VCQUNDLE9BQU87Ozs7OzBCQUtKLFdBQVc7Ozs7Ozs7O1NBUTVCLENBQUM7UUFDTixDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1FBRTVCLE1BQU0sWUFBWSxHQUFHLHVDQUF1QyxPQUFPLDZDQUE2QyxPQUFPLHVDQUF1QyxDQUFDO1FBQy9KLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxDQUFDLFlBQVksQ0FBQyxDQUFDO1FBRXRDLENBQUMsQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFO1lBQ3ZDLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7WUFDMUIsT0FBTyxDQUFDLGVBQWUsQ0FBQyxDQUFDO1FBQzNCLENBQUMsQ0FBQyxDQUFDO1FBRUgsQ0FBQyxDQUFDLHVCQUF1QixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxHQUFHLEVBQUU7WUFDMUMsTUFBTSxXQUFXLEdBQUcsSUFBSSxHQUFHLEVBQVUsQ0FBQztZQUN0QyxDQUFDLENBQUMsZ0NBQWdDLENBQUMsQ0FBQyxJQUFJLENBQUM7Z0JBQ3ZDLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO1lBQ3RDLENBQUMsQ0FBQyxDQUFDO1lBRUgsTUFBTSxnQkFBZ0IsR0FBRyxlQUFlLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxXQUFXLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDO1lBQzdFLElBQUksV0FBVyxDQUFDLElBQUksR0FBRyxDQUFDLEVBQUUsQ0FBQztnQkFDekIsTUFBTSxDQUFDLElBQUksQ0FBQyxPQUFPLFdBQVcsQ0FBQyxJQUFJLFFBQVEsQ0FBQyxDQUFDO1lBQy9DLENBQUM7WUFDRCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQzFCLE9BQU8sQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO1FBQzVCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDO0FBRU0sU0FBUyxtQ0FBbUMsQ0FBQyxlQUE2QjtJQUMvRSxPQUFPLElBQUksT0FBTyxDQUFDLE9BQU8sQ0FBQyxFQUFFO1FBQzNCLE1BQU0sT0FBTyxHQUFHLG1DQUFtQyxDQUFDO1FBQ3BELENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7UUFFMUIsTUFBTSxXQUFXLEdBQUcsZUFBZTthQUNoQyxHQUFHLENBQUMsTUFBTSxDQUFDLEVBQUU7WUFDWixNQUFNLFFBQVEsR0FBRyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUN0RCxPQUFPOztnR0FFaUYsTUFBTSxDQUFDLEVBQUU7K0VBQzFCLFFBQVEsS0FBSyxRQUFRO2dGQUNwQixRQUFROzthQUUzRSxDQUFDO1FBQ1IsQ0FBQyxDQUFDO2FBQ0QsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO1FBRVosTUFBTSxTQUFTLEdBQUc7d0JBQ0UsT0FBTzs7Ozs7MEJBS0wsV0FBVzs7Ozs7Ozs7U0FRNUIsQ0FBQztRQUNOLENBQUMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7UUFFNUIsTUFBTSxZQUFZLEdBQUc7MkNBQ2tCLE9BQU87aUJBQ2pDLENBQUM7UUFDZCxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxZQUFZLENBQUMsQ0FBQztRQUV0QyxDQUFDLENBQUMsc0JBQXNCLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLEdBQUcsRUFBRTtZQUN6QyxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQzFCLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUNoQixDQUFDLENBQUMsQ0FBQztRQUVILENBQUMsQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxPQUFPLEVBQUUsR0FBRyxFQUFFO1lBQzFDLE1BQU0sT0FBTyxHQUFVLEVBQUUsQ0FBQztZQUMxQixJQUFJLFFBQVEsR0FBRyxLQUFLLENBQUM7WUFDckIsQ0FBQyxDQUFDLDhEQUE4RCxDQUFDLENBQUMsSUFBSSxDQUFDO2dCQUNyRSxNQUFNLFFBQVEsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3pCLE1BQU0sT0FBTyxHQUFHLFFBQVEsQ0FBQyxRQUFRLENBQUMsMEJBQTBCLENBQUMsQ0FBQyxHQUFHLEVBQUUsRUFBRSxRQUFRLEVBQUUsQ0FBQyxJQUFJLEVBQUUsQ0FBQztnQkFDdkYsSUFBSSxDQUFDLE9BQU8sSUFBSSxRQUFRLENBQUMsRUFBRSxDQUFDLFVBQVUsQ0FBQyxFQUFFLENBQUM7b0JBQ3hDLE1BQU0sQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLENBQUM7b0JBQzlCLFFBQVEsR0FBRyxJQUFJLENBQUM7b0JBQ2hCLE9BQU8sS0FBSyxDQUFDO2dCQUNmLENBQUM7Z0JBQ0QsT0FBTyxDQUFDLElBQUksQ0FBQztvQkFDWCxVQUFVLEVBQUUsUUFBUSxDQUFDLElBQUksQ0FBQyxhQUFhLENBQUM7b0JBQ3hDLE9BQU8sRUFBRSxPQUFPO29CQUNoQixNQUFNLEVBQUUsUUFBUSxDQUFDLEVBQUUsQ0FBQyxVQUFVLENBQUM7aUJBQ2hDLENBQUMsQ0FBQztZQUNMLENBQUMsQ0FBQyxDQUFDO1lBRUgsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO2dCQUNkLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUM7Z0JBQzFCLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNuQixDQUFDO1FBQ0gsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDLENBQUMsQ0FBQztBQUNMLENBQUM7QUFFRCxXQUFXO0FBQ0osS0FBSyxVQUFVLG1CQUFtQixDQUFDLFFBQWdCO0lBQ3hELE1BQU0sRUFBRSxnQkFBZ0IsRUFBRSxHQUFHLE1BQU0sa0lBQW1CLENBQUM7SUFDdkQsTUFBTSxPQUFPLEdBQUcsTUFBTSxnQkFBZ0IsRUFBRSxDQUFDO0lBQ3pDLE1BQU0sVUFBVSxHQUFHLE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUVyQyxJQUFJLENBQUMsVUFBVSxFQUFFLENBQUM7UUFDaEIsTUFBTSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUN0QixPQUFPO0lBQ1QsQ0FBQztJQUVELGtCQUFrQjtJQUNsQixJQUFJLFVBQVUsR0FBVSxFQUFFLENBQUM7SUFDM0IsSUFBSSxDQUFDO1FBQ0gsVUFBVSxHQUFHLE1BQU0sWUFBWSxDQUFDLGdCQUFnQixDQUFDLEVBQUUsS0FBSyxFQUFFLFFBQVEsRUFBRSxDQUFDLENBQUM7SUFDeEUsQ0FBQztJQUFDLE9BQU8sS0FBSyxFQUFFLENBQUM7UUFDZixPQUFPLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFBRSxLQUFLLENBQUMsQ0FBQztJQUNuQyxDQUFDO0lBRUQsTUFBTSxPQUFPLEdBQUcsa0NBQWtDLENBQUM7SUFDbkQsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztJQUUxQixTQUFTO0lBQ1QsTUFBTSxXQUFXLEdBQUcsVUFBVSxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUM7SUFDN0MsTUFBTSxhQUFhLEdBQUcsVUFBVSxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUMsQ0FBQyxLQUFVLEVBQUUsRUFBRSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQyxNQUFNLENBQUM7SUFDckYsTUFBTSxjQUFjLEdBQUcsV0FBVyxHQUFHLGFBQWEsQ0FBQztJQUVuRCxTQUFTO0lBQ1QsTUFBTSxpQkFBaUIsR0FBRyxVQUFVLENBQUMsTUFBTTtTQUN4QyxNQUFNLENBQUMsQ0FBQyxLQUFVLEVBQUUsRUFBRSxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUM7U0FDckMsR0FBRyxDQUNGLENBQUMsS0FBVSxFQUFFLEVBQUUsQ0FDYiwrR0FBK0csQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUMsSUFBSSxFQUFFLFFBQVEsQ0FDN0o7U0FDQSxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7SUFFWixNQUFNLGtCQUFrQixHQUFHLFVBQVUsQ0FBQyxNQUFNO1NBQ3pDLE1BQU0sQ0FBQyxDQUFDLEtBQVUsRUFBRSxFQUFFLENBQUMsQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDO1NBQ3RDLEdBQUcsQ0FDRixDQUFDLEtBQVUsRUFBRSxFQUFFLENBQ2IsK0dBQStHLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksRUFBRSxRQUFRLENBQzdKO1NBQ0EsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBRVosU0FBUztJQUNULE1BQU0sU0FBUyxHQUNiLFVBQVUsQ0FBQyxXQUFXLElBQUksVUFBVSxDQUFDLFdBQVcsQ0FBQyxNQUFNLEdBQUcsQ0FBQztRQUN6RCxDQUFDLENBQUM7aUVBQ3lELFVBQVUsQ0FBQyxXQUFXLENBQUMsTUFBTTs7YUFFakYsVUFBVSxDQUFDLFdBQVc7YUFDckIsR0FBRyxDQUFDLENBQUMsS0FBVSxFQUFFLEVBQUU7WUFDbEIsa0JBQWtCO1lBQ2xCLE1BQU0sYUFBYSxHQUFHLFVBQVUsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUMsRUFBRSxLQUFLLEtBQUssQ0FBQyxFQUFFLENBQUMsQ0FBQztZQUM5RCxNQUFNLFNBQVMsR0FDYixhQUFhLEVBQUUsV0FBVztnQkFDMUIsYUFBYSxFQUFFLFVBQVU7Z0JBQ3pCLEtBQUssQ0FBQyxVQUFVO2dCQUNoQixLQUFLLENBQUMsV0FBVztnQkFDakIsS0FBSyxDQUFDLElBQUk7Z0JBQ1YsU0FBUyxLQUFLLENBQUMsRUFBRSxFQUFFLENBQUM7WUFDdEIsT0FBTyxnRUFBZ0UsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxTQUFTO2tCQUN6RyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLElBQUksRUFBRSxJQUFJLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsTUFBTTtxQkFDbEUsQ0FBQztRQUNULENBQUMsQ0FBQzthQUNELElBQUksQ0FBQyxFQUFFLENBQUM7O2NBRVI7UUFDUixDQUFDLENBQUMsRUFBRSxDQUFDO0lBRVQsTUFBTSxTQUFTLEdBQUc7ZUFDTCxPQUFPOzs7Ozs7Ozs0Q0FRc0IsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLENBQUMsSUFBSSxFQUFFOzRDQUN4QyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxVQUFVLENBQUMsQ0FBQyxJQUFJLEVBQUU7NENBQzlDLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxjQUFjLEVBQUU7Z0JBQ3BFLFVBQVUsQ0FBQyxhQUFhLENBQUMsQ0FBQyxDQUFDLDZEQUE2RCxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxhQUFhLENBQUMsQ0FBQyxJQUFJLEVBQUUsZUFBZSxDQUFDLENBQUMsQ0FBQyxFQUFFOzs7Ozs7Ozs7bUVBUzFHLGFBQWE7Ozs7bUVBSWIsY0FBYzs7OzttRUFJZCxXQUFXOzs7OztZQU1sRSxhQUFhLEdBQUcsQ0FBQztRQUNmLENBQUMsQ0FBQzs7cUVBRXFELGFBQWE7O2dCQUVsRSxpQkFBaUI7OztXQUd0QjtRQUNHLENBQUMsQ0FBQyxFQUNOOztZQUdFLGNBQWMsR0FBRyxDQUFDO1FBQ2hCLENBQUMsQ0FBQzs7cUVBRXFELGNBQWM7O2dCQUVuRSxrQkFBa0I7OztXQUd2QjtRQUNHLENBQUMsQ0FBQyxFQUNOOztZQUVFLFNBQVM7Ozs7bURBSThCLFFBQVE7Ozs7O0dBS3hELENBQUM7SUFFRixDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxDQUFDO0lBRTVCLE9BQU87SUFDUCxDQUFDLENBQUMsb0JBQW9CLENBQUMsQ0FBQyxFQUFFLENBQUMsT0FBTyxFQUFFLEdBQUcsRUFBRTtRQUN2QyxDQUFDLENBQUMsSUFBSSxPQUFPLEVBQUUsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO0lBQzVCLENBQUMsQ0FBQyxDQUFDO0lBRUgsQ0FBQyxDQUFDLG1CQUFtQixDQUFDLENBQUMsRUFBRSxDQUFDLE9BQU8sRUFBRSxLQUFLLElBQUksRUFBRTtRQUM1QyxNQUFNLFFBQVEsR0FBRyxDQUFDLENBQUMsbUJBQW1CLENBQUMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDbkQsQ0FBQyxDQUFDLElBQUksT0FBTyxFQUFFLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztRQUMxQixNQUFNLEVBQUUsVUFBVSxFQUFFLEdBQUcsTUFBTSxnSUFBa0IsQ0FBQztRQUNoRCxNQUFNLFVBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUM3QixDQUFDLENBQUMsQ0FBQztJQUVILFFBQVE7SUFDUixNQUFNLFlBQVksR0FBRzs7U0FFZCxPQUFPOzs7O1NBSVAsT0FBTzs7Ozs7OztTQU9QLE9BQU87Ozs7U0FJUCxPQUFPOzs7O1NBSVAsT0FBTzs7Ozs7U0FLUCxPQUFPOzs7O1NBSVAsT0FBTzs7OztTQUlQLE9BQU87Ozs7U0FJUCxPQUFPOzs7Ozs7O1NBT1AsT0FBTzs7Ozs7U0FLUCxPQUFPOzs7U0FHUCxPQUFPOzs7U0FHUCxPQUFPOzs7U0FHUCxPQUFPOzs7O1dBSUwsQ0FBQztJQUNWLENBQUMsQ0FBQyxJQUFJLE9BQU8sRUFBRSxDQUFDLENBQUMsTUFBTSxDQUFDLFlBQVksQ0FBQyxDQUFDO0FBQ3hDLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/ovoXliqnlvLnnqpflip/og70udHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbmZpZ0RhdGEgfSBmcm9tICcuL+mFjee9ruWtmOWCqOWSjOivu+WPlic7XG5cbmV4cG9ydCBmdW5jdGlvbiBzaG93SGVscFBvcHVwKCk6IHZvaWQge1xuICBjb25zdCBwb3B1cElkID0gJ3ByZXNldC1tYW5hZ2VyLWhlbHAtcG9wdXAnO1xuICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gIGNvbnN0IGhlbHBDb250ZW50ID0gYFxuICAgICAgICA8ZGl2IHN0eWxlPVwicGFkZGluZzogMCAxMHB4OyBmb250LXNpemU6IDE0cHg7IGxpbmUtaGVpZ2h0OiAxLjY7XCI+XG4gICAgICAgICAgICA8aDU+5Li76KaB5Yqf6IO9PC9oNT5cbiAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgICA8bGk+PGI+5L+d5a2YL+abtOaWsOmFjee9rjo8L2I+IOS/neWtmOaIluabtOaWsOW9k+WJjemihOiuvuS4reaJgOaciVwi5p2h55uuXCLnmoTlkK/nlKgv56aB55So54q25oCB44CC5pu05paw5pe25Y+v6YCJ5oup5piv5ZCm5ZCM5q2l5q2j5YiZ54q25oCB44CCPC9saT5cbiAgICAgICAgICAgICAgICA8bGk+PGI+5Yqg6L296YWN572uOjwvYj4g5LiA6ZSu5YiH5o2i5Yiw5oyH5a6a55qE6aKE6K6+5bm25bCG5omA5pyJXCLmnaHnm65cIuaBouWkjeWIsOW3suS/neWtmOeahOeKtuaAgeOAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuafpeeci+mFjee9rjo8L2I+IOWcqFwi5pu05aSaXCLoj5zljZXkuK3ngrnlh7tcIuafpeeci1wi77yM5Y+v6K+m57uG5p+l55yL6YWN572u55qE5Z+65pys5L+h5oGv44CB5p2h55uu54q25oCB57uf6K6h44CB5ZCv55SoL+emgeeUqOeahOWFt+S9k+adoeebruWIl+ihqOWSjOe7keWumueahOato+WImeS/oeaBr+OAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuadoeebruWIhue7hDo8L2I+IOWPr+S7peWwhumihOiuvuadoeebruWIm+W7uuWIhue7hO+8jOWIhue7hOWQjueahOadoeebruS8muWcqOmihOiuvueVjOmdouS4reaKmOWPoOaYvuekuu+8jOiuqeeVjOmdouabtOWKoOaVtOa0geOAguaUr+aMgeWIm+W7uuOAgeenu+mZpOWSjOa4hemZpOWIhue7hO+8jOWIhue7hOiuvue9ruS8muiHquWKqOS/neWtmOOAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuWvvOWFpS/lr7zlh7o6PC9iPiDku6UgLmpzb24g5paH5Lu255qE5b2i5byP5YiG5Lqr5Y2V5Liq6YWN572u44CC5a+85Ye65pe25Y+v5Lul5Li66YWN572u5YyF5re75Yqg5aSH5rOo77yM5pa55L6/5YiG5Lqr5ZKM6K+G5Yir44CC5pW05ZCI5YyF5Y+v5Lul6ZmE5bim6aKE6K6+5pys6Lqr44CB57uR5a6a55qE5q2j5YiZ5ZKM5YiG57uE6YWN572u44CCPC9saT5cbiAgICAgICAgICAgICAgICA8bGk+PGI+5YW85a655LiW55WM5Lmm5a+85YWlOjwvYj4g5pSv5oyB55u05o6l5a+85YWl6YCa6L+H6YWS6aaG5LiW55WM5Lmm5Yqf6IO95a+85Ye655qE44CB5ZCr5pyJ5pys5o+S5Lu25pWw5o2u55qE5aSH5Lu95paH5Lu244CCPC9saT5cbiAgICAgICAgICAgICAgICA8bGk+PGI+5om56YeP5a+85YWlL+WvvOWHujo8L2I+IOS4gOasoeaAp+WIhuS6q+WkmuS4qumFjee9ruOAgeWFs+iBlOeahOmihOiuvuWSjOato+WImeiEmuacrO+8jOaWueS+v+Wkh+S7veWSjOi/geenu+OAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuaJuemHj+WIoOmZpDo8L2I+IOWcqOS4u+eVjOmdouWLvumAieWkmuS4qumFjee9rui/m+ihjOS4gOasoeaAp+WIoOmZpO+8jOaWueS+v+a4heeQhuOAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuinkuiJsue7keWumjo8L2I+IOWwhumFjee9ruS4jueJueWumuinkuiJsuWFs+iBlO+8jOWIh+aNouWIsOivpeinkuiJsuaXtuS8muiHquWKqOaPkOekuuWKoOi9veOAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPuato+WImee7keWumjo8L2I+IOWwhumFjee9ruS4juS4gOe7hOWFqOWxgOato+WImeeahOW8gOWFs+eKtuaAgeWFs+iBlO+8jOWKoOi9vemFjee9ruaXtuS8muiHquWKqOW6lOeUqOOAgjwvbGk+XG4gICAgICAgICAgICAgICAgPGxpPjxiPumHjeWRveWQjeS4juWIhue7hDo8L2I+IOaCqOWPr+S7pemHjeWRveWQjeS7u+S9lemFjee9ru+8jOWQjOWQjemihOiuvueahOmFjee9ruS8muiHquWKqOaKmOWPoOWcqOS4gOS4quWIhue7hOS4i++8jOS9v+eVjOmdouabtOa4heaZsOOAgjwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICA8L2Rpdj5cbiAgICBgO1xuXG4gIGNvbnN0IHVzYWdlTm90aWNlID0gYFxuICAgICAgICA8ZGl2IHN0eWxlPVwicGFkZGluZzogMTJweDsgZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMS42OyBiYWNrZ3JvdW5kLWNvbG9yOiAjZjlmM2VhOyBib3JkZXItcmFkaXVzOiA4cHg7IG1hcmdpbi10b3A6IDE1cHg7XCI+XG4gICAgICAgICAgICA8aDUgc3R5bGU9XCJjb2xvcjogI2M2MjgyODsgbWFyZ2luLXRvcDowO1wiPuS9v+eUqOmhu+efpTwvaDU+XG4gICAgICAgICAgICA8cCBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkOyBtYXJnaW4tYm90dG9tOiAwO1wiPlxuICAgICAgICAgICAgICAgIOacrOiEmuacrOWFjei0ueWcqOaXheeoi+OAgeWWteWWteeUteazouacjeWKoeWZqOWPkeW4g++8jOS9nOiAhU1vTeWwj27vvIzkuI3lhYHorrjmn5DkuKromZDnlLdjaGFy6aKE6K6+5LiO6K+l5L2c6ICF5Y+m5LiA5Liq5qKm5aWz6aKE6K6+5L2/55So77yM5Lmf5LiN5pSv5oyB6Ym05oqETW9N6YKj5L2N55qE6aKE6K6+5L2/55So44CCXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgIDwvZGl2PlxuICAgIGA7XG5cbiAgY29uc3QgcG9wdXBIdG1sID0gYFxuICAgICAgICA8ZGl2IGlkPVwiJHtwb3B1cElkfVwiIHN0eWxlPVwicG9zaXRpb246IGZpeGVkOyB0b3A6IDA7IGxlZnQ6IDA7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMCU7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDI7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGp1c3RpZnktY29udGVudDogY2VudGVyO1wiPlxuICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDUwMHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDgwdmg7XCI+XG4gICAgICAgICAgICAgICAgPGg0IHN0eWxlPVwibWFyZ2luLXRvcDowOyBjb2xvcjojNmE0MjI2OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGJvcmRlci1ib3R0b206IDJweCBzb2xpZCAjZjBkOGI2OyBwYWRkaW5nLWJvdHRvbTogMTBweDsgZmxleC1zaHJpbms6IDA7XCI+5Za15Za16aKE6K6+6YWN572u566h55CGIC0g5L2/55So6K+05piOPC9oND5cbiAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiZmxleDogMTsgbWluLWhlaWdodDogMDsgb3ZlcmZsb3cteTogYXV0bzsgbWFyZ2luOiAxNXB4IDA7XCI+XG4gICAgICAgICAgICAgICAgICAgICR7aGVscENvbnRlbnR9XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgJHt1c2FnZU5vdGljZX1cbiAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7IG1hcmdpbi10b3A6IDE1cHg7IGZsZXgtc2hyaW5rOiAwO1wiPlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwiaGVscC1wb3B1cC1jbG9zZVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0Yzc4ZTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6IzNhMmMyYztcIj7lhbPpl608L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICBgO1xuICAkKCdib2R5JykuYXBwZW5kKHBvcHVwSHRtbCk7XG4gIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+QG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7ICMke3BvcHVwSWR9IHsgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQgIWltcG9ydGFudDsgfSAjJHtwb3B1cElkfSA+IGRpdiB7IG1hcmdpbi10b3A6IDEwdmg7IG1heC1oZWlnaHQ6IDc1dmggIWltcG9ydGFudDsgfSB9PC9zdHlsZT5gO1xuICAkKGAjJHtwb3B1cElkfWApLmFwcGVuZChtb2JpbGVTdHlsZXMpO1xuICAkKCcjaGVscC1wb3B1cC1jbG9zZScpLm9uKCdjbGljaycsICgpID0+ICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCkpO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gc2hvd1JlbWFya1BvcHVwKHJlbWFya1RleHQ6IHN0cmluZyk6IFByb21pc2U8Ym9vbGVhbj4ge1xuICByZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiB7XG4gICAgY29uc3QgcG9wdXBJZCA9ICdwcmVzZXQtbWFuYWdlci1yZW1hcmstcG9wdXAnO1xuICAgICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG5cbiAgICAvLyBTaW1wbGUgTWFya2Rvd24gdG8gSFRNTCBjb252ZXJ0ZXJcbiAgICBmdW5jdGlvbiBjb252ZXJ0TWFya2Rvd24odGV4dDogc3RyaW5nKTogc3RyaW5nIHtcbiAgICAgIGNvbnN0IHNhbml0aXplID0gKHM6IHN0cmluZykgPT4gJCgnPGRpdi8+JykudGV4dChzKS5odG1sKCk7XG4gICAgICBsZXQgbGluZXMgPSB0ZXh0LnNwbGl0KCdcXG4nKTtcbiAgICAgIGxldCBodG1sID0gJyc7XG4gICAgICBsZXQgaW5MaXN0ID0gZmFsc2U7XG5cbiAgICAgIGNvbnN0IHByb2Nlc3NJbmxpbmUgPSAobGluZTogc3RyaW5nKSA9PiB7XG4gICAgICAgIHJldHVybiBzYW5pdGl6ZShsaW5lKVxuICAgICAgICAgIC5yZXBsYWNlKC9cXCpcXCooLio/KVxcKlxcKi9nLCAnPHN0cm9uZz4kMTwvc3Ryb25nPicpXG4gICAgICAgICAgLnJlcGxhY2UoL1xcKiguKj8pXFwqL2csICc8ZW0+JDE8L2VtPicpXG4gICAgICAgICAgLnJlcGxhY2UoL2AoLio/KWAvZywgJzxjb2RlPiQxPC9jb2RlPicpO1xuICAgICAgfTtcblxuICAgICAgZm9yIChjb25zdCBsaW5lIG9mIGxpbmVzKSB7XG4gICAgICAgIGNvbnN0IHRyaW1tZWRMaW5lID0gbGluZS50cmltKCk7XG4gICAgICAgIGNvbnN0IGlzTGlzdCA9IHRyaW1tZWRMaW5lLnN0YXJ0c1dpdGgoJyogJykgfHwgdHJpbW1lZExpbmUuc3RhcnRzV2l0aCgnLSAnKTtcblxuICAgICAgICBpZiAoaW5MaXN0ICYmICFpc0xpc3QgJiYgdHJpbW1lZExpbmUpIHtcbiAgICAgICAgICBodG1sICs9ICc8L3VsPic7XG4gICAgICAgICAgaW5MaXN0ID0gZmFsc2U7XG4gICAgICAgIH1cblxuICAgICAgICBpZiAodHJpbW1lZExpbmUuc3RhcnRzV2l0aCgnIyAnKSkge1xuICAgICAgICAgIGh0bWwgKz0gYDxoMT4ke3Byb2Nlc3NJbmxpbmUodHJpbW1lZExpbmUuc3Vic3RyaW5nKDIpKX08L2gxPmA7XG4gICAgICAgIH0gZWxzZSBpZiAodHJpbW1lZExpbmUuc3RhcnRzV2l0aCgnIyMgJykpIHtcbiAgICAgICAgICBodG1sICs9IGA8aDI+JHtwcm9jZXNzSW5saW5lKHRyaW1tZWRMaW5lLnN1YnN0cmluZygzKSl9PC9oMj5gO1xuICAgICAgICB9IGVsc2UgaWYgKHRyaW1tZWRMaW5lLnN0YXJ0c1dpdGgoJyMjIyAnKSkge1xuICAgICAgICAgIGh0bWwgKz0gYDxoMz4ke3Byb2Nlc3NJbmxpbmUodHJpbW1lZExpbmUuc3Vic3RyaW5nKDQpKX08L2gzPmA7XG4gICAgICAgIH0gZWxzZSBpZiAoaXNMaXN0KSB7XG4gICAgICAgICAgaWYgKCFpbkxpc3QpIHtcbiAgICAgICAgICAgIGh0bWwgKz0gJzx1bD4nO1xuICAgICAgICAgICAgaW5MaXN0ID0gdHJ1ZTtcbiAgICAgICAgICB9XG4gICAgICAgICAgaHRtbCArPSBgPGxpPiR7cHJvY2Vzc0lubGluZSh0cmltbWVkTGluZS5zdWJzdHJpbmcoMikpfTwvbGk+YDtcbiAgICAgICAgfSBlbHNlIGlmICh0cmltbWVkTGluZSkge1xuICAgICAgICAgIGh0bWwgKz0gYDxwPiR7cHJvY2Vzc0lubGluZShsaW5lKX08L3A+YDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgaWYgKGluTGlzdCkgaHRtbCArPSAnPC91bD4nO1xuICAgICAgcmV0dXJuIGh0bWw7XG4gICAgfVxuXG4gICAgY29uc3QgY29udGVudEh0bWwgPSBjb252ZXJ0TWFya2Rvd24ocmVtYXJrVGV4dCk7XG5cbiAgICBjb25zdCBwb3B1cEh0bWwgPSBgXG4gICAgICAgICAgICA8ZGl2IGlkPVwiJHtwb3B1cElkfVwiIHN0eWxlPVwicG9zaXRpb246IGZpeGVkOyB0b3A6IDA7IGxlZnQ6IDA7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMCU7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDI7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGp1c3RpZnktY29udGVudDogY2VudGVyO1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOGYwOyBjb2xvcjogIzNhMmMyYzsgYm9yZGVyLXJhZGl1czogMTZweDsgcGFkZGluZzogMjBweDsgd2lkdGg6IDkwJTsgbWF4LXdpZHRoOiA2MDBweDsgYm94LXNoYWRvdzogMCA0cHggMjVweCByZ2JhKDEyMCw5MCw2MCwuMjUpOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBtYXgtaGVpZ2h0OiA4MHZoO1wiPlxuICAgICAgICAgICAgICAgICAgICA8c3R5bGU+XG4gICAgICAgICAgICAgICAgICAgICAgICAjJHtwb3B1cElkfSAucmVtYXJrLWNvbnRlbnQgaDEsICMke3BvcHVwSWR9IC5yZW1hcmstY29udGVudCBoMiwgIyR7cG9wdXBJZH0gLnJlbWFyay1jb250ZW50IGgzIHsgbWFyZ2luOiAxMnB4IDAgNnB4IDA7IHBhZGRpbmctYm90dG9tOiA2cHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZTBjOWE2OyB9XG4gICAgICAgICAgICAgICAgICAgICAgICAjJHtwb3B1cElkfSAucmVtYXJrLWNvbnRlbnQgaDEgeyBmb250LXNpemU6IDEuNGVtOyBjb2xvcjogIzZhNDIyNjsgfVxuICAgICAgICAgICAgICAgICAgICAgICAgIyR7cG9wdXBJZH0gLnJlbWFyay1jb250ZW50IGgyIHsgZm9udC1zaXplOiAxLjJlbTsgY29sb3I6ICM3YTUyMzU7IH1cbiAgICAgICAgICAgICAgICAgICAgICAgICMke3BvcHVwSWR9IC5yZW1hcmstY29udGVudCBoMyB7IGZvbnQtc2l6ZTogMS4xZW07IGNvbG9yOiAjN2E1MjM1OyB9XG4gICAgICAgICAgICAgICAgICAgICAgICAjJHtwb3B1cElkfSAucmVtYXJrLWNvbnRlbnQgcCB7IG1hcmdpbjogMCAwIDEwcHggMDsgfVxuICAgICAgICAgICAgICAgICAgICAgICAgIyR7cG9wdXBJZH0gLnJlbWFyay1jb250ZW50IHVsIHsgbWFyZ2luOiAxMHB4IDA7IHBhZGRpbmctbGVmdDogMjVweDsgfVxuICAgICAgICAgICAgICAgICAgICAgICAgIyR7cG9wdXBJZH0gLnJlbWFyay1jb250ZW50IGxpIHsgbWFyZ2luLWJvdHRvbTogNXB4OyB9XG4gICAgICAgICAgICAgICAgICAgICAgICAjJHtwb3B1cElkfSAucmVtYXJrLWNvbnRlbnQgY29kZSB7IGJhY2tncm91bmQtY29sb3I6ICNlMGQ4Y2Q7IHBhZGRpbmc6IDJweCA1cHg7IGJvcmRlci1yYWRpdXM6IDRweDsgZm9udC1mYW1pbHk6IG1vbm9zcGFjZTsgY29sb3I6ICMzYTJjMmM7IGZvbnQtc2l6ZTogMC45ZW07IH1cbiAgICAgICAgICAgICAgICAgICAgPC9zdHlsZT5cbiAgICAgICAgICAgICAgICAgICAgPGg0IHN0eWxlPVwibWFyZ2luLXRvcDowOyBjb2xvcjojNmE0MjI2OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGJvcmRlci1ib3R0b206IDJweCBzb2xpZCAjZjBkOGI2OyBwYWRkaW5nLWJvdHRvbTogMTBweDtcIj7lr7zlhaXlpIfms6g8L2g0PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwicmVtYXJrLWNvbnRlbnRcIiBzdHlsZT1cImZsZXg6IDE7IG1pbi1oZWlnaHQ6IDIwMHB4OyBvdmVyZmxvdy15OiBhdXRvOyBtYXJnaW46IDE1cHggMDsgYmFja2dyb3VuZC1jb2xvcjogI2ZkZmFmNTsgYm9yZGVyOiAxcHggc29saWQgI2YwZTJkMDsgYm9yZGVyLXJhZGl1czogOHB4OyBwYWRkaW5nOiAxNXB4OyBsaW5lLWhlaWdodDogMS42OyB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAke2NvbnRlbnRIdG1sfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0O1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInJlbWFyay1wb3B1cC1jb250aW51ZVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0Yzc4ZTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6IzNhMmMyYztcIj7nu6fnu63lr7zlhaU8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgYDtcblxuICAgICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcbiAgICBjb25zdCBtb2JpbGVTdHlsZXMgPSBgPHN0eWxlPkBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgeyAjJHtwb3B1cElkfSB7IGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0ICFpbXBvcnRhbnQ7IH0gIyR7cG9wdXBJZH0gPiBkaXYgeyBtYXJnaW4tdG9wOiA1dmg7IG1heC1oZWlnaHQ6IDg1dmggIWltcG9ydGFudDsgfSB9PC9zdHlsZT5gO1xuICAgICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG5cbiAgICAkKCcjcmVtYXJrLXBvcHVwLWNvbnRpbnVlJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcbiAgICAgIHJlc29sdmUodHJ1ZSk7XG4gICAgfSk7XG4gIH0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gc2hvd05ld0VudHJpZXNQb3B1cChuZXdFbnRyaWVzOiBhbnlbXSwgcHJvbXB0SWRUb05hbWVNYXA6IE1hcDxzdHJpbmcsIHN0cmluZz4pOiBQcm9taXNlPGFueVtdIHwgbnVsbD4ge1xuICByZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiB7XG4gICAgY29uc3QgcG9wdXBJZCA9ICdwcmVzZXQtbWFuYWdlci1uZXctZW50cmllcy1wb3B1cCc7XG4gICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcblxuICAgIGNvbnN0IGVudHJpZXNIdG1sID0gbmV3RW50cmllc1xuICAgICAgLm1hcCgoZW50cnksIGluZGV4KSA9PiB7XG4gICAgICAgIGNvbnN0IGVudHJ5TmFtZSA9IHByb21wdElkVG9OYW1lTWFwLmdldChlbnRyeS5pZCkgfHwgYOacquefpeadoeebriAoSUQ6ICR7ZW50cnkuaWR9KWA7XG4gICAgICAgIGNvbnN0IGlzQ2hlY2tlZCA9IGVudHJ5LmVuYWJsZWQgPyAnY2hlY2tlZCcgOiAnJztcbiAgICAgICAgY29uc3Qgc2FmZUVudHJ5TmFtZSA9ICQoJzxkaXYvPicpLnRleHQoZW50cnlOYW1lKS5odG1sKCk7XG4gICAgICAgIHJldHVybiBgXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImVudHJ5LWl0ZW1cIiBzdHlsZT1cImRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZzogOHB4IDA7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwibmV3LWVudHJ5LXRvZ2dsZS0ke2luZGV4fVwiIHN0eWxlPVwiY3Vyc29yOiBwb2ludGVyOyBmbGV4OiAxOyBtYXJnaW4tcmlnaHQ6IDEwcHg7IG92ZXJmbG93OiBoaWRkZW47IHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzOyB3aGl0ZS1zcGFjZTogbm93cmFwO1wiIHRpdGxlPVwiJHtzYWZlRW50cnlOYW1lfVwiPiR7c2FmZUVudHJ5TmFtZX08L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9XCJwbS1zd2l0Y2hcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJjaGVja2JveFwiIGlkPVwibmV3LWVudHJ5LXRvZ2dsZS0ke2luZGV4fVwiIGRhdGEtaWQ9XCIke2VudHJ5LmlkfVwiICR7aXNDaGVja2VkfS8+XG4gICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwicG0tc2xpZGVyXCI+PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgYDtcbiAgICAgIH0pXG4gICAgICAuam9pbignJyk7XG5cbiAgICBjb25zdCBwb3B1cEh0bWwgPSBgXG4gICAgICAgICAgICA8ZGl2IGlkPVwiJHtwb3B1cElkfVwiIHN0eWxlPVwicG9zaXRpb246IGZpeGVkOyB0b3A6IDA7IGxlZnQ6IDA7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMCU7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDE7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGp1c3RpZnktY29udGVudDogY2VudGVyO1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOGYwOyBjb2xvcjogIzNhMmMyYzsgYm9yZGVyLXJhZGl1czogMTZweDsgcGFkZGluZzogMjBweDsgd2lkdGg6IDkwJTsgbWF4LXdpZHRoOiA0NTBweDsgYm94LXNoYWRvdzogMCA0cHggMjVweCByZ2JhKDEyMCw5MCw2MCwuMjUpOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBtYXgtaGVpZ2h0OiA5MHZoOyBib3gtc2l6aW5nOiBib3JkZXItYm94O1wiPlxuICAgICAgICAgICAgICAgICAgICA8aDQgc3R5bGU9XCJtYXJnaW4tdG9wOjA7IGNvbG9yOiM2YTQyMjY7IHRleHQtYWxpZ246IGNlbnRlcjtcIj7mo4DmtYvliLDmlrDmnaHnm648L2g0PlxuICAgICAgICAgICAgICAgICAgICA8cCBzdHlsZT1cImZvbnQtc2l6ZTogMTRweDsgY29sb3I6ICM2YTQyMjY7IG1hcmdpbjogMTBweCAwOyBmbGV4LXNocmluazogMDtcIj7or7fpgInmi6nku6XkuIvmlrDlop7mnaHnm67nmoTpu5jorqTlkK/nlKjnirbmgIEo5Yu+6YCJ5Li66ZyA6KaB5ZCv55SoKe+8mjwvcD5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZsZXg6IDE7IG1pbi1oZWlnaHQ6IDA7IG92ZXJmbG93LXk6IGF1dG87IG1hcmdpbi1ib3R0b206IDIwcHg7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBlMmQwOyBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2YwZTJkMDsgcGFkZGluZzogNXB4IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAke2VudHJpZXNIdG1sfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImJ1dHRvbi1jb250YWluZXJcIiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0OyBtYXJnaW4tdG9wOiBhdXRvOyBmbGV4LXNocmluazogMDsgZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6ZmxleC1lbmQ7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwibmV3LWVudHJpZXMtY2FuY2VsXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZTBlMGUwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBjb2xvcjojMzMzOyBtYXJnaW4tcmlnaHQ6IDEwcHg7XCI+5Y+W5raIPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwibmV3LWVudHJpZXMtY29uZmlybVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0Yzc4ZTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6IzNhMmMyYztcIj7noa7orqQ8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgYDtcblxuICAgICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcblxuICAgIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+QG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7IyR7cG9wdXBJZH0geyBhbGlnbi1pdGVtczogZmxleC1zdGFydCAhaW1wb3J0YW50OyB9ICMke3BvcHVwSWR9ID4gZGl2eyBtYXJnaW4tdG9wOiA1dmg7IHdpZHRoOiA5NSUgIWltcG9ydGFudDttYXgtd2lkdGg6IG5vbmUgIWltcG9ydGFudDtoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDttYXgtaGVpZ2h0OiA4NXZoICFpbXBvcnRhbnQ7Ym9yZGVyLXJhZGl1czogMTJweCAhaW1wb3J0YW50O3BhZGRpbmc6IDE1cHggIWltcG9ydGFudDt9IyR7cG9wdXBJZH0gaDR7Zm9udC1zaXplOiAxOHB4ICFpbXBvcnRhbnQ7bWFyZ2luLWJvdHRvbTogMTBweCAhaW1wb3J0YW50O30jJHtwb3B1cElkfSBwe2ZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O21hcmdpbjogNXB4IDAgMTVweCAwICFpbXBvcnRhbnQ7fSMke3BvcHVwSWR9IC5lbnRyeS1pdGVte3BhZGRpbmc6IDEwcHggMCAhaW1wb3J0YW50O30jJHtwb3B1cElkfSAuYnV0dG9uLWNvbnRhaW5lcntmbGV4LWRpcmVjdGlvbjogcm93ICFpbXBvcnRhbnQ7Z2FwOiAxMHB4ICFpbXBvcnRhbnQ7anVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDt9IyR7cG9wdXBJZH0gLmJ1dHRvbi1jb250YWluZXIgYnV0dG9ue3dpZHRoOiBhdXRvICFpbXBvcnRhbnQ7bWFyZ2luOiAwICFpbXBvcnRhbnQ7ZmxleC1ncm93OiAxO319PC9zdHlsZT5gO1xuICAgICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG5cbiAgICAkKCcjbmV3LWVudHJpZXMtY29uZmlybScpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICAgIGNvbnN0IHVwZGF0ZWRFbnRyaWVzID0gbmV3RW50cmllcy5tYXAoKGVudHJ5LCBpbmRleCkgPT4gKHtcbiAgICAgICAgLi4uZW50cnksXG4gICAgICAgIGVuYWJsZWQ6ICQoYCNuZXctZW50cnktdG9nZ2xlLSR7aW5kZXh9YCkuaXMoJzpjaGVja2VkJyksXG4gICAgICB9KSk7XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVzb2x2ZSh1cGRhdGVkRW50cmllcyk7XG4gICAgfSk7XG5cbiAgICAkKCcjbmV3LWVudHJpZXMtY2FuY2VsJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcbiAgICAgIHJlc29sdmUobnVsbCk7XG4gICAgfSk7XG4gIH0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gc2hvd0NvbmZpZ1NlbGVjdGlvblBvcHVwKGNvbmZpZ3M6IENvbmZpZ0RhdGFbXSwgY2hhck5hbWU6IHN0cmluZyk6IFByb21pc2U8c3RyaW5nIHwgbnVsbD4ge1xuICByZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiB7XG4gICAgY29uc3QgcG9wdXBJZCA9ICdwcmVzZXQtbWFuYWdlci1jb25maWctc2VsZWN0aW9uLXBvcHVwJztcbiAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gICAgY29uc3QgY29uZmlnc0h0bWwgPSBjb25maWdzXG4gICAgICAubWFwKChjb25maWcsIGluZGV4KSA9PiB7XG4gICAgICAgIGNvbnN0IHNhZmVOYW1lID0gJCgnPGRpdi8+JykudGV4dChjb25maWcubmFtZSkuaHRtbCgpO1xuICAgICAgICByZXR1cm4gYFxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJjb25maWctaXRlbVwiIHN0eWxlPVwicGFkZGluZzogMTBweCA1cHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlOyBjdXJzb3I6IHBvaW50ZXI7IGJvcmRlci1yYWRpdXM6IDRweDsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjtcIj5cbiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJyYWRpb1wiIGlkPVwiY29uZmlnLXNlbGVjdC0ke2luZGV4fVwiIG5hbWU9XCJjb25maWctc2VsZWN0aW9uXCIgdmFsdWU9XCIke2NvbmZpZy5pZH1cIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBweDsgdHJhbnNmb3JtOiBzY2FsZSgxLjIpO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwiY29uZmlnLXNlbGVjdC0ke2luZGV4fVwiIHN0eWxlPVwiY3Vyc29yOiBwb2ludGVyOyB3aWR0aDogMTAwJTtcIj4ke3NhZmVOYW1lfTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBgO1xuICAgICAgfSlcbiAgICAgIC5qb2luKCcnKTtcblxuICAgIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgICAgIDxkaXYgaWQ9XCIke3BvcHVwSWR9XCIgc3R5bGU9XCJwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgbGVmdDogMDsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjUpOyB6LWluZGV4OiAxMDAwMTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDQwMHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDkwdmg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6IzZhNDIyNjsgdGV4dC1hbGlnbjogY2VudGVyOyBib3JkZXItYm90dG9tOiAycHggc29saWQgI2YwZDhiNjsgcGFkZGluZy1ib3R0b206IDEwcHg7XCI+6YCJ5oup6YWN572uPC9oND5cbiAgICAgICAgICAgICAgICAgICAgPHAgc3R5bGU9XCJmb250LXNpemU6IDE0cHg7IGNvbG9yOiAjNmE0MjI2OyBtYXJnaW46IDE1cHggMDsgdGV4dC1hbGlnbjogY2VudGVyO1wiPuinkuiJsiBcIiR7JCgnPGRpdi8+JykudGV4dChjaGFyTmFtZSkuaHRtbCgpfVwiIOe7keWumuS6huWkmuS4qumFjee9ru+8jOivt+mAieaLqeS4gOS4qui/m+ihjOWKoOi9ve+8mjwvcD5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZsZXg6IDE7IG1pbi1oZWlnaHQ6IDA7IG92ZXJmbG93LXk6IGF1dG87IG1hcmdpbi1ib3R0b206IDIwcHg7IHBhZGRpbmc6IDVweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICR7Y29uZmlnc0h0bWx9XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7IGRpc3BsYXk6ZmxleDsganVzdGlmeS1jb250ZW50OmZsZXgtZW5kOyBnYXA6IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwiY29uZmlnLXNlbGVjdC1jYW5jZWxcIiBzdHlsZT1cInBhZGRpbmc6IDhweCAxNnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNlMGUwZTA7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7IGNvbG9yOiMzMzM7XCI+5Y+W5raIPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwiY29uZmlnLXNlbGVjdC1jb25maXJtXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZjRjNzhlOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojM2EyYzJjO1wiPuWKoOi9vTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICBgO1xuXG4gICAgJCgnYm9keScpLmFwcGVuZChwb3B1cEh0bWwpO1xuICAgIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+IEBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgeyAjJHtwb3B1cElkfSB7IGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0ICFpbXBvcnRhbnQ7IH0gIyR7cG9wdXBJZH0gPiBkaXYgeyBtYXJnaW4tdG9wOiA1dmg7IG1heC1oZWlnaHQ6IDg1dmggIWltcG9ydGFudDsgfSB9PC9zdHlsZT5gO1xuICAgICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG5cbiAgICBpZiAoY29uZmlncy5sZW5ndGggPiAwKSAkKGAjY29uZmlnLXNlbGVjdC0wYCkucHJvcCgnY2hlY2tlZCcsIHRydWUpO1xuXG4gICAgJChgIyR7cG9wdXBJZH0gLmNvbmZpZy1pdGVtYCkub24oJ2NsaWNrJywgZnVuY3Rpb24gKCkge1xuICAgICAgJCh0aGlzKS5maW5kKCdpbnB1dFt0eXBlPVwicmFkaW9cIl0nKS5wcm9wKCdjaGVja2VkJywgdHJ1ZSk7XG4gICAgfSk7XG5cbiAgICAkKCcjY29uZmlnLXNlbGVjdC1jb25maXJtJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgY29uc3Qgc2VsZWN0ZWRJZCA9ICQoJ2lucHV0W25hbWU9XCJjb25maWctc2VsZWN0aW9uXCJdOmNoZWNrZWQnKS52YWwoKSBhcyBzdHJpbmc7XG4gICAgICBpZiAoc2VsZWN0ZWRJZCkge1xuICAgICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgICByZXNvbHZlKHNlbGVjdGVkSWQpO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgdG9hc3RyLndhcm5pbmcoJ+ivt+mAieaLqeS4gOS4qumFjee9ruOAgicpO1xuICAgICAgfVxuICAgIH0pO1xuXG4gICAgJCgnI2NvbmZpZy1zZWxlY3QtY2FuY2VsJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcbiAgICAgIHJlc29sdmUobnVsbCk7XG4gICAgfSk7XG4gIH0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gc2hvd1JlZ2V4RXhwb3J0U2VsZWN0aW9uUG9wdXAoYm91bmRSZWdleGVzOiBhbnlbXSk6IFByb21pc2U8YW55W10gfCBudWxsPiB7XG4gIHJldHVybiBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHtcbiAgICBjb25zdCBwb3B1cElkID0gJ3ByZXNldC1tYW5hZ2VyLXJlZ2V4LWV4cG9ydC1wb3B1cCc7XG4gICAgJChgIyR7cG9wdXBJZH1gKS5yZW1vdmUoKTtcblxuICAgIGNvbnN0IHJlZ2V4ZXNIdG1sID0gYm91bmRSZWdleGVzXG4gICAgICAubWFwKHJlZ2V4ID0+IHtcbiAgICAgICAgY29uc3Qgc2FmZU5hbWUgPSAkKCc8ZGl2Lz4nKS50ZXh0KHJlZ2V4LnNjcmlwdF9uYW1lKS5odG1sKCk7XG4gICAgICAgIHJldHVybiBgXG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZzogMTBweCA1cHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPVwicmVnZXgtZXhwb3J0LXRvZ2dsZS0ke3JlZ2V4LmlkfVwiIHN0eWxlPVwiY3Vyc29yOiBwb2ludGVyOyBmbGV4OiAxOyBtYXJnaW4tcmlnaHQ6IDEwcHg7IG92ZXJmbG93OiBoaWRkZW47IHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzOyB3aGl0ZS1zcGFjZTogbm93cmFwO1wiIHRpdGxlPVwiJHtzYWZlTmFtZX1cIj4ke3NhZmVOYW1lfTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzcz1cInBtLXN3aXRjaFwiPlxuICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cImNoZWNrYm94XCIgY2xhc3M9XCJyZWdleC1leHBvcnQtY2hlY2tib3hcIiBpZD1cInJlZ2V4LWV4cG9ydC10b2dnbGUtJHtyZWdleC5pZH1cIiBkYXRhLWlkPVwiJHtyZWdleC5pZH1cIiBjaGVja2VkLz5cbiAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9XCJwbS1zbGlkZXJcIj48L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBgO1xuICAgICAgfSlcbiAgICAgIC5qb2luKCcnKTtcblxuICAgIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgICAgIDxkaXYgaWQ9XCIke3BvcHVwSWR9XCIgc3R5bGU9XCJwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgbGVmdDogMDsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjUpOyB6LWluZGV4OiAxMDAwMTsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDQ1MHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDgwdmg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6IzZhNDIyNjsgdGV4dC1hbGlnbjogY2VudGVyO1wiPumAieaLqeimgeWvvOWHuueahOato+WImTwvaDQ+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJtYXJnaW46IDEwcHggMDsgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJyZWdleC1leHBvcnQtc2VsZWN0LWFsbFwiIHN0eWxlPVwicGFkZGluZzogNnB4IDEycHg7IGJhY2tncm91bmQtY29sb3I6I2E1ZDZmOTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjtcIj7lhajpgIk8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInJlZ2V4LWV4cG9ydC1kZXNlbGVjdC1hbGxcIiBzdHlsZT1cInBhZGRpbmc6IDZweCAxMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiNlMGUwZTA7IGJvcmRlcjpub25lOyBib3JkZXItcmFkaXVzOjZweDsgY3Vyc29yOnBvaW50ZXI7XCI+5YWo5LiN6YCJPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiZmxleDogMTsgbWluLWhlaWdodDogMDsgb3ZlcmZsb3cteTogYXV0bzsgbWFyZ2luLWJvdHRvbTogMjBweDsgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNmMGUyZDA7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjBlMmQwOyBwYWRkaW5nOiA1cHggMTBweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICR7cmVnZXhlc0h0bWx9XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwidGV4dC1hbGlnbjogcmlnaHQ7IGRpc3BsYXk6ZmxleDsganVzdGlmeS1jb250ZW50OmZsZXgtZW5kOyBnYXA6IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGlkPVwicmVnZXgtZXhwb3J0LWNhbmNlbFwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2UwZTBlMDsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgY29sb3I6IzMzMztcIj7lj5bmtog8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJyZWdleC1leHBvcnQtY29uZmlybVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0Yzc4ZTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6IzNhMmMyYztcIj7noa7orqTlr7zlh7o8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgYDtcblxuICAgICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcbiAgICBjb25zdCBtb2JpbGVTdHlsZXMgPSBgPHN0eWxlPkBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgeyAjJHtwb3B1cElkfSB7IGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0ICFpbXBvcnRhbnQ7IH0gIyR7cG9wdXBJZH0gPiBkaXYgeyBtYXJnaW4tdG9wOiA1dmg7IH0gfTwvc3R5bGU+YDtcbiAgICAkKGAjJHtwb3B1cElkfWApLmFwcGVuZChtb2JpbGVTdHlsZXMpO1xuXG4gICAgJCgnI3JlZ2V4LWV4cG9ydC1zZWxlY3QtYWxsJykub24oJ2NsaWNrJywgKCkgPT4gJCgnLnJlZ2V4LWV4cG9ydC1jaGVja2JveCcpLnByb3AoJ2NoZWNrZWQnLCB0cnVlKSk7XG4gICAgJCgnI3JlZ2V4LWV4cG9ydC1kZXNlbGVjdC1hbGwnKS5vbignY2xpY2snLCAoKSA9PiAkKCcucmVnZXgtZXhwb3J0LWNoZWNrYm94JykucHJvcCgnY2hlY2tlZCcsIGZhbHNlKSk7XG4gICAgJCgnI3JlZ2V4LWV4cG9ydC1jYW5jZWwnKS5vbignY2xpY2snLCAoKSA9PiB7XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVzb2x2ZShudWxsKTtcbiAgICB9KTtcbiAgICAkKCcjcmVnZXgtZXhwb3J0LWNvbmZpcm0nKS5vbignY2xpY2snLCAoKSA9PiB7XG4gICAgICBjb25zdCBzZWxlY3RlZElkcyA9IG5ldyBTZXQ8c3RyaW5nPigpO1xuICAgICAgJCgnLnJlZ2V4LWV4cG9ydC1jaGVja2JveDpjaGVja2VkJykuZWFjaChmdW5jdGlvbiAoKSB7XG4gICAgICAgIHNlbGVjdGVkSWRzLmFkZCgkKHRoaXMpLmRhdGEoJ2lkJykpO1xuICAgICAgfSk7XG4gICAgICBjb25zdCBzZWxlY3RlZFJlZ2V4ZXMgPSBib3VuZFJlZ2V4ZXMuZmlsdGVyKHIgPT4gc2VsZWN0ZWRJZHMuaGFzKHIuaWQpKTtcbiAgICAgICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG4gICAgICByZXNvbHZlKHNlbGVjdGVkUmVnZXhlcyk7XG4gICAgfSk7XG4gIH0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gc2hvd1JlZ2V4RGVsZXRpb25Qb3B1cChleGlzdGluZ1JlZ2V4ZXM6IGFueVtdKTogUHJvbWlzZTxhbnlbXT4ge1xuICByZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiB7XG4gICAgY29uc3QgcG9wdXBJZCA9ICdwcmVzZXQtbWFuYWdlci1yZWdleC1kZWxldGUtcG9wdXAnO1xuICAgICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG5cbiAgICBjb25zdCByZWdleGVzSHRtbCA9IGV4aXN0aW5nUmVnZXhlc1xuICAgICAgLm1hcChyZWdleCA9PiB7XG4gICAgICAgIGNvbnN0IHNhZmVOYW1lID0gJCgnPGRpdi8+JykudGV4dChyZWdleC5zY3JpcHRfbmFtZSkuaHRtbCgpO1xuICAgICAgICByZXR1cm4gYFxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBwYWRkaW5nOiAxMHB4IDVweDsgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlZWU7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBjbGFzcz1cInJlZ2V4LWRlbGV0ZS1jaGVja2JveFwiIGlkPVwicmVnZXgtZGVsZXRlLXRvZ2dsZS0ke3JlZ2V4LmlkfVwiIGRhdGEtaWQ9XCIke3JlZ2V4LmlkfVwiIHN0eWxlPVwibWFyZ2luLXJpZ2h0OiAxNXB4OyB0cmFuc2Zvcm06IHNjYWxlKDEuMyk7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBmb3I9XCJyZWdleC1kZWxldGUtdG9nZ2xlLSR7cmVnZXguaWR9XCIgc3R5bGU9XCJjdXJzb3I6IHBvaW50ZXI7IGZsZXg6IDE7IG92ZXJmbG93OiBoaWRkZW47IHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzOyB3aGl0ZS1zcGFjZTogbm93cmFwO1wiIHRpdGxlPVwiJHtzYWZlTmFtZX1cIj4ke3NhZmVOYW1lfTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBgO1xuICAgICAgfSlcbiAgICAgIC5qb2luKCcnKTtcblxuICAgIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgICAgIDxkaXYgaWQ9XCIke3BvcHVwSWR9XCIgc3R5bGU9XCJwb3NpdGlvbjogZml4ZWQ7IHRvcDogMDsgbGVmdDogMDsgd2lkdGg6IDEwMCU7IGhlaWdodDogMTAwJTsgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDAsMCwwLjUpOyB6LWluZGV4OiAxMDAwMjsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDQ1MHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDgwdmg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6I2M2MjgyODsgdGV4dC1hbGlnbjogY2VudGVyO1wiPuWIoOmZpOW3suacieato+WImSAo5Y+v6YCJKTwvaDQ+XG4gICAgICAgICAgICAgICAgICAgIDxwIHN0eWxlPVwiZm9udC1zaXplOiAxM3B4OyBjb2xvcjogIzc3NzsgdGV4dC1hbGlnbjogY2VudGVyOyBtYXJnaW4tYm90dG9tOiAxNXB4O1wiPuWcqOWvvOWFpeaWsOato+WImeWJje+8jOS9oOWPr+S7pemAieaLqeWIoOmZpOS4gOS6m+S4jeWGjemcgOimgeeahOaXp+ato+WImeOAgjwvcD5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZsZXg6IDE7IG1pbi1oZWlnaHQ6IDA7IG92ZXJmbG93LXk6IGF1dG87IG1hcmdpbi1ib3R0b206IDIwcHg7IGJvcmRlci10b3A6IDFweCBzb2xpZCAjZjBlMmQwOyBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2YwZTJkMDsgcGFkZGluZzogNXB4IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAke3JlZ2V4ZXNIdG1sfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cInRleHQtYWxpZ246IHJpZ2h0OyBkaXNwbGF5OmZsZXg7IGp1c3RpZnktY29udGVudDpmbGV4LWVuZDsgZ2FwOiAxMHB4O1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInJlZ2V4LWRlbGV0ZS1za2lwXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZTBlMGUwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBjb2xvcjojMzMzO1wiPui3s+i/h+W5tuWvvOWFpTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cInJlZ2V4LWRlbGV0ZS1jb25maXJtXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZjVhOGEwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojZmZmO1wiPuWIoOmZpOmAieS4reW5tuWvvOWFpTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICBgO1xuICAgICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcblxuICAgIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+QG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7ICMke3BvcHVwSWR9IHsgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQgIWltcG9ydGFudDsgfSAjJHtwb3B1cElkfSA+IGRpdiB7IG1hcmdpbi10b3A6IDV2aDsgfSB9PC9zdHlsZT5gO1xuICAgICQoYCMke3BvcHVwSWR9YCkuYXBwZW5kKG1vYmlsZVN0eWxlcyk7XG5cbiAgICAkKCcjcmVnZXgtZGVsZXRlLXNraXAnKS5vbignY2xpY2snLCAoKSA9PiB7XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVzb2x2ZShleGlzdGluZ1JlZ2V4ZXMpO1xuICAgIH0pO1xuXG4gICAgJCgnI3JlZ2V4LWRlbGV0ZS1jb25maXJtJykub24oJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgY29uc3QgaWRzVG9EZWxldGUgPSBuZXcgU2V0PHN0cmluZz4oKTtcbiAgICAgICQoJy5yZWdleC1kZWxldGUtY2hlY2tib3g6Y2hlY2tlZCcpLmVhY2goZnVuY3Rpb24gKCkge1xuICAgICAgICBpZHNUb0RlbGV0ZS5hZGQoJCh0aGlzKS5kYXRhKCdpZCcpKTtcbiAgICAgIH0pO1xuXG4gICAgICBjb25zdCByZW1haW5pbmdSZWdleGVzID0gZXhpc3RpbmdSZWdleGVzLmZpbHRlcihyID0+ICFpZHNUb0RlbGV0ZS5oYXMoci5pZCkpO1xuICAgICAgaWYgKGlkc1RvRGVsZXRlLnNpemUgPiAwKSB7XG4gICAgICAgIHRvYXN0ci5pbmZvKGDlt7LliKDpmaQgJHtpZHNUb0RlbGV0ZS5zaXplfSDmnaHml6fmraPliJnjgIJgKTtcbiAgICAgIH1cbiAgICAgICQoYCMke3BvcHVwSWR9YCkucmVtb3ZlKCk7XG4gICAgICByZXNvbHZlKHJlbWFpbmluZ1JlZ2V4ZXMpO1xuICAgIH0pO1xuICB9KTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIHNob3dCYXRjaEltcG9ydENvbmZpZ1NlbGVjdGlvblBvcHVwKGNvbmZpZ3NUb0ltcG9ydDogQ29uZmlnRGF0YVtdKTogUHJvbWlzZTxhbnlbXSB8IG51bGw+IHtcbiAgcmV0dXJuIG5ldyBQcm9taXNlKHJlc29sdmUgPT4ge1xuICAgIGNvbnN0IHBvcHVwSWQgPSAncHJlc2V0LW1hbmFnZXItYmF0Y2gtaW1wb3J0LXBvcHVwJztcbiAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gICAgY29uc3QgY29uZmlnc0h0bWwgPSBjb25maWdzVG9JbXBvcnRcbiAgICAgIC5tYXAoY29uZmlnID0+IHtcbiAgICAgICAgY29uc3Qgc2FmZU5hbWUgPSAkKCc8ZGl2Lz4nKS50ZXh0KGNvbmZpZy5uYW1lKS5odG1sKCk7XG4gICAgICAgIHJldHVybiBgXG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cInBhZGRpbmc6IDhweCA1cHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlOyBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBnYXA6IDEwcHg7XCI+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwiY2hlY2tib3hcIiBjbGFzcz1cInBtLWJhdGNoLWltcG9ydC1jaGVja2JveFwiIGRhdGEtb3JpZ2luYWwtaWQ9XCIke2NvbmZpZy5pZH1cIiBjaGVja2VkIHN0eWxlPVwidHJhbnNmb3JtOiBzY2FsZSgxLjIpO1wiPlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZmxleC1zaHJpbms6IDA7XCIgdGl0bGU9XCIke3NhZmVOYW1lfVwiPiR7c2FmZU5hbWV9PC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgY2xhc3M9XCJwbS1iYXRjaC1pbXBvcnQtbmV3bmFtZVwiIHZhbHVlPVwiJHtzYWZlTmFtZX1cIiBzdHlsZT1cImZsZXg6IDE7IG1pbi13aWR0aDogMTAwcHg7IGJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlcjogMXB4IHNvbGlkICNkNGI1OGI7IGNvbG9yOiMzYTJjMmM7IHBhZGRpbmc6IDRweCA2cHg7IGJvcmRlci1yYWRpdXM6IDRweDsgZm9udC1zaXplOjEzcHg7XCI+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBgO1xuICAgICAgfSlcbiAgICAgIC5qb2luKCcnKTtcblxuICAgIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICAgICAgICAgICA8ZGl2IGlkPVwiJHtwb3B1cElkfVwiIHN0eWxlPVwicG9zaXRpb246IGZpeGVkOyB0b3A6IDA7IGxlZnQ6IDA7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMCU7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDE7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGp1c3RpZnktY29udGVudDogY2VudGVyO1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmOGYwOyBjb2xvcjogIzNhMmMyYzsgYm9yZGVyLXJhZGl1czogMTZweDsgcGFkZGluZzogMjBweDsgd2lkdGg6IDkwJTsgbWF4LXdpZHRoOiA1MDBweDsgYm94LXNoYWRvdzogMCA0cHggMjVweCByZ2JhKDEyMCw5MCw2MCwuMjUpOyBkaXNwbGF5OiBmbGV4OyBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyBtYXgtaGVpZ2h0OiA4MHZoO1wiPlxuICAgICAgICAgICAgICAgICAgICA8aDQgc3R5bGU9XCJtYXJnaW4tdG9wOjA7IGNvbG9yOiM2YTQyMjY7IHRleHQtYWxpZ246IGNlbnRlcjtcIj7pgInmi6nopoHlr7zlhaXnmoTphY3nva48L2g0PlxuICAgICAgICAgICAgICAgICAgICA8cCBzdHlsZT1cImZvbnQtc2l6ZTogMTNweDsgY29sb3I6ICM3Nzc7IHRleHQtYWxpZ246IGNlbnRlcjsgbWFyZ2luLWJvdHRvbTogMTVweDtcIj7li77pgInopoHlr7zlhaXnmoTphY3nva7vvIzlj6/kv67mlLnlr7zlhaXlkI7nmoTlkI3np7DjgII8L3A+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxOyBtaW4taGVpZ2h0OiAwOyBvdmVyZmxvdy15OiBhdXRvOyBtYXJnaW4tYm90dG9tOiAyMHB4OyBib3JkZXItdG9wOiAxcHggc29saWQgI2YwZTJkMDsgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNmMGUyZDA7IHBhZGRpbmc6IDVweCAxMHB4O1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgJHtjb25maWdzSHRtbH1cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJ0ZXh0LWFsaWduOiByaWdodDsgZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6ZmxleC1lbmQ7IGdhcDogMTBweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gaWQ9XCJiYXRjaC1pbXBvcnQtY2FuY2VsXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZTBlMGUwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBjb2xvcjojMzMzO1wiPuWPlua2iDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBpZD1cImJhdGNoLWltcG9ydC1jb25maXJtXCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojZjRjNzhlOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojM2EyYzJjO1wiPuWvvOWFpemAieS4remhuTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICBgO1xuICAgICQoJ2JvZHknKS5hcHBlbmQocG9wdXBIdG1sKTtcblxuICAgIGNvbnN0IG1vYmlsZVN0eWxlcyA9IGA8c3R5bGU+XG4gICAgICAgICAgICBAbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHsgIyR7cG9wdXBJZH0gPiBkaXYgeyBtYXJnaW4tdG9wOiA2MDBweDsgfSB9XG4gICAgICAgIDwvc3R5bGU+YDtcbiAgICAkKGAjJHtwb3B1cElkfWApLmFwcGVuZChtb2JpbGVTdHlsZXMpO1xuXG4gICAgJCgnI2JhdGNoLWltcG9ydC1jYW5jZWwnKS5vbignY2xpY2snLCAoKSA9PiB7XG4gICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgcmVzb2x2ZShudWxsKTtcbiAgICB9KTtcblxuICAgICQoJyNiYXRjaC1pbXBvcnQtY29uZmlybScpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICAgIGNvbnN0IGNob2ljZXM6IGFueVtdID0gW107XG4gICAgICBsZXQgaGFzRXJyb3IgPSBmYWxzZTtcbiAgICAgICQoJyNwcmVzZXQtbWFuYWdlci1iYXRjaC1pbXBvcnQtcG9wdXAgLnBtLWJhdGNoLWltcG9ydC1jaGVja2JveCcpLmVhY2goZnVuY3Rpb24gKCkge1xuICAgICAgICBjb25zdCBjaGVja2JveCA9ICQodGhpcyk7XG4gICAgICAgIGNvbnN0IG5ld05hbWUgPSBjaGVja2JveC5zaWJsaW5ncygnLnBtLWJhdGNoLWltcG9ydC1uZXduYW1lJykudmFsKCk/LnRvU3RyaW5nKCkudHJpbSgpO1xuICAgICAgICBpZiAoIW5ld05hbWUgJiYgY2hlY2tib3guaXMoJzpjaGVja2VkJykpIHtcbiAgICAgICAgICB0b2FzdHIuZXJyb3IoYOacieW3suWLvumAieeahOmFjee9ruaWsOWQjeensOS4uuepuuOAgmApO1xuICAgICAgICAgIGhhc0Vycm9yID0gdHJ1ZTtcbiAgICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICAgIH1cbiAgICAgICAgY2hvaWNlcy5wdXNoKHtcbiAgICAgICAgICBvcmlnaW5hbElkOiBjaGVja2JveC5kYXRhKCdvcmlnaW5hbC1pZCcpLFxuICAgICAgICAgIG5ld05hbWU6IG5ld05hbWUsXG4gICAgICAgICAgaW1wb3J0OiBjaGVja2JveC5pcygnOmNoZWNrZWQnKSxcbiAgICAgICAgfSk7XG4gICAgICB9KTtcblxuICAgICAgaWYgKCFoYXNFcnJvcikge1xuICAgICAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgICAgICByZXNvbHZlKGNob2ljZXMpO1xuICAgICAgfVxuICAgIH0pO1xuICB9KTtcbn1cblxuLy8g5pi+56S65p+l55yL6YWN572u5by556qXXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gc2hvd1ZpZXdDb25maWdQb3B1cChjb25maWdJZDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPiB7XG4gIGNvbnN0IHsgZ2V0U3RvcmVkQ29uZmlncyB9ID0gYXdhaXQgaW1wb3J0KCcuL+mFjee9ruWtmOWCqOWSjOivu+WPlicpO1xuICBjb25zdCBjb25maWdzID0gYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpO1xuICBjb25zdCBjb25maWdEYXRhID0gY29uZmlnc1tjb25maWdJZF07XG5cbiAgaWYgKCFjb25maWdEYXRhKSB7XG4gICAgdG9hc3RyLmVycm9yKCfphY3nva7kuI3lrZjlnKgnKTtcbiAgICByZXR1cm47XG4gIH1cblxuICAvLyDojrflj5bmiYDmnInmraPliJnkv6Hmga/vvIznlKjkuo7mmL7npLrlkI3np7BcbiAgbGV0IGFsbFJlZ2V4ZXM6IGFueVtdID0gW107XG4gIHRyeSB7XG4gICAgYWxsUmVnZXhlcyA9IGF3YWl0IFRhdmVybkhlbHBlci5nZXRUYXZlcm5SZWdleGVzKHsgc2NvcGU6ICdnbG9iYWwnIH0pO1xuICB9IGNhdGNoIChlcnJvcikge1xuICAgIGNvbnNvbGUud2Fybign6I635Y+W5q2j5YiZ5L+h5oGv5aSx6LSlOicsIGVycm9yKTtcbiAgfVxuXG4gIGNvbnN0IHBvcHVwSWQgPSAncHJlc2V0LW1hbmFnZXItdmlldy1jb25maWctcG9wdXAnO1xuICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuXG4gIC8vIOe7n+iuoemFjee9ruS/oeaBr1xuICBjb25zdCB0b3RhbFN0YXRlcyA9IGNvbmZpZ0RhdGEuc3RhdGVzLmxlbmd0aDtcbiAgY29uc3QgZW5hYmxlZFN0YXRlcyA9IGNvbmZpZ0RhdGEuc3RhdGVzLmZpbHRlcigoc3RhdGU6IGFueSkgPT4gc3RhdGUuZW5hYmxlZCkubGVuZ3RoO1xuICBjb25zdCBkaXNhYmxlZFN0YXRlcyA9IHRvdGFsU3RhdGVzIC0gZW5hYmxlZFN0YXRlcztcblxuICAvLyDliIbnu4TmmL7npLrnirbmgIFcbiAgY29uc3QgZW5hYmxlZFN0YXRlc0h0bWwgPSBjb25maWdEYXRhLnN0YXRlc1xuICAgIC5maWx0ZXIoKHN0YXRlOiBhbnkpID0+IHN0YXRlLmVuYWJsZWQpXG4gICAgLm1hcChcbiAgICAgIChzdGF0ZTogYW55KSA9PlxuICAgICAgICBgPGRpdiBzdHlsZT1cInBhZGRpbmc6IDRweCA4cHg7IG1hcmdpbjogMnB4OyBiYWNrZ3JvdW5kLWNvbG9yOiAjZThmNWU4OyBib3JkZXItcmFkaXVzOiA0cHg7IGZvbnQtc2l6ZTogMTJweDtcIj4keyQoJzxkaXYvPicpLnRleHQoc3RhdGUubmFtZSkuaHRtbCgpfTwvZGl2PmAsXG4gICAgKVxuICAgIC5qb2luKCcnKTtcblxuICBjb25zdCBkaXNhYmxlZFN0YXRlc0h0bWwgPSBjb25maWdEYXRhLnN0YXRlc1xuICAgIC5maWx0ZXIoKHN0YXRlOiBhbnkpID0+ICFzdGF0ZS5lbmFibGVkKVxuICAgIC5tYXAoXG4gICAgICAoc3RhdGU6IGFueSkgPT5cbiAgICAgICAgYDxkaXYgc3R5bGU9XCJwYWRkaW5nOiA0cHggOHB4OyBtYXJnaW46IDJweDsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZWJlZTsgYm9yZGVyLXJhZGl1czogNHB4OyBmb250LXNpemU6IDEycHg7XCI+JHskKCc8ZGl2Lz4nKS50ZXh0KHN0YXRlLm5hbWUpLmh0bWwoKX08L2Rpdj5gLFxuICAgIClcbiAgICAuam9pbignJyk7XG5cbiAgLy8g5q2j5YiZ57uR5a6a5L+h5oGvXG4gIGNvbnN0IHJlZ2V4SW5mbyA9XG4gICAgY29uZmlnRGF0YS5yZWdleFN0YXRlcyAmJiBjb25maWdEYXRhLnJlZ2V4U3RhdGVzLmxlbmd0aCA+IDBcbiAgICAgID8gYDxkaXYgc3R5bGU9XCJtYXJnaW4tdG9wOiAxNXB4O1wiPlxuICAgICAgICAgPGg1IHN0eWxlPVwiY29sb3I6ICM2YTQyMjY7IG1hcmdpbi1ib3R0b206IDhweDtcIj7nu5HlrprmraPliJkgKCR7Y29uZmlnRGF0YS5yZWdleFN0YXRlcy5sZW5ndGh95LiqKTwvaDU+XG4gICAgICAgICA8ZGl2IGNsYXNzPVwiaXRlbS1saXN0XCIgc3R5bGU9XCJtYXgtaGVpZ2h0OiAxMDBweDsgb3ZlcmZsb3cteTogYXV0bzsgYm9yZGVyOiAxcHggc29saWQgI2UwYzlhNjsgYm9yZGVyLXJhZGl1czogNHB4OyBwYWRkaW5nOiA4cHg7XCI+XG4gICAgICAgICAgICR7Y29uZmlnRGF0YS5yZWdleFN0YXRlc1xuICAgICAgICAgICAgIC5tYXAoKHJlZ2V4OiBhbnkpID0+IHtcbiAgICAgICAgICAgICAgIC8vIOS7juaJgOacieato+WImeS4reafpeaJvuWvueW6lOeahOato+WImeS/oeaBr1xuICAgICAgICAgICAgICAgY29uc3QgZnVsbFJlZ2V4SW5mbyA9IGFsbFJlZ2V4ZXMuZmluZChyID0+IHIuaWQgPT09IHJlZ2V4LmlkKTtcbiAgICAgICAgICAgICAgIGNvbnN0IHJlZ2V4TmFtZSA9XG4gICAgICAgICAgICAgICAgIGZ1bGxSZWdleEluZm8/LnNjcmlwdF9uYW1lIHx8XG4gICAgICAgICAgICAgICAgIGZ1bGxSZWdleEluZm8/LnNjcmlwdE5hbWUgfHxcbiAgICAgICAgICAgICAgICAgcmVnZXguc2NyaXB0TmFtZSB8fFxuICAgICAgICAgICAgICAgICByZWdleC5zY3JpcHRfbmFtZSB8fFxuICAgICAgICAgICAgICAgICByZWdleC5uYW1lIHx8XG4gICAgICAgICAgICAgICAgIGDmraPliJlJRDogJHtyZWdleC5pZH1gO1xuICAgICAgICAgICAgICAgcmV0dXJuIGA8ZGl2IHN0eWxlPVwicGFkZGluZzogNHB4IDhweDsgbWFyZ2luOiAycHg7IGJhY2tncm91bmQtY29sb3I6ICR7cmVnZXguZW5hYmxlZCA/ICcjZTNmMmZkJyA6ICcjZmFmYWZhJ307IGJvcmRlci1yYWRpdXM6IDRweDsgZm9udC1zaXplOiAxMnB4O1wiPlxuICAgICAgICAgICAgICAgICR7JCgnPGRpdi8+JykudGV4dChyZWdleE5hbWUpLmh0bWwoKX0gJHtyZWdleC5lbmFibGVkID8gJyjlkK/nlKgpJyA6ICco56aB55SoKSd9XG4gICAgICAgICAgICAgIDwvZGl2PmA7XG4gICAgICAgICAgICAgfSlcbiAgICAgICAgICAgICAuam9pbignJyl9XG4gICAgICAgICA8L2Rpdj5cbiAgICAgICA8L2Rpdj5gXG4gICAgICA6ICcnO1xuXG4gIGNvbnN0IHBvcHVwSHRtbCA9IGBcbiAgICA8ZGl2IGlkPVwiJHtwb3B1cElkfVwiIHN0eWxlPVwicG9zaXRpb246IGZpeGVkOyB0b3A6IDA7IGxlZnQ6IDA7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMCU7IGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDI7IGRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IGp1c3RpZnktY29udGVudDogY2VudGVyO1wiPlxuICAgICAgPGRpdiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6ICNmZmY4ZjA7IGNvbG9yOiAjM2EyYzJjOyBib3JkZXItcmFkaXVzOiAxNnB4OyBwYWRkaW5nOiAyMHB4OyB3aWR0aDogOTAlOyBtYXgtd2lkdGg6IDYwMHB4OyBib3gtc2hhZG93OiAwIDRweCAyNXB4IHJnYmEoMTIwLDkwLDYwLC4yNSk7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IG1heC1oZWlnaHQ6IDgwdmg7XCI+XG4gICAgICAgIDxoNCBzdHlsZT1cIm1hcmdpbi10b3A6MDsgY29sb3I6IzZhNDIyNjsgdGV4dC1hbGlnbjogY2VudGVyOyBib3JkZXItYm90dG9tOiAycHggc29saWQgI2YwZDhiNjsgcGFkZGluZy1ib3R0b206IDEwcHg7XCI+5p+l55yL6YWN572u6K+m5oOFPC9oND5cbiAgICAgICAgXG4gICAgICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxOyBtaW4taGVpZ2h0OiAwOyBvdmVyZmxvdy15OiBhdXRvOyBtYXJnaW46IDE1cHggMDtcIj5cbiAgICAgICAgICA8ZGl2IHN0eWxlPVwibWFyZ2luLWJvdHRvbTogMTVweDtcIj5cbiAgICAgICAgICAgIDxoNSBzdHlsZT1cImNvbG9yOiAjNmE0MjI2OyBtYXJnaW4tYm90dG9tOiA4cHg7XCI+5Z+65pys5L+h5oGvPC9oNT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZjlmM2VhOyBwYWRkaW5nOiAxMHB4OyBib3JkZXItcmFkaXVzOiA2cHg7XCI+XG4gICAgICAgICAgICAgIDxkaXY+PHN0cm9uZz7phY3nva7lkI3np7A6PC9zdHJvbmc+ICR7JCgnPGRpdi8+JykudGV4dChjb25maWdEYXRhLm5hbWUpLmh0bWwoKX08L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdj48c3Ryb25nPuWFs+iBlOmihOiuvjo8L3N0cm9uZz4gJHskKCc8ZGl2Lz4nKS50ZXh0KGNvbmZpZ0RhdGEucHJlc2V0TmFtZSkuaHRtbCgpfTwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2PjxzdHJvbmc+5Yib5bu65pe26Ze0Ojwvc3Ryb25nPiAke25ldyBEYXRlKGNvbmZpZ0RhdGEuaWQpLnRvTG9jYWxlU3RyaW5nKCl9PC9kaXY+XG4gICAgICAgICAgICAgICR7Y29uZmlnRGF0YS5ib3VuZENoYXJOYW1lID8gYDxkaXY+PHN0cm9uZz7nu5Hlrprop5LoibI6PC9zdHJvbmc+IDxzcGFuIHN0eWxlPVwiY29sb3I6ICM0Q0FGNTA7XCI+JHskKCc8ZGl2Lz4nKS50ZXh0KGNvbmZpZ0RhdGEuYm91bmRDaGFyTmFtZSkuaHRtbCgpfTwvc3Bhbj48L2Rpdj5gIDogJyd9XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJtYXJnaW4tYm90dG9tOiAxNXB4O1wiPlxuICAgICAgICAgICAgPGg1IHN0eWxlPVwiY29sb3I6ICM2YTQyMjY7IG1hcmdpbi1ib3R0b206IDhweDtcIj7mnaHnm67nirbmgIHnu5/orqE8L2g1PlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInN0YXRzLWNvbnRhaW5lclwiIHN0eWxlPVwiZGlzcGxheTogZmxleDsgZ2FwOiAxMHB4OyBtYXJnaW4tYm90dG9tOiAxMHB4O1wiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwic3RhdHMtaXRlbVwiIHN0eWxlPVwiYmFja2dyb3VuZC1jb2xvcjogI2U4ZjVlODsgcGFkZGluZzogOHB4OyBib3JkZXItcmFkaXVzOiA2cHg7IGZsZXg6IDE7IHRleHQtYWxpZ246IGNlbnRlcjtcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiZm9udC13ZWlnaHQ6IGJvbGQ7IGNvbG9yOiAjMmU3ZDMyO1wiPuWQr+eUqDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmb250LXNpemU6IDE4cHg7IGZvbnQtd2VpZ2h0OiBib2xkO1wiPiR7ZW5hYmxlZFN0YXRlc308L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJzdGF0cy1pdGVtXCIgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZlYmVlOyBwYWRkaW5nOiA4cHg7IGJvcmRlci1yYWRpdXM6IDZweDsgZmxleDogMTsgdGV4dC1hbGlnbjogY2VudGVyO1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgY29sb3I6ICNjNjI4Mjg7XCI+56aB55SoPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogMThweDsgZm9udC13ZWlnaHQ6IGJvbGQ7XCI+JHtkaXNhYmxlZFN0YXRlc308L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJzdGF0cy1pdGVtXCIgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiAjZjBmNGY4OyBwYWRkaW5nOiA4cHg7IGJvcmRlci1yYWRpdXM6IDZweDsgZmxleDogMTsgdGV4dC1hbGlnbjogY2VudGVyO1wiPlxuICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgY29sb3I6ICM1NDZlN2E7XCI+5oC76K6hPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogMThweDsgZm9udC13ZWlnaHQ6IGJvbGQ7XCI+JHt0b3RhbFN0YXRlc308L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICR7XG4gICAgICAgICAgICBlbmFibGVkU3RhdGVzID4gMFxuICAgICAgICAgICAgICA/IGBcbiAgICAgICAgICA8ZGl2IHN0eWxlPVwibWFyZ2luLWJvdHRvbTogMTVweDtcIj5cbiAgICAgICAgICAgIDxoNSBzdHlsZT1cImNvbG9yOiAjNmE0MjI2OyBtYXJnaW4tYm90dG9tOiA4cHg7XCI+5ZCv55So55qE5p2h55uuICgke2VuYWJsZWRTdGF0ZXN95LiqKTwvaDU+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaXRlbS1saXN0XCIgc3R5bGU9XCJtYXgtaGVpZ2h0OiAxNTBweDsgb3ZlcmZsb3cteTogYXV0bzsgYm9yZGVyOiAxcHggc29saWQgI2UwYzlhNjsgYm9yZGVyLXJhZGl1czogNHB4OyBwYWRkaW5nOiA4cHg7XCI+XG4gICAgICAgICAgICAgICR7ZW5hYmxlZFN0YXRlc0h0bWx9XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICBgXG4gICAgICAgICAgICAgIDogJydcbiAgICAgICAgICB9XG5cbiAgICAgICAgICAke1xuICAgICAgICAgICAgZGlzYWJsZWRTdGF0ZXMgPiAwXG4gICAgICAgICAgICAgID8gYFxuICAgICAgICAgIDxkaXYgc3R5bGU9XCJtYXJnaW4tYm90dG9tOiAxNXB4O1wiPlxuICAgICAgICAgICAgPGg1IHN0eWxlPVwiY29sb3I6ICM2YTQyMjY7IG1hcmdpbi1ib3R0b206IDhweDtcIj7npoHnlKjnmoTmnaHnm64gKCR7ZGlzYWJsZWRTdGF0ZXN95LiqKTwvaDU+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaXRlbS1saXN0XCIgc3R5bGU9XCJtYXgtaGVpZ2h0OiAxNTBweDsgb3ZlcmZsb3cteTogYXV0bzsgYm9yZGVyOiAxcHggc29saWQgI2UwYzlhNjsgYm9yZGVyLXJhZGl1czogNHB4OyBwYWRkaW5nOiA4cHg7XCI+XG4gICAgICAgICAgICAgICR7ZGlzYWJsZWRTdGF0ZXNIdG1sfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgYFxuICAgICAgICAgICAgICA6ICcnXG4gICAgICAgICAgfVxuXG4gICAgICAgICAgJHtyZWdleEluZm99XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxkaXYgc3R5bGU9XCJ0ZXh0LWFsaWduOiByaWdodDsgbWFyZ2luLXRvcDogMTVweDsgZGlzcGxheTogZmxleDsgZ2FwOiAxMHB4OyBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1wiPlxuICAgICAgICAgIDxidXR0b24gaWQ9XCJ2aWV3LWNvbmZpZy1sb2FkXCIgZGF0YS1pZD1cIiR7Y29uZmlnSWR9XCIgc3R5bGU9XCJwYWRkaW5nOiA4cHggMTZweDsgYmFja2dyb3VuZC1jb2xvcjojNENBRjUwOyBib3JkZXI6bm9uZTsgYm9yZGVyLXJhZGl1czo2cHg7IGN1cnNvcjpwb2ludGVyOyBmb250LXdlaWdodDpib2xkOyBjb2xvcjojZmZmO1wiPuWKoOi9veatpOmFjee9rjwvYnV0dG9uPlxuICAgICAgICAgIDxidXR0b24gaWQ9XCJ2aWV3LWNvbmZpZy1jbG9zZVwiIHN0eWxlPVwicGFkZGluZzogOHB4IDE2cHg7IGJhY2tncm91bmQtY29sb3I6I2Y0Yzc4ZTsgYm9yZGVyOm5vbmU7IGJvcmRlci1yYWRpdXM6NnB4OyBjdXJzb3I6cG9pbnRlcjsgZm9udC13ZWlnaHQ6Ym9sZDsgY29sb3I6IzNhMmMyYztcIj7lhbPpl608L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgYDtcblxuICAkKCdib2R5JykuYXBwZW5kKHBvcHVwSHRtbCk7XG5cbiAgLy8g57uR5a6a5LqL5Lu2XG4gICQoJyN2aWV3LWNvbmZpZy1jbG9zZScpLm9uKCdjbGljaycsICgpID0+IHtcbiAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICB9KTtcblxuICAkKCcjdmlldy1jb25maWctbG9hZCcpLm9uKCdjbGljaycsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCBjb25maWdJZCA9ICQoJyN2aWV3LWNvbmZpZy1sb2FkJykuZGF0YSgnaWQnKTtcbiAgICAkKGAjJHtwb3B1cElkfWApLnJlbW92ZSgpO1xuICAgIGNvbnN0IHsgbG9hZENvbmZpZyB9ID0gYXdhaXQgaW1wb3J0KCcuL+mFjee9ruaTjeS9nOWKn+iDvScpO1xuICAgIGF3YWl0IGxvYWRDb25maWcoY29uZmlnSWQpO1xuICB9KTtcblxuICAvLyDnp7vliqjnq6/moLflvI9cbiAgY29uc3QgbW9iaWxlU3R5bGVzID0gYDxzdHlsZT5cbiAgICBAbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHsgXG4gICAgICAjJHtwb3B1cElkfSB7IFxuICAgICAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydCAhaW1wb3J0YW50OyBcbiAgICAgICAgcGFkZGluZzogMTBweDtcbiAgICAgIH0gXG4gICAgICAjJHtwb3B1cElkfSA+IGRpdiB7IFxuICAgICAgICBtYXJnaW4tdG9wOiA1dmg7IFxuICAgICAgICBtYXgtaGVpZ2h0OiA5MHZoICFpbXBvcnRhbnQ7IFxuICAgICAgICB3aWR0aDogOTUlICFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSBoNCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMThweCAhaW1wb3J0YW50O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSBoNSB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTVweCAhaW1wb3J0YW50O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSBidXR0b24ge1xuICAgICAgICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZzogMTBweCAxNnB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIG1pbi1oZWlnaHQ6IDQ0cHg7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSAuc3RhdHMtY29udGFpbmVyIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbiAhaW1wb3J0YW50O1xuICAgICAgICBnYXA6IDhweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgICAgIyR7cG9wdXBJZH0gLnN0YXRzLWl0ZW0ge1xuICAgICAgICBmbGV4OiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmc6IDEycHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IC5pdGVtLWxpc3Qge1xuICAgICAgICBtYXgtaGVpZ2h0OiAxMjBweCAhaW1wb3J0YW50O1xuICAgICAgICBmb250LXNpemU6IDEzcHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IC5pdGVtLWxpc3QgZGl2IHtcbiAgICAgICAgcGFkZGluZzogNnB4IDEwcHggIWltcG9ydGFudDtcbiAgICAgICAgbWFyZ2luOiAzcHggIWltcG9ydGFudDtcbiAgICAgICAgZm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuICAgIEBtZWRpYSAobWF4LXdpZHRoOiA0ODBweCkge1xuICAgICAgIyR7cG9wdXBJZH0gPiBkaXYge1xuICAgICAgICBtYXJnaW4tdG9wOiAydmggIWltcG9ydGFudDtcbiAgICAgICAgbWF4LWhlaWdodDogOTZ2aCAhaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nOiAxMnB4O1xuICAgICAgfVxuICAgICAgIyR7cG9wdXBJZH0gaDQge1xuICAgICAgICBmb250LXNpemU6IDE2cHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICAgICMke3BvcHVwSWR9IC5zdGF0cy1pdGVtIHtcbiAgICAgICAgcGFkZGluZzogMTBweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgICAgIyR7cG9wdXBJZH0gLnN0YXRzLWl0ZW0gZGl2OmZpcnN0LWNoaWxkIHtcbiAgICAgICAgZm9udC1zaXplOiAxM3B4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgICAjJHtwb3B1cElkfSAuc3RhdHMtaXRlbSBkaXY6bGFzdC1jaGlsZCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cbiAgPC9zdHlsZT5gO1xuICAkKGAjJHtwb3B1cElkfWApLmFwcGVuZChtb2JpbGVTdHlsZXMpO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/辅助弹窗功能.ts\n\n}");
 
-/***/ }),
 
-/***/ "./src/喵喵预设配置管理/配置存储和读取.ts":
-/*!*********************************!*\
-  !*** ./src/喵喵预设配置管理/配置存储和读取.ts ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+// 特殊识别条目的名称和内容
+const IDENTIFIER_PROMPT_NAME = '*喵喵脚本识别*';
+const IDENTIFIER_PROMPT_CONTENT = '';
+// 触发一次预设保存，避免条目更改丢失
+function triggerPresetSave() {
+    try {
+        const $btn = $('#update_oai_preset');
+        if ($btn.length) {
+            $btn.trigger('click');
+            console.log('已触发预设保存');
+        }
+        else {
+            console.warn('未找到预设保存按钮 #update_oai_preset');
+        }
+    }
+    catch (err) {
+        console.error('触发预设保存时出错:', err);
+    }
+}
+// 创建或获取识别条目
+async function createOrGetIdentifierPrompt() {
+    try {
+        // 获取当前预设的所有条目
+        const preset = TavernHelper.getPreset('in_use');
+        const prompts = [...preset.prompts, ...preset.prompts_unused];
+        // 查找是否已存在识别条目
+        const existingPrompt = prompts.find(p => p.name === IDENTIFIER_PROMPT_NAME);
+        if (existingPrompt) {
+            console.log('找到现有识别条目:', existingPrompt.id);
+            return existingPrompt.id;
+        }
+        // 创建新的识别条目
+        console.log('创建新的识别条目...');
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)(),
+                name: IDENTIFIER_PROMPT_NAME,
+                enabled: false, // 不启用
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: IDENTIFIER_PROMPT_CONTENT,
+            };
+            // 添加到预设的prompts数组末尾
+            preset.prompts.push(newPrompt);
+            return preset;
+        }, { render: 'immediate' });
+        // 触发保存
+        triggerPresetSave();
+        // 重新获取条目列表以获取新创建的ID
+        const updatedPreset = TavernHelper.getPreset('in_use');
+        const updatedPrompts = [...updatedPreset.prompts, ...updatedPreset.prompts_unused];
+        const newPrompt = updatedPrompts.find(p => p.name === IDENTIFIER_PROMPT_NAME);
+        if (newPrompt) {
+            console.log('识别条目创建成功，ID:', newPrompt.id);
+            return newPrompt.id;
+        }
+        else {
+            console.error('无法找到新创建的识别条目');
+            return null;
+        }
+    }
+    catch (error) {
+        console.error('创建识别条目失败:', error);
+        return null;
+    }
+}
+// 确保当前预设中有指定的识别条目
+async function ensureIdentifierInCurrentPreset(identifierId) {
+    try {
+        const preset = TavernHelper.getPreset('in_use');
+        const prompts = [...preset.prompts, ...preset.prompts_unused];
+        // 检查是否已存在该识别条目
+        const existingPrompt = prompts.find(p => p.id === identifierId);
+        if (existingPrompt) {
+            console.log('当前预设中已存在识别条目:', identifierId);
+            return;
+        }
+        // 如果不存在，创建该识别条目
+        console.log('在当前预设中创建识别条目:', identifierId);
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: identifierId,
+                name: IDENTIFIER_PROMPT_NAME,
+                enabled: false, // 不启用
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: IDENTIFIER_PROMPT_CONTENT,
+            };
+            // 添加到预设的prompts数组末尾
+            preset.prompts.push(newPrompt);
+            return preset;
+        }, { render: 'immediate' });
+        // 触发保存
+        triggerPresetSave();
+        console.log('识别条目已添加到当前预设');
+    }
+    catch (error) {
+        console.error('确保识别条目存在失败:', error);
+    }
+}
+// 为指定预设创建识别条目
+async function createIdentifierForPreset(presetName) {
+    try {
+        // 切换到目标预设
+        if (!TavernHelper.loadPreset(presetName)) {
+            console.warn(`无法加载预设: ${presetName}`);
+            return null;
+        }
+        // 等待预设切换完成
+        await new Promise(resolve => setTimeout(resolve, 500));
+        // 检查预设是否已有识别条目
+        const preset = TavernHelper.getPreset('in_use');
+        const prompts = [...preset.prompts, ...preset.prompts_unused];
+        const existingIdentifier = prompts.find(p => p.name === IDENTIFIER_PROMPT_NAME);
+        if (existingIdentifier) {
+            console.log(`预设 "${presetName}" 已存在识别条目:`, existingIdentifier.id);
+            return existingIdentifier.id;
+        }
+        // 创建新的识别条目
+        const identifierId = (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)();
+        console.log(`为预设 "${presetName}" 创建识别条目，ID:`, identifierId);
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: identifierId,
+                name: IDENTIFIER_PROMPT_NAME,
+                enabled: false, // 不启用
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: IDENTIFIER_PROMPT_CONTENT,
+            };
+            // 添加到预设的prompts数组末尾
+            preset.prompts.push(newPrompt);
+            return preset;
+        }, { render: 'immediate' });
+        // 触发保存
+        triggerPresetSave();
+        console.log(`预设 "${presetName}" 识别条目创建完成，ID:`, identifierId);
+        return identifierId;
+    }
+    catch (error) {
+        console.error(`为预设 "${presetName}" 创建识别条目失败:`, error);
+        return null;
+    }
+}
+// 为当前预设创建识别条目并更新所有相关配置
+async function createIdentifierForCurrentPreset() {
+    try {
+        // 检查当前预设是否已有识别条目
+        const preset = TavernHelper.getPreset('in_use');
+        const prompts = [...preset.prompts, ...preset.prompts_unused];
+        const existingIdentifier = prompts.find(p => p.name === IDENTIFIER_PROMPT_NAME);
+        if (existingIdentifier) {
+            toastr.warning('当前预设已存在识别条目，无需重复创建');
+            return;
+        }
+        // 创建新的识别条目
+        const identifierId = (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)();
+        console.log('为当前预设创建识别条目，ID:', identifierId);
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            const newPrompt = {
+                id: identifierId,
+                name: IDENTIFIER_PROMPT_NAME,
+                enabled: false, // 不启用
+                position: {
+                    type: 'relative',
+                },
+                role: 'system',
+                content: IDENTIFIER_PROMPT_CONTENT,
+            };
+            // 添加到预设的prompts数组末尾
+            preset.prompts.push(newPrompt);
+            return preset;
+        }, { render: 'immediate' });
+        // 触发保存
+        triggerPresetSave();
+        // 获取当前预设名称
+        const currentPresetName = TavernHelper.getLoadedPresetName();
+        console.log('当前预设名称:', currentPresetName);
+        // 更新所有使用当前预设名称的旧配置，添加识别条目ID
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        let updatedCount = 0;
+        for (const configId in configs) {
+            const config = configs[configId];
+            // 如果配置没有identifierId且presetName匹配当前预设
+            if (!config.identifierId && config.presetName === currentPresetName) {
+                config.identifierId = identifierId;
+                updatedCount++;
+                console.log(`更新配置 "${config.name}" 添加识别条目ID`);
+            }
+        }
+        if (updatedCount > 0) {
+            // 保存更新后的配置
+            await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+            // 清除缓存并重新渲染
+            (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)();
+            await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+            toastr.success(`已为当前预设创建识别条目，并更新了 ${updatedCount} 个相关配置`);
+        }
+        else {
+            toastr.success('已为当前预设创建识别条目');
+        }
+        console.log('识别条目创建完成，ID:', identifierId);
+    }
+    catch (error) {
+        console.error('创建识别条目失败:', error);
+        toastr.error('创建识别条目失败，请检查控制台日志');
+    }
+}
+// 自动为所有预设创建识别条目并更新配置
+async function autoCreateIdentifiersForAllPresets() {
+    try {
+        console.log('开始自动为所有预设创建识别条目...');
+        // 获取所有预设名称
+        const presetNames = TavernHelper.getPresetNames();
+        console.log('找到预设列表:', presetNames);
+        // 获取所有配置
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        console.log('找到配置数量:', Object.keys(configs).length);
+        // 统计需要处理的预设
+        const presetToProcess = new Set();
+        for (const configId in configs) {
+            const config = configs[configId];
+            if (!config.identifierId && config.presetName) {
+                presetToProcess.add(config.presetName);
+            }
+        }
+        console.log('需要处理的预设:', Array.from(presetToProcess));
+        if (presetToProcess.size === 0) {
+            console.log('所有配置都已有关联的识别条目，无需处理');
+            return;
+        }
+        // 记录当前预设，稍后恢复
+        const originalPreset = TavernHelper.getLoadedPresetName();
+        console.log('当前预设:', originalPreset);
+        let totalUpdated = 0;
+        const presetIdentifierMap = new Map();
+        // 为每个需要处理的预设创建识别条目
+        for (const presetName of presetToProcess) {
+            if (presetNames.includes(presetName)) {
+                console.log(`处理预设: ${presetName}`);
+                const identifierId = await createIdentifierForPreset(presetName);
+                if (identifierId) {
+                    presetIdentifierMap.set(presetName, identifierId);
+                    console.log(`预设 "${presetName}" 识别条目ID: ${identifierId}`);
+                }
+            }
+            else {
+                console.warn(`预设 "${presetName}" 不存在，跳过`);
+            }
+        }
+        // 更新所有相关配置
+        for (const configId in configs) {
+            const config = configs[configId];
+            if (!config.identifierId && config.presetName && presetIdentifierMap.has(config.presetName)) {
+                config.identifierId = presetIdentifierMap.get(config.presetName);
+                totalUpdated++;
+                console.log(`更新配置 "${config.name}" 关联预设 "${config.presetName}"`);
+            }
+        }
+        // 保存更新后的配置
+        if (totalUpdated > 0) {
+            await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+            console.log(`已更新 ${totalUpdated} 个配置`);
+        }
+        // 恢复原始预设
+        if (originalPreset && presetNames.includes(originalPreset)) {
+            TavernHelper.loadPreset(originalPreset);
+            console.log(`已恢复原始预设: ${originalPreset}`);
+        }
+        // 清除缓存并重新渲染
+        (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)();
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+        toastr.success(`自动创建完成！为 ${presetIdentifierMap.size} 个预设创建了识别条目，更新了 ${totalUpdated} 个配置`);
+        console.log('自动创建识别条目完成');
+    }
+    catch (error) {
+        console.error('自动创建识别条目失败:', error);
+        toastr.error('自动创建识别条目失败，请检查控制台日志');
+    }
+}
+async function renameConfig(configId) {
+    const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+    const configToRename = configs[configId];
+    if (!configToRename) {
+        toastr.error('找不到要重命名的配置。');
+        return;
+    }
+    const oldName = configToRename.name;
+    const newName = await triggerSlash(`/input default="${oldName}" "请输入新的配置名称"`);
+    if (newName && newName.trim() !== '') {
+        configs[configId].name = newName.trim();
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+        (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)(); // 清除配置缓存
+        toastr.success(`配置已从 "${oldName}" 重命名为 "${newName.trim()}"。`);
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+        (0,___WEBPACK_IMPORTED_MODULE_2__/* .updateConfigListCache */ .oz)(); // 更新UI缓存
+    }
+    else {
+        toastr.info('重命名操作已取消。');
+    }
+}
+async function updateConfig(configId) {
+    try {
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        const oldConfig = configs[configId];
+        if (!oldConfig) {
+            toastr.error(`配置不存在，无法更新。`);
+            return;
+        }
+        const loadedPresetName = TavernHelper.getLoadedPresetName();
+        const preset = TavernHelper.getPreset('in_use');
+        const allPrompts = [...preset.prompts, ...preset.prompts_unused];
+        const currentPromptStates = allPrompts.map((p) => ({
+            id: p.id,
+            enabled: p.enabled,
+            name: p.name,
+        }));
+        const configToSave = {
+            ...oldConfig,
+            presetName: loadedPresetName,
+            states: currentPromptStates,
+        };
+        const updateRegexChoice = await triggerSlash(`/popup okButton="是" cancelButton="否" result=true "是否要同时更新此配置的正则开关状态？"`);
+        if (updateRegexChoice === '1') {
+            const allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });
+            const newRegexStates = allRegexes.map((regex) => ({
+                id: regex.id,
+                enabled: regex.enabled,
+            }));
+            configToSave.regexStates = newRegexStates;
+            toastr.info('已同步更新正则状态。');
+        }
+        const oldStateIds = new Set(oldConfig.states.map(s => s.id));
+        const newEntries = configToSave.states.filter(s => !oldStateIds.has(s.id));
+        if (newEntries.length > 0) {
+            const promptIdToNameMap = new Map(currentPromptStates.map((p) => [p.id, p.name]));
+            const userChoices = await (0,___WEBPACK_IMPORTED_MODULE_3__/* .showNewEntriesPopup */ .eS)(newEntries, promptIdToNameMap);
+            if (userChoices !== null) {
+                const choicesMap = new Map(userChoices.map((choice) => [choice.id, choice.enabled]));
+                configToSave.states.forEach(state => {
+                    if (choicesMap.has(state.id))
+                        state.enabled = choicesMap.get(state.id);
+                });
+            }
+            else {
+                toastr.info('已为新条目保留默认状态。');
+            }
+        }
+        configs[configId] = configToSave;
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+        (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)(); // 清除配置缓存
+        toastr.success(`配置 "${configToSave.name}" 已更新。`);
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+        (0,___WEBPACK_IMPORTED_MODULE_2__/* .updateConfigListCache */ .oz)(); // 更新UI缓存
+    }
+    catch (error) {
+        console.error('更新预设配置失败:', error);
+        toastr.error('更新预设配置失败，请检查控制台获取更多信息。');
+    }
+}
+async function saveCurrentConfig() {
+    // 先创建识别条目，然后通过识别条目ID获取正确的预设名称
+    const identifierId = await createOrGetIdentifierPrompt();
+    if (!identifierId) {
+        toastr.error('无法创建识别条目，配置保存失败');
+        return;
+    }
+    // 获取当前预设名称（用于显示和向后兼容）
+    const currentPresetName = await (0,___WEBPACK_IMPORTED_MODULE_4__/* .getPresetNameByIdentifier */ .nx)(identifierId);
+    if (!currentPresetName) {
+        toastr.error('无法识别当前预设，配置保存失败');
+        return;
+    }
+    const blacklist = ['恶灵低语', 'deepspay', 'spaymale', '深阉', '小骡之神', '小猫之神', 'kemini'];
+    if (blacklist.some(keyword => currentPresetName.toLowerCase().includes(keyword))) {
+        toastr.warning('*你使用了作者黑名单的预设哦（盯）*');
+        return;
+    }
+    const nameInput = $('#preset-manager-name-input');
+    const configName = nameInput.val()?.toString().trim();
+    if (!configName) {
+        toastr.error('请输入配置名称。');
+        return;
+    }
+    try {
+        console.log('当前预设名称:', currentPresetName);
+        console.log('识别条目ID:', identifierId);
+        const preset = TavernHelper.getPreset('in_use');
+        const allPrompts = [...preset.prompts, ...preset.prompts_unused];
+        const promptStates = allPrompts.map((p) => ({
+            id: p.id,
+            enabled: p.enabled,
+            name: p.name,
+        }));
+        const configToSave = {
+            id: (0,___WEBPACK_IMPORTED_MODULE_0__/* .generateUniqueId */ .Ij)(),
+            name: configName,
+            presetName: currentPresetName, // 使用实际的预设名称而不是"in_use"
+            identifierId: identifierId, // 使用识别条目ID进行可靠的预设识别
+            states: promptStates,
+        };
+        if ($('#preset-manager-bind-char').is(':checked')) {
+            const charData = await TavernHelper.getCharData('current');
+            if (charData && charData.avatar) {
+                configToSave.boundCharAvatar = charData.avatar;
+                configToSave.boundCharName = charData.name;
+            }
+            else {
+                toastr.warning('无法获取当前角色信息，配置未绑定。');
+            }
+        }
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        configs[configToSave.id] = configToSave;
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+        (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)(); // 清除配置缓存
+        toastr.success(`配置 "${configName}" 已保存。`);
+        nameInput.val('');
+        $('#preset-manager-bind-char').prop('checked', false);
+        await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+        (0,___WEBPACK_IMPORTED_MODULE_2__/* .updateConfigListCache */ .oz)(); // 更新UI缓存
+    }
+    catch (error) {
+        console.error('保存预设配置失败:', error);
+        toastr.error('保存预设配置失败，请检查控制台获取更多信息。');
+    }
+}
+async function loadConfig(configId, shouldToggleUI = true) {
+    try {
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        const configToLoad = configs[configId];
+        if (!configToLoad) {
+            toastr.error(`配置不存在。`);
+            return;
+        }
+        // 优先使用识别条目ID查找预设，如果没有则回退到预设名称
+        let targetPresetName = null;
+        if (configToLoad.identifierId) {
+            // 使用识别条目ID查找预设
+            targetPresetName = await (0,___WEBPACK_IMPORTED_MODULE_4__/* .getPresetNameByIdentifier */ .nx)(configToLoad.identifierId);
+            if (targetPresetName) {
+                // 如果找到的是"in_use"，需要转换为当前正在使用的实际预设名称
+                if (targetPresetName === 'in_use') {
+                    const currentPresetName = TavernHelper.getLoadedPresetName();
+                    targetPresetName = currentPresetName !== 'in_use' ? currentPresetName : 'in_use';
+                    console.log('通过识别条目ID找到in_use，转换为当前预设:', targetPresetName);
+                }
+                else {
+                    console.log('通过识别条目ID找到预设:', targetPresetName);
+                }
+            }
+            else {
+                console.warn('无法通过识别条目ID找到预设，尝试使用预设名称');
+            }
+        }
+        // 如果通过识别条目ID没找到，尝试使用预设名称（向后兼容）
+        if (!targetPresetName && configToLoad.presetName) {
+            if (TavernHelper.getPresetNames().includes(configToLoad.presetName)) {
+                targetPresetName = configToLoad.presetName;
+                console.log('通过预设名称找到预设:', targetPresetName);
+            }
+            else {
+                console.warn(`预设 "${configToLoad.presetName}" 不存在，尝试扫描所有预设查找识别条目`);
+                // 如果预设名称也不存在，尝试扫描所有预设查找识别条目
+                if (configToLoad.identifierId) {
+                    targetPresetName = await (0,___WEBPACK_IMPORTED_MODULE_4__/* .getPresetNameByIdentifier */ .nx)(configToLoad.identifierId);
+                }
+            }
+        }
+        if (targetPresetName) {
+            // 加载预设
+            if (TavernHelper.loadPreset(targetPresetName)) {
+                toastr.info(`已切换到预设 "${targetPresetName}"。`);
+                await new Promise(resolve => setTimeout(resolve, 500));
+                // 确保目标预设中有识别条目
+                if (configToLoad.identifierId) {
+                    await ensureIdentifierInCurrentPreset(configToLoad.identifierId);
+                }
+            }
+            else {
+                toastr.error(`加载预设 "${targetPresetName}" 失败。`);
+                return;
+            }
+        }
+        else {
+            toastr.warning(`无法找到对应的预设，将仅对当前预设应用条目状态。`);
+        }
+        const promptStates = configToLoad.states;
+        if (!promptStates || !Array.isArray(promptStates)) {
+            toastr.error(`配置 "${configToLoad.name}" 数据格式不正确或为空。`);
+            return;
+        }
+        const statesMap = new Map(promptStates.map(s => [s.id, s.enabled]));
+        await TavernHelper.updatePresetWith('in_use', preset => {
+            [...preset.prompts, ...preset.prompts_unused].forEach((prompt) => {
+                if (statesMap.has(prompt.id))
+                    prompt.enabled = statesMap.get(prompt.id);
+            });
+            return preset;
+        });
+        if (configToLoad.regexStates && Array.isArray(configToLoad.regexStates)) {
+            const statesToApply = new Map(configToLoad.regexStates.map(r => [r.id, r.enabled]));
+            if (statesToApply.size > 0) {
+                await TavernHelper.updateTavernRegexesWith(regexes => {
+                    regexes.forEach((regex) => {
+                        if (regex.scope === 'global' && statesToApply.has(regex.id)) {
+                            regex.enabled = statesToApply.get(regex.id);
+                        }
+                    });
+                    return regexes;
+                }, { scope: 'global' });
+                toastr.success(`已应用配置 "${configToLoad.name}" 绑定的全局正则。`);
+            }
+        }
+        toastr.success(`已加载配置 "${configToLoad.name}"。`);
+        // 加载配置后触发分组恢复
+        setTimeout(() => {
+            (0,___WEBPACK_IMPORTED_MODULE_1__/* .triggerGroupingRestore */ .aY)();
+        }, 500);
+        if (shouldToggleUI) {
+            (0,___WEBPACK_IMPORTED_MODULE_2__/* .toggleUI */ .jS)();
+        }
+    }
+    catch (error) {
+        console.error('加载预设配置失败:', error);
+        toastr.error('加载预设配置失败，请检查控制台获取更多信息。');
+    }
+}
+async function deleteConfig(configId) {
+    try {
+        const configs = await (0,___WEBPACK_IMPORTED_MODULE_4__.getStoredConfigs)();
+        const configToDelete = configs[configId];
+        if (configToDelete) {
+            delete configs[configId];
+            await (0,___WEBPACK_IMPORTED_MODULE_4__/* .setStoredConfigs */ .BR)(configs);
+            (0,___WEBPACK_IMPORTED_MODULE_4__/* .clearConfigCache */ .ih)(); // 清除配置缓存
+            toastr.success(`已删除配置 "${configToDelete.name}"。`);
+            await (0,___WEBPACK_IMPORTED_MODULE_4__/* .renderConfigsList */ .sd)();
+            (0,___WEBPACK_IMPORTED_MODULE_2__/* .updateConfigListCache */ .oz)(); // 更新UI缓存
+        }
+        else {
+            toastr.warning(`配置不存在。`);
+        }
+    }
+    catch (error) {
+        console.error('删除配置失败:', error);
+        toastr.error('删除配置失败，请检查控制台获取更多信息。');
+    }
+}
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   clearConfigCache: () => (/* binding */ clearConfigCache),\n/* harmony export */   getStoredConfigs: () => (/* binding */ getStoredConfigs),\n/* harmony export */   renderConfigsList: () => (/* binding */ renderConfigsList),\n/* harmony export */   setStoredConfigs: () => (/* binding */ setStoredConfigs)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n\n// 添加配置缓存\nlet configCache = null;\nlet lastCacheTime = 0;\nconst CONFIG_CACHE_DURATION = 10000; // 10秒缓存\nasync function getStoredConfigs() {\n    // 检查缓存是否有效\n    const now = Date.now();\n    if (configCache && now - lastCacheTime < CONFIG_CACHE_DURATION) {\n        return configCache;\n    }\n    let worldbookEntries;\n    try {\n        worldbookEntries = await TavernHelper.getWorldbook(___WEBPACK_IMPORTED_MODULE_0__.CONFIG_LOREBOOK_NAME);\n    }\n    catch (error) {\n        return {};\n    }\n    const v2Entry = worldbookEntries.find((entry) => entry.strategy?.keys?.includes(___WEBPACK_IMPORTED_MODULE_0__.V2_MIGRATION_KEY));\n    if (v2Entry) {\n        console.log('喵喵预设配置管理: 检测到旧版合并数据，正在迁移...');\n        try {\n            const configsArray = JSON.parse(v2Entry.content);\n            const migratedEntries = configsArray.map((config) => ({\n                name: config.name || config.id,\n                strategy: { type: 'constant', keys: [config.id] },\n                content: JSON.stringify(config),\n                enabled: false,\n            }));\n            const otherEntries = worldbookEntries.filter((entry) => !entry.strategy?.keys?.includes(___WEBPACK_IMPORTED_MODULE_0__.V2_MIGRATION_KEY));\n            await TavernHelper.createOrReplaceWorldbook(___WEBPACK_IMPORTED_MODULE_0__.CONFIG_LOREBOOK_NAME, [...otherEntries, ...migratedEntries]);\n            toastr.info('喵喵预设配置管理：已自动升级数据格式。');\n            worldbookEntries = await TavernHelper.getWorldbook(___WEBPACK_IMPORTED_MODULE_0__.CONFIG_LOREBOOK_NAME);\n        }\n        catch (e) {\n            console.error('迁移配置失败:', e);\n            toastr.error('自动迁移配置数据失败，请检查控制台。');\n        }\n    }\n    const configs = {};\n    for (const entry of worldbookEntries) {\n        try {\n            const configData = JSON.parse(entry.content);\n            if (configData.id && configData.name && Array.isArray(configData.states)) {\n                configs[configData.id] = configData;\n            }\n        }\n        catch (e) {\n            // 忽略解析失败的条目\n        }\n    }\n    // 更新缓存\n    configCache = configs;\n    lastCacheTime = now;\n    return configs;\n}\n// 清除配置缓存\nfunction clearConfigCache() {\n    configCache = null;\n    lastCacheTime = 0;\n}\nasync function setStoredConfigs(configsObject) {\n    try {\n        const nameCounts = {};\n        const entries = Object.values(configsObject).map(config => {\n            let entryName = config.name;\n            nameCounts[entryName] = (nameCounts[entryName] || 0) + 1;\n            if (nameCounts[entryName] > 1) {\n                entryName = `${entryName} (${config.id.slice(-5)})`;\n            }\n            return {\n                name: entryName,\n                strategy: { type: 'constant', keys: [config.id] },\n                content: JSON.stringify(config),\n                enabled: false,\n                comment: `MiaoMiao Preset Config: ${config.name} (ID: ${config.id})`,\n            };\n        });\n        await TavernHelper.createOrReplaceWorldbook(___WEBPACK_IMPORTED_MODULE_0__.CONFIG_LOREBOOK_NAME, entries);\n    }\n    catch (error) {\n        console.error('写入配置到世界书失败:', error);\n        toastr.error('配置保存/更新失败，请检查控制台日志。');\n    }\n}\nasync function renderConfigsList() {\n    const configsObject = await getStoredConfigs();\n    const configs = Object.values(configsObject);\n    const listElement = $('#preset-manager-list');\n    listElement.empty();\n    if (configs.length === 0) {\n        listElement.append('<li style=\"color:#888; padding:10px;\">暂无已保存的配置。</li>');\n        return;\n    }\n    const groupedConfigs = configs.reduce((acc, config) => {\n        const groupName = config.presetName || '未分类';\n        if (!acc[groupName])\n            acc[groupName] = [];\n        acc[groupName].push(config);\n        return acc;\n    }, {});\n    const sortedGroupNames = Object.keys(groupedConfigs).sort((a, b) => {\n        if (a === '未分类')\n            return 1;\n        if (b === '未分类')\n            return -1;\n        return a.localeCompare(b);\n    });\n    for (const groupName of sortedGroupNames) {\n        const configsInGroup = groupedConfigs[groupName];\n        const safeGroupName = $('<div/>').text(groupName).html();\n        const isUncategorized = groupName === '未分类';\n        const groupElement = $(`\n            <details class=\"pm-config-group\" ${isUncategorized ? 'open' : ''}>\n                <summary class=\"pm-config-group-summary\">${safeGroupName} <span class=\"pm-config-count\">(${configsInGroup.length})</span></summary>\n                <ul class=\"pm-config-sublist\"></ul>\n            </details>\n        `);\n        const sublist = groupElement.find('.pm-config-sublist');\n        for (const configData of configsInGroup) {\n            const boundCharDisplay = configData.boundCharName\n                ? `<span style=\"color:#4CAF50; margin-left: 8px; font-weight:bold;\">(绑定: ${configData.boundCharName})</span>`\n                : '';\n            const listItem = $(`\n                <li style=\"display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom: 1px solid #f0e2d0; font-size:14px;\">\n                    <div style=\"display:flex; flex-direction:column; align-items:flex-start; overflow:hidden; margin-right: 10px; flex: 1; min-width: 0;\">\n                        <span style=\"font-weight:bold; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width: 100%;\" title=\"${$('<div/>').text(configData.name).html()}\">${$('<div/>').text(configData.name).html()}${boundCharDisplay}</span>\n                    </div>\n                    <div class=\"pm-actions-container\">\n                        <button data-id=\"${configData.id}\" name=\"load-config\" style=\"background-color:#f9d6a5; color:#3a2c2c;\">加载</button>\n                        <button data-id=\"${configData.id}\" name=\"delete-config\" style=\"background-color:#f5a8a0; color:#fff;\">删除</button>\n                        <div class=\"pm-more-btn-wrapper\">\n                            <button name=\"more-actions\" style=\"background-color:#b0bec5; color:#fff;\">更多</button>\n                            <div class=\"pm-submenu\">\n                                <button data-id=\"${configData.id}\" name=\"view-config\">查看</button>\n                                <button data-id=\"${configData.id}\" name=\"update-config\">更新</button>\n                                <button data-id=\"${configData.id}\" name=\"rename-config\">重命名</button>\n                                <button data-id=\"${configData.id}\" name=\"bind-regex\">正则</button>\n                                <button data-id=\"${configData.id}\" name=\"export-config\">导出</button>\n                                <div style=\"border-top: 1px solid #eee; margin: 5px 0;\"></div>\n                                <button name=\"close-submenu\" style=\"color: #888; text-align: center;\">关闭</button>\n                            </div>\n                        </div>\n                    </div>\n                </li>\n            `);\n            sublist.append(listItem);\n        }\n        listElement.append(groupElement);\n    }\n    // 绑定按钮事件\n    // 使用动态导入避免循环引用\n    Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./事件绑定 */ \"./src/喵喵预设配置管理/事件绑定.ts\")).then(({ bindConfigListEvents }) => {\n        bindConfigListEvents();\n    });\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+mFjee9ruWtmOWCqOWSjOivu+WPli50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFrRTtBQVlsRSxTQUFTO0FBQ1QsSUFBSSxXQUFXLEdBQXNDLElBQUksQ0FBQztBQUMxRCxJQUFJLGFBQWEsR0FBRyxDQUFDLENBQUM7QUFDdEIsTUFBTSxxQkFBcUIsR0FBRyxLQUFLLENBQUMsQ0FBQyxRQUFRO0FBRXRDLEtBQUssVUFBVSxnQkFBZ0I7SUFDcEMsV0FBVztJQUNYLE1BQU0sR0FBRyxHQUFHLElBQUksQ0FBQyxHQUFHLEVBQUUsQ0FBQztJQUN2QixJQUFJLFdBQVcsSUFBSSxHQUFHLEdBQUcsYUFBYSxHQUFHLHFCQUFxQixFQUFFLENBQUM7UUFDL0QsT0FBTyxXQUFXLENBQUM7SUFDckIsQ0FBQztJQUVELElBQUksZ0JBQWdCLENBQUM7SUFDckIsSUFBSSxDQUFDO1FBQ0gsZ0JBQWdCLEdBQUcsTUFBTSxZQUFZLENBQUMsWUFBWSxDQUFDLG1EQUFvQixDQUFDLENBQUM7SUFDM0UsQ0FBQztJQUFDLE9BQU8sS0FBSyxFQUFFLENBQUM7UUFDZixPQUFPLEVBQUUsQ0FBQztJQUNaLENBQUM7SUFFRCxNQUFNLE9BQU8sR0FBRyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsQ0FBQyxLQUFVLEVBQUUsRUFBRSxDQUFDLEtBQUssQ0FBQyxRQUFRLEVBQUUsSUFBSSxFQUFFLFFBQVEsQ0FBQywrQ0FBZ0IsQ0FBQyxDQUFDLENBQUM7SUFDeEcsSUFBSSxPQUFPLEVBQUUsQ0FBQztRQUNaLE9BQU8sQ0FBQyxHQUFHLENBQUMsNkJBQTZCLENBQUMsQ0FBQztRQUMzQyxJQUFJLENBQUM7WUFDSCxNQUFNLFlBQVksR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNqRCxNQUFNLGVBQWUsR0FBRyxZQUFZLENBQUMsR0FBRyxDQUFDLENBQUMsTUFBVyxFQUFFLEVBQUUsQ0FBQyxDQUFD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RyxDQUFDLENBQUMsRUFBRSxDQUFDO1lBRVAsTUFBTSxRQUFRLEdBQUcsQ0FBQyxDQUFDOzs7K0lBR3NILENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksRUFBRSxLQUFLLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksRUFBRSxHQUFHLGdCQUFnQjs7OzJDQUc1TSxVQUFVLENBQUMsRUFBRTsyQ0FDYixVQUFVLENBQUMsRUFBRTs7OzttREFJTCxVQUFVLENBQUMsRUFBRTttREFDYixVQUFVLENBQUMsRUFBRTttREFDYixVQUFVLENBQUMsRUFBRTttREFDYixVQUFVLENBQUMsRUFBRTttREFDYixVQUFVLENBQUMsRUFBRTs7Ozs7OzthQU9uRCxDQUFDLENBQUM7WUFDVCxPQUFPLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQzNCLENBQUM7UUFDRCxXQUFXLENBQUMsTUFBTSxDQUFDLFlBQVksQ0FBQyxDQUFDO0lBQ25DLENBQUM7SUFFRCxTQUFTO0lBQ1QsZUFBZTtJQUNmLDRIQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDLEVBQUUsb0JBQW9CLEVBQUUsRUFBRSxFQUFFO1FBQ2pELG9CQUFvQixFQUFFLENBQUM7SUFDekIsQ0FBQyxDQUFDLENBQUM7QUFDTCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGF2ZXJuX2hlbHBlcl90ZW1wbGF0ZS8uL3NyYy/llrXllrXpooTorr7phY3nva7nrqHnkIYv6YWN572u5a2Y5YKo5ZKM6K+75Y+WLnRzPyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDT05GSUdfTE9SRUJPT0tfTkFNRSwgVjJfTUlHUkFUSU9OX0tFWSB9IGZyb20gJy4v5Yid5aeL5YyW5ZKM6YWN572uJztcblxuZXhwb3J0IGludGVyZmFjZSBDb25maWdEYXRhIHtcbiAgaWQ6IHN0cmluZztcbiAgbmFtZTogc3RyaW5nO1xuICBwcmVzZXROYW1lPzogc3RyaW5nO1xuICBzdGF0ZXM6IEFycmF5PHsgaWQ6IHN0cmluZzsgZW5hYmxlZDogYm9vbGVhbjsgbmFtZTogc3RyaW5nIH0+O1xuICByZWdleFN0YXRlcz86IEFycmF5PHsgaWQ6IHN0cmluZzsgZW5hYmxlZDogYm9vbGVhbiB9PjtcbiAgYm91bmRDaGFyQXZhdGFyPzogc3RyaW5nO1xuICBib3VuZENoYXJOYW1lPzogc3RyaW5nO1xufVxuXG4vLyDmt7vliqDphY3nva7nvJPlrZhcbmxldCBjb25maWdDYWNoZTogUmVjb3JkPHN0cmluZywgQ29uZmlnRGF0YT4gfCBudWxsID0gbnVsbDtcbmxldCBsYXN0Q2FjaGVUaW1lID0gMDtcbmNvbnN0IENPTkZJR19DQUNIRV9EVVJBVElPTiA9IDEwMDAwOyAvLyAxMOenkue8k+WtmFxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0U3RvcmVkQ29uZmlncygpOiBQcm9taXNlPFJlY29yZDxzdHJpbmcsIENvbmZpZ0RhdGE+PiB7XG4gIC8vIOajgOafpee8k+WtmOaYr+WQpuacieaViFxuICBjb25zdCBub3cgPSBEYXRlLm5vdygpO1xuICBpZiAoY29uZmlnQ2FjaGUgJiYgbm93IC0gbGFzdENhY2hlVGltZSA8IENPTkZJR19DQUNIRV9EVVJBVElPTikge1xuICAgIHJldHVybiBjb25maWdDYWNoZTtcbiAgfVxuXG4gIGxldCB3b3JsZGJvb2tFbnRyaWVzO1xuICB0cnkge1xuICAgIHdvcmxkYm9va0VudHJpZXMgPSBhd2FpdCBUYXZlcm5IZWxwZXIuZ2V0V29ybGRib29rKENPTkZJR19MT1JFQk9PS19OQU1FKTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICByZXR1cm4ge307XG4gIH1cblxuICBjb25zdCB2MkVudHJ5ID0gd29ybGRib29rRW50cmllcy5maW5kKChlbnRyeTogYW55KSA9PiBlbnRyeS5zdHJhdGVneT8ua2V5cz8uaW5jbHVkZXMoVjJfTUlHUkFUSU9OX0tFWSkpO1xuICBpZiAodjJFbnRyeSkge1xuICAgIGNvbnNvbGUubG9nKCfllrXllrXpooTorr7phY3nva7nrqHnkIY6IOajgOa1i+WIsOaXp+eJiOWQiOW5tuaVsOaNru+8jOato+WcqOi/geenuy4uLicpO1xuICAgIHRyeSB7XG4gICAgICBjb25zdCBjb25maWdzQXJyYXkgPSBKU09OLnBhcnNlKHYyRW50cnkuY29udGVudCk7XG4gICAgICBjb25zdCBtaWdyYXRlZEVudHJpZXMgPSBjb25maWdzQXJyYXkubWFwKChjb25maWc6IGFueSkgPT4gKHtcbiAgICAgICAgbmFtZTogY29uZmlnLm5hbWUgfHwgY29uZmlnLmlkLFxuICAgICAgICBzdHJhdGVneTogeyB0eXBlOiAnY29uc3RhbnQnLCBrZXlzOiBbY29uZmlnLmlkXSB9LFxuICAgICAgICBjb250ZW50OiBKU09OLnN0cmluZ2lmeShjb25maWcpLFxuICAgICAgICBlbmFibGVkOiBmYWxzZSxcbiAgICAgIH0pKTtcblxuICAgICAgY29uc3Qgb3RoZXJFbnRyaWVzID0gd29ybGRib29rRW50cmllcy5maWx0ZXIoKGVudHJ5OiBhbnkpID0+ICFlbnRyeS5zdHJhdGVneT8ua2V5cz8uaW5jbHVkZXMoVjJfTUlHUkFUSU9OX0tFWSkpO1xuICAgICAgYXdhaXQgVGF2ZXJuSGVscGVyLmNyZWF0ZU9yUmVwbGFjZVdvcmxkYm9vayhDT05GSUdfTE9SRUJPT0tfTkFNRSwgWy4uLm90aGVyRW50cmllcywgLi4ubWlncmF0ZWRFbnRyaWVzXSk7XG4gICAgICB0b2FzdHIuaW5mbygn5Za15Za16aKE6K6+6YWN572u566h55CG77ya5bey6Ieq5Yqo5Y2H57qn5pWw5o2u5qC85byP44CCJyk7XG4gICAgICB3b3JsZGJvb2tFbnRyaWVzID0gYXdhaXQgVGF2ZXJuSGVscGVyLmdldFdvcmxkYm9vayhDT05GSUdfTE9SRUJPT0tfTkFNRSk7XG4gICAgfSBjYXRjaCAoZSkge1xuICAgICAgY29uc29sZS5lcnJvcign6L+B56e76YWN572u5aSx6LSlOicsIGUpO1xuICAgICAgdG9hc3RyLmVycm9yKCfoh6rliqjov4Hnp7vphY3nva7mlbDmja7lpLHotKXvvIzor7fmo4Dmn6XmjqfliLblj7DjgIInKTtcbiAgICB9XG4gIH1cblxuICBjb25zdCBjb25maWdzOiBSZWNvcmQ8c3RyaW5nLCBDb25maWdEYXRhPiA9IHt9O1xuICBmb3IgKGNvbnN0IGVudHJ5IG9mIHdvcmxkYm9va0VudHJpZXMpIHtcbiAgICB0cnkge1xuICAgICAgY29uc3QgY29uZmlnRGF0YSA9IEpTT04ucGFyc2UoZW50cnkuY29udGVudCk7XG4gICAgICBpZiAoY29uZmlnRGF0YS5pZCAmJiBjb25maWdEYXRhLm5hbWUgJiYgQXJyYXkuaXNBcnJheShjb25maWdEYXRhLnN0YXRlcykpIHtcbiAgICAgICAgY29uZmlnc1tjb25maWdEYXRhLmlkXSA9IGNvbmZpZ0RhdGE7XG4gICAgICB9XG4gICAgfSBjYXRjaCAoZSkge1xuICAgICAgLy8g5b+955Wl6Kej5p6Q5aSx6LSl55qE5p2h55uuXG4gICAgfVxuICB9XG5cbiAgLy8g5pu05paw57yT5a2YXG4gIGNvbmZpZ0NhY2hlID0gY29uZmlncztcbiAgbGFzdENhY2hlVGltZSA9IG5vdztcblxuICByZXR1cm4gY29uZmlncztcbn1cblxuLy8g5riF6Zmk6YWN572u57yT5a2YXG5leHBvcnQgZnVuY3Rpb24gY2xlYXJDb25maWdDYWNoZSgpOiB2b2lkIHtcbiAgY29uZmlnQ2FjaGUgPSBudWxsO1xuICBsYXN0Q2FjaGVUaW1lID0gMDtcbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNldFN0b3JlZENvbmZpZ3MoY29uZmlnc09iamVjdDogUmVjb3JkPHN0cmluZywgQ29uZmlnRGF0YT4pOiBQcm9taXNlPHZvaWQ+IHtcbiAgdHJ5IHtcbiAgICBjb25zdCBuYW1lQ291bnRzOiBSZWNvcmQ8c3RyaW5nLCBudW1iZXI+ID0ge307XG4gICAgY29uc3QgZW50cmllcyA9IE9iamVjdC52YWx1ZXMoY29uZmlnc09iamVjdCkubWFwKGNvbmZpZyA9PiB7XG4gICAgICBsZXQgZW50cnlOYW1lID0gY29uZmlnLm5hbWU7XG4gICAgICBuYW1lQ291bnRzW2VudHJ5TmFtZV0gPSAobmFtZUNvdW50c1tlbnRyeU5hbWVdIHx8IDApICsgMTtcbiAgICAgIGlmIChuYW1lQ291bnRzW2VudHJ5TmFtZV0gPiAxKSB7XG4gICAgICAgIGVudHJ5TmFtZSA9IGAke2VudHJ5TmFtZX0gKCR7Y29uZmlnLmlkLnNsaWNlKC01KX0pYDtcbiAgICAgIH1cbiAgICAgIHJldHVybiB7XG4gICAgICAgIG5hbWU6IGVudHJ5TmFtZSxcbiAgICAgICAgc3RyYXRlZ3k6IHsgdHlwZTogJ2NvbnN0YW50Jywga2V5czogW2NvbmZpZy5pZF0gfSxcbiAgICAgICAgY29udGVudDogSlNPTi5zdHJpbmdpZnkoY29uZmlnKSxcbiAgICAgICAgZW5hYmxlZDogZmFsc2UsXG4gICAgICAgIGNvbW1lbnQ6IGBNaWFvTWlhbyBQcmVzZXQgQ29uZmlnOiAke2NvbmZpZy5uYW1lfSAoSUQ6ICR7Y29uZmlnLmlkfSlgLFxuICAgICAgfTtcbiAgICB9KTtcbiAgICBhd2FpdCBUYXZlcm5IZWxwZXIuY3JlYXRlT3JSZXBsYWNlV29ybGRib29rKENPTkZJR19MT1JFQk9PS19OQU1FLCBlbnRyaWVzKTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICBjb25zb2xlLmVycm9yKCflhpnlhaXphY3nva7liLDkuJbnlYzkuablpLHotKU6JywgZXJyb3IpO1xuICAgIHRvYXN0ci5lcnJvcign6YWN572u5L+d5a2YL+abtOaWsOWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOaXpeW/l+OAgicpO1xuICB9XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiByZW5kZXJDb25maWdzTGlzdCgpOiBQcm9taXNlPHZvaWQ+IHtcbiAgY29uc3QgY29uZmlnc09iamVjdCA9IGF3YWl0IGdldFN0b3JlZENvbmZpZ3MoKTtcbiAgY29uc3QgY29uZmlncyA9IE9iamVjdC52YWx1ZXMoY29uZmlnc09iamVjdCk7XG4gIGNvbnN0IGxpc3RFbGVtZW50ID0gJCgnI3ByZXNldC1tYW5hZ2VyLWxpc3QnKTtcbiAgbGlzdEVsZW1lbnQuZW1wdHkoKTtcblxuICBpZiAoY29uZmlncy5sZW5ndGggPT09IDApIHtcbiAgICBsaXN0RWxlbWVudC5hcHBlbmQoJzxsaSBzdHlsZT1cImNvbG9yOiM4ODg7IHBhZGRpbmc6MTBweDtcIj7mmoLml6Dlt7Lkv53lrZjnmoTphY3nva7jgII8L2xpPicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IGdyb3VwZWRDb25maWdzID0gY29uZmlncy5yZWR1Y2UoKGFjYzogUmVjb3JkPHN0cmluZywgQ29uZmlnRGF0YVtdPiwgY29uZmlnKSA9PiB7XG4gICAgY29uc3QgZ3JvdXBOYW1lID0gY29uZmlnLnByZXNldE5hbWUgfHwgJ+acquWIhuexuyc7XG4gICAgaWYgKCFhY2NbZ3JvdXBOYW1lXSkgYWNjW2dyb3VwTmFtZV0gPSBbXTtcbiAgICBhY2NbZ3JvdXBOYW1lXS5wdXNoKGNvbmZpZyk7XG4gICAgcmV0dXJuIGFjYztcbiAgfSwge30pO1xuXG4gIGNvbnN0IHNvcnRlZEdyb3VwTmFtZXMgPSBPYmplY3Qua2V5cyhncm91cGVkQ29uZmlncykuc29ydCgoYSwgYikgPT4ge1xuICAgIGlmIChhID09PSAn5pyq5YiG57G7JykgcmV0dXJuIDE7XG4gICAgaWYgKGIgPT09ICfmnKrliIbnsbsnKSByZXR1cm4gLTE7XG4gICAgcmV0dXJuIGEubG9jYWxlQ29tcGFyZShiKTtcbiAgfSk7XG5cbiAgZm9yIChjb25zdCBncm91cE5hbWUgb2Ygc29ydGVkR3JvdXBOYW1lcykge1xuICAgIGNvbnN0IGNvbmZpZ3NJbkdyb3VwID0gZ3JvdXBlZENvbmZpZ3NbZ3JvdXBOYW1lXTtcbiAgICBjb25zdCBzYWZlR3JvdXBOYW1lID0gJCgnPGRpdi8+JykudGV4dChncm91cE5hbWUpLmh0bWwoKTtcbiAgICBjb25zdCBpc1VuY2F0ZWdvcml6ZWQgPSBncm91cE5hbWUgPT09ICfmnKrliIbnsbsnO1xuXG4gICAgY29uc3QgZ3JvdXBFbGVtZW50ID0gJChgXG4gICAgICAgICAgICA8ZGV0YWlscyBjbGFzcz1cInBtLWNvbmZpZy1ncm91cFwiICR7aXNVbmNhdGVnb3JpemVkID8gJ29wZW4nIDogJyd9PlxuICAgICAgICAgICAgICAgIDxzdW1tYXJ5IGNsYXNzPVwicG0tY29uZmlnLWdyb3VwLXN1bW1hcnlcIj4ke3NhZmVHcm91cE5hbWV9IDxzcGFuIGNsYXNzPVwicG0tY29uZmlnLWNvdW50XCI+KCR7Y29uZmlnc0luR3JvdXAubGVuZ3RofSk8L3NwYW4+PC9zdW1tYXJ5PlxuICAgICAgICAgICAgICAgIDx1bCBjbGFzcz1cInBtLWNvbmZpZy1zdWJsaXN0XCI+PC91bD5cbiAgICAgICAgICAgIDwvZGV0YWlscz5cbiAgICAgICAgYCk7XG4gICAgY29uc3Qgc3VibGlzdCA9IGdyb3VwRWxlbWVudC5maW5kKCcucG0tY29uZmlnLXN1Ymxpc3QnKTtcblxuICAgIGZvciAoY29uc3QgY29uZmlnRGF0YSBvZiBjb25maWdzSW5Hcm91cCkge1xuICAgICAgY29uc3QgYm91bmRDaGFyRGlzcGxheSA9IGNvbmZpZ0RhdGEuYm91bmRDaGFyTmFtZVxuICAgICAgICA/IGA8c3BhbiBzdHlsZT1cImNvbG9yOiM0Q0FGNTA7IG1hcmdpbi1sZWZ0OiA4cHg7IGZvbnQtd2VpZ2h0OmJvbGQ7XCI+KOe7keWumjogJHtjb25maWdEYXRhLmJvdW5kQ2hhck5hbWV9KTwvc3Bhbj5gXG4gICAgICAgIDogJyc7XG5cbiAgICAgIGNvbnN0IGxpc3RJdGVtID0gJChgXG4gICAgICAgICAgICAgICAgPGxpIHN0eWxlPVwiZGlzcGxheTpmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsgYWxpZ24taXRlbXM6Y2VudGVyOyBwYWRkaW5nOjEwcHg7IGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjBlMmQwOyBmb250LXNpemU6MTRweDtcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImRpc3BsYXk6ZmxleDsgZmxleC1kaXJlY3Rpb246Y29sdW1uOyBhbGlnbi1pdGVtczpmbGV4LXN0YXJ0OyBvdmVyZmxvdzpoaWRkZW47IG1hcmdpbi1yaWdodDogMTBweDsgZmxleDogMTsgbWluLXdpZHRoOiAwO1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gc3R5bGU9XCJmb250LXdlaWdodDpib2xkOyB3aGl0ZS1zcGFjZTpub3dyYXA7IG92ZXJmbG93OmhpZGRlbjsgdGV4dC1vdmVyZmxvdzplbGxpcHNpczsgbWF4LXdpZHRoOiAxMDAlO1wiIHRpdGxlPVwiJHskKCc8ZGl2Lz4nKS50ZXh0KGNvbmZpZ0RhdGEubmFtZSkuaHRtbCgpfVwiPiR7JCgnPGRpdi8+JykudGV4dChjb25maWdEYXRhLm5hbWUpLmh0bWwoKX0ke2JvdW5kQ2hhckRpc3BsYXl9PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cInBtLWFjdGlvbnMtY29udGFpbmVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGRhdGEtaWQ9XCIke2NvbmZpZ0RhdGEuaWR9XCIgbmFtZT1cImxvYWQtY29uZmlnXCIgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiNmOWQ2YTU7IGNvbG9yOiMzYTJjMmM7XCI+5Yqg6L29PC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGRhdGEtaWQ9XCIke2NvbmZpZ0RhdGEuaWR9XCIgbmFtZT1cImRlbGV0ZS1jb25maWdcIiBzdHlsZT1cImJhY2tncm91bmQtY29sb3I6I2Y1YThhMDsgY29sb3I6I2ZmZjtcIj7liKDpmaQ8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJwbS1tb3JlLWJ0bi13cmFwcGVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBuYW1lPVwibW9yZS1hY3Rpb25zXCIgc3R5bGU9XCJiYWNrZ3JvdW5kLWNvbG9yOiNiMGJlYzU7IGNvbG9yOiNmZmY7XCI+5pu05aSaPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cInBtLXN1Ym1lbnVcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBkYXRhLWlkPVwiJHtjb25maWdEYXRhLmlkfVwiIG5hbWU9XCJ2aWV3LWNvbmZpZ1wiPuafpeecizwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGRhdGEtaWQ9XCIke2NvbmZpZ0RhdGEuaWR9XCIgbmFtZT1cInVwZGF0ZS1jb25maWdcIj7mm7TmlrA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBkYXRhLWlkPVwiJHtjb25maWdEYXRhLmlkfVwiIG5hbWU9XCJyZW5hbWUtY29uZmlnXCI+6YeN5ZG95ZCNPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gZGF0YS1pZD1cIiR7Y29uZmlnRGF0YS5pZH1cIiBuYW1lPVwiYmluZC1yZWdleFwiPuato+WImTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGRhdGEtaWQ9XCIke2NvbmZpZ0RhdGEuaWR9XCIgbmFtZT1cImV4cG9ydC1jb25maWdcIj7lr7zlh7o8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImJvcmRlci10b3A6IDFweCBzb2xpZCAjZWVlOyBtYXJnaW46IDVweCAwO1wiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIG5hbWU9XCJjbG9zZS1zdWJtZW51XCIgc3R5bGU9XCJjb2xvcjogIzg4ODsgdGV4dC1hbGlnbjogY2VudGVyO1wiPuWFs+mXrTwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICBgKTtcbiAgICAgIHN1Ymxpc3QuYXBwZW5kKGxpc3RJdGVtKTtcbiAgICB9XG4gICAgbGlzdEVsZW1lbnQuYXBwZW5kKGdyb3VwRWxlbWVudCk7XG4gIH1cblxuICAvLyDnu5HlrprmjInpkq7kuovku7ZcbiAgLy8g5L2/55So5Yqo5oCB5a+85YWl6YG/5YWN5b6q546v5byV55SoXG4gIGltcG9ydCgnLi/kuovku7bnu5HlrponKS50aGVuKCh7IGJpbmRDb25maWdMaXN0RXZlbnRzIH0pID0+IHtcbiAgICBiaW5kQ29uZmlnTGlzdEV2ZW50cygpO1xuICB9KTtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/配置存储和读取.ts\n\n}");
-
-/***/ }),
-
-/***/ "./src/喵喵预设配置管理/配置操作功能.ts":
-/*!********************************!*\
-  !*** ./src/喵喵预设配置管理/配置操作功能.ts ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   deleteConfig: () => (/* binding */ deleteConfig),\n/* harmony export */   loadConfig: () => (/* binding */ loadConfig),\n/* harmony export */   renameConfig: () => (/* binding */ renameConfig),\n/* harmony export */   saveCurrentConfig: () => (/* binding */ saveCurrentConfig),\n/* harmony export */   updateConfig: () => (/* binding */ updateConfig)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./初始化和配置 */ \"./src/喵喵预设配置管理/初始化和配置.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./界面创建和管理 */ \"./src/喵喵预设配置管理/界面创建和管理.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./辅助弹窗功能 */ \"./src/喵喵预设配置管理/辅助弹窗功能.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./配置存储和读取 */ \"./src/喵喵预设配置管理/配置存储和读取.ts\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./条目分组功能 */ \"./src/喵喵预设配置管理/条目分组功能.ts\");\n\n\n\n\n\nasync function renameConfig(configId) {\n    const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n    const configToRename = configs[configId];\n    if (!configToRename) {\n        toastr.error('找不到要重命名的配置。');\n        return;\n    }\n    const oldName = configToRename.name;\n    const newName = await triggerSlash(`/input default=\"${oldName}\" \"请输入新的配置名称\"`);\n    if (newName && newName.trim() !== '') {\n        configs[configId].name = newName.trim();\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(configs);\n        (0,___WEBPACK_IMPORTED_MODULE_3__.clearConfigCache)(); // 清除配置缓存\n        toastr.success(`配置已从 \"${oldName}\" 重命名为 \"${newName.trim()}\"。`);\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n        (0,___WEBPACK_IMPORTED_MODULE_1__.updateConfigListCache)(); // 更新UI缓存\n    }\n    else {\n        toastr.info('重命名操作已取消。');\n    }\n}\nasync function updateConfig(configId) {\n    try {\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const oldConfig = configs[configId];\n        if (!oldConfig) {\n            toastr.error(`配置不存在，无法更新。`);\n            return;\n        }\n        const loadedPresetName = TavernHelper.getLoadedPresetName();\n        const preset = TavernHelper.getPreset('in_use');\n        const allPrompts = [...preset.prompts, ...preset.prompts_unused];\n        const currentPromptStates = allPrompts.map((p) => ({\n            id: p.id,\n            enabled: p.enabled,\n            name: p.name,\n        }));\n        const configToSave = {\n            ...oldConfig,\n            presetName: loadedPresetName,\n            states: currentPromptStates,\n        };\n        const updateRegexChoice = await triggerSlash(`/popup okButton=\"是\" cancelButton=\"否\" result=true \"是否要同时更新此配置的正则开关状态？\"`);\n        if (updateRegexChoice === '1') {\n            const allRegexes = await TavernHelper.getTavernRegexes({ scope: 'global' });\n            const newRegexStates = allRegexes.map((regex) => ({\n                id: regex.id,\n                enabled: regex.enabled,\n            }));\n            configToSave.regexStates = newRegexStates;\n            toastr.info('已同步更新正则状态。');\n        }\n        const oldStateIds = new Set(oldConfig.states.map(s => s.id));\n        const newEntries = configToSave.states.filter(s => !oldStateIds.has(s.id));\n        if (newEntries.length > 0) {\n            const promptIdToNameMap = new Map(currentPromptStates.map((p) => [p.id, p.name]));\n            const userChoices = await (0,___WEBPACK_IMPORTED_MODULE_2__.showNewEntriesPopup)(newEntries, promptIdToNameMap);\n            if (userChoices !== null) {\n                const choicesMap = new Map(userChoices.map((choice) => [choice.id, choice.enabled]));\n                configToSave.states.forEach(state => {\n                    if (choicesMap.has(state.id))\n                        state.enabled = choicesMap.get(state.id);\n                });\n            }\n            else {\n                toastr.info('已为新条目保留默认状态。');\n            }\n        }\n        configs[configId] = configToSave;\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(configs);\n        (0,___WEBPACK_IMPORTED_MODULE_3__.clearConfigCache)(); // 清除配置缓存\n        toastr.success(`配置 \"${configToSave.name}\" 已更新。`);\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n        (0,___WEBPACK_IMPORTED_MODULE_1__.updateConfigListCache)(); // 更新UI缓存\n    }\n    catch (error) {\n        console.error('更新预设配置失败:', error);\n        toastr.error('更新预设配置失败，请检查控制台获取更多信息。');\n    }\n}\nasync function saveCurrentConfig() {\n    const loadedPresetName = TavernHelper.getLoadedPresetName();\n    const blacklist = ['恶灵低语', 'deepspay', 'spaymale', '深阉', '小骡之神', '小猫之神', 'kemini'];\n    if (blacklist.some(keyword => loadedPresetName.toLowerCase().includes(keyword))) {\n        toastr.warning('*你使用了作者黑名单的预设哦（盯）*');\n        return;\n    }\n    const nameInput = $('#preset-manager-name-input');\n    const configName = nameInput.val()?.toString().trim();\n    if (!configName) {\n        toastr.error('请输入配置名称。');\n        return;\n    }\n    try {\n        const preset = TavernHelper.getPreset('in_use');\n        const allPrompts = [...preset.prompts, ...preset.prompts_unused];\n        const promptStates = allPrompts.map((p) => ({\n            id: p.id,\n            enabled: p.enabled,\n            name: p.name,\n        }));\n        const configToSave = {\n            id: (0,___WEBPACK_IMPORTED_MODULE_0__.generateUniqueId)(),\n            name: configName,\n            presetName: loadedPresetName,\n            states: promptStates,\n        };\n        if ($('#preset-manager-bind-char').is(':checked')) {\n            const charData = await TavernHelper.getCharData('current');\n            if (charData && charData.avatar) {\n                configToSave.boundCharAvatar = charData.avatar;\n                configToSave.boundCharName = charData.name;\n            }\n            else {\n                toastr.warning('无法获取当前角色信息，配置未绑定。');\n            }\n        }\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        configs[configToSave.id] = configToSave;\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(configs);\n        (0,___WEBPACK_IMPORTED_MODULE_3__.clearConfigCache)(); // 清除配置缓存\n        toastr.success(`配置 \"${configName}\" 已保存。`);\n        nameInput.val('');\n        $('#preset-manager-bind-char').prop('checked', false);\n        await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n        (0,___WEBPACK_IMPORTED_MODULE_1__.updateConfigListCache)(); // 更新UI缓存\n    }\n    catch (error) {\n        console.error('保存预设配置失败:', error);\n        toastr.error('保存预设配置失败，请检查控制台获取更多信息。');\n    }\n}\nasync function loadConfig(configId, shouldToggleUI = true) {\n    try {\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const configToLoad = configs[configId];\n        if (!configToLoad) {\n            toastr.error(`配置不存在。`);\n            return;\n        }\n        if (configToLoad.presetName) {\n            if (TavernHelper.getPresetNames().includes(configToLoad.presetName)) {\n                if (TavernHelper.loadPreset(configToLoad.presetName)) {\n                    toastr.info(`已切换到预设 \"${configToLoad.presetName}\"。`);\n                    await new Promise(resolve => setTimeout(resolve, 150));\n                }\n                else {\n                    toastr.error(`加载预设 \"${configToLoad.presetName}\" 失败。`);\n                    return;\n                }\n            }\n            else {\n                toastr.warning(`配置关联的预设 \"${configToLoad.presetName}\" 不存在。将仅对当前预设应用条目状态。`);\n            }\n        }\n        const promptStates = configToLoad.states;\n        if (!promptStates || !Array.isArray(promptStates)) {\n            toastr.error(`配置 \"${configToLoad.name}\" 数据格式不正确或为空。`);\n            return;\n        }\n        const statesMap = new Map(promptStates.map(s => [s.id, s.enabled]));\n        await TavernHelper.updatePresetWith('in_use', preset => {\n            [...preset.prompts, ...preset.prompts_unused].forEach((prompt) => {\n                if (statesMap.has(prompt.id))\n                    prompt.enabled = statesMap.get(prompt.id);\n            });\n            return preset;\n        });\n        if (configToLoad.regexStates && Array.isArray(configToLoad.regexStates)) {\n            const statesToApply = new Map(configToLoad.regexStates.map(r => [r.id, r.enabled]));\n            if (statesToApply.size > 0) {\n                await TavernHelper.updateTavernRegexesWith(regexes => {\n                    regexes.forEach((regex) => {\n                        if (regex.scope === 'global' && statesToApply.has(regex.id)) {\n                            regex.enabled = statesToApply.get(regex.id);\n                        }\n                    });\n                    return regexes;\n                }, { scope: 'global' });\n                toastr.success(`已应用配置 \"${configToLoad.name}\" 绑定的全局正则。`);\n            }\n        }\n        toastr.success(`已加载配置 \"${configToLoad.name}\"。`);\n        // 加载配置后触发分组恢复\n        setTimeout(() => {\n            (0,___WEBPACK_IMPORTED_MODULE_4__.triggerGroupingRestore)();\n        }, 500);\n        if (shouldToggleUI) {\n            (0,___WEBPACK_IMPORTED_MODULE_1__.toggleUI)();\n        }\n    }\n    catch (error) {\n        console.error('加载预设配置失败:', error);\n        toastr.error('加载预设配置失败，请检查控制台获取更多信息。');\n    }\n}\nasync function deleteConfig(configId) {\n    try {\n        const configs = await (0,___WEBPACK_IMPORTED_MODULE_3__.getStoredConfigs)();\n        const configToDelete = configs[configId];\n        if (configToDelete) {\n            delete configs[configId];\n            await (0,___WEBPACK_IMPORTED_MODULE_3__.setStoredConfigs)(configs);\n            (0,___WEBPACK_IMPORTED_MODULE_3__.clearConfigCache)(); // 清除配置缓存\n            toastr.success(`已删除配置 \"${configToDelete.name}\"。`);\n            await (0,___WEBPACK_IMPORTED_MODULE_3__.renderConfigsList)();\n            (0,___WEBPACK_IMPORTED_MODULE_1__.updateConfigListCache)(); // 更新UI缓存\n        }\n        else {\n            toastr.warning(`配置不存在。`);\n        }\n    }\n    catch (error) {\n        console.error('删除配置失败:', error);\n        toastr.error('删除配置失败，请检查控制台获取更多信息。');\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMv5Za15Za16aKE6K6+6YWN572u566h55CGL+mFjee9ruaTjeS9nOWKn+iDvS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQTRDO0FBQ2dCO0FBQ2I7QUFDaUU7QUFDOUQ7QUFFM0MsS0FBSyxVQUFVLFlBQVksQ0FBQyxRQUFnQjtJQUNqRCxNQUFNLE9BQU8sR0FBRyxNQUFNLG1EQUFnQixFQUFFLENBQUM7SUFDekMsTUFBTSxjQUFjLEdBQUcsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ3pDLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQztRQUNwQixNQUFNLENBQUMsS0FBSyxDQUFDLGFBQWEsQ0FBQyxDQUFDO1FBQzVCLE9BQU87SUFDVCxDQUFDO0lBRUQsTUFBTSxPQUFPLEdBQUcsY0FBYyxDQUFDLElBQUksQ0FBQztJQUNwQyxNQUFNLE9BQU8sR0FBRyxNQUFNLFlBQVksQ0FBQyxtQkFBbUIsT0FBTyxlQUFlLENBQUMsQ0FBQztJQUU5RSxJQUFJLE9BQU8sSUFBSSxPQUFPLENBQUMsSUFBSSxFQUFFLEtBQUssRUFBRSxFQUFFLENBQUM7UUFDckMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksR0FBRyxPQUFPLENBQUMsSUFBSSxFQUFFLENBQUM7UUFDeEMsTUFBTSxtREFBZ0IsQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNoQyxtREFBZ0IsRUFBRSxDQUFDLENBQUMsU0FBUztRQUM3QixNQUFNLENBQUMsT0FBTyxDQUFDLFNBQVMsT0FBTyxXQUFXLE9BQU8sQ0FBQyxJQUFJLEVBQUUsSUFBSSxDQUFDLENBQUM7UUFDOUQsTUFBTSxvREFBaUIsRUFBRSxDQUFDO1FBQzFCLHdEQUFxQixFQUFFLENBQUMsQ0FBQyxTQUFTO0lBQ3BDLENBQUM7U0FBTSxDQUFDO1FBQ04sTUFBTSxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUMzQixDQUFDO0FBQ0gsQ0FBQztBQUVNLEtBQUssVUFBVSxZQUFZLENBQUMsUUFBZ0I7SUFDakQs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RUFBRSxDQUFDO1lBQzFCLHdEQUFxQixFQUFFLENBQUMsQ0FBQyxTQUFTO1FBQ3BDLENBQUM7YUFBTSxDQUFDO1lBQ04sTUFBTSxDQUFDLE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUMzQixDQUFDO0lBQ0gsQ0FBQztJQUFDLE9BQU8sS0FBSyxFQUFFLENBQUM7UUFDZixPQUFPLENBQUMsS0FBSyxDQUFDLFNBQVMsRUFBRSxLQUFLLENBQUMsQ0FBQztRQUNoQyxNQUFNLENBQUMsS0FBSyxDQUFDLHNCQUFzQixDQUFDLENBQUM7SUFDdkMsQ0FBQztBQUNILENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90YXZlcm5faGVscGVyX3RlbXBsYXRlLy4vc3JjL+WWteWWtemihOiuvumFjee9rueuoeeQhi/phY3nva7mk43kvZzlip/og70udHM/Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdlbmVyYXRlVW5pcXVlSWQgfSBmcm9tICcuL+WIneWni+WMluWSjOmFjee9ric7XG5pbXBvcnQgeyB0b2dnbGVVSSwgdXBkYXRlQ29uZmlnTGlzdENhY2hlIH0gZnJvbSAnLi/nlYzpnaLliJvlu7rlkoznrqHnkIYnO1xuaW1wb3J0IHsgc2hvd05ld0VudHJpZXNQb3B1cCB9IGZyb20gJy4v6L6F5Yqp5by556qX5Yqf6IO9JztcbmltcG9ydCB7IGNsZWFyQ29uZmlnQ2FjaGUsIENvbmZpZ0RhdGEsIGdldFN0b3JlZENvbmZpZ3MsIHJlbmRlckNvbmZpZ3NMaXN0LCBzZXRTdG9yZWRDb25maWdzIH0gZnJvbSAnLi/phY3nva7lrZjlgqjlkozor7vlj5YnO1xuaW1wb3J0IHsgdHJpZ2dlckdyb3VwaW5nUmVzdG9yZSB9IGZyb20gJy4v5p2h55uu5YiG57uE5Yqf6IO9JztcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlbmFtZUNvbmZpZyhjb25maWdJZDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPiB7XG4gIGNvbnN0IGNvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gIGNvbnN0IGNvbmZpZ1RvUmVuYW1lID0gY29uZmlnc1tjb25maWdJZF07XG4gIGlmICghY29uZmlnVG9SZW5hbWUpIHtcbiAgICB0b2FzdHIuZXJyb3IoJ+aJvuS4jeWIsOimgemHjeWRveWQjeeahOmFjee9ruOAgicpO1xuICAgIHJldHVybjtcbiAgfVxuXG4gIGNvbnN0IG9sZE5hbWUgPSBjb25maWdUb1JlbmFtZS5uYW1lO1xuICBjb25zdCBuZXdOYW1lID0gYXdhaXQgdHJpZ2dlclNsYXNoKGAvaW5wdXQgZGVmYXVsdD1cIiR7b2xkTmFtZX1cIiBcIuivt+i+k+WFpeaWsOeahOmFjee9ruWQjeensFwiYCk7XG5cbiAgaWYgKG5ld05hbWUgJiYgbmV3TmFtZS50cmltKCkgIT09ICcnKSB7XG4gICAgY29uZmlnc1tjb25maWdJZF0ubmFtZSA9IG5ld05hbWUudHJpbSgpO1xuICAgIGF3YWl0IHNldFN0b3JlZENvbmZpZ3MoY29uZmlncyk7XG4gICAgY2xlYXJDb25maWdDYWNoZSgpOyAvLyDmuIXpmaTphY3nva7nvJPlrZhcbiAgICB0b2FzdHIuc3VjY2Vzcyhg6YWN572u5bey5LuOIFwiJHtvbGROYW1lfVwiIOmHjeWRveWQjeS4uiBcIiR7bmV3TmFtZS50cmltKCl9XCLjgIJgKTtcbiAgICBhd2FpdCByZW5kZXJDb25maWdzTGlzdCgpO1xuICAgIHVwZGF0ZUNvbmZpZ0xpc3RDYWNoZSgpOyAvLyDmm7TmlrBVSee8k+WtmFxuICB9IGVsc2Uge1xuICAgIHRvYXN0ci5pbmZvKCfph43lkb3lkI3mk43kvZzlt7Llj5bmtojjgIInKTtcbiAgfVxufVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gdXBkYXRlQ29uZmlnKGNvbmZpZ0lkOiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+IHtcbiAgdHJ5IHtcbiAgICBjb25zdCBjb25maWdzID0gYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpO1xuICAgIGNvbnN0IG9sZENvbmZpZyA9IGNvbmZpZ3NbY29uZmlnSWRdO1xuICAgIGlmICghb2xkQ29uZmlnKSB7XG4gICAgICB0b2FzdHIuZXJyb3IoYOmFjee9ruS4jeWtmOWcqO+8jOaXoOazleabtOaWsOOAgmApO1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIGNvbnN0IGxvYWRlZFByZXNldE5hbWUgPSBUYXZlcm5IZWxwZXIuZ2V0TG9hZGVkUHJlc2V0TmFtZSgpO1xuICAgIGNvbnN0IHByZXNldCA9IFRhdmVybkhlbHBlci5nZXRQcmVzZXQoJ2luX3VzZScpO1xuICAgIGNvbnN0IGFsbFByb21wdHMgPSBbLi4ucHJlc2V0LnByb21wdHMsIC4uLnByZXNldC5wcm9tcHRzX3VudXNlZF07XG4gICAgY29uc3QgY3VycmVudFByb21wdFN0YXRlcyA9IGFsbFByb21wdHMubWFwKChwOiB7IGlkOiBzdHJpbmc7IGVuYWJsZWQ6IGJvb2xlYW47IG5hbWU6IHN0cmluZyB9KSA9PiAoe1xuICAgICAgaWQ6IHAuaWQsXG4gICAgICBlbmFibGVkOiBwLmVuYWJsZWQsXG4gICAgICBuYW1lOiBwLm5hbWUsXG4gICAgfSkpO1xuXG4gICAgY29uc3QgY29uZmlnVG9TYXZlOiBDb25maWdEYXRhID0ge1xuICAgICAgLi4ub2xkQ29uZmlnLFxuICAgICAgcHJlc2V0TmFtZTogbG9hZGVkUHJlc2V0TmFtZSxcbiAgICAgIHN0YXRlczogY3VycmVudFByb21wdFN0YXRlcyxcbiAgICB9O1xuXG4gICAgY29uc3QgdXBkYXRlUmVnZXhDaG9pY2UgPSBhd2FpdCB0cmlnZ2VyU2xhc2goXG4gICAgICBgL3BvcHVwIG9rQnV0dG9uPVwi5pivXCIgY2FuY2VsQnV0dG9uPVwi5ZCmXCIgcmVzdWx0PXRydWUgXCLmmK/lkKbopoHlkIzml7bmm7TmlrDmraTphY3nva7nmoTmraPliJnlvIDlhbPnirbmgIHvvJ9cImAsXG4gICAgKTtcbiAgICBpZiAodXBkYXRlUmVnZXhDaG9pY2UgPT09ICcxJykge1xuICAgICAgY29uc3QgYWxsUmVnZXhlcyA9IGF3YWl0IFRhdmVybkhlbHBlci5nZXRUYXZlcm5SZWdleGVzKHsgc2NvcGU6ICdnbG9iYWwnIH0pO1xuICAgICAgY29uc3QgbmV3UmVnZXhTdGF0ZXMgPSBhbGxSZWdleGVzLm1hcCgocmVnZXg6IHsgaWQ6IHN0cmluZzsgZW5hYmxlZDogYm9vbGVhbiB9KSA9PiAoe1xuICAgICAgICBpZDogcmVnZXguaWQsXG4gICAgICAgIGVuYWJsZWQ6IHJlZ2V4LmVuYWJsZWQsXG4gICAgICB9KSk7XG4gICAgICBjb25maWdUb1NhdmUucmVnZXhTdGF0ZXMgPSBuZXdSZWdleFN0YXRlcztcbiAgICAgIHRvYXN0ci5pbmZvKCflt7LlkIzmraXmm7TmlrDmraPliJnnirbmgIHjgIInKTtcbiAgICB9XG5cbiAgICBjb25zdCBvbGRTdGF0ZUlkcyA9IG5ldyBTZXQob2xkQ29uZmlnLnN0YXRlcy5tYXAocyA9PiBzLmlkKSk7XG4gICAgY29uc3QgbmV3RW50cmllcyA9IGNvbmZpZ1RvU2F2ZS5zdGF0ZXMuZmlsdGVyKHMgPT4gIW9sZFN0YXRlSWRzLmhhcyhzLmlkKSk7XG5cbiAgICBpZiAobmV3RW50cmllcy5sZW5ndGggPiAwKSB7XG4gICAgICBjb25zdCBwcm9tcHRJZFRvTmFtZU1hcCA9IG5ldyBNYXAoY3VycmVudFByb21wdFN0YXRlcy5tYXAoKHA6IHsgaWQ6IHN0cmluZzsgbmFtZTogc3RyaW5nIH0pID0+IFtwLmlkLCBwLm5hbWVdKSk7XG4gICAgICBjb25zdCB1c2VyQ2hvaWNlcyA9IGF3YWl0IHNob3dOZXdFbnRyaWVzUG9wdXAobmV3RW50cmllcywgcHJvbXB0SWRUb05hbWVNYXApO1xuXG4gICAgICBpZiAodXNlckNob2ljZXMgIT09IG51bGwpIHtcbiAgICAgICAgY29uc3QgY2hvaWNlc01hcCA9IG5ldyBNYXAoXG4gICAgICAgICAgdXNlckNob2ljZXMubWFwKChjaG9pY2U6IHsgaWQ6IHN0cmluZzsgZW5hYmxlZDogYm9vbGVhbiB9KSA9PiBbY2hvaWNlLmlkLCBjaG9pY2UuZW5hYmxlZF0pLFxuICAgICAgICApO1xuICAgICAgICBjb25maWdUb1NhdmUuc3RhdGVzLmZvckVhY2goc3RhdGUgPT4ge1xuICAgICAgICAgIGlmIChjaG9pY2VzTWFwLmhhcyhzdGF0ZS5pZCkpIHN0YXRlLmVuYWJsZWQgPSBjaG9pY2VzTWFwLmdldChzdGF0ZS5pZCkgYXMgYm9vbGVhbjtcbiAgICAgICAgfSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICB0b2FzdHIuaW5mbygn5bey5Li65paw5p2h55uu5L+d55WZ6buY6K6k54q25oCB44CCJyk7XG4gICAgICB9XG4gICAgfVxuXG4gICAgY29uZmlnc1tjb25maWdJZF0gPSBjb25maWdUb1NhdmU7XG4gICAgYXdhaXQgc2V0U3RvcmVkQ29uZmlncyhjb25maWdzKTtcbiAgICBjbGVhckNvbmZpZ0NhY2hlKCk7IC8vIOa4hemZpOmFjee9rue8k+WtmFxuXG4gICAgdG9hc3RyLnN1Y2Nlc3MoYOmFjee9riBcIiR7Y29uZmlnVG9TYXZlLm5hbWV9XCIg5bey5pu05paw44CCYCk7XG4gICAgYXdhaXQgcmVuZGVyQ29uZmlnc0xpc3QoKTtcbiAgICB1cGRhdGVDb25maWdMaXN0Q2FjaGUoKTsgLy8g5pu05pawVUnnvJPlrZhcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICBjb25zb2xlLmVycm9yKCfmm7TmlrDpooTorr7phY3nva7lpLHotKU6JywgZXJyb3IpO1xuICAgIHRvYXN0ci5lcnJvcign5pu05paw6aKE6K6+6YWN572u5aSx6LSl77yM6K+35qOA5p+l5o6n5Yi25Y+w6I635Y+W5pu05aSa5L+h5oGv44CCJyk7XG4gIH1cbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNhdmVDdXJyZW50Q29uZmlnKCk6IFByb21pc2U8dm9pZD4ge1xuICBjb25zdCBsb2FkZWRQcmVzZXROYW1lID0gVGF2ZXJuSGVscGVyLmdldExvYWRlZFByZXNldE5hbWUoKTtcbiAgY29uc3QgYmxhY2tsaXN0ID0gWyfmgbbngbXkvY7or60nLCAnZGVlcHNwYXknLCAnc3BheW1hbGUnLCAn5rex6ZiJJywgJ+Wwj+mqoeS5i+elnicsICflsI/njKvkuYvnpZ4nLCAna2VtaW5pJ107XG4gIGlmIChibGFja2xpc3Quc29tZShrZXl3b3JkID0+IGxvYWRlZFByZXNldE5hbWUudG9Mb3dlckNhc2UoKS5pbmNsdWRlcyhrZXl3b3JkKSkpIHtcbiAgICB0b2FzdHIud2FybmluZygnKuS9oOS9v+eUqOS6huS9nOiAhem7keWQjeWNleeahOmihOiuvuWTpu+8iOebr++8iSonKTtcbiAgICByZXR1cm47XG4gIH1cblxuICBjb25zdCBuYW1lSW5wdXQgPSAkKCcjcHJlc2V0LW1hbmFnZXItbmFtZS1pbnB1dCcpO1xuICBjb25zdCBjb25maWdOYW1lID0gbmFtZUlucHV0LnZhbCgpPy50b1N0cmluZygpLnRyaW0oKTtcbiAgaWYgKCFjb25maWdOYW1lKSB7XG4gICAgdG9hc3RyLmVycm9yKCfor7fovpPlhaXphY3nva7lkI3np7DjgIInKTtcbiAgICByZXR1cm47XG4gIH1cblxuICB0cnkge1xuICAgIGNvbnN0IHByZXNldCA9IFRhdmVybkhlbHBlci5nZXRQcmVzZXQoJ2luX3VzZScpO1xuICAgIGNvbnN0IGFsbFByb21wdHMgPSBbLi4ucHJlc2V0LnByb21wdHMsIC4uLnByZXNldC5wcm9tcHRzX3VudXNlZF07XG4gICAgY29uc3QgcHJvbXB0U3RhdGVzID0gYWxsUHJvbXB0cy5tYXAoKHA6IHsgaWQ6IHN0cmluZzsgZW5hYmxlZDogYm9vbGVhbjsgbmFtZTogc3RyaW5nIH0pID0+ICh7XG4gICAgICBpZDogcC5pZCxcbiAgICAgIGVuYWJsZWQ6IHAuZW5hYmxlZCxcbiAgICAgIG5hbWU6IHAubmFtZSxcbiAgICB9KSk7XG4gICAgY29uc3QgY29uZmlnVG9TYXZlOiBDb25maWdEYXRhID0ge1xuICAgICAgaWQ6IGdlbmVyYXRlVW5pcXVlSWQoKSxcbiAgICAgIG5hbWU6IGNvbmZpZ05hbWUsXG4gICAgICBwcmVzZXROYW1lOiBsb2FkZWRQcmVzZXROYW1lLFxuICAgICAgc3RhdGVzOiBwcm9tcHRTdGF0ZXMsXG4gICAgfTtcblxuICAgIGlmICgkKCcjcHJlc2V0LW1hbmFnZXItYmluZC1jaGFyJykuaXMoJzpjaGVja2VkJykpIHtcbiAgICAgIGNvbnN0IGNoYXJEYXRhID0gYXdhaXQgVGF2ZXJuSGVscGVyLmdldENoYXJEYXRhKCdjdXJyZW50Jyk7XG4gICAgICBpZiAoY2hhckRhdGEgJiYgY2hhckRhdGEuYXZhdGFyKSB7XG4gICAgICAgIGNvbmZpZ1RvU2F2ZS5ib3VuZENoYXJBdmF0YXIgPSBjaGFyRGF0YS5hdmF0YXI7XG4gICAgICAgIGNvbmZpZ1RvU2F2ZS5ib3VuZENoYXJOYW1lID0gY2hhckRhdGEubmFtZTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIHRvYXN0ci53YXJuaW5nKCfml6Dms5Xojrflj5blvZPliY3op5LoibLkv6Hmga/vvIzphY3nva7mnKrnu5HlrprjgIInKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBjb25zdCBjb25maWdzID0gYXdhaXQgZ2V0U3RvcmVkQ29uZmlncygpO1xuICAgIGNvbmZpZ3NbY29uZmlnVG9TYXZlLmlkXSA9IGNvbmZpZ1RvU2F2ZTtcbiAgICBhd2FpdCBzZXRTdG9yZWRDb25maWdzKGNvbmZpZ3MpO1xuICAgIGNsZWFyQ29uZmlnQ2FjaGUoKTsgLy8g5riF6Zmk6YWN572u57yT5a2YXG5cbiAgICB0b2FzdHIuc3VjY2Vzcyhg6YWN572uIFwiJHtjb25maWdOYW1lfVwiIOW3suS/neWtmOOAgmApO1xuICAgIG5hbWVJbnB1dC52YWwoJycpO1xuICAgICQoJyNwcmVzZXQtbWFuYWdlci1iaW5kLWNoYXInKS5wcm9wKCdjaGVja2VkJywgZmFsc2UpO1xuICAgIGF3YWl0IHJlbmRlckNvbmZpZ3NMaXN0KCk7XG4gICAgdXBkYXRlQ29uZmlnTGlzdENhY2hlKCk7IC8vIOabtOaWsFVJ57yT5a2YXG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5L+d5a2Y6aKE6K6+6YWN572u5aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+S/neWtmOmihOiuvumFjee9ruWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOiOt+WPluabtOWkmuS/oeaBr+OAgicpO1xuICB9XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBsb2FkQ29uZmlnKGNvbmZpZ0lkOiBzdHJpbmcsIHNob3VsZFRvZ2dsZVVJID0gdHJ1ZSk6IFByb21pc2U8dm9pZD4ge1xuICB0cnkge1xuICAgIGNvbnN0IGNvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gICAgY29uc3QgY29uZmlnVG9Mb2FkID0gY29uZmlnc1tjb25maWdJZF07XG4gICAgaWYgKCFjb25maWdUb0xvYWQpIHtcbiAgICAgIHRvYXN0ci5lcnJvcihg6YWN572u5LiN5a2Y5Zyo44CCYCk7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgaWYgKGNvbmZpZ1RvTG9hZC5wcmVzZXROYW1lKSB7XG4gICAgICBpZiAoVGF2ZXJuSGVscGVyLmdldFByZXNldE5hbWVzKCkuaW5jbHVkZXMoY29uZmlnVG9Mb2FkLnByZXNldE5hbWUpKSB7XG4gICAgICAgIGlmIChUYXZlcm5IZWxwZXIubG9hZFByZXNldChjb25maWdUb0xvYWQucHJlc2V0TmFtZSkpIHtcbiAgICAgICAgICB0b2FzdHIuaW5mbyhg5bey5YiH5o2i5Yiw6aKE6K6+IFwiJHtjb25maWdUb0xvYWQucHJlc2V0TmFtZX1cIuOAgmApO1xuICAgICAgICAgIGF3YWl0IG5ldyBQcm9taXNlKHJlc29sdmUgPT4gc2V0VGltZW91dChyZXNvbHZlLCAxNTApKTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICB0b2FzdHIuZXJyb3IoYOWKoOi9vemihOiuviBcIiR7Y29uZmlnVG9Mb2FkLnByZXNldE5hbWV9XCIg5aSx6LSl44CCYCk7XG4gICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICB9IGVsc2Uge1xuICAgICAgICB0b2FzdHIud2FybmluZyhg6YWN572u5YWz6IGU55qE6aKE6K6+IFwiJHtjb25maWdUb0xvYWQucHJlc2V0TmFtZX1cIiDkuI3lrZjlnKjjgILlsIbku4Xlr7nlvZPliY3pooTorr7lupTnlKjmnaHnm67nirbmgIHjgIJgKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICBjb25zdCBwcm9tcHRTdGF0ZXMgPSBjb25maWdUb0xvYWQuc3RhdGVzO1xuICAgIGlmICghcHJvbXB0U3RhdGVzIHx8ICFBcnJheS5pc0FycmF5KHByb21wdFN0YXRlcykpIHtcbiAgICAgIHRvYXN0ci5lcnJvcihg6YWN572uIFwiJHtjb25maWdUb0xvYWQubmFtZX1cIiDmlbDmja7moLzlvI/kuI3mraPnoa7miJbkuLrnqbrjgIJgKTtcbiAgICAgIHJldHVybjtcbiAgICB9XG5cbiAgICBjb25zdCBzdGF0ZXNNYXAgPSBuZXcgTWFwKHByb21wdFN0YXRlcy5tYXAocyA9PiBbcy5pZCwgcy5lbmFibGVkXSkpO1xuICAgIGF3YWl0IFRhdmVybkhlbHBlci51cGRhdGVQcmVzZXRXaXRoKCdpbl91c2UnLCBwcmVzZXQgPT4ge1xuICAgICAgWy4uLnByZXNldC5wcm9tcHRzLCAuLi5wcmVzZXQucHJvbXB0c191bnVzZWRdLmZvckVhY2goKHByb21wdDogYW55KSA9PiB7XG4gICAgICAgIGlmIChzdGF0ZXNNYXAuaGFzKHByb21wdC5pZCkpIHByb21wdC5lbmFibGVkID0gc3RhdGVzTWFwLmdldChwcm9tcHQuaWQpIGFzIGJvb2xlYW47XG4gICAgICB9KTtcbiAgICAgIHJldHVybiBwcmVzZXQ7XG4gICAgfSk7XG5cbiAgICBpZiAoY29uZmlnVG9Mb2FkLnJlZ2V4U3RhdGVzICYmIEFycmF5LmlzQXJyYXkoY29uZmlnVG9Mb2FkLnJlZ2V4U3RhdGVzKSkge1xuICAgICAgY29uc3Qgc3RhdGVzVG9BcHBseSA9IG5ldyBNYXAoY29uZmlnVG9Mb2FkLnJlZ2V4U3RhdGVzLm1hcChyID0+IFtyLmlkLCByLmVuYWJsZWRdKSk7XG4gICAgICBpZiAoc3RhdGVzVG9BcHBseS5zaXplID4gMCkge1xuICAgICAgICBhd2FpdCBUYXZlcm5IZWxwZXIudXBkYXRlVGF2ZXJuUmVnZXhlc1dpdGgoXG4gICAgICAgICAgcmVnZXhlcyA9PiB7XG4gICAgICAgICAgICByZWdleGVzLmZvckVhY2goKHJlZ2V4OiBhbnkpID0+IHtcbiAgICAgICAgICAgICAgaWYgKHJlZ2V4LnNjb3BlID09PSAnZ2xvYmFsJyAmJiBzdGF0ZXNUb0FwcGx5LmhhcyhyZWdleC5pZCkpIHtcbiAgICAgICAgICAgICAgICByZWdleC5lbmFibGVkID0gc3RhdGVzVG9BcHBseS5nZXQocmVnZXguaWQpIGFzIGJvb2xlYW47XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgcmV0dXJuIHJlZ2V4ZXM7XG4gICAgICAgICAgfSxcbiAgICAgICAgICB7IHNjb3BlOiAnZ2xvYmFsJyB9LFxuICAgICAgICApO1xuICAgICAgICB0b2FzdHIuc3VjY2Vzcyhg5bey5bqU55So6YWN572uIFwiJHtjb25maWdUb0xvYWQubmFtZX1cIiDnu5HlrprnmoTlhajlsYDmraPliJnjgIJgKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICB0b2FzdHIuc3VjY2Vzcyhg5bey5Yqg6L296YWN572uIFwiJHtjb25maWdUb0xvYWQubmFtZX1cIuOAgmApO1xuXG4gICAgLy8g5Yqg6L296YWN572u5ZCO6Kem5Y+R5YiG57uE5oGi5aSNXG4gICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICB0cmlnZ2VyR3JvdXBpbmdSZXN0b3JlKCk7XG4gICAgfSwgNTAwKTtcblxuICAgIGlmIChzaG91bGRUb2dnbGVVSSkge1xuICAgICAgdG9nZ2xlVUkoKTtcbiAgICB9XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgY29uc29sZS5lcnJvcign5Yqg6L296aKE6K6+6YWN572u5aSx6LSlOicsIGVycm9yKTtcbiAgICB0b2FzdHIuZXJyb3IoJ+WKoOi9vemihOiuvumFjee9ruWksei0pe+8jOivt+ajgOafpeaOp+WItuWPsOiOt+WPluabtOWkmuS/oeaBr+OAgicpO1xuICB9XG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBkZWxldGVDb25maWcoY29uZmlnSWQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD4ge1xuICB0cnkge1xuICAgIGNvbnN0IGNvbmZpZ3MgPSBhd2FpdCBnZXRTdG9yZWRDb25maWdzKCk7XG4gICAgY29uc3QgY29uZmlnVG9EZWxldGUgPSBjb25maWdzW2NvbmZpZ0lkXTtcbiAgICBpZiAoY29uZmlnVG9EZWxldGUpIHtcbiAgICAgIGRlbGV0ZSBjb25maWdzW2NvbmZpZ0lkXTtcbiAgICAgIGF3YWl0IHNldFN0b3JlZENvbmZpZ3MoY29uZmlncyk7XG4gICAgICBjbGVhckNvbmZpZ0NhY2hlKCk7IC8vIOa4hemZpOmFjee9rue8k+WtmFxuICAgICAgdG9hc3RyLnN1Y2Nlc3MoYOW3suWIoOmZpOmFjee9riBcIiR7Y29uZmlnVG9EZWxldGUubmFtZX1cIuOAgmApO1xuICAgICAgYXdhaXQgcmVuZGVyQ29uZmlnc0xpc3QoKTtcbiAgICAgIHVwZGF0ZUNvbmZpZ0xpc3RDYWNoZSgpOyAvLyDmm7TmlrBVSee8k+WtmFxuICAgIH0gZWxzZSB7XG4gICAgICB0b2FzdHIud2FybmluZyhg6YWN572u5LiN5a2Y5Zyo44CCYCk7XG4gICAgfVxuICB9IGNhdGNoIChlcnJvcikge1xuICAgIGNvbnNvbGUuZXJyb3IoJ+WIoOmZpOmFjee9ruWksei0pTonLCBlcnJvcik7XG4gICAgdG9hc3RyLmVycm9yKCfliKDpmaTphY3nva7lpLHotKXvvIzor7fmo4Dmn6XmjqfliLblj7Dojrflj5bmm7TlpJrkv6Hmga/jgIInKTtcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/喵喵预设配置管理/配置操作功能.ts\n\n}");
 
 /***/ })
 
@@ -194,9 +5018,269 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ })();
 /******/ 
 /************************************************************************/
-/******/ 
-/******/ // startup
-/******/ // Load entry module and return exports
-/******/ // This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ var __webpack_exports__ = __webpack_require__("./src/喵喵预设配置管理/index.ts");
-/******/ 
+var __webpack_exports__ = {};
+
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/初始化和配置.ts
+var _ = __webpack_require__(291);
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/条目分组功能.ts
+var src_ = __webpack_require__(11);
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/界面创建和管理.ts
+var src_0 = __webpack_require__(574);
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/配置存储和读取.ts
+var src_1 = __webpack_require__(320);
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/配置操作功能.ts
+var src_2 = __webpack_require__(884);
+;// ./src/喵喵预设配置管理/角色绑定功能.ts
+
+
+
+
+async function onChatChanged() {
+    try {
+        await new Promise(resolve => setTimeout(resolve, 250));
+        const charData = await TavernHelper.getCharData('current');
+        if (!charData || !charData.avatar || charData.avatar === _/* lastProcessedCharAvatar */.Mk) {
+            if (!charData || !charData.avatar)
+                (0,_/* setLastProcessedCharAvatar */.iu)(null);
+            return;
+        }
+        (0,_/* setLastProcessedCharAvatar */.iu)(charData.avatar);
+        const configs = await (0,src_1.getStoredConfigs)();
+        const boundConfigs = Object.values(configs).filter(config => config.boundCharAvatar === charData.avatar);
+        if (boundConfigs.length === 0)
+            return;
+        let configIdToLoad = null;
+        if (boundConfigs.length === 1) {
+            const singleConfig = boundConfigs[0];
+            const popupText = `角色 "${charData.name}" 拥有绑定的配置 "${singleConfig.name}"。是否要加载此配置？`;
+            const userChoice = await triggerSlash(`/popup okButton="加载" cancelButton="取消" result=true "${popupText}"`);
+            if (userChoice === '1')
+                configIdToLoad = singleConfig.id;
+        }
+        else {
+            const { showConfigSelectionPopup } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 780));
+            configIdToLoad = await showConfigSelectionPopup(boundConfigs, charData.name);
+        }
+        if (configIdToLoad) {
+            await (0,src_2.loadConfig)(configIdToLoad, false);
+            // 角色切换后触发分组恢复
+            setTimeout(() => {
+                (0,src_/* triggerGroupingRestore */.aY)();
+            }, 800);
+        }
+    }
+    catch (error) {
+        console.error('检查绑定配置时出错:', error);
+        toastr.error('检查角色绑定配置时出错。');
+    }
+}
+
+;// ./src/喵喵预设配置管理/加载和卸载时执行函数.ts
+
+
+
+
+// 防止重复初始化的全局标记
+const SCRIPT_ID = 'MIAO_MIAO_PRESET_MANAGER';
+// 等待必要的全局变量加载完成
+function checkReady() {
+    const win = window;
+    if (win.jQuery &&
+        win.TavernHelper &&
+        typeof TavernHelper.createOrReplaceWorldbook === 'function' &&
+        win.tavern_events &&
+        typeof getButtonEvent === 'function') {
+        initScript();
+    }
+    else {
+        setTimeout(checkReady, 100);
+    }
+}
+function init() {
+    // 检查是否已存在，如果存在则重新初始化（适配脚本重复加载）
+    const win = window;
+    if (win[SCRIPT_ID]) {
+        console.log('⚠️ 喵喵预设配置管理已存在，重新初始化以适配重复加载');
+        // 清理旧的事件绑定
+        cleanupOldBindings();
+    }
+    // 设置全局标记
+    win[SCRIPT_ID] = true;
+    win.miaoMiaoPresetManager = true;
+    console.log('🔥 jQuery ready 事件触发...');
+    checkReady();
+}
+// 清理旧的事件绑定
+function cleanupOldBindings() {
+    try {
+        // 解绑所有可能的事件
+        $('#preset-manager-close').off('click');
+        $('#preset-manager-help-btn').off('click');
+        $('#preset-manager-save-btn').off('click');
+        $('#preset-manager-import-btn').off('click');
+        $('#preset-manager-batch-export-btn').off('click');
+        $('#preset-manager-batch-delete-btn').off('click');
+        $('#preset-manager-grouping-btn').off('click');
+        $('#preset-manager-import-file').off('change');
+        // 解绑分组相关事件
+        $('.prompt-item').off('click');
+        $('.prompt-checkbox').off('change');
+        $('.dropdown-close-btn').off('click');
+        $(document).off('click', '.dropdown-close-btn');
+        console.log('✅ 旧的事件绑定已清理');
+    }
+    catch (error) {
+        console.warn('清理旧事件绑定时出错:', error);
+    }
+}
+async function initScript() {
+    try {
+        console.log('🚀 喵喵预设配置管理开始初始化...');
+        // 初始化配置管理器
+        await (0,_/* initializePresetManager */.xd)();
+        console.log('✅ 配置管理器初始化完成');
+        // 创建UI界面
+        (0,src_0/* createUI */.RD)();
+        console.log('✅ UI界面创建完成');
+        // 注册按钮事件
+        const buttonEventId = getButtonEvent(_/* TOGGLE_BUTTON_NAME */.EF);
+        eventOn(buttonEventId, src_0/* toggleUI */.jS);
+        console.log('✅ 按钮事件已注册:', buttonEventId);
+        // 注册角色切换事件
+        eventOn(tavern_events.CHAT_CHANGED, onChatChanged);
+        // 延迟加载非关键功能，避免阻塞UI
+        setTimeout(() => {
+            initNonCriticalFeatures();
+        }, 100);
+        console.log('✅ 喵喵预设配置管理已加载成功!');
+    }
+    catch (error) {
+        console.error('初始化喵喵预设配置管理失败:', error);
+        toastr.error('喵喵预设配置管理加载失败，请检查控制台');
+    }
+}
+// 初始化非关键功能，避免阻塞主UI
+function initNonCriticalFeatures() {
+    try {
+        // 恢复分组配置
+        eventOn(tavern_events.SETTINGS_LOADED, src_/* restoreGroupingFromConfig */.Ec);
+        // 监听预设变化，如果存在该事件的话
+        const tavernEventsExt = tavern_events;
+        if (tavernEventsExt.PRESET_CHANGED) {
+            eventOn(tavernEventsExt.PRESET_CHANGED, src_/* restoreGroupingFromConfig */.Ec);
+        }
+        // 监听预设界面变化，延迟恢复分组
+        if (tavernEventsExt.PROMPT_MANAGER_UPDATED) {
+            eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => (0,src_/* restoreGroupingDelayed */.s8)(150, 'dom_change'));
+        }
+        // 监听设置更新事件，这通常在条目开关后触发
+        eventOn(tavern_events.SETTINGS_UPDATED, () => {
+            console.log('检测到设置更新，准备恢复分组');
+            (0,src_/* restoreGroupingDelayed */.s8)(200, 'settings');
+        });
+        // 优化DOM观察器 - 使用防抖机制
+        let restoreTimeout = null;
+        const observer = new MutationObserver(mutations => {
+            let shouldRestore = false;
+            mutations.forEach(mutation => {
+                if (mutation.type === 'childList') {
+                    const target = mutation.target;
+                    // 检查是否是预设管理器的条目变化
+                    if (target.classList?.contains('completion_prompt_manager') ||
+                        target.querySelector?.('.completion_prompt_manager_prompt') ||
+                        // 检查是否是预设条目本身的变化
+                        target.classList?.contains('completion_prompt_manager_prompt') ||
+                        // 检查是否是分组容器的变化
+                        target.classList?.contains('prompt-group-container')) {
+                        shouldRestore = true;
+                    }
+                }
+                // 检查属性变化（如开关状态变化）
+                if (mutation.type === 'attributes') {
+                    const target = mutation.target;
+                    if (target.classList?.contains('completion_prompt_manager_prompt') ||
+                        target.closest?.('.completion_prompt_manager_prompt')) {
+                        shouldRestore = true;
+                    }
+                }
+            });
+            if (shouldRestore) {
+                // 防抖处理，避免频繁触发
+                if (restoreTimeout) {
+                    clearTimeout(restoreTimeout);
+                }
+                restoreTimeout = window.setTimeout(() => {
+                    console.log('检测到预设条目变化，准备恢复分组');
+                    (0,src_/* restoreGroupingDelayed */.s8)(150, 'toggle');
+                }, 50);
+            }
+        });
+        // 开始观察预设管理器区域的变化
+        const presetManagerContainer = $('.completion_prompt_manager').get(0);
+        if (presetManagerContainer) {
+            observer.observe(presetManagerContainer, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['class', 'data-pm-identifier'],
+            });
+            console.log('✅ 预设管理器DOM观察器已启动');
+        }
+        // 延迟恢复分组，避免阻塞UI加载
+        setTimeout(() => {
+            console.log('🔄 脚本加载完成，开始强制恢复分组配置...');
+            (0,src_/* forceRestoreGrouping */.nO)();
+        }, 2000);
+        console.log('✅ 非关键功能初始化完成');
+    }
+    catch (error) {
+        console.error('初始化非关键功能失败:', error);
+    }
+}
+// 在加载脚本时执行初始化
+console.log('🔥 喵喵预设配置管理模块开始加载...');
+$(() => init());
+// 在卸载脚本时执行清理
+$(window).on('pagehide', () => {
+    // 清理全局标记
+    const win = window;
+    delete win[SCRIPT_ID];
+    delete win.miaoMiaoPresetManager;
+    // 快速清理UI元素，避免阻塞
+    const uiElement = document.getElementById('preset-manager-ui');
+    const fileElement = document.getElementById('preset-manager-import-file');
+    if (uiElement) {
+        uiElement.remove();
+    }
+    if (fileElement) {
+        fileElement.remove();
+    }
+    // 异步清理分组效果，避免阻塞页面卸载
+    setTimeout(async () => {
+        try {
+            const { clearAllGrouping } = await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 11));
+            clearAllGrouping();
+        }
+        catch (error) {
+            // 忽略清理错误
+        }
+    }, 0);
+    console.log('✅ 喵喵预设配置管理已卸载');
+});
+
+// EXTERNAL MODULE: ./src/喵喵预设配置管理/导入导出功能.ts
+var src_3 = __webpack_require__(411);
+;// ./src/喵喵预设配置管理/index.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
