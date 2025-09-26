@@ -8,6 +8,11 @@ import url from 'node:url';
 import { Server } from 'socket.io';
 import TerserPlugin from 'terser-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+<<<<<<< HEAD
+=======
+import unpluginAutoImport from 'unplugin-auto-import/webpack';
+import unpluginVueComponents from 'unplugin-vue-components/webpack';
+>>>>>>> 4c144ebfe567933cec93187260726072ae371aba
 import { VueLoaderPlugin } from 'vue-loader';
 import webpack from 'webpack';
 import WebpackObfuscator from 'webpack-obfuscator';
@@ -113,7 +118,21 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     entry: path.join(__dirname, entry.script),
     target: 'browserslist',
     output: {
+<<<<<<< HEAD
       devtoolModuleFilenameTemplate: 'webpack://tavern_helper_template/[resource-path]?[loaders]',
+=======
+      devtoolNamespace: 'tavern_helper_template',
+      devtoolModuleFilenameTemplate: info => {
+        const resource_path = decodeURIComponent(info.resourcePath.replace(/^\.\//, ''));
+        const is_direct = info.allLoaders === '';
+        const is_vue_script =
+          resource_path.match(/\.vue$/) &&
+          info.query.match(/\btype=script\b/) &&
+          !info.allLoaders.match(/\bts-loader\b/);
+
+        return `${is_direct === true ? 'src' : 'webpack'}://${info.namespace}/${resource_path}${is_direct || is_vue_script ? '' : '?' + info.hash}`;
+      },
+>>>>>>> 4c144ebfe567933cec93187260726072ae371aba
       filename: `${script_filepath.name}.js`,
       path: path.join(__dirname, 'dist', path.relative(path.join(__dirname, 'src'), script_filepath.dir)),
       chunkFilename: `${script_filepath.name}.[contenthash].chunk.js`,
@@ -276,7 +295,30 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           }),
         ]
     )
+<<<<<<< HEAD
       .concat({ apply: watch_it }, new VueLoaderPlugin(), new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }))
+=======
+      .concat(
+        { apply: watch_it },
+        new VueLoaderPlugin(),
+        unpluginAutoImport({
+          dts: true,
+          dtsMode: 'overwrite',
+          imports: [
+            'vue',
+            'pinia',
+            '@vueuse/core',
+            { from: 'dedent', imports: [['default', 'dedent']] },
+            { from: 'zod', imports: ['z'] },
+          ],
+        }),
+        unpluginVueComponents({
+          dts: true,
+          // globs: ['src/panel/component/*.vue'],
+        }),
+        new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+      )
+>>>>>>> 4c144ebfe567933cec93187260726072ae371aba
       .concat(
         should_obfuscate
           ? [
@@ -291,7 +333,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           : [],
       ),
     optimization: {
+<<<<<<< HEAD
       minimize: false,
+=======
+      minimize: true,
+>>>>>>> 4c144ebfe567933cec93187260726072ae371aba
       minimizer: [
         argv.mode === 'production'
           ? new TerserPlugin({
