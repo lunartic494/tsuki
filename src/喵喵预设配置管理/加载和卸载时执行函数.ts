@@ -23,11 +23,12 @@ function checkReady(): void {
 }
 
 function init(): void {
-  // 简化重复检查 - 只检查UI是否已存在，如果存在就跳过初始化
+  // 检查是否已存在，如果存在则重新初始化（适配脚本重复加载）
   const win = window as unknown as Record<string, unknown>;
   if (win[SCRIPT_ID]) {
-    console.log('⚠️ 喵喵预设配置管理已存在，跳过重复初始化');
-    return;
+    console.log('⚠️ 喵喵预设配置管理已存在，重新初始化以适配重复加载');
+    // 清理旧的事件绑定
+    cleanupOldBindings();
   }
 
   // 设置全局标记
@@ -36,6 +37,31 @@ function init(): void {
 
   console.log('🔥 jQuery ready 事件触发...');
   checkReady();
+}
+
+// 清理旧的事件绑定
+function cleanupOldBindings(): void {
+  try {
+    // 解绑所有可能的事件
+    $('#preset-manager-close').off('click');
+    $('#preset-manager-help-btn').off('click');
+    $('#preset-manager-save-btn').off('click');
+    $('#preset-manager-import-btn').off('click');
+    $('#preset-manager-batch-export-btn').off('click');
+    $('#preset-manager-batch-delete-btn').off('click');
+    $('#preset-manager-grouping-btn').off('click');
+    $('#preset-manager-import-file').off('change');
+
+    // 解绑分组相关事件
+    $('.prompt-item').off('click');
+    $('.prompt-checkbox').off('change');
+    $('.dropdown-close-btn').off('click');
+    $(document).off('click', '.dropdown-close-btn');
+
+    console.log('✅ 旧的事件绑定已清理');
+  } catch (error) {
+    console.warn('清理旧事件绑定时出错:', error);
+  }
 }
 
 async function initScript(): Promise<void> {
@@ -84,13 +110,13 @@ function initNonCriticalFeatures(): void {
 
     // 监听预设界面变化，延迟恢复分组
     if (tavernEventsExt.PROMPT_MANAGER_UPDATED) {
-      eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => restoreGroupingDelayed(300));
+      eventOn(tavernEventsExt.PROMPT_MANAGER_UPDATED, () => restoreGroupingDelayed(150, 'dom_change'));
     }
 
     // 监听设置更新事件，这通常在条目开关后触发
     eventOn(tavern_events.SETTINGS_UPDATED, () => {
       console.log('检测到设置更新，准备恢复分组');
-      restoreGroupingDelayed(800);
+      restoreGroupingDelayed(200, 'settings');
     });
 
     // 优化DOM观察器 - 使用防抖机制
@@ -132,8 +158,8 @@ function initNonCriticalFeatures(): void {
         }
         restoreTimeout = window.setTimeout(() => {
           console.log('检测到预设条目变化，准备恢复分组');
-          restoreGroupingDelayed(500);
-        }, 200);
+          restoreGroupingDelayed(150, 'toggle');
+        }, 50);
       }
     });
 

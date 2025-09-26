@@ -51,7 +51,7 @@ export function createUI(): void {
                     <button id="preset-manager-import-btn" style="padding:6px 12px; background-color:#a5d6f9; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">导入</button>
                     <button id="preset-manager-batch-export-btn" style="padding:6px 12px; background-color:#81c784; border:none; border-radius:6px; color:#3a2c2c; cursor:pointer; font-weight:bold;">批量导出</button>
                     <button id="preset-manager-batch-delete-btn" style="padding:6px 12px; background-color:#ef9a9a; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">批量删除</button>
-                    <button id="preset-manager-grouping-btn" style="padding:6px 12px; background-color:#9c27b0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">条目分组</button>
+                    <button id="preset-manager-grouping-btn" style="padding:6px 12px; background-color:#9c27b0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold;">预设编辑器</button>
                 </div>
             </div>
 

@@ -3,7 +3,8 @@ import { CONFIG_LOREBOOK_NAME, V2_MIGRATION_KEY } from './初始化和配置';
 export interface ConfigData {
   id: string;
   name: string;
-  presetName?: string;
+  presetName?: string; // 保留用于向后兼容
+  identifierId?: string; // 识别条目的ID，用于更可靠的预设识别
   states: Array<{ id: string; enabled: boolean; name: string }>;
   regexStates?: Array<{ id: string; enabled: boolean }>;
   boundCharAvatar?: string;
@@ -29,19 +30,21 @@ export async function getStoredConfigs(): Promise<Record<string, ConfigData>> {
     return {};
   }
 
-  const v2Entry = worldbookEntries.find((entry: any) => entry.strategy?.keys?.includes(V2_MIGRATION_KEY));
+  const v2Entry = worldbookEntries.find((entry: WorldbookEntry) => entry.strategy?.keys?.includes(V2_MIGRATION_KEY));
   if (v2Entry) {
     console.log('喵喵预设配置管理: 检测到旧版合并数据，正在迁移...');
     try {
       const configsArray = JSON.parse(v2Entry.content);
-      const migratedEntries = configsArray.map((config: any) => ({
+      const migratedEntries = configsArray.map((config: { name?: string; id: string }) => ({
         name: config.name || config.id,
         strategy: { type: 'constant', keys: [config.id] },
         content: JSON.stringify(config),
         enabled: false,
       }));
 
-      const otherEntries = worldbookEntries.filter((entry: any) => !entry.strategy?.keys?.includes(V2_MIGRATION_KEY));
+      const otherEntries = worldbookEntries.filter(
+        (entry: WorldbookEntry) => !entry.strategy?.keys?.includes(V2_MIGRATION_KEY),
+      );
       await TavernHelper.createOrReplaceWorldbook(CONFIG_LOREBOOK_NAME, [...otherEntries, ...migratedEntries]);
       toastr.info('喵喵预设配置管理：已自动升级数据格式。');
       worldbookEntries = await TavernHelper.getWorldbook(CONFIG_LOREBOOK_NAME);
@@ -74,6 +77,34 @@ export async function getStoredConfigs(): Promise<Record<string, ConfigData>> {
 export function clearConfigCache(): void {
   configCache = null;
   lastCacheTime = 0;
+}
+
+// 通过识别条目ID获取预设名称
+export async function getPresetNameByIdentifier(identifierId: string): Promise<string | null> {
+  try {
+    console.log(`正在查找识别条目ID: ${identifierId}`);
+    const presetNames = TavernHelper.getPresetNames();
+    console.log(`可用预设列表:`, presetNames);
+
+    for (const presetName of presetNames) {
+      const preset = TavernHelper.getPreset(presetName);
+      if (preset && preset.prompts) {
+        // 检查 prompts 和 prompts_unused 两个数组
+        const allPrompts = [...preset.prompts, ...(preset.prompts_unused || [])];
+        const hasIdentifier = allPrompts.some((p: PresetPrompt) => p.id === identifierId);
+        if (hasIdentifier) {
+          console.log(`在预设 "${presetName}" 中找到识别条目ID: ${identifierId}`);
+          return presetName;
+        }
+      }
+    }
+
+    console.warn(`未找到识别条目ID: ${identifierId}`);
+    return null;
+  } catch (error) {
+    console.error('通过识别条目获取预设名称失败:', error);
+    return null;
+  }
 }
 
 export async function setStoredConfigs(configsObject: Record<string, ConfigData>): Promise<void> {
@@ -111,12 +142,43 @@ export async function renderConfigsList(): Promise<void> {
     return;
   }
 
-  const groupedConfigs = configs.reduce((acc: Record<string, ConfigData[]>, config) => {
-    const groupName = config.presetName || '未分类';
-    if (!acc[groupName]) acc[groupName] = [];
-    acc[groupName].push(config);
-    return acc;
-  }, {});
+  // 使用异步分组，优先通过识别条目ID获取预设名称
+  const groupedConfigs: Record<string, ConfigData[]> = {};
+
+  for (const config of configs) {
+    let groupName = '未分类';
+
+    if (config.identifierId) {
+      // 优先使用识别条目ID获取预设名称
+      const presetName = await getPresetNameByIdentifier(config.identifierId);
+      if (presetName) {
+        // 如果找到的是"in_use"，需要转换为当前正在使用的实际预设名称
+        if (presetName === 'in_use') {
+          const currentPresetName = TavernHelper.getLoadedPresetName();
+          groupName = currentPresetName !== 'in_use' ? currentPresetName : 'in_use';
+          console.log(`配置 "${config.name}" 找到in_use，转换为当前预设: ${groupName}`);
+        } else {
+          groupName = presetName;
+          console.log(`配置 "${config.name}" 通过识别条目ID找到预设: ${presetName}`);
+        }
+      } else if (config.presetName && config.presetName !== 'in_use') {
+        // 回退到预设名称，但排除"in_use"
+        groupName = config.presetName;
+        console.log(`配置 "${config.name}" 使用预设名称: ${config.presetName}`);
+      } else {
+        console.warn(`配置 "${config.name}" 无法找到有效预设名称，使用默认分组`);
+      }
+    } else if (config.presetName && config.presetName !== 'in_use') {
+      // 向后兼容：使用预设名称，但排除"in_use"
+      groupName = config.presetName;
+      console.log(`配置 "${config.name}" 使用预设名称（向后兼容）: ${config.presetName}`);
+    } else {
+      console.warn(`配置 "${config.name}" 没有有效的预设信息，使用默认分组`);
+    }
+
+    if (!groupedConfigs[groupName]) groupedConfigs[groupName] = [];
+    groupedConfigs[groupName].push(config);
+  }
 
   const sortedGroupNames = Object.keys(groupedConfigs).sort((a, b) => {
     if (a === '未分类') return 1;
@@ -171,8 +233,14 @@ export async function renderConfigsList(): Promise<void> {
   }
 
   // 绑定按钮事件
-  // 使用动态导入避免循环引用
-  import('./事件绑定').then(({ bindConfigListEvents }) => {
-    bindConfigListEvents();
-  });
+  // 使用动态导入避免循环引用，添加延迟确保DOM完全更新
+  setTimeout(() => {
+    import('./事件绑定')
+      .then(({ bindConfigListEvents }) => {
+        bindConfigListEvents();
+      })
+      .catch(error => {
+        console.error('绑定按钮事件失败:', error);
+      });
+  }, 100);
 }

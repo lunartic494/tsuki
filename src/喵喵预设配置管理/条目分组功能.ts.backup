@@ -1,22 +1,3 @@
-// 扩展 window 类型
-declare global {
-  interface Window {
-    miaomiaoPromptGroupingLoaded?: boolean;
-  }
-}
-
-// 防重复加载检查
-if (window.miaomiaoPromptGroupingLoaded) {
-  console.log('喵喵预设配置管理 - 条目分组功能已加载，跳过重复加载');
-  // 直接返回，不执行后续代码
-  throw new Error('Script already loaded');
-}
-
-window.miaomiaoPromptGroupingLoaded = true;
-console.log('喵喵预设配置管理 - 条目分组功能首次加载');
-
-import { generateUUID } from './初始化和配置';
-
 export interface PromptGroup {
   id: string;
   name: string;
@@ -56,21 +37,6 @@ function savePresetGrouping(presetName: string, groups: PromptGroup[]): void {
 let cachedPromptElements: JQuery | null = null;
 let lastPromptQueryTime = 0;
 const PROMPT_CACHE_DURATION = 3000; // 3秒缓存
-
-// 触发一次预设保存，避免条目更改丢失
-function triggerPresetSave(): void {
-  try {
-    const $btn = $('#update_oai_preset');
-    if ($btn.length) {
-      $btn.trigger('click');
-      console.log('已触发预设保存');
-    } else {
-      console.warn('未找到预设保存按钮 #update_oai_preset');
-    }
-  } catch (err) {
-    console.error('触发预设保存时出错:', err);
-  }
-}
 
 // 获取当前预设的所有条目
 export function getCurrentPresetPrompts(): Array<{ id: string; name: string; element: JQuery; enabled: boolean }> {
@@ -190,8 +156,7 @@ export async function showPromptGroupingUI(): Promise<void> {
               </button>
               <div id="group-management-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #d4b58b; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10002; margin-top: 2px;">
                 <button id="create-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#333; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">创建分组</button>
-                <button id="add-to-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#9C27B0; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">加入分组</button>
-                <button id="remove-from-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#FF5722; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">移出分组</button>
+                <button id="remove-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#f44336; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">移除分组</button>
                 <button id="dissolve-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#ff9800; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">解散分组</button>
                 <button id="clear-all-groups-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#ff5722; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">清除所有</button>
                 <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
@@ -226,6 +191,18 @@ export async function showPromptGroupingUI(): Promise<void> {
                   <button id="add-prompt-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#4CAF50; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">新增条目</button>
                   <button id="edit-prompt-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#FF9800; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">编辑条目</button>
                   <button id="delete-prompts-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#F44336; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">删除条目</button>
+                  <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
+                  <button class="dropdown-close-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#888; cursor:pointer; font-size: 13px; text-align: center;">关闭</button>
+                </div>
+              </div>
+              <div style="position: relative; display: inline-block; flex: 1; min-width: 120px;">
+                <button id="item-group-btn" style="width: 100%; padding: 10px 16px; background-color:#9C27B0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-weight:bold; font-size: 13px; display: flex; align-items: center; justify-content: space-between;">
+                  <span>分组操作</span>
+                  <span style="font-size: 12px;">▼</span>
+                </button>
+                <div id="item-group-menu" style="display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #fff; border: 1px solid #d4b58b; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10002; margin-top: 2px;">
+                  <button id="add-to-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#9C27B0; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">加入分组</button>
+                  <button id="remove-from-group-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#FF5722; cursor:pointer; font-size: 13px; text-align: left; border-bottom: 1px solid #f0f0f0;">移出分组</button>
                   <div style="border-top: 1px solid #eee; margin: 5px 0;"></div>
                   <button class="dropdown-close-btn" style="width: 100%; padding: 10px 16px; border:none; background:none; color:#888; cursor:pointer; font-size: 13px; text-align: center;">关闭</button>
                 </div>
@@ -678,6 +655,7 @@ function bindGroupingEvents(
   $('#group-management-btn').off('click');
   $('#item-selection-btn').off('click');
   $('#item-edit-btn').off('click');
+  $('#item-group-btn').off('click');
   $('#add-to-group-btn').off('click');
   $('#remove-from-group-btn').off('click');
   $('.dropdown-close-btn').off('click');
@@ -1008,8 +986,52 @@ function bindGroupingEvents(
       return;
     }
 
-    // 显示解散分组弹窗
-    await showDissolveGroupPopup(existingGroups);
+    // 显示分组选择弹窗
+    await showGroupSelectionPopup(existingGroups, (selectedGroupNames: string[]) => {
+      if (selectedGroupNames.length === 0) {
+        toastr.error('请选择要解散的分组');
+        return;
+      }
+
+      // 解散选中的分组
+      selectedGroupNames.forEach(groupName => {
+        const groupIndex = existingGroups.findIndex(g => g.name === groupName);
+        if (groupIndex > -1) {
+          const group = existingGroups[groupIndex];
+
+          // 更新UI - 移除分组标签和背景色
+          group.promptIds.forEach(promptId => {
+            const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
+            item.css('background-color', '#fff');
+            item.find('.group-tag').remove();
+            // 清除分组路径显示
+            const promptText = item.find('.prompt-text');
+            if (promptText.length > 0) {
+              promptText.find('div:last-child').remove(); // 移除分组路径div
+            }
+          });
+
+          // 从分组数组中移除
+          existingGroups.splice(groupIndex, 1);
+        }
+      });
+
+      updateExistingGroupsInfo(existingGroups);
+
+      // 保存分组配置并立即应用
+      const currentPresetName = TavernHelper.getLoadedPresetName();
+      const validGroups = existingGroups.filter(g => g.promptIds.length > 0);
+      savePresetGrouping(currentPresetName, validGroups);
+
+      // 立即应用分组到DOM
+      applyGroupingToDOM(validGroups);
+      // 延迟恢复以确保DOM更新完成
+      setTimeout(() => {
+        restoreGroupingImmediate();
+      }, 100);
+
+      toastr.success(`已解散分组：${selectedGroupNames.join('、')}`);
+    });
   });
 
   // 清除所有分组
@@ -1079,7 +1101,7 @@ function bindGroupingEvents(
     const menu = $('#group-management-menu');
     menu.toggle();
     // 关闭其他菜单
-    $('#item-selection-menu, #item-edit-menu').hide();
+    $('#item-selection-menu, #item-edit-menu, #item-group-menu').hide();
   });
 
   $('#item-selection-btn').on('click', function (e) {
@@ -1087,7 +1109,7 @@ function bindGroupingEvents(
     const menu = $('#item-selection-menu');
     menu.toggle();
     // 关闭其他菜单
-    $('#group-management-menu, #item-edit-menu').hide();
+    $('#group-management-menu, #item-edit-menu, #item-group-menu').hide();
   });
 
   $('#item-edit-btn').on('click', function (e) {
@@ -1095,7 +1117,15 @@ function bindGroupingEvents(
     const menu = $('#item-edit-menu');
     menu.toggle();
     // 关闭其他菜单
-    $('#group-management-menu, #item-selection-menu').hide();
+    $('#group-management-menu, #item-selection-menu, #item-group-menu').hide();
+  });
+
+  $('#item-group-btn').on('click', function (e) {
+    e.stopPropagation();
+    const menu = $('#item-group-menu');
+    menu.toggle();
+    // 关闭其他菜单
+    $('#group-management-menu, #item-selection-menu, #item-edit-menu').hide();
   });
 
   // 关闭按钮事件 - 使用更具体的选择器避免重复绑定
@@ -1141,10 +1171,19 @@ function bindGroupingEvents(
       console.log('条目编辑菜单已关闭');
     });
 
+  $('#item-group-menu .dropdown-close-btn')
+    .off('click')
+    .on('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      $('#item-group-menu').hide();
+      console.log('条目分组菜单已关闭');
+    });
+
   // 点击其他地方关闭所有菜单
   $(document).on('click', function (e) {
     if (!$(e.target).closest('[id$="-btn"], [id$="-menu"]').length) {
-      $('#group-management-menu, #item-selection-menu, #item-edit-menu').hide();
+      $('#group-management-menu, #item-selection-menu, #item-edit-menu, #item-group-menu').hide();
     }
   });
 }
@@ -1639,6 +1678,145 @@ export function clearPresetGrouping(presetName: string): void {
   if (currentPresetName === presetName) {
     clearAllGrouping();
   }
+}
+
+// 显示分组选择弹窗
+async function showGroupSelectionPopup(
+  groups: PromptGroup[],
+  onConfirm: (selectedGroupNames: string[]) => void,
+): Promise<void> {
+  const popupId = 'group-selection-popup';
+  $(`#${popupId}`).remove();
+
+  const groupsHtml = groups
+    .map(
+      group => `
+    <div class="group-selection-item" style="display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 5px 0; border-radius: 6px; cursor: pointer; background-color: #fff;">
+      <input type="checkbox" class="group-checkbox" data-group-name="${$('<div/>').text(group.name).html()}" style="margin-right: 12px; transform: scale(1.3);">
+      <div style="flex: 1;">
+        <div style="font-weight: bold; color: #333; font-size: 14px;">${$('<div/>').text(group.name).html()}</div>
+        <div style="font-size: 12px; color: #666; margin-top: 2px;">包含 ${group.promptIds.length} 个条目</div>
+      </div>
+    </div>
+  `,
+    )
+    .join('');
+
+  const popupHtml = `
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+      <div class="group-selection-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 70vh;">
+        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择要解散的分组</h4>
+        
+        <div style="margin: 15px 0; display: flex; gap: 8px; flex-wrap: wrap;">
+          <button id="select-all-groups-btn" style="padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全选</button>
+          <button id="select-none-groups-btn" style="padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全不选</button>
+        </div>
+
+        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+          <div style="font-size: 13px; color: #666; margin-bottom: 12px;">选择要解散的分组，解散后分组内的条目将变为独立条目</div>
+          <div id="groups-container">
+            ${groupsHtml}
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="font-size: 12px; color: #666;">⚠️ 解散操作不可撤销</div>
+          <div style="display: flex; gap: 8px;">
+            <button id="group-selection-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
+            <button id="group-selection-confirm" style="padding: 10px 16px; background-color:#ff9800; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">解散选中</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 600px) {
+        #${popupId} {
+          align-items: flex-start !important;
+          padding: 10px;
+        }
+        #${popupId} .group-selection-popup-content {
+          margin-top: 5vh !important;
+          max-height: 90vh !important;
+          width: 95% !important;
+          padding: 15px;
+          border-radius: 12px;
+        }
+        #${popupId} .group-selection-item {
+          padding: 12px !important;
+          min-height: 48px !important;
+        }
+        #${popupId} .group-checkbox {
+          transform: scale(1.4) !important;
+          margin-right: 15px !important;
+        }
+        #${popupId} button {
+          font-size: 14px !important;
+          padding: 10px 14px !important;
+          min-height: 44px;
+        }
+      }
+      @media (max-width: 480px) {
+        #${popupId} .group-selection-popup-content {
+          margin-top: 2vh !important;
+          max-height: 96vh !important;
+          padding: 12px;
+        }
+        #${popupId} h4 {
+          font-size: 16px !important;
+          margin-bottom: 15px !important;
+        }
+        #${popupId} .group-selection-item {
+          padding: 14px !important;
+          min-height: 52px !important;
+        }
+      }
+      @media (max-width: 360px) {
+        #${popupId} .group-selection-popup-content {
+          width: 98% !important;
+          padding: 10px;
+        }
+        #${popupId} button {
+          font-size: 13px !important;
+          padding: 8px 12px !important;
+        }
+        #${popupId} h4 {
+          font-size: 15px !important;
+        }
+      }
+    </style>
+  `;
+
+  $('body').append(popupHtml);
+
+  // 绑定事件
+  $('.group-selection-item').on('click', function (e) {
+    if ((e.target as HTMLInputElement).type === 'checkbox') return;
+
+    const checkbox = $(this).find('.group-checkbox');
+    checkbox.prop('checked', !checkbox.prop('checked'));
+  });
+
+  $('#select-all-groups-btn').on('click', () => {
+    $('.group-checkbox').prop('checked', true);
+  });
+
+  $('#select-none-groups-btn').on('click', () => {
+    $('.group-checkbox').prop('checked', false);
+  });
+
+  $('#group-selection-cancel').on('click', () => {
+    $(`#${popupId}`).remove();
+  });
+
+  $('#group-selection-confirm').on('click', () => {
+    const selectedGroupNames: string[] = [];
+    $('.group-checkbox:checked').each(function () {
+      selectedGroupNames.push($(this).data('group-name'));
+    });
+
+    $(`#${popupId}`).remove();
+    onConfirm(selectedGroupNames);
+  });
 }
 
 // 显示位置选择弹窗
@@ -2154,37 +2332,8 @@ async function showEditPromptPopup(
 async function addNewPrompt(name: string, content: string, enabled: boolean): Promise<void> {
   console.log('新增条目:', name, enabled);
 
-  try {
-    // 使用UUID生成函数
-
-    // 使用酒馆助手的预设API直接创建条目
-    await TavernHelper.updatePresetWith(
-      'in_use',
-      preset => {
-        const newPrompt: PresetPrompt = {
-          id: generateUUID(),
-          name: name,
-          enabled: enabled,
-          position: {
-            type: 'relative',
-          },
-          role: 'system',
-          content: content,
-        };
-
-        // 添加到预设的prompts数组末尾
-        preset.prompts.push(newPrompt);
-        return preset;
-      },
-      { render: 'immediate' },
-    );
-
-    console.log('条目创建成功');
-    triggerPresetSave();
-  } catch (error) {
-    console.error('创建条目失败:', error);
-    throw error;
-  }
+  // 使用酒馆助手的接口添加新条目
+  await triggerSlash(`/addprompt name="${name}" content="${content}" enabled=${enabled}`);
 }
 
 // 在指定位置插入新条目
@@ -2197,46 +2346,25 @@ async function addNewPromptAtPosition(
 ): Promise<void> {
   console.log('在指定位置插入新条目:', name, '位置:', targetId, position);
 
-  try {
-    // 使用UUID生成函数
+  // 先创建条目（添加到末尾）
+  await triggerSlash(`/addprompt name="${name}" content="${content}" enabled=${enabled}`);
 
-    // 直接在指定位置创建条目
-    await TavernHelper.updatePresetWith(
-      'in_use',
-      preset => {
-        const newPrompt: PresetPrompt = {
-          id: generateUUID(),
-          name: name,
-          enabled: enabled,
-          position: {
-            type: 'relative',
-          },
-          role: 'system',
-          content: content,
-        };
+  // 等待一点时间确保条目创建完成
+  await new Promise(resolve => setTimeout(resolve, 200));
 
-        // 找到目标条目的索引
-        const targetIndex = preset.prompts.findIndex(p => p.id === targetId);
-        if (targetIndex === -1) {
-          // 如果找不到目标条目，就添加到末尾
-          preset.prompts.push(newPrompt);
-        } else {
-          // 根据位置插入条目
-          const insertIndex = position === 'above' ? targetIndex : targetIndex + 1;
-          preset.prompts.splice(insertIndex, 0, newPrompt);
-        }
+  // 获取新创建的条目ID（通常是最后一个）
+  const currentPrompts = getCurrentPresetPrompts();
+  const newPrompt = currentPrompts[currentPrompts.length - 1];
 
-        return preset;
-      },
-      { render: 'immediate' },
-    );
-
-    console.log('条目创建并插入成功');
-    triggerPresetSave();
-  } catch (error) {
-    console.error('在指定位置插入条目失败:', error);
-    throw error;
+  if (!newPrompt) {
+    console.error('未找到新创建的条目');
+    return;
   }
+
+  console.log('新创建的条目ID:', newPrompt.id);
+
+  // 将新条目移动到指定位置
+  movePromptsToPosition([newPrompt.id], targetId, position);
 }
 
 // 获取条目内容
@@ -2262,66 +2390,24 @@ async function getPromptContent(promptId: string): Promise<string> {
 async function updatePrompt(promptId: string, name: string, content: string, enabled: boolean): Promise<void> {
   console.log('更新条目:', promptId, name, enabled);
 
-  try {
-    // 使用酒馆助手的预设API直接更新条目
-    await TavernHelper.updatePresetWith(
-      'in_use',
-      preset => {
-        // 查找要更新的条目
-        const promptToUpdate = preset.prompts.find(p => p.id === promptId);
-        if (promptToUpdate) {
-          promptToUpdate.name = name;
-          promptToUpdate.content = content;
-          promptToUpdate.enabled = enabled;
-        } else {
-          // 如果在prompts中没找到，尝试在prompts_unused中查找
-          const unusedPromptToUpdate = preset.prompts_unused.find(p => p.id === promptId);
-          if (unusedPromptToUpdate) {
-            unusedPromptToUpdate.name = name;
-            unusedPromptToUpdate.content = content;
-            unusedPromptToUpdate.enabled = enabled;
-          }
-        }
-
-        return preset;
-      },
-      { render: 'immediate' },
-    );
-
-    console.log('条目更新成功');
-    triggerPresetSave();
-  } catch (error) {
-    console.error('更新条目失败:', error);
-    throw error;
-  }
+  // 使用酒馆助手的接口更新条目
+  await triggerSlash(`/editprompt id="${promptId}" name="${name}" content="${content}" enabled=${enabled}`);
 }
 
 // 删除选中的条目
 async function deleteSelectedPrompts(promptIds: string[]): Promise<void> {
   console.log('删除条目:', promptIds);
 
-  try {
-    // 使用酒馆助手的预设API直接删除条目
-    await TavernHelper.updatePresetWith(
-      'in_use',
-      preset => {
-        // 从prompts数组中删除条目
-        preset.prompts = preset.prompts.filter(p => !promptIds.includes(p.id));
-        // 从prompts_unused数组中删除条目
-        preset.prompts_unused = preset.prompts_unused.filter(p => !promptIds.includes(p.id));
-
-        return preset;
-      },
-      { render: 'immediate' },
-    );
-
-    console.log('删除条目成功:', promptIds);
-    triggerPresetSave();
-    toastr.success(`成功删除 ${promptIds.length} 个条目`);
-  } catch (error) {
-    console.error('删除条目失败:', promptIds, error);
-    toastr.error('删除条目失败，请重试');
+  for (const promptId of promptIds) {
+    try {
+      await triggerSlash(`/deleteprompt id="${promptId}"`);
+      console.log('删除条目成功:', promptId);
+    } catch (error) {
+      console.error('删除条目失败:', promptId, error);
+    }
   }
+
+  toastr.success(`成功删除 ${promptIds.length} 个条目`);
 }
 
 // 在分组树中查找包含指定条目的分组
@@ -2491,7 +2577,10 @@ function findGroupById(groups: PromptGroup[], groupId: string): PromptGroup | nu
 }
 
 // 显示分组选择弹窗
-async function showGroupSelectionPopup(selectedPrompts: string[], existingGroups: PromptGroup[]): Promise<void> {
+async function showGroupSelectionPopup(
+  selectedPrompts: string[],
+  existingGroups: PromptGroup[],
+): Promise<void> {
   const popupId = 'group-selection-popup';
   $(`#${popupId}`).remove();
 
@@ -2504,8 +2593,8 @@ async function showGroupSelectionPopup(selectedPrompts: string[], existingGroups
   const groupsHtml = generateGroupsListHtml(existingGroups, 0);
 
   const popupHtml = `
-    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
-      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 100%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh; position: relative;">
+    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
+      <div style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 80vh;">
         <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择目标分组</h4>
         <div style="flex: 1; min-height: 0; overflow-y: auto; margin: 15px 0;">
           <div style="font-size: 13px; color: #666; margin-bottom: 12px; line-height: 1.4;">
@@ -2516,181 +2605,65 @@ async function showGroupSelectionPopup(selectedPrompts: string[], existingGroups
           </div>
         </div>
         <div style="text-align: right; margin-top: 15px; flex-shrink: 0;">
-          <div id="selected-group-info" style="font-size: 12px; color: #666; margin-bottom: 10px; text-align: left; display: none;">
-            已选择分组: <span id="selected-group-name" style="font-weight: bold; color: #4CAF50;"></span>
-          </div>
-          <div style="display: flex; gap: 10px; justify-content: flex-end;">
-            <button id="group-selection-cancel" style="padding: 8px 16px; background-color:#bcaaa4; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c;">取消</button>
-            <button id="group-selection-confirm" style="padding: 8px 16px; background-color:#4CAF50; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; display: none;">加入此分组</button>
-          </div>
+          <button id="group-selection-cancel" style="padding: 8px 16px; background-color:#bcaaa4; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#3a2c2c; margin-right: 10px;">取消</button>
         </div>
       </div>
     </div>
-    <style>
-      .group-option.selected-group {
-        background-color: #e8f5e8 !important;
-        border-color: #4CAF50 !important;
-        border-width: 2px !important;
-        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
-      }
-      .group-option.selected-group:hover {
-        background-color: #d4edda !important;
-      }
-      @media (max-width: 768px) {
-        #${popupId} {
-          align-items: flex-start !important;
-          padding: 10px !important;
-        }
-        #${popupId} > div {
-          margin-top: 5vh !important;
-          max-height: 85vh !important;
-          width: 100% !important;
-          padding: 15px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        #${popupId} {
-          padding: 5px !important;
-        }
-        #${popupId} > div {
-          margin-top: 2vh !important;
-          max-height: 90vh !important;
-          padding: 12px !important;
-        }
-      }
-    </style>
   `;
 
   $('body').append(popupHtml);
-
-  let selectedGroup: PromptGroup | null = null;
-
-  // 先解绑所有可能重复的事件，防止脚本重复加载导致的问题
-  $('#group-selection-cancel').off('click');
-  $('#group-selection-confirm').off('click');
-  $(document).off('click', '.group-option');
 
   // 绑定事件
   $('#group-selection-cancel').on('click', () => {
     $(`#${popupId}`).remove();
   });
 
-  // 确认加入分组
-  $('#group-selection-confirm').on('click', async () => {
-    if (!selectedGroup) {
-      toastr.error('请先选择一个分组');
-      return;
-    }
-
-    try {
-      await addPromptsToGroup(selectedPrompts, selectedGroup, existingGroups);
+  // 绑定分组选择事件
+  $('.group-option').on('click', async function() {
+    const groupId = $(this).data('group-id');
+    const group = findGroupById(existingGroups, groupId);
+    
+    if (group) {
+      await addPromptsToGroup(selectedPrompts, group, existingGroups);
       $(`#${popupId}`).remove();
-
+      
       // 重新加载分组界面
       setTimeout(() => {
         $('#preset-manager-grouping-popup').remove();
         showPromptGroupingUI();
       }, 100);
-    } catch (error) {
-      console.error('加入分组失败:', error);
-      toastr.error('加入分组失败，请重试');
     }
   });
-
-  // 延迟绑定事件，确保DOM完全加载
-  setTimeout(() => {
-    console.log('开始绑定分组选择事件');
-    console.log(
-      '现有分组列表:',
-      existingGroups.map(g => ({ id: g.id, name: g.name, type: typeof g.id })),
-    );
-
-    // 直接绑定到弹窗内的元素
-    $(`#${popupId} .group-option`)
-      .off('click')
-      .on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const groupId = $(this).data('group-id');
-        console.log('点击分组选项:', groupId, '类型:', typeof groupId, '元素:', this);
-
-        // 确保groupId是字符串类型
-        const groupIdStr = String(groupId);
-        console.log('转换后的groupId:', groupIdStr, '类型:', typeof groupIdStr);
-
-        const group = findGroupById(existingGroups, groupIdStr);
-        console.log('找到分组:', group);
-
-        if (group) {
-          // 清除之前的选择
-          $(`#${popupId} .group-option`).removeClass('selected-group');
-
-          // 标记当前选择
-          $(this).addClass('selected-group');
-          selectedGroup = group;
-
-          // 显示选择信息和确认按钮
-          const nameElement = $(`#${popupId} #selected-group-name`);
-          const infoElement = $(`#${popupId} #selected-group-info`);
-          const confirmButton = $(`#${popupId} #group-selection-confirm`);
-
-          console.log('更新UI元素:', {
-            nameElement: nameElement.length,
-            infoElement: infoElement.length,
-            confirmButton: confirmButton.length,
-          });
-
-          nameElement.text(group.name);
-          infoElement.show();
-          confirmButton.show();
-
-          console.log('已选择分组:', group.name, 'UI已更新');
-        } else {
-          console.error('未找到分组:', groupId);
-          toastr.error('未找到选中的分组');
-        }
-      });
-
-    console.log('分组选择事件绑定完成，找到元素数量:', $(`#${popupId} .group-option`).length);
-  }, 100);
-
-  // 添加调试信息
-  console.log('分组选择弹窗已创建，分组数量:', existingGroups.length);
-  console.log('确认按钮元素:', $('#group-selection-confirm').length);
-  console.log('选择信息元素:', $('#selected-group-info').length);
 }
 
 // 生成分组列表HTML
 function generateGroupsListHtml(groups: PromptGroup[], level: number): string {
   let html = '';
-
+  
   groups.forEach(group => {
+    const indent = '  '.repeat(level);
     const hasContent = group.promptIds.length > 0 || group.subGroups.length > 0;
-
+    
     if (hasContent) {
       html += `
         <div class="group-option" data-group-id="${group.id}" 
-             style="padding: 12px; margin: 8px 0; border: 1px solid #e0e0e0; border-radius: 8px; cursor: pointer; background-color: #f9f9f9; transition: all 0.2s ease; margin-left: ${level * 20}px; user-select: none;"
-             onmouseover="this.style.backgroundColor='#e8f5e8'; this.style.borderColor='#4CAF50';"
-             onmouseout="this.style.backgroundColor='#f9f9f9'; this.style.borderColor='#e0e0e0';">
-          <div style="font-weight: bold; color: #333; font-size: 14px; margin-bottom: 4px;">
+             style="padding: 10px; margin: 5px 0; border: 1px solid #e0e0e0; border-radius: 6px; cursor: pointer; background-color: #f9f9f9; transition: background-color 0.2s; margin-left: ${level * 20}px;">
+          <div style="font-weight: bold; color: #333; font-size: 14px;">
             ${$('<div/>').text(group.name).html()}
           </div>
-          <div style="font-size: 12px; color: #666; display: flex; gap: 12px;">
-            <span>📄 条目: ${group.promptIds.length}</span>
-            <span>📁 子分组: ${group.subGroups.length}</span>
+          <div style="font-size: 12px; color: #666; margin-top: 4px;">
+            条目数量: ${group.promptIds.length} | 子分组: ${group.subGroups.length}
           </div>
         </div>
       `;
     }
-
+    
     // 递归处理子分组
     if (group.subGroups.length > 0) {
       html += generateGroupsListHtml(group.subGroups, level + 1);
     }
   });
-
+  
   return html;
 }
 
@@ -2701,14 +2674,18 @@ async function addPromptsToGroup(
   existingGroups: PromptGroup[],
 ): Promise<void> {
   // 检查条目是否已经在目标分组中
-  const alreadyInGroup = selectedPrompts.filter(promptId => targetGroup.promptIds.includes(promptId));
+  const alreadyInGroup = selectedPrompts.filter(promptId => 
+    targetGroup.promptIds.includes(promptId)
+  );
 
   if (alreadyInGroup.length > 0) {
     toastr.warning(`有 ${alreadyInGroup.length} 个条目已在该分组中，将跳过`);
   }
 
   // 将条目添加到目标分组
-  const newPrompts = selectedPrompts.filter(promptId => !targetGroup.promptIds.includes(promptId));
+  const newPrompts = selectedPrompts.filter(promptId => 
+    !targetGroup.promptIds.includes(promptId)
+  );
 
   targetGroup.promptIds.push(...newPrompts);
 
@@ -2716,7 +2693,7 @@ async function addPromptsToGroup(
   newPrompts.forEach(promptId => {
     const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
     item.css('background-color', '#e8f5e8');
-
+    
     // 更新或添加分组标签
     const existingTag = item.find('.group-tag');
     const groupPath = getGroupPath(targetGroup, existingGroups);
@@ -2726,31 +2703,22 @@ async function addPromptsToGroup(
       item
         .find('.prompt-text')
         .append(
-          `<div style="color: #666; font-size: 12px; margin-top: 4px; word-wrap: break-word; overflow-wrap: break-word;">📁 ${groupPath}</div>`,
+          `<div style="color: #666; font-size: 12px; margin-top: 4px; word-wrap: break-word; overflow-wrap: break-word;">📁 ${groupPath}</div>`
         );
       item.append(
-        `<span class="group-tag" style="background-color: #4CAF50; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; flex-shrink: 0; align-self: flex-start; margin-top: 2px;">已分组</span>`,
+        `<span class="group-tag" style="background-color: #4CAF50; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; margin-left: 8px; flex-shrink: 0; align-self: flex-start; margin-top: 2px;">已分组</span>`
       );
     }
   });
 
-  // 保存分组配置
-  const currentPresetName = TavernHelper.getLoadedPresetName();
-  savePresetGrouping(currentPresetName, existingGroups);
-
-  // 立即应用分组到DOM
-  applyGroupingToDOM(existingGroups);
-
-  // 延迟恢复以确保DOM更新完成
-  setTimeout(() => {
-    restoreGroupingImmediate();
-  }, 100);
-
-  toastr.success(`已将 ${newPrompts.length} 个条目加入分组 "${getGroupPath(targetGroup, existingGroups)}"，已立即应用`);
+  toastr.success(`已将 ${newPrompts.length} 个条目加入分组 "${getGroupPath(targetGroup, existingGroups)}"，将在关闭分组界面时应用`);
 }
 
 // 将条目从分组中移除
-async function removePromptsFromGroups(selectedPrompts: string[], existingGroups: PromptGroup[]): Promise<void> {
+async function removePromptsFromGroups(
+  selectedPrompts: string[],
+  existingGroups: PromptGroup[],
+): Promise<void> {
   selectedPrompts.forEach(promptId => {
     const group = findPromptInGroups(existingGroups, promptId);
     if (group) {
@@ -2768,164 +2736,5 @@ async function removePromptsFromGroups(selectedPrompts: string[], existingGroups
     }
   });
 
-  // 保存分组配置
-  const currentPresetName = TavernHelper.getLoadedPresetName();
-  savePresetGrouping(currentPresetName, existingGroups);
-
-  // 立即应用分组到DOM
-  applyGroupingToDOM(existingGroups);
-
-  // 延迟恢复以确保DOM更新完成
-  setTimeout(() => {
-    restoreGroupingImmediate();
-  }, 100);
-
-  toastr.success(`已将 ${selectedPrompts.length} 个条目移出分组，已立即应用`);
-}
-
-// 显示解散分组弹窗
-async function showDissolveGroupPopup(existingGroups: PromptGroup[]): Promise<void> {
-  const popupId = 'dissolve-group-popup';
-  $(`#${popupId}`).remove();
-
-  const groupsHtml = existingGroups
-    .map(
-      group => `
-    <div class="group-selection-item" style="display: flex; align-items: center; padding: 10px; border: 1px solid #e0e0e0; margin: 5px 0; border-radius: 6px; cursor: pointer; background-color: #fff;">
-      <input type="checkbox" class="group-checkbox" data-group-name="${$('<div/>').text(group.name).html()}" style="margin-right: 12px; transform: scale(1.3);">
-      <div style="flex: 1;">
-        <div style="font-weight: bold; color: #333; font-size: 14px;">${$('<div/>').text(group.name).html()}</div>
-        <div style="font-size: 12px; color: #666; margin-top: 2px;">包含 ${group.promptIds.length} 个条目</div>
-      </div>
-    </div>
-  `,
-    )
-    .join('');
-
-  const popupHtml = `
-    <div id="${popupId}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10002; display: flex; align-items: center; justify-content: center;">
-      <div class="group-selection-popup-content" style="background-color: #fff8f0; color: #3a2c2c; border-radius: 16px; padding: 20px; width: 90%; max-width: 500px; box-shadow: 0 4px 25px rgba(120,90,60,.25); display: flex; flex-direction: column; max-height: 70vh;">
-        <h4 style="margin-top:0; color:#6a4226; text-align: center; border-bottom: 2px solid #f0d8b6; padding-bottom: 10px;">选择要解散的分组</h4>
-        
-        <div style="margin: 15px 0; display: flex; gap: 8px; flex-wrap: wrap;">
-          <button id="select-all-groups-btn" style="padding: 6px 12px; background-color:#2196F3; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全选</button>
-          <button id="select-none-groups-btn" style="padding: 6px 12px; background-color:#9E9E9E; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:13px;">全不选</button>
-        </div>
-
-        <div style="flex: 1; min-height: 0; overflow-y: auto; border: 1px solid #f0e2d0; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
-          <div style="font-size: 13px; color: #666; margin-bottom: 12px;">选择要解散的分组，解散后分组内的条目将变为独立条目</div>
-          <div id="groups-container">
-            ${groupsHtml}
-          </div>
-        </div>
-
-        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
-          <div style="font-size: 12px; color: #666;">⚠️ 解散操作不可撤销</div>
-          <div style="display: flex; gap: 8px;">
-            <button id="group-selection-cancel" style="padding: 10px 16px; background-color:#9E9E9E; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">取消</button>
-            <button id="group-selection-confirm" style="padding: 10px 16px; background-color:#ff9800; border:none; border-radius:6px; cursor:pointer; font-weight:bold; color:#fff; font-size: 14px;">解散选中</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-  $('body').append(popupHtml);
-
-  // 绑定事件
-  $('.group-selection-item').on('click', function (e) {
-    if ((e.target as HTMLInputElement).type === 'checkbox') return;
-
-    const checkbox = $(this).find('.group-checkbox');
-    checkbox.prop('checked', !checkbox.prop('checked'));
-  });
-
-  $('#select-all-groups-btn').on('click', () => {
-    $('.group-checkbox').prop('checked', true);
-  });
-
-  $('#select-none-groups-btn').on('click', () => {
-    $('.group-checkbox').prop('checked', false);
-  });
-
-  $('#group-selection-cancel').on('click', () => {
-    $(`#${popupId}`).remove();
-  });
-
-  $('#group-selection-confirm').on('click', () => {
-    const selectedGroupNames: string[] = [];
-    $('.group-checkbox:checked').each(function () {
-      selectedGroupNames.push($(this).data('group-name'));
-    });
-
-    if (selectedGroupNames.length === 0) {
-      toastr.error('请选择要解散的分组');
-      return;
-    }
-
-    // 解散选中的分组
-    selectedGroupNames.forEach(groupName => {
-      const groupIndex = existingGroups.findIndex(g => g.name === groupName);
-      if (groupIndex > -1) {
-        const group = existingGroups[groupIndex];
-
-        // 更新UI - 移除分组标签和背景色
-        group.promptIds.forEach(promptId => {
-          const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
-          item.css('background-color', '#fff');
-          item.find('.group-tag').remove();
-          // 清除分组路径显示
-          const promptText = item.find('.prompt-text');
-          if (promptText.length > 0) {
-            const lastDiv = promptText.find('div:last-child');
-            if (lastDiv.text().includes('📁')) {
-              lastDiv.remove();
-            }
-          }
-        });
-
-        // 递归处理子分组
-        const processSubGroups = (subGroups: PromptGroup[]) => {
-          subGroups.forEach(subGroup => {
-            subGroup.promptIds.forEach(promptId => {
-              const item = $(`.prompt-item[data-prompt-id="${promptId}"]`);
-              item.css('background-color', '#fff');
-              item.find('.group-tag').remove();
-              const promptText = item.find('.prompt-text');
-              if (promptText.length > 0) {
-                const lastDiv = promptText.find('div:last-child');
-                if (lastDiv.text().includes('📁')) {
-                  lastDiv.remove();
-                }
-              }
-            });
-            if (subGroup.subGroups.length > 0) {
-              processSubGroups(subGroup.subGroups);
-            }
-          });
-        };
-
-        if (group.subGroups.length > 0) {
-          processSubGroups(group.subGroups);
-        }
-
-        existingGroups.splice(groupIndex, 1);
-      }
-    });
-
-    // 保存更新后的分组配置
-    const currentPresetName = TavernHelper.getLoadedPresetName();
-    const validGroups = existingGroups.filter(g => hasValidContent(g));
-    savePresetGrouping(currentPresetName, validGroups);
-
-    // 立即应用分组到DOM
-    applyGroupingToDOM(validGroups);
-    // 延迟恢复以确保DOM更新完成
-    setTimeout(() => {
-      restoreGroupingImmediate();
-    }, 100);
-
-    $(`#${popupId}`).remove();
-    toastr.success(`已解散 ${selectedGroupNames.length} 个分组`);
-  });
+  toastr.success(`已将 ${selectedPrompts.length} 个条目移出分组，将在关闭分组界面时应用`);
 }

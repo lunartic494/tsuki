@@ -17,6 +17,15 @@ export function generateUniqueId(): string {
   return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
 
+// 生成标准的UUID v4格式，用作预设条目 identifier
+export function generateUUID(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
 export function setLastProcessedCharAvatar(avatar: string | null): void {
   lastProcessedCharAvatar = avatar;
 }
@@ -40,6 +49,20 @@ export async function initializePresetManager(): Promise<void> {
       $('.pm-submenu').hide();
     }
   });
+
+  // 自动为所有预设创建识别条目（仅在新版用户首次使用时执行）
+  try {
+    const configs = await import('./配置操作功能').then(m => m.getStoredConfigs());
+    const hasOldConfigs = Object.values(configs).some((config: any) => !config.identifierId && config.presetName);
+
+    if (hasOldConfigs) {
+      console.log('检测到旧版配置，开始自动创建识别条目...');
+      const { autoCreateIdentifiersForAllPresets } = await import('./配置操作功能');
+      await autoCreateIdentifiersForAllPresets();
+    }
+  } catch (error) {
+    console.error('自动创建识别条目时出错:', error);
+  }
 }
 
 // 移除自动初始化，改为在加载时执行函数中调用

@@ -1,10 +1,12 @@
 // 配置列表的按钮事件绑定
 export function bindConfigListEvents(): void {
   const listElement = $('#preset-manager-list');
+  console.log('绑定配置列表事件，找到按钮数量:', listElement.find('button').length);
 
   listElement.off('click', 'button').on('click', 'button', async function (e) {
     const button = $(this);
     const action = button.attr('name');
+    console.log('按钮点击事件触发，action:', action, 'configId:', button.data('id'));
 
     if (action === 'more-actions') {
       e.stopPropagation();

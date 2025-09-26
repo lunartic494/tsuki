@@ -7,18 +7,40 @@ export function showHelpPopup(): void {
   const helpContent = `
         <div style="padding: 0 10px; font-size: 14px; line-height: 1.6;">
             <h5>主要功能</h5>
-            <ul>
-                <li><b>保存/更新配置:</b> 保存或更新当前预设中所有"条目"的启用/禁用状态。更新时可选择是否同步正则状态。</li>
-                <li><b>加载配置:</b> 一键切换到指定的预设并将所有"条目"恢复到已保存的状态。</li>
-                <li><b>查看配置:</b> 在"更多"菜单中点击"查看"，可详细查看配置的基本信息、条目状态统计、启用/禁用的具体条目列表和绑定的正则信息。</li>
-                <li><b>条目分组:</b> 可以将预设条目创建分组，分组后的条目会在预设界面中折叠显示，让界面更加整洁。支持创建、移除和清除分组，分组设置会自动保存。</li>
-                <li><b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身、绑定的正则和分组配置。</li>
-                <li><b>兼容世界书导入:</b> 支持直接导入通过酒馆世界书功能导出的、含有本插件数据的备份文件。</li>
-                <li><b>批量导入/导出:</b> 一次性分享多个配置、关联的预设和正则脚本，方便备份和迁移。</li>
-                <li><b>批量删除:</b> 在主界面勾选多个配置进行一次性删除，方便清理。</li>
-                <li><b>角色绑定:</b> 将配置与特定角色关联，切换到该角色时会自动提示加载。</li>
-                <li><b>正则绑定:</b> 将配置与一组全局正则的开关状态关联，加载配置时会自动应用。</li>
-                <li><b>重命名与分组:</b> 您可以重命名任何配置，同名预设的配置会自动折叠在一个分组下，使界面更清晰。</li>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                    <b>保存/更新配置:</b> 保存或更新当前预设中所有"条目"的启用/禁用状态。更新时可选择是否同步正则状态。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2196F3;">
+                    <b>加载配置:</b> 一键切换到指定的预设并将所有"条目"恢复到已保存的状态。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #FF9800;">
+                    <b>查看配置:</b> 在"更多"菜单中点击"查看"，可详细查看配置的基本信息、条目状态统计、启用/禁用的具体条目列表和绑定的正则信息。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #9C27B0;">
+                    <b>预设编辑器:</b> 强大的条目管理工具，支持创建、编辑、删除条目，以及多级分组管理。所有修改会实时保存到浏览器本地存储，分组设置与当前预设绑定。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #00BCD4;">
+                    <b>导入/导出:</b> 以 .json 文件的形式分享单个配置。导出时可以为配置包添加备注，方便分享和识别。整合包可以附带预设本身、绑定的正则和分组配置。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #795548;">
+                    <b>兼容世界书导入:</b> 支持直接导入通过酒馆世界书功能导出的、含有本插件数据的备份文件。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #607D8B;">
+                    <b>批量导入/导出:</b> 一次性分享多个配置、关联的预设和正则脚本，方便备份和迁移。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #F44336;">
+                    <b>批量删除:</b> 在主界面勾选多个配置进行一次性删除，方便清理。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #E91E63;">
+                    <b>角色绑定:</b> 将配置与特定角色关联，切换到该角色时会自动提示加载。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #3F51B5;">
+                    <b>正则绑定:</b> 将配置与一组全局正则的开关状态关联，加载配置时会自动应用。
+                </li>
+                <li style="margin-bottom: 16px; padding: 12px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #FF5722;">
+                    <b>重命名与分组:</b> 您可以重命名任何配置，同名预设的配置会自动折叠在一个分组下，使界面更清晰。
+                </li>
             </ul>
         </div>
     `;
@@ -60,7 +82,7 @@ export function showRemarkPopup(remarkText: string): Promise<boolean> {
     // Simple Markdown to HTML converter
     function convertMarkdown(text: string): string {
       const sanitize = (s: string) => $('<div/>').text(s).html();
-      let lines = text.split('\n');
+      const lines = text.split('\n');
       let html = '';
       let inList = false;
 
