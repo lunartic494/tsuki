@@ -228,6 +228,8 @@ declare const tavern_events: {
   CONNECTION_PROFILE_LOADED: 'connection_profile_loaded';
   TOOL_CALLS_PERFORMED: 'tool_calls_performed';
   TOOL_CALLS_RENDERED: 'tool_calls_rendered';
+  /** since SillyTavern v1.13.4 */
+  WORLDINFO_ENTRIES_LOADED: 'worldinfo_entries_loaded';
 };
 
 interface ListenerType {
@@ -304,7 +306,10 @@ interface ListenerType {
   [tavern_events.OAI_PRESET_EXPORT_READY]: (preset: Object) => void;
   [tavern_events.OAI_PRESET_IMPORT_READY]: (result: { data: Object; presetName: string }) => void;
   [tavern_events.WORLDINFO_SETTINGS_UPDATED]: () => void;
-  [tavern_events.WORLDINFO_UPDATED]: (name: string, data: { entries: Object[] }) => void;
+  [tavern_events.WORLDINFO_UPDATED]: (
+    name: string,
+    data: { entries: { [uid: number]: SillyTavern.FlattenedWorldInfoEntry } },
+  ) => void;
   [tavern_events.CHARACTER_EDITED]: (result: { detail: { id: string; character: SillyTavern.v1CharData } }) => void;
   [tavern_events.CHARACTER_PAGE_LOADED]: () => void;
   [tavern_events.CHARACTER_GROUP_OVERLAY_STATE_CHANGE_BEFORE]: (state: number) => void;
@@ -322,7 +327,7 @@ interface ListenerType {
     prompt: { role: 'user' | 'assistant' | 'system'; content: string }[];
   }) => void;
   [tavern_events.GROUP_MEMBER_DRAFTED]: (character_id: string) => void;
-  [tavern_events.WORLD_INFO_ACTIVATED]: (entries: any[]) => void;
+  [tavern_events.WORLD_INFO_ACTIVATED]: (entries: ({ world: string } & SillyTavern.FlattenedWorldInfoEntry)[]) => void;
   [tavern_events.TEXT_COMPLETION_SETTINGS_READY]: () => void;
   [tavern_events.CHAT_COMPLETION_SETTINGS_READY]: (generate_data: {
     messages: { role: 'user' | 'assistant' | 'system'; content: string }[];
@@ -347,7 +352,7 @@ interface ListenerType {
       value: Record<string, any>;
       description?: string;
       strict?: boolean;
-    }
+    };
     [others: string]: any;
   }) => void;
   [tavern_events.CHAT_COMPLETION_PROMPT_READY]: (event_data: {
@@ -374,5 +379,11 @@ interface ListenerType {
   [tavern_events.CONNECTION_PROFILE_LOADED]: (profile_name: string) => void;
   [tavern_events.TOOL_CALLS_PERFORMED]: (tool_invocations: Object[]) => void;
   [tavern_events.TOOL_CALLS_RENDERED]: (tool_invocations: Object[]) => void;
+  [tavern_events.WORLDINFO_ENTRIES_LOADED]: (lores: {
+    globalLore: ({ world: string } & SillyTavern.FlattenedWorldInfoEntry)[];
+    characterLore: ({ world: string } & SillyTavern.FlattenedWorldInfoEntry)[];
+    chatLore: ({ world: string } & SillyTavern.FlattenedWorldInfoEntry)[];
+    personaLore: ({ world: string } & SillyTavern.FlattenedWorldInfoEntry)[];
+  }) => void;
   [custom_event: string]: (...args: any) => any;
 }
