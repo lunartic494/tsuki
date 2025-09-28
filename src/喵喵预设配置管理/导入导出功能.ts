@@ -42,9 +42,16 @@ export async function exportConfig(configId: string): Promise<void> {
       if (includePresetChoice === '1') {
         const presetData = TavernHelper.getPreset(configPresetName);
         if (presetData) {
-          (presetData as any).name = configPresetName;
+          // 如果配置的presetName是"in_use"，需要获取当前实际使用的预设名称
+          let actualPresetName = configPresetName;
+          if (configPresetName === 'in_use') {
+            const currentPresetName = TavernHelper.getLoadedPresetName();
+            actualPresetName = currentPresetName !== 'in_use' ? currentPresetName : 'in_use';
+            console.log(`配置presetName为in_use，使用当前实际预设名称: ${actualPresetName}`);
+          }
+          (presetData as any).name = actualPresetName;
           (exportBundle as any).presetData = presetData;
-          toastr.info(`已将预设 "${configPresetName}" 打包。`);
+          toastr.info(`已将预设 "${actualPresetName}" 打包。`);
         } else {
           toastr.warning(`无法获取预设 "${configPresetName}" 的数据。`);
         }
@@ -75,7 +82,7 @@ export async function exportConfig(configId: string): Promise<void> {
     // 检查是否包含分组配置
     const groupingPresetName = configData.presetName;
     if (groupingPresetName) {
-      const groupingConfig = exportPresetGrouping(groupingPresetName);
+      const groupingConfig = await exportPresetGrouping(groupingPresetName);
       if (groupingConfig) {
         const includeGroupingChoice = await triggerSlash(
           `/popup okButton="是" cancelButton="否" result=true "预设 \\"${groupingPresetName}\\" 包含条目分组设置。是否要一起导出？"`,
@@ -198,7 +205,7 @@ export async function handleFileImport(event: any): Promise<void> {
         if (configToImport.presetName) {
           try {
             console.log('导入分组配置:', groupingToImport);
-            importPresetGrouping(configToImport.presetName, groupingToImport as PromptGroup[]);
+            await importPresetGrouping(configToImport.presetName, groupingToImport as PromptGroup[]);
             toastr.success('已成功导入并应用分组设置到预设。');
           } catch (error) {
             console.error('导入分组配置失败:', error);

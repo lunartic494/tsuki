@@ -50,7 +50,27 @@ export async function showBatchExportPopup(): Promise<void> {
   $('body').append(popupHtml);
 
   const mobileStyles = `<style>
-        @media (max-width: 600px) { #${popupId} > div { margin-top: 5vh; } }
+        @media (max-width: 600px) { 
+          #${popupId} { 
+            align-items: flex-start !important; 
+            padding: 10px;
+          } 
+          #${popupId} > div { 
+            margin-top: 10vh; 
+            width: 95% !important;
+            max-width: none !important;
+            max-height: 85vh !important;
+            padding: 15px;
+          }
+          #${popupId} h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          #${popupId} .pm-batch-export-item {
+            transform: scale(1.5);
+            margin-right: 15px;
+          }
+        }
     </style>`;
   $(`#${popupId}`).append(mobileStyles);
 
@@ -115,7 +135,16 @@ async function batchExportConfigs(selectedConfigs: ConfigData[]): Promise<void> 
           if (TavernHelper.getPresetNames().includes(presetName)) {
             const presetData = TavernHelper.getPreset(presetName);
             if (presetData) {
-              megaBundle.presets[presetName] = presetData;
+              // 如果presetName是"in_use"，需要获取当前实际使用的预设名称
+              let actualPresetName = presetName;
+              if (presetName === 'in_use') {
+                const currentPresetName = TavernHelper.getLoadedPresetName();
+                actualPresetName = currentPresetName !== 'in_use' ? currentPresetName : 'in_use';
+                console.log(`批量导出中presetName为in_use，使用当前实际预设名称: ${actualPresetName}`);
+              }
+              // 确保预设数据中的name字段使用正确的预设名称
+              (presetData as any).name = actualPresetName;
+              megaBundle.presets[actualPresetName] = presetData;
               includedCount++;
             }
           }
@@ -280,7 +309,29 @@ export async function showBatchDeletePopup(): Promise<void> {
     `;
 
   $('body').append(popupHtml);
-  const mobileStyles = `<style>@media (max-width: 600px) { #${popupId} { align-items: flex-start !important; } #${popupId} > div { margin-top: 200px; } }</style>`;
+  const mobileStyles = `<style>
+        @media (max-width: 600px) { 
+          #${popupId} { 
+            align-items: flex-start !important; 
+            padding: 10px;
+          } 
+          #${popupId} > div { 
+            margin-top: 10vh; 
+            width: 95% !important;
+            max-width: none !important;
+            max-height: 85vh !important;
+            padding: 15px;
+          }
+          #${popupId} h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          #${popupId} .pm-batch-delete-item {
+            transform: scale(1.5);
+            margin-right: 15px;
+          }
+        }
+    </style>`;
   $(`#${popupId}`).append(mobileStyles);
 
   $('#batch-delete-select-all').on('click', () => $('.pm-batch-delete-item').prop('checked', true));

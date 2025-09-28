@@ -453,10 +453,17 @@ export async function saveCurrentConfig(): Promise<void> {
   }
 
   // 获取当前预设名称（用于显示和向后兼容）
-  const currentPresetName = await getPresetNameByIdentifier(identifierId);
+  let currentPresetName = await getPresetNameByIdentifier(identifierId);
   if (!currentPresetName) {
     toastr.error('无法识别当前预设，配置保存失败');
     return;
+  }
+
+  // 如果获取到的是"in_use"，需要转换为当前实际使用的预设名称
+  if (currentPresetName === 'in_use') {
+    const actualPresetName = TavernHelper.getLoadedPresetName();
+    currentPresetName = actualPresetName !== 'in_use' ? actualPresetName : 'in_use';
+    console.log(`通过识别条目ID找到in_use，转换为当前实际预设名称: ${currentPresetName}`);
   }
 
   const blacklist = ['恶灵低语', 'deepspay', 'spaymale', '深阉', '小骡之神', '小猫之神', 'kemini'];
