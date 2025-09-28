@@ -2246,7 +2246,7 @@ async function getPromptContent(promptId: string): Promise<string> {
     const preset = TavernHelper.getPreset('in_use');
     const allPrompts = [...preset.prompts, ...preset.prompts_unused];
     const prompt = allPrompts.find(p => p.id === promptId);
-    
+
     if (prompt && prompt.content) {
       console.log('从预设数据获取条目内容成功:', promptId);
       return prompt.content;
