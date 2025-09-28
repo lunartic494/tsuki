@@ -2241,21 +2241,37 @@ async function addNewPromptAtPosition(
 
 // 获取条目内容
 async function getPromptContent(promptId: string): Promise<string> {
-  // 尝试从DOM中获取条目内容
-  const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
-  if (promptElement.length === 0) {
-    console.warn('未找到条目元素:', promptId);
+  try {
+    // 从预设数据中获取条目内容
+    const preset = TavernHelper.getPreset('in_use');
+    const allPrompts = [...preset.prompts, ...preset.prompts_unused];
+    const prompt = allPrompts.find(p => p.id === promptId);
+    
+    if (prompt && prompt.content) {
+      console.log('从预设数据获取条目内容成功:', promptId);
+      return prompt.content;
+    }
+
+    // 如果预设数据中没有找到，尝试从DOM中获取
+    const promptElement = $(`.completion_prompt_manager_prompt[data-pm-identifier="${promptId}"]`);
+    if (promptElement.length > 0) {
+      // 查找条目内容元素
+      const contentElement = promptElement.find('.completion_prompt_manager_prompt_content, .prompt-content, textarea');
+      if (contentElement.length > 0) {
+        const content = contentElement.text() || contentElement.val()?.toString() || '';
+        if (content) {
+          console.log('从DOM获取条目内容成功:', promptId);
+          return content;
+        }
+      }
+    }
+
+    console.warn('未找到条目内容:', promptId);
+    return '';
+  } catch (error) {
+    console.error('获取条目内容失败:', error);
     return '';
   }
-
-  // 查找条目内容元素
-  const contentElement = promptElement.find('.completion_prompt_manager_prompt_content, .prompt-content, textarea');
-  if (contentElement.length > 0) {
-    return contentElement.text() || contentElement.val()?.toString() || '';
-  }
-
-  console.warn('未找到条目内容:', promptId);
-  return '';
 }
 
 // 更新条目
