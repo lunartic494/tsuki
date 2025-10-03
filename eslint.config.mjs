@@ -66,14 +66,23 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
       'no-var': 'error',
+<<<<<<< HEAD
       'prefer-const': 'warn',
       'vue/multi-word-component-names': 'off',
       yoda: 'error',
       '@typescript-eslint/no-explicit-any': 'error',
+=======
+      'pinia/require-setup-store-properties-export': 'off',
+      'prefer-const': 'warn',
+      'vue/multi-word-component-names': 'off',
+      yoda: 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+>>>>>>> 330d6cbc9cfe1ddada8661e1ae1b5f80a2870451
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   eslintConfigPrettier,
+<<<<<<< HEAD
   globalIgnores([
     '@types/**',
     '*.d.ts',
@@ -83,4 +92,7 @@ export default [
     'postcss.config.js',
     'webpack.config.ts',
   ]),
+=======
+  globalIgnores(['dist/**', 'node_modules/**', 'eslint.config.mjs', 'postcss.config.js', 'webpack.config.ts']),
+>>>>>>> 330d6cbc9cfe1ddada8661e1ae1b5f80a2870451
 ];
