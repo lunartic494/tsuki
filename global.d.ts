@@ -2,6 +2,13 @@ declare module '*?raw' {
   const content: string;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*?url' {
+  const content: string;
+  export default content;
+}
+>>>>>>> 77de30304c6d069b0e0135197a237bdfdd044dfc
 declare module '*.html' {
   const content: string;
   export default content;
