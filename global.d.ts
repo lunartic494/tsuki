@@ -2,10 +2,24 @@ declare module '*?raw' {
   const content: string;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*?url' {
+  const content: string;
+  export default content;
+}
+>>>>>>> 5222cd67a858e8df734db29241ac1f211ca14bca
 declare module '*.html' {
   const content: string;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
+>>>>>>> 5222cd67a858e8df734db29241ac1f211ca14bca
 declare module '*.css' {
   const content: unknown;
   export default content;
