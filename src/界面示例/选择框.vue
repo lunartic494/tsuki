@@ -6,7 +6,11 @@
         :key="item.title"
         class="roleplay_options_item"
         tabindex="1"
+<<<<<<< HEAD
         @click="handle_item_click(item)"
+=======
+        @click="handleItemClick(item)"
+>>>>>>> ba6a8cbd65eb2331437d53a70aa6035251541b2e
       >
         <span class="roleplay_options_title">
           <strong>{{ item.title }}</strong>
@@ -19,8 +23,11 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { onMounted, ref } from 'vue';
 
+=======
+>>>>>>> ba6a8cbd65eb2331437d53a70aa6035251541b2e
 interface RoleplayOption {
   title: string;
   content: string;
@@ -28,7 +35,11 @@ interface RoleplayOption {
 
 const items = ref<RoleplayOption[]>([]);
 
+<<<<<<< HEAD
 function extract_items(): RoleplayOption[] {
+=======
+function extractItems(): RoleplayOption[] {
+>>>>>>> ba6a8cbd65eb2331437d53a70aa6035251541b2e
   const chat_message = getChatMessages(getCurrentMessageId())[0];
   const text = chat_message.message.match(/<roleplay_options>(.*?)<\/roleplay_options>/s)?.[1] ?? '';
 
@@ -40,10 +51,17 @@ function extract_items(): RoleplayOption[] {
 }
 
 onMounted(() => {
+<<<<<<< HEAD
   items.value = extract_items();
 });
 
 async function handle_item_click(item: RoleplayOption) {
+=======
+  items.value = extractItems();
+});
+
+async function handleItemClick(item: RoleplayOption) {
+>>>>>>> ba6a8cbd65eb2331437d53a70aa6035251541b2e
   await createChatMessages([{ role: 'user', message: item.content }]);
   triggerSlash('/trigger');
 }
