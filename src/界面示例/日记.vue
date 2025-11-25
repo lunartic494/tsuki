@@ -5,8 +5,11 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { onMounted, ref } from 'vue';
 
+=======
+>>>>>>> a6ac49cab5f9f2ac6e94edc96535f8cb9839df7f
 const display_text = ref('');
 
 function captureDisplayText() {
