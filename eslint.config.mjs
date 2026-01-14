@@ -26,7 +26,11 @@ export default [
     rules: {
       ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
       ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
+<<<<<<< HEAD
       'better-tailwindcss/enforce-consistent-line-wrapping': ['off', { printWidth: 120 }],
+=======
+      'better-tailwindcss/enforce-consistent-line-wrapping': ['off', { preferSingleLine: true, printWidth: 120 }],
+>>>>>>> 5c87e143a47f2eac0521a9f7965b7f21118f88a5
       'better-tailwindcss/no-unregistered-classes': ['off', { ignore: ['fa-*'] }],
     },
     settings: {
@@ -56,6 +60,10 @@ export default [
       'import-x/no-cycle': 'error',
       'import-x/no-dynamic-require': 'warn',
       'import-x/no-nodejs-modules': 'warn',
+<<<<<<< HEAD
+=======
+      'import-x/no-unresolved': [2, { ignore: ['^http'] }],
+>>>>>>> 5c87e143a47f2eac0521a9f7965b7f21118f88a5
       'no-dupe-class-members': 'off',
       'no-empty-function': 'off',
       'no-floating-decimal': 'error',
@@ -66,14 +74,24 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
       'no-var': 'error',
+<<<<<<< HEAD
       'prefer-const': 'warn',
       'vue/multi-word-component-names': 'off',
       yoda: 'error',
       '@typescript-eslint/no-explicit-any': 'error',
+=======
+      'pinia/no-duplicate-store-ids': 'off',
+      'pinia/require-setup-store-properties-export': 'off',
+      'prefer-const': 'warn',
+      'vue/multi-word-component-names': 'off',
+      yoda: 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+>>>>>>> 5c87e143a47f2eac0521a9f7965b7f21118f88a5
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   eslintConfigPrettier,
+<<<<<<< HEAD
   globalIgnores([
     '@types/**',
     '*.d.ts',
@@ -83,4 +101,7 @@ export default [
     'postcss.config.js',
     'webpack.config.ts',
   ]),
+=======
+  globalIgnores(['dist/**', 'node_modules/**', 'eslint.config.mjs', 'postcss.config.js', 'webpack.config.ts']),
+>>>>>>> 5c87e143a47f2eac0521a9f7965b7f21118f88a5
 ];
