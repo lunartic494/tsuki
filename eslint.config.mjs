@@ -26,12 +26,20 @@ export default [
     rules: {
       ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
       ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
+<<<<<<< HEAD
       'better-tailwindcss/enforce-consistent-line-wrapping': ['off', { printWidth: 120 }],
+=======
+      'better-tailwindcss/enforce-consistent-line-wrapping': ['off', { preferSingleLine: true, printWidth: 120 }],
+>>>>>>> 1fdfca54e89542414750e2c88ad8fca7d4a3f85c
       'better-tailwindcss/no-unregistered-classes': ['off', { ignore: ['fa-*'] }],
     },
     settings: {
       'better-tailwindcss': {
+<<<<<<< HEAD
         entryPoint: 'src/global.css',
+=======
+        entryPoint: 'tailwind.css',
+>>>>>>> 1fdfca54e89542414750e2c88ad8fca7d4a3f85c
         tailwindConfig: 'tailwind.config.js',
       },
     },
@@ -56,6 +64,10 @@ export default [
       'import-x/no-cycle': 'error',
       'import-x/no-dynamic-require': 'warn',
       'import-x/no-nodejs-modules': 'warn',
+<<<<<<< HEAD
+=======
+      'import-x/no-unresolved': [2, { ignore: ['^http'] }],
+>>>>>>> 1fdfca54e89542414750e2c88ad8fca7d4a3f85c
       'no-dupe-class-members': 'off',
       'no-empty-function': 'off',
       'no-floating-decimal': 'error',
@@ -66,14 +78,24 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
       'no-var': 'error',
+<<<<<<< HEAD
       'prefer-const': 'warn',
       'vue/multi-word-component-names': 'off',
       yoda: 'error',
       '@typescript-eslint/no-explicit-any': 'error',
+=======
+      'pinia/no-duplicate-store-ids': 'off',
+      'pinia/require-setup-store-properties-export': 'off',
+      'prefer-const': 'warn',
+      'vue/multi-word-component-names': 'off',
+      yoda: 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+>>>>>>> 1fdfca54e89542414750e2c88ad8fca7d4a3f85c
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   eslintConfigPrettier,
+<<<<<<< HEAD
   globalIgnores([
     '@types/**',
     '*.d.ts',
@@ -83,4 +105,7 @@ export default [
     'postcss.config.js',
     'webpack.config.ts',
   ]),
+=======
+  globalIgnores(['dist/**', 'node_modules/**', 'eslint.config.mjs', 'postcss.config.js', 'webpack.config.ts']),
+>>>>>>> 1fdfca54e89542414750e2c88ad8fca7d4a3f85c
 ];
