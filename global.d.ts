@@ -2,7 +2,11 @@ declare module '*?raw' {
   const content: string;
   export default content;
 }
+<<<<<<< HEAD
 declare module '*.html' {
+=======
+declare module '*?url' {
+>>>>>>> bc44abea1c2f7980dd9a2d9b909b4ad64bc8bdee
   const content: string;
   export default content;
 }
@@ -10,6 +14,21 @@ declare module '*.css' {
   const content: unknown;
   export default content;
 }
+<<<<<<< HEAD
+=======
+declare module '*.html' {
+  const content: string;
+  export default content;
+}
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
+declare module '*.yaml' {
+  const content: any;
+  export default content;
+}
+>>>>>>> bc44abea1c2f7980dd9a2d9b909b4ad64bc8bdee
 declare module '*.vue' {
   import { DefineComponent } from 'vue';
   const component: DefineComponent;
@@ -24,3 +43,12 @@ declare namespace z {
   export type input<T> = import('zod').input<T>;
   export type output<T> = import('zod').output<T>;
 }
+<<<<<<< HEAD
+=======
+
+declare module 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js' {
+  export function registerMvuSchema(
+    schema: z.ZodType<Record<string, any>> | (() => z.ZodType<Record<string, any>>),
+  ): void;
+}
+>>>>>>> bc44abea1c2f7980dd9a2d9b909b4ad64bc8bdee
